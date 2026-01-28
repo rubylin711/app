@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/full_black_background"
+    tools:context="com.prime.dtvplayer.Activity.ResetDefaultActivity">
+
+    <include
+        android:id="@+id/activityTitleViewLayoutResetDefault"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/title_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textViewLeftGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/STR_RESET_DEFAULT_HELP_CONTENT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/content_bottom_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/content_right_guideline"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/content_left_guideline"
+        app:layout_constraintTop_toTopOf="@+id/content_top_guideline" />
+
+    <!--
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_RESET_DEFAULT_HELP_CONTENT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <Button
+        android:id="@+id/resetdefaultokBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:text="@string/STR_OK"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/text_color"
+        android:background="@drawable/item_selector"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toTopOf="@+id/button_separate_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/content_right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/button_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/content_bottom_guideline" />
+
+    <Button
+        android:id="@+id/resetdefaultcancelBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_selector"
+        android:text="@string/STR_CANCEL"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toStartOf="@+id/content_right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/button_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/resetdefaultokBTN" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/button_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.69" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/button_separate_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

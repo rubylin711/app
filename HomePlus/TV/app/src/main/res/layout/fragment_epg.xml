@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clEpg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_1920_w"
+    tools:context=".ui.fragment.EpgFragment">
+
+    <!-- Start of top-left section -->
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:translationX="-10dp"
+        android:translationY="-10dp"
+        android:src="@drawable/bg_epg_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/epg_title"
+            android:textColor="@color/colorWhiteOpacity75"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/tvEpgCurrentGenreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/text_all_channels"
+            android:textColor="@color/colorWhiteOpacity75"
+            android:textSize="12dp" />
+    </LinearLayout>
+    <!-- End of top-left section -->
+
+    <!-- Start of top-right section (program information) -->
+    <TextView
+        android:id="@+id/tvEpgDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="45dp"
+        android:text="00:00"
+        android:textColor="#818181"
+        android:textSize="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="368dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvEpgChannelNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000"
+            android:textColor="@color/colorGold2"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tvEpgChannelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="EPGChannelName"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/ivEpgChannelPadlock"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2.5dp"
+            android:src="@drawable/icon_ch_lock_d"
+            android:layout_gravity="center|left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivEpgChannelMusic"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2.5dp"
+            android:src="@drawable/icon_ch_music_d"
+            android:layout_gravity="center|left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivEpgChannelFavorite"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2.5dp"
+            android:src="@drawable/icon_ch_favorite_d"
+            android:layout_gravity="center|left"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivEpgChannelResolution"
+            android:layout_width="21dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/icon_miniguide_hd"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivEpgChannelDolby"
+            android:layout_width="19dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/icon_miniguide_dolby"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEpgProgramName"
+        android:layout_width="569dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="368dp"
+        android:layout_marginTop="108dp"
+        android:text="This is a long text that will scroll as marquee12345678901234567890"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="368dp"
+        android:layout_marginTop="140dp"
+        android:gravity="center|left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvEpgProgramStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/colorTextNotSelect"
+            android:textSize="11dp" />
+
+        <ProgressBar
+            android:id="@+id/pbEpgProgram"
+            style="@style/progress_channel"
+            android:layout_width="150dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="0dp"
+            android:progressBackgroundTint="#CC383B43"
+            android:progressTint="@color/corporateColor" />
+
+        <TextView
+            android:id="@+id/tvEpgProgramEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="00:00"
+            android:textColor="@color/colorTextNotSelect"
+            android:textSize="11dp" />
+
+        <ImageView
+            android:id="@+id/ivEpgProgramRating"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/icon_rating_all"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivEpgProgramBilingual"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/icon_miniguide_audio"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/tvEpgSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/stroke_white"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/subtitle"
+            android:textColor="@color/colorButtonTextGray"
+            android:textSize="9dp" />
+
+        <ImageView
+            android:id="@+id/ivEpgProgramReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/icon_miniguide_resv_watch_d"
+            android:adjustViewBounds="true"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivEpgProgramNowRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/icon_miniguide_rec"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivEpgProgramScheduleRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/icon_miniguide_rec_resv"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/svEpgProgramDescription"
+        android:layout_width="557dp"
+        android:layout_height="54dp"
+        android:scrollbarThumbVertical="@drawable/epg_scrollbar_thumb"
+        android:scrollbarTrackVertical="@drawable/epg_scrollbar_track"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:layout_marginLeft="352dp"
+        android:layout_marginTop="173dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarSize="1.5dp"
+        android:fadeScrollbars="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvEpgProgramDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:lineSpacingExtra="1dp"
+            android:textColor="@color/colorB2b2b2Opacity80"
+            android:text="No description"
+            android:textSize="12dp" />
+    </ScrollView>
+    <!-- End of top-right section (program information) -->
+
+    <!-- Start of bottom-half section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="840dp"
+        android:layout_height="230dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="245dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llEpgInfoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:gravity="center|left"
+            android:background="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Date title -->
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="18dp"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:layout_marginLeft="25dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueSubtitle"
+                android:text="@string/date"
+                android:textSize="12dp"
+                android:minWidth="24dp" />
+
+            <!-- Channel title -->
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="18dp"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:layout_marginLeft="57dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueSubtitle"
+                android:text="@string/channel"
+                android:textSize="12dp"
+                android:minWidth="24dp" />
+
+            <!-- Channel page -->
+            <LinearLayout
+                android:id="@+id/llEpgChannelPageInfo"
+                android:layout_width="40dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="98dp"
+                android:orientation="horizontal"
+                android:singleLine="true"
+                android:gravity="center|left"
+                android:visibility="invisible"
+                android:minWidth="32dp">
+                <TextView
+                    android:id="@+id/tvEpgChannelCurrentPageIndex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:text="01"
+                    android:textSize="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:text="/"
+                    android:textSize="12dp" />
+                <TextView
+                    android:id="@+id/tvEpgChannelTotalPageIndex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:text="02"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <!-- Program title -->
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="18dp"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:layout_marginLeft="28dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueSubtitle"
+                android:text="@string/program"
+                android:textSize="12dp"
+                android:minWidth="24dp" />
+
+            <!-- Program page -->
+            <LinearLayout
+                android:id="@+id/llEpgProgramPageInfo"
+                android:layout_width="40dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="390dp"
+                android:orientation="horizontal"
+                android:singleLine="true"
+                android:gravity="center|left"
+                android:visibility="invisible"
+                android:minWidth="32dp">
+                <TextView
+                    android:id="@+id/tvEpgProgramCurrentPageIndex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:text="01"
+                    android:textSize="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:text="/"
+                    android:textSize="12dp" />
+                <TextView
+                    android:id="@+id/tvEpgProgramTotalPageIndex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:text="02"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Epg main list -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/llEpgInfoTitle">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEpgDateList"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="#1f2428"
+                android:divider="@color/colorBlackOpacity30"
+                android:dividerHeight="1dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEpgChannelList"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhiteOpacity10"
+                android:layout_marginLeft="1dp"
+                android:divider="@color/colorBlackOpacity30"
+                android:dividerHeight="1dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="510dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/llEpgProgramMask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tvEpgProgramMask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhiteOpacity50"
+                        android:text="@string/epg_locked_channel"
+                        android:textSize="17dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/colorkey_b"
+                            android:visibility="visible"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="17dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/colorWhiteOpacity50"
+                            android:text="@string/epg_unlock_hint"
+                            android:textSize="11dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvEpgProgramList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhiteOpacity10"
+                    android:layout_marginLeft="1dp"
+                    android:divider="@color/colorBlackOpacity30"
+                    android:dividerHeight="1dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bottom bar -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Direction -->
+        <LinearLayout
+            android:id="@+id/llEpgBottomBarDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/colorkey_direction"
+                android:layout_gravity="center"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/direction"
+                android:layout_marginLeft="2dp"
+                android:textColor="#b2b2b2"
+                android:textSize="12dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Red key -->
+        <LinearLayout
+            android:id="@+id/llEpgBottomBarRed"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/colorkey_r"
+                android:layout_gravity="center"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/tvEpgBottomBarRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/record"
+                android:layout_marginLeft="2dp"
+                android:textColor="#b2b2b2"
+                android:textSize="12dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Green key -->
+        <LinearLayout
+            android:id="@+id/llEpgBottomBarGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/colorkey_g"
+                android:layout_gravity="center"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/tvEpgBottomBarGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reminder_epg_watch"
+                android:layout_marginLeft="2dp"
+                android:textColor="#b2b2b2"
+                android:textSize="12dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Yellow key -->
+        <LinearLayout
+            android:id="@+id/llEpgBottomBarYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/colorkey_y"
+                android:layout_gravity="center"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/tvEpgBottomBarYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_favourite"
+                android:layout_marginLeft="2dp"
+                android:textColor="#b2b2b2"
+                android:textSize="12dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Blue key -->
+        <LinearLayout
+            android:id="@+id/llEpgBottomBarBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/colorkey_b"
+                android:layout_gravity="center"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unlock_all"
+                android:layout_marginLeft="2dp"
+                android:textColor="#b2b2b2"
+                android:textSize="12dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- OK key -->
+        <LinearLayout
+            android:id="@+id/llEpgBottomBarOk"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/key_ok"
+                android:layout_gravity="center"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/channel_tune"
+                android:layout_marginLeft="2dp"
+                android:textColor="#b2b2b2"
+                android:textSize="12dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Back key -->
+        <LinearLayout
+            android:id="@+id/llEpgBottomBarBack"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginRight="0dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/key_arrow"
+                android:layout_gravity="center"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:layout_marginLeft="2dp"
+                android:textColor="#b2b2b2"
+                android:textSize="12dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEpgEnterChannelNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackOpacity50"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/gradient_black"
+                android:orientation="vertical" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#000000"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="40dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tvEpgEnterChannelNumber"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="000"
+                android:textSize="32dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorTabSelect"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- End of bottom-half section -->
+
+    <!-- Epg genre list -->
+    <!--<include
+        android:id="@+id/include_clEpgGenreList"
+        layout="@layout/popup_epg_genre_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

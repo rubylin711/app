@@ -1,0 +1,1 @@
+需要sign過，開機才會開得起activity(QRCode的畫面)

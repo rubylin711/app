@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_round_50_gray_30_trans_6f" />
+
+    <item android:drawable="@drawable/vector_play_arrow_20"
+        android:top="7.5dp"
+        android:bottom="7.5dp"
+        android:left="7.5dp"
+        android:right="7.5dp"
+        />
+</layer-list>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    tools:context=".ui.activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="435dp"
+        android:layout_height="255dp"
+        android:background="@drawable/shape_r_corner_3_gray_37"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvParentalPinTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/parental_lock_authorization_title"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Divider -->
+        <TextView
+            android:id="@+id/tvParentalPinDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/colorWhiteOpacity10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Message Frame -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvParentalPinDivider">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvParentalPinMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/parental_lock_authorization_msg"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvParentalPinHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/parental_lock_authorization_press_left_to_delete"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="165dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="top|right"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <EditText
+                        android:id="@+id/etParentalPin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_item2"
+                        android:cursorVisible="false"
+                        android:inputType="none"
+                        android:maxLength="4"
+                        android:textColor="#00000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvParentalPinAsterisk1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/password_off"
+                            android:textColor="@color/colorWhiteOpacity80"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvParentalPinAsterisk2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/password_off"
+                            android:textColor="@color/colorWhiteOpacity80"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvParentalPinAsterisk3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/password_off"
+                            android:textColor="@color/colorWhiteOpacity80"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvParentalPinAsterisk4"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/password_off"
+                            android:textColor="@color/colorWhiteOpacity80"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="195dp"
+            android:textColor="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnParentalPinSave"
+                android:layout_width="125dp"
+                android:layout_height="36dp"
+                android:background="@drawable/state_pvr_dialog_button"
+                android:textAllCaps="false"
+                android:text="@string/ok"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnParentalPinCancel"
+                android:layout_width="125dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/state_pvr_dialog_button"
+                android:textAllCaps="false"
+                android:text="@string/cancel"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

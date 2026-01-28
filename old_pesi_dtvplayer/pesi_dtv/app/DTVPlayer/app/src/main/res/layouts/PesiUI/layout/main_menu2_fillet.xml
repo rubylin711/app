@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:baselineAligned="false"
+    android:gravity="center"
+    tools:context="com.prime.dtvplayer.Activity.MainMenu2Activity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v_submenu_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v_submenu_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.84" />
+
+
+    <!-- Submenu -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_menu_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_submenu_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h_submenu_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.59" />
+
+    <LinearLayout
+        android:id="@+id/submenu2BigLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_frameline"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_h_submenu_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_v_submenu_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h_submenu_top">
+
+
+        <TextView
+            android:id="@+id/subMenuTitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/shape_rectangle_frameline_titile"
+            android:gravity="center_horizontal|center_vertical"
+            android:text=" "
+            android:textColor="@color/LightBlue"
+            android:textSize="26sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/submenuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_rectangle_frameline_content"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subMenuTitle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/backgroundLayout"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/menu_bg"
+        android:gravity="bottom|start"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toEndOf="@+id/main_menu_layout"
+        app:layout_constraintStart_toStartOf="@+id/main_menu_layout" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main_menu_layout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/MAINMENU2_MAIN_MENU_LAYOUT_HEIGHT"
+        android:layout_marginEnd="64dp"
+        android:layout_marginStart="64dp"
+        android:baselineAligned="false"
+        android:gravity="top|center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/selectedLayout"
+            android:layout_width="@dimen/MAINMENU2_LAYOUT_WIDTH"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <!-- Installation -->
+
+            <ImageView
+                android:id="@+id/menu1Img"
+                android:layout_width="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_height="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/STR_TODO"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/installation_menu2_nfocus"
+                tools:ignore="InvalidId" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/MAINMENU2_LAYOUT_WIDTH"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <!-- Channel -->
+
+            <ImageView
+                android:id="@+id/menu2Img"
+                android:layout_width="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_height="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/STR_TODO"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/channel_menu2_nfocus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/MAINMENU2_LAYOUT_WIDTH"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <!-- Setting -->
+
+            <ImageView
+                android:id="@+id/menu3Img"
+                android:layout_width="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_height="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/STR_TODO"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/settings_menu2_nfocus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/MAINMENU2_LAYOUT_WIDTH"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <!-- Tools -->
+
+            <ImageView
+                android:id="@+id/menu4Img"
+                android:layout_width="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_height="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/STR_TODO"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/tools_menu2_nfocus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/MAINMENU2_LAYOUT_WIDTH"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+
+            <ImageView
+                android:id="@+id/menu5Img"
+                android:layout_width="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_height="@dimen/MAINMENU2_MENU_ICON_SIZE"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/STR_TODO"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/hdd_menu2_nfocus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.ReceiverInformationActivity">
+
+    <!--
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/STR_TODO"
+        android:src="@color/colorBlue"
+        app:layout_constraintBottom_toTopOf="@+id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idReceiverInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/STR_RECEIVER_INFORMATION_TITLE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/title_limit"
+        app:layout_constraintStart_toStartOf="@+id/receiverInfo_v_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+    -->
+
+    <include
+        android:id="@+id/receiver_Info_Layout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/receiverInfo_v_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/receiverInfo_v_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxLeft_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxRight_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_END" />
+
+    <TextView
+        android:id="@+id/idStbModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/STR_STB_MODEL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toStartOf="@+id/receiverInfo_v_right"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/idClientID"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/STR_CLIENT_ID"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/TEXT_SIZE"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/idStbModel"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/idStbModel" />-->
+
+    <TextView
+        android:id="@+id/idSwVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_SW_VERSION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idStbModel"
+        app:layout_constraintTop_toBottomOf="@+id/idStbModel" />
+
+    <TextView
+        android:id="@+id/idSerViceVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_SERVICE_VERSION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idSwVer"
+        app:layout_constraintTop_toBottomOf="@+id/idSwVer" />
+
+
+
+    <TextView
+        android:id="@+id/idDatabaseVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_DATABASE_VERSION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idSerViceVersion"
+        app:layout_constraintTop_toBottomOf="@+id/idSerViceVersion" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/idHwVer"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/STR_HW_VERSION"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/TEXT_SIZE"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/idDatabaseVer"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/idDatabaseVer" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/idLoaderVer"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/STR_LOADER_VERSION"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/TEXT_SIZE"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/idHwVer"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/idHwVer" />-->
+
+    <TextView
+        android:id="@+id/idStbModelValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_STB_MODEL_VALUE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/idStbModel"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v2"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_CENTER"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v2"
+        app:layout_constraintTop_toTopOf="@+id/idStbModel" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/idClientIdVal"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="@string/STR_CLIENT_ID_VALUE"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/TEXT_SIZE"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/idClientID"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v2"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v2"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/idClientID" />-->
+
+    <TextView
+        android:id="@+id/idSwVerVal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_SW_VERSION_VALUE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/idSwVer"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v2"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v2"
+        app:layout_constraintTop_toTopOf="@+id/idSwVer" />
+
+
+    <TextView
+        android:id="@+id/idServiceVersionVal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/idSerViceVersion"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v2"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v2"
+        app:layout_constraintTop_toTopOf="@+id/idSerViceVersion" />
+
+
+    <TextView
+        android:id="@+id/idDatabaseVerValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_DATABASE_VERSION_VALUE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/idDatabaseVer"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v2"
+        app:layout_constraintStart_toStartOf="@+id/idSwVerVal"
+        app:layout_constraintTop_toTopOf="@+id/idDatabaseVer" />
+
+    <TextView
+        android:id="@+id/cpuTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_CPU_INFO"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/idDatabaseVer"
+        app:layout_constraintTop_toBottomOf="@+id/idDatabaseVer" />
+
+    <TextView
+        android:id="@+id/cpuinfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/cpuTXV"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v2"
+        app:layout_constraintTop_toTopOf="@+id/cpuTXV" />
+
+    <TextView
+        android:id="@+id/storageTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_STORAGE_INFO"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/cpuTXV"
+        app:layout_constraintTop_toBottomOf="@+id/cpuTXV" />
+
+    <TextView
+        android:id="@+id/storageInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/storageTXV"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v2"
+        app:layout_constraintTop_toTopOf="@+id/storageTXV" />
+
+    <TextView
+        android:id="@+id/memoryFreeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_MEMORY_FREE_INFO"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/storageTXV"
+        app:layout_constraintTop_toBottomOf="@+id/storageTXV" />
+
+    <TextView
+        android:id="@+id/memoryToatalTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_MEMORY_TOTAL_INFO"
+        app:layout_constraintStart_toStartOf="@+id/memoryFreeTXV"
+        app:layout_constraintTop_toBottomOf="@+id/memoryFreeTXV" />
+
+    <TextView
+        android:id="@+id/memoryInfoFreeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/memoryFreeTXV"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v2"
+        app:layout_constraintTop_toTopOf="@+id/memoryFreeTXV" />
+
+    <TextView
+        android:id="@+id/memoryInfoTotalTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/memoryToatalTXV"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v2"
+        app:layout_constraintTop_toTopOf="@+id/memoryToatalTXV" />
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/idHwVerValue"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="@string/STR_HW_VERSION_VALUE"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/TEXT_SIZE"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/idHwVer"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v2"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/idDatabaseVerValue"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/idHwVer" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/idLoaderVersionValue"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="@string/STR_LOADER_VERSION_VALUE"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/TEXT_SIZE"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/idLoaderVer"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v2"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/idHwVerValue"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/idLoaderVer" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

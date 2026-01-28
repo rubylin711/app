@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#34363c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tvReminderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="77dp"
+                android:text="@string/reminder_floating_title"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:id="@+id/llReminderChannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvReminderTitle"
+                android:layout_alignLeft="@id/tvReminderTitle"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvReminderChannelNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="000"
+                    android:textColor="@color/colorGold2"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvReminderChannelName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center"
+                    android:text="ch_name"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvReminderProgramName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="pg_name"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llReminderChannel"
+                android:layout_alignLeft="@id/llReminderChannel">
+                <TextView
+                    android:id="@+id/tvReminderConfirmMsg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text="@string/reminder_floating_start_in_n_sec_line1"
+                    android:textColor="#8da4b9"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tvReminderConfirmSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text="60"
+                    android:textColor="#8da4b9"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tvReminderConfirmMsg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text="@string/reminder_floating_start_in_n_sec_line2"
+                    android:textColor="#8da4b9"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnReminderWatch"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:layout_toLeftOf="@id/btnReminderCancel"
+            android:background="@drawable/button_item2"
+            android:text="@string/reminder_watch"
+            android:textAllCaps="false"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btnReminderCancel"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="77dp"
+            android:background="@drawable/button_item2"
+            android:text="@string/close"
+            android:textAllCaps="false"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16dp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

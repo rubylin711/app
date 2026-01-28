@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/SETRESERVEINFODIALOG_WIDTH"
+    android:layout_height="wrap_content"
+    android:background="@drawable/banner">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/bgIGV"-->
+    <!--android:layout_width="709dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:background="@drawable/banner"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/bufferTXV"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/rightGuideline"-->
+    <!--app:layout_constraintHorizontal_bias="1.0"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/leftGuideline"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/topGuideline"-->
+    <!--app:layout_constraintVertical_bias="1.0" />-->
+
+    <ImageView
+        android:id="@+id/titleLineIGV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_line"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/STR_TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTXV" />
+
+    <TextView
+        android:id="@+id/titleTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/STR_RESERVE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/curTimeTXV"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_CURTIMETXV_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_CURTIMETXV_SMALL_HEIGHT"
+        android:gravity="end"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/typeSPINNER"
+        app:layout_constraintTop_toBottomOf="@+id/titleLineIGV" />
+
+    <TextView
+        android:id="@+id/eventNameTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorWhite"
+        android:singleLine="true"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/curTimeTXV"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/curTimeTXV" />
+
+    <TextView
+        android:id="@+id/messageTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:gravity="center_horizontal"
+        android:text="@string/STR_DO_YOU_WANT_TO_RESERVE_THIS"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/eventNameTXV"
+        app:layout_constraintStart_toStartOf="@+id/eventNameTXV"
+        app:layout_constraintTop_toBottomOf="@+id/eventNameTXV" />
+
+    <TextView
+        android:id="@+id/typeDateTXV"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_TXV_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:layout_gravity="start"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_TIMER_TYPE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/messageTXV" />
+
+    <TextView
+        android:id="@+id/cycleTXV"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_TXV_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:layout_gravity="start"
+        android:text="@string/STR_TIMER_CYCLE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/typeDateTXV"
+        app:layout_constraintTop_toBottomOf="@+id/typeDateTXV" />
+
+    <TextView
+        android:id="@+id/startTimeTXV"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_TXV_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:layout_gravity="start"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/cycleTXV"
+        app:layout_constraintTop_toBottomOf="@+id/cycleTXV" />
+
+    <TextView
+        android:id="@+id/durationTXV"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_TXV_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:layout_gravity="start"
+        android:text="@string/STR_TIMER_DURATION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/startTimeTXV"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeTXV" />
+
+    <Spinner
+        android:id="@+id/typeSPINNER"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_SPINNER_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/typeDateTXV" />
+
+    <Spinner
+        android:id="@+id/cycleSPINNER"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_SPINNER_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintStart_toStartOf="@+id/typeSPINNER"
+        app:layout_constraintTop_toTopOf="@+id/cycleTXV" />
+
+    <!--Button
+        android:id="@+id/startTimeBTN"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_STARTTIME_DURATION_BTN_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:background="@drawable/item_selector"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/cycleSPINNER"
+        app:layout_constraintTop_toTopOf="@+id/startTimeTXV" /-->
+
+    <EditText
+        android:id="@+id/startTimeEDV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="time"
+        android:maxLength="5"
+        android:text="00:00"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/durationTXV"
+        app:layout_constraintStart_toStartOf="@+id/cycleSPINNER"
+        app:layout_constraintTop_toTopOf="@+id/startTimeTXV" />
+
+    <!--Button
+        android:id="@+id/durationBTN"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_STARTTIME_DURATION_BTN_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:background="@drawable/item_selector"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/startTimeBTN"
+        app:layout_constraintTop_toTopOf="@+id/durationTXV" /-->
+
+    <EditText
+        android:id="@+id/durationEDV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="time"
+        android:maxLength="5"
+        android:text="00:00"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/durationTXV"
+        app:layout_constraintStart_toStartOf="@+id/startTimeEDV"
+        app:layout_constraintTop_toTopOf="@+id/durationTXV" />
+
+    <Button
+        android:id="@+id/cancelBTN"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_OK_CANCEL_BTN_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_selector"
+        android:text="@string/STR_CANCEL"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/durationEDV" />
+
+    <Button
+        android:id="@+id/okBTN"
+        android:layout_width="@dimen/SETRESERVEINFODIALOG_OK_CANCEL_BTN_WIDTH"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_ITEM_SMALL_HEIGHT"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/item_selector"
+        android:text="@string/STR_OK"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/cancelBTN" />
+
+
+    <TextView
+        android:id="@+id/bufferTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/SETRESERVEINFODIALOG_BUFFERTXV_HEIGHT"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cancelBTN"
+        app:layout_constraintStart_toStartOf="@+id/okBTN"
+        app:layout_constraintTop_toBottomOf="@+id/okBTN" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

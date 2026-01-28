@@ -1,0 +1,10 @@
+include ':app'
+rootProject.name='HOMEPLUS_SETTINGS'
+
+
+include ':PlayerService', ':DataStructure'
+project(':PlayerService').projectDir         = file('../../PrimePlayer/PlayerService')
+project(':DataStructure').projectDir         = file('../../PrimePlayer/DataStructure')
+
+include ':PrimeDtvService'
+project(':PrimeDtvService').projectDir       = file('../../PrimePlayer/PrimeDtvService')

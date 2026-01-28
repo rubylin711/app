@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <!-- page 1 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lo_install_page_1"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/lo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="58dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/custom_font"
+            android:text=""
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/><!-- title -->
+        <View
+            android:id="@+id/lo_panel_1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:visibility="visible"
+            android:background="@color/install_panel_color_1"
+            app:layout_constraintBottom_toBottomOf="parent" /><!-- panel -->
+        <ImageView
+            android:id="@+id/lo_banner"
+            android:layout_width="@dimen/install_app_banner_width"
+            android:layout_height="@dimen/install_app_banner_height"
+            android:layout_marginStart="128dp"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" /><!-- poster -->
+        <TextView
+            android:id="@+id/lo_first_button"
+            android:layout_width="102dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="302dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/view_install_list_btn_bg"
+            android:nextFocusRight="@id/lo_screenshots_btn"
+            app:layout_constraintTop_toTopOf="@id/lo_panel_1"
+            app:layout_constraintBottom_toBottomOf="@id/lo_panel_1"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" /><!-- first button -->
+        <TextView
+            android:id="@+id/lo_open_btn"
+            android:layout_width="102dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:focusable="true"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/view_install_list_btn_bg"
+            android:nextFocusLeft="@id/lo_first_button"
+            android:nextFocusRight="@id/lo_screenshots_btn"
+            app:layout_constraintTop_toTopOf="@id/lo_panel_1"
+            app:layout_constraintBottom_toBottomOf="@id/lo_panel_1"
+            app:layout_constraintStart_toEndOf="@id/lo_first_button"
+            tools:ignore="HardcodedText" /><!-- open button -->
+        <TextView
+            android:id="@+id/lo_screenshots_btn"
+            android:layout_width="146dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/view_install_list_btn_bg"
+            app:layout_constraintTop_toTopOf="@id/lo_panel_1"
+            app:layout_constraintBottom_toBottomOf="@id/lo_panel_1"
+            app:layout_constraintStart_toEndOf="@id/lo_open_btn"
+            tools:ignore="HardcodedText" /><!-- screenshot button -->
+        <ProgressBar
+            android:id="@+id/lo_install_progress"
+            android:layout_width="300dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginStart="56dp"
+            android:max="100"
+            android:progress="0"
+            android:visibility="invisible"
+            style="?android:attr/progressBarStyleHorizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/><!-- progress -->
+        <TextView
+            android:id="@+id/lo_install_progress_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/lo_install_progress"
+            tools:ignore="HardcodedText" /><!-- progress state -->
+        <TextView
+            android:id="@+id/lo_install_progress_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@id/lo_install_progress"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/lo_install_progress"
+            tools:ignore="HardcodedText" /><!-- progress percent -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- page 2 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lo_install_page_2"
+        android:layout_width="match_parent"
+        android:layout_height="484dp"
+        android:visibility="gone"
+        android:background="@color/install_panel_color_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/lo_app_poster"
+            android:layout_width="@dimen/install_app_banner_width"
+            android:layout_height="@dimen/install_app_banner_height"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" /><!-- poster -->
+        <TextView
+            android:id="@+id/lo_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="302dp"
+            android:layout_marginTop="36dp"
+            android:gravity="start"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" /><!-- app name -->
+        <TextView
+            android:id="@+id/lo_app_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/lo_app_name"
+            app:layout_constraintStart_toStartOf="@id/lo_app_name"
+            tools:ignore="HardcodedText" /><!-- app description -->
+        <TextView
+            android:id="@+id/lo_app_fulltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:gravity="start"
+            android:textColor="@color/install_fulltext_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/lo_app_description"
+            app:layout_constraintStart_toStartOf="@id/lo_app_description"
+            tools:ignore="HardcodedText" /><!-- app fulltext -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- page 3 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lo_install_page_3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/install_app_screenshots_total_height"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- screenshots title -->
+        <TextView
+            android:id="@+id/lo_screenshots_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="42dp"
+            android:textSize="18sp"
+            android:gravity="start"
+            android:text="Screenshots"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+        <!-- screenshots view -->
+        <com.prime.dmg.launcher.Home.Recommend.Installer.ScreenshotsView
+            android:id="@+id/lo_screenshots_view"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            app:layout_constraintTop_toBottomOf="@id/lo_screenshots_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

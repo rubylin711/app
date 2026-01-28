@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/purchase_app_root_width"
+        android:layout_height="@dimen/purchase_app_root_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/black_panel"
+        tools:ignore="UselessParent">
+        <TextView
+            android:id="@+id/lo_purchase_app_plan_hint"
+            android:layout_width="@dimen/purchase_app_plan_hint_layout_width"
+            android:layout_height="@dimen/purchase_app_plan_hint_layout_height"
+            android:layout_marginTop="@dimen/purchase_app_plan_hint_margin"
+            android:layout_toEndOf="@+id/lo_purchase_app_banner"
+            android:layout_marginStart="@dimen/purchase_app_plan_hint_margin_30dp"
+            android:textSize="@dimen/purchase_app_15sp"
+            android:textColor="@color/white"
+            android:gravity="start|center_vertical"/>
+        <ImageView
+            android:id="@+id/lo_purchase_app_banner"
+            android:visibility="visible"
+            android:layout_width="@dimen/purchase_app_AppBanner_width"
+            android:layout_height="@dimen/purchase_app_AppBanner_height"
+            android:layout_marginTop="@dimen/purchase_app_AppBanner_margin_25dp"
+            android:layout_marginStart="@dimen/purchase_app_AppBanner_margin_30dp"
+            tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/lo_purchase_app_qrcode_view"
+            android:layout_width="@dimen/purchase_app_QrCodeView_160dp"
+            android:layout_height="@dimen/purchase_app_QrCodeView_160dp"
+            android:layout_marginTop="@dimen/purchase_app_AppBanner_margin_25dp"
+            android:layout_marginBottom="@dimen/purchase_app_AppBanner_margin_30dp"
+            android:layout_marginStart="@dimen/purchase_app_AppBanner_margin_30dp"
+            android:layout_below="@+id/lo_purchase_app_banner"
+            android:layout_alignParentBottom="true"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/lo_purchase_app_qrcode_hint"
+            android:layout_width="@dimen/purchase_app_plan_hint_layout_width"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/lo_purchase_app_qrcode_view"
+            android:layout_alignTop="@+id/lo_purchase_app_qrcode_view"
+            android:layout_alignBottom="@+id/lo_purchase_app_qrcode_view"
+            android:layout_marginStart="@dimen/purchase_app_AppBanner_margin_30dp"
+            android:textSize="@dimen/purchase_app_15sp"
+            android:textColor="@color/white"
+            android:gravity="start|center_vertical"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/purchase_app_5dp"
+            android:layout_marginBottom="@dimen/purchase_app_5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            tools:ignore="RelativeOverlap,UseCompoundDrawables">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/qr_code_dialog_hint_icon_size"
+                android:layout_height="@dimen/qr_code_dialog_hint_icon_size"
+                android:layout_marginEnd="@dimen/purchase_app_5dp"
+                android:src="@drawable/hint_back"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:text="@string/hint_rcu_cancel"
+                android:textSize="@dimen/hottest_video_item_14sp"
+                android:textColor="@color/darker_gray"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

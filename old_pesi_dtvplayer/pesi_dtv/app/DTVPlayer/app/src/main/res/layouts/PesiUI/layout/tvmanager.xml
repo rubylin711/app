@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/full_black_background"
+    tools:context="com.prime.dtvplayer.Activity.TVManagerActivity">
+
+    <include
+        android:id="@+id/tvmanagerTitleViewLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_title_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <include
+        android:id="@+id/tvmanagerHelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listviewbottomguideline"
+        app:layout_constraintVertical_bias="0.724" />
+    <!--
+    android:listSelector="@drawable/focus_list"
+    -->
+<!--
+    <GridView
+        android:id="@+id/tvlistLIV"
+        android:layout_width="0dp"
+        android:layout_height="139dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:listSelector="@drawable/focus_list"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintEnd_toStartOf="@+id/tvlistview_rightguideline"
+        app:layout_constraintStart_toStartOf="@id/tviconIGV"
+        app:layout_constraintTop_toTopOf="@+id/body_title_guideline" />
+
+    <GridView
+        android:id="@+id/favlistLIV"
+        android:layout_width="0dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="8dp"
+        android:listSelector="@drawable/focus_list"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintEnd_toStartOf="@+id/favlistview_rightguideline"
+        app:layout_constraintStart_toStartOf="@id/faviconIGV"
+        app:layout_constraintTop_toTopOf="@+id/body_title_guideline" />
+        -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/listviewbottomguideline"
+        app:layout_constraintEnd_toStartOf="@+id/tvlistview_rightguideline"
+        app:layout_constraintStart_toStartOf="@id/tviconIGV"
+        app:layout_constraintTop_toTopOf="@+id/body_title_guideline">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tvlistLIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:focusable="true"
+            android:descendantFocusability="afterDescendants"
+            app:layoutManager="LinearLayoutManager" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/listviewbottomguideline"
+        app:layout_constraintEnd_toStartOf="@+id/favlistview_rightguideline"
+        app:layout_constraintStart_toStartOf="@id/faviconIGV"
+        app:layout_constraintTop_toTopOf="@+id/body_title_guideline">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favlistLIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tvlistview_rightguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/favlistview_rightguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/listviewbottomguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/tvtitleTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_ALL_TV_CHANNELS"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/body_title_guideline"
+        app:layout_constraintStart_toEndOf="@+id/tviconIGV"
+        app:layout_constraintTop_toTopOf="@+id/guideline"/>
+
+    <TextView
+        android:id="@+id/favtitleTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_FAV1"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/body_title_guideline"
+        app:layout_constraintStart_toEndOf="@+id/faviconIGV"
+        app:layout_constraintTop_toTopOf="@+id/guideline"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tvlistview_leftguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tviconIGV_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.11" />
+
+    <ImageView
+        android:id="@+id/tviconIGV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/STR_ALL_TV_CHANNELS"
+        android:src="@drawable/tvicon"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/body_title_guideline"
+        app:layout_constraintStart_toStartOf="@+id/tvlistview_leftguideline"
+        app:layout_constraintEnd_toStartOf="@id/tviconIGV_right"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/faviconIGV_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.56" />
+
+    <ImageView
+        android:id="@+id/faviconIGV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/STR_FAV1"
+        android:src="@drawable/tvicon"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/body_title_guideline"
+        app:layout_constraintStart_toEndOf="@+id/tvlistview_rightguideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@id/faviconIGV_right"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/body_title_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_title_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

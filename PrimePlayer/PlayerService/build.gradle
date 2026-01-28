@@ -1,0 +1,133 @@
+plugins {
+    id 'com.android.library'
+    // 若有用 Kotlin 再加：id 'org.jetbrains.kotlin.android'
+}
+
+def PLAYERSERVICE_LIBRARY_VERSION_CODE = 63
+def PLAYERSERVICE_LIBRARY_VERSION_NAME = "1.0.63"
+def consumer = providers.gradleProperty("consumer.app").orElse("primeplayer").get()
+android {
+    namespace 'com.prime.dtv'
+    compileSdk 34
+
+    defaultConfig {
+//        applicationId "com.prime.dtv"
+        minSdk 21
+        targetSdk 34
+//        versionCode 1
+//        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        // Android Library 必須是整數，但它不會影響最終 APK
+        versionCode PLAYERSERVICE_LIBRARY_VERSION_CODE
+
+        // Android Library 必須是字串，但它不會影響最終 APK
+        versionName PLAYERSERVICE_LIBRARY_VERSION_NAME
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+            buildConfigField "String", "VERSION_NAME", "\"${PLAYERSERVICE_LIBRARY_VERSION_NAME}\""
+            buildConfigField "int", "VERSION_CODE", "${PLAYERSERVICE_LIBRARY_VERSION_CODE}"
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+            buildConfigField "String", "VERSION_NAME", "\"${PLAYERSERVICE_LIBRARY_VERSION_NAME}\""
+            buildConfigField "int", "VERSION_CODE", "${PLAYERSERVICE_LIBRARY_VERSION_CODE}"
+        }
+    }
+//    signingConfigs {
+//        release {
+//            storeFile file("../AOSP_public_wellknow_key.jks")
+//            storePassword 'pesi1234'
+//            keyAlias 'key0'
+//            keyPassword 'pesi1234'
+//        }
+//        debug {
+//            storeFile file("../AOSP_public_wellknow_key.jks")
+//            storePassword 'pesi1234'
+//            keyAlias 'key0'
+//            keyPassword 'pesi1234'
+//        }
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    
+//    sourceSets {
+//        main {
+//            // 確保 aidl 來源集已包含
+//            aidl.srcDirs = ['src/main/aidl']
+//        }
+//    }
+//    repositories {
+//        // 這行告訴 Gradle 去 'libs' 資料夾尋找檔案依賴
+//        flatDir {
+//            dirs 'libs'
+//        }
+//    }
+    buildFeatures {
+        buildConfig = true
+    }
+    // 自訂輸出 AAR 檔案的名稱
+    // 讓輸出的 AAR 檔案名稱包含版本號 (例如：adservice-1.0.0.aar)
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            def projectDir = project.rootDir.name
+            def versionName = project.properties['DATASTRUCTURE_LIBRARY_VERSION_NAME']
+
+            outputFileName = "${project.name}-${versionName}.aar"
+        }
+    }
+}
+/**
+ * framework.jar 路徑：用「相對本模組」定位，不用 flatDir。
+ * 這樣不會受 CNSLauncher rootDir 影響。
+ */
+def frameworkJar = new File(project.projectDir, "../libs/framework.jar").canonicalFile
+
+// 你的 AAR 路徑
+def adAar = files("$projectDir/../libs/ADManager-release.aar")
+dependencies {
+    implementation project(':DataStructure')
+    // 不用 flatDir，直接 files()
+    if (frameworkJar.exists()) {
+        compileOnly files(frameworkJar)
+    } else {
+        logger.warn("WARNING: framework.jar not found at ${frameworkJar}")
+    }
+    implementation files("$projectDir/../libs/IMiscService.jar")
+    implementation files("$projectDir/../libs/IMediaService.jar")
+    implementation files("$projectDir/../libs/PrimeAudioTrack.jar")
+    implementation files("$projectDir/../libs/PrimeSystemAPP.jar")
+    implementation files("$projectDir/../libs/IDtvService.jar")
+    if (consumer == "cnslauncher") {
+        // 只在 CNSLauncher 編譯時：不要打包 AD，僅供編譯
+        //compileOnly project(':ADManager')
+        compileOnly(adAar)
+
+    } else {
+        // 其他情況（例如 primeplayer）：一起打包
+        //implementation files(adAar)
+        //compileOnly(adAar)
+    }
+    
+    // 用明確座標，避免使用 libs.*（Version Catalog）造成脈絡取用失敗
+    implementation 'androidx.tvprovider:tvprovider:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'androidx.work:work-runtime:2.9.0'
+}

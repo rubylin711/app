@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prime.dtvplayer"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DTV_BROADCAST" />
+    <uses-permission android:name="android.permission.usb" />
+    <uses-permission android:name="android.permission.NETPROGRAM_BROADCAST" />
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-feature android:name="android.hardware.usb.accessory" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG " />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <uses-feature android:name="android.hardware.wifi" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SHUTDOWN"
+        tools:ignore="ProtectedPermissions" />
+<!--    <uses-permission android:name="android.permission.ADD_SYSTEM_SERVICE" />-->
+    <uses-permission
+        android:name="android.permission.FACTORY_TEST"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NOTIFICATIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.android.providers.tv.permission.ACCESS_ALL_EPG_DATA" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.DEVICE_POWER"
+        tools:ignore="ProtectedPermissions" />
+    <!--
+ Sync Time
+    <uses-permission android:name="android.permission.SET_TIME"/>
+    -->
+    <uses-feature
+        android:name="android.software.live_tv"
+        android:required="true" />
+
+    <application
+        android:name="com.mtest.activity.Global_Variables"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/cablevision"
+        android:banner="@drawable/cablevision_banner"
+        android:keepScreenOn="true"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:persistent="false"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
+        tools:ignore="HardcodedDebugMode"
+        android:theme="@style/Transparent">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
+        <provider
+            android:name=".Database.DTVContentProvider"
+            android:authorities="com.prime.dtvplayer.Database.DTVContentProvider"
+            android:exported="true" />
+        <provider
+            android:name=".Service.Database.DVBContentProvider"
+            android:authorities="com.prime.dtvplayer.Service.Database.DVBContentProvider"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.ViewActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.PESIHOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".Activity.PesiBroadcastReceiver"
+            android:directBootAware="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="pesi.HomeKeyDectect.broadcast.action.startDTVPlayer" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="pesi.broadcast.action.waitSetupComplete" />
+            </intent-filter>
+        </receiver>
+        <!--<activity android:name=".TestMiddleware.TestMidMain">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.PESIHOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        <!-- Mtest Test App Entry -->
+        <!--<activity
+            android:name="com.mtest.activity.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.PESIHOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        <!-- Loader DTV Test App Entry //LoaderDTV need open -->
+        <!--<activity android:name="com.loader.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.PESIHOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+
+        <activity android:name=".Activity.MainMenuActivity" />
+        <activity android:name=".Activity.MainMenu2Activity" />
+        <activity
+            android:name=".Activity.MainMenu3Activity"
+            android:theme="@style/Theme.AppCompat.Translucent">
+        </activity>
+        <activity android:name=".Activity.RecordListActivity" />
+        <activity android:name=".Activity.RecordGridActivity" />
+        <activity android:name=".Activity.RecordNavigatorActivity" android:theme="@style/ControlHighlight" />
+        <activity android:name=".Activity.OtaDownloadActivity" />
+        <activity android:name=".Activity.AntennaSetupActivity" />
+        <activity android:name=".Activity.ScanResultActivity" />
+        <activity android:name=".Activity.ChannelSearchActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.ChannelSearchISDBTActivity" />
+        <activity android:name=".Activity.ChannelSearchDVBTActivity" />
+        <activity android:name=".Activity.ChannelSearchDVBSActivity" />
+        <activity android:name=".Activity.ReceiverInformationActivity" />
+        <activity android:name=".Activity.SignalInformationActivity" />
+        <activity android:name=".Activity.SystemSettingsActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.TVManagerActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.LanguageSettingsActivity" />
+        <activity android:name=".Activity.ParentalActivity" />
+        <activity android:name=".Activity.ResetDefaultActivity" />
+        <activity android:name=".Activity.OutputSettingsActivity" />
+        <activity android:name=".Activity.EpgActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.TimerListActivity" />
+        <activity android:name=".Activity.TimerSettingActivity" />
+        <activity android:name=".Activity.DimensionEPG"
+            android:exported="true" />
+        <activity android:name=".GridViewActivity.GridTVManagerActivity" />
+        <activity android:name=".Activity.TimeAdjustActivity" />
+        <activity android:name=".Activity.FirstTimeInstallationActivity" />
+        <activity android:name=".Activity.CAMenuActivity" />
+        <activity android:name=".Activity.LoaderInfoActivity" />
+        <activity android:name=".Activity.CAInfoActivity" />
+        <activity android:name=".Activity.IRDInfoActivity" />
+        <activity android:name=".Activity.MailActivity" />
+        <activity android:name=".Activity.VMXOTAActivity" />
+        <activity android:name=".Activity.Storage_device_setup" />
+        <activity android:name=".Activity.RecordSettingsActivity" />
+        <activity android:name=".Activity.VoiceSearchActivity"
+            android:theme="@style/Theme.Leanback.PesiVoiceSearch"/>
+        <activity android:name=".Activity.TestDataBase" />
+
+<!--        <activity android:name=".TestMiddleware.TestMidActivity1" />-->
+<!--        <activity android:name=".TestMiddleware.TestGposActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestFavGroupActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestFavInfoActivity" /> &lt;!&ndash; <activity android:name=".TestMiddleware.TestAntActivity" /> &ndash;&gt;-->
+<!--        <activity android:name=".TestMiddleware.TestSatActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestTpActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestEPGEventActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestProgramActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestProgramManagerActivity" />-->
+<!--        <activity android:name=".TestMiddleware.OKListManagerActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestBookActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestEPGUiDisplayActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestBookManagerActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestUtcActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestAvControlActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>-->
+<!--        <activity android:name=".TestMiddleware.TestSubtitleActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestTTXActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestTunerActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestTunerDVBCActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestViewUiDisplayActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestDVBCScanActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestTunerISDBTActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestISDBTScanActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestRestToFactoryActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestPVRDualActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestPVRRecordActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestPVRPlayActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestPVRFileActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestPVRTimeShiftActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestAVBurnActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestPipActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestTmctlActivity" />-->
+<!--        <activity android:name=".TestMiddleware.TestCommonActivity" />-->
+
+        <activity
+            android:name="com.loader.LoaderStatus"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.loader.LoaderISDBTParameters"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.loader.LoaderCableParameters"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.loader.LoaderTerrestrialParameters"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.loader.SecureSetting"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.loader.OTAUpgrade"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.loader.USBUpgrade"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+
+        <service
+            android:name="com.dolphin.dtv.CallbackService"
+            android:enabled="true"
+            android:exported="false" /> <!-- Tv Input Service -->
+        <activity android:name="com.TvInput.TvInputActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.TvInput.ScanActivity" />
+
+        <service
+            android:name="com.TvInput.PesiTvInputService"
+            android:label="Prime TV"
+            android:permission="android.permission.BIND_TV_INPUT">
+            <intent-filter>
+                <action android:name="android.media.tv.TvInputService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.media.tv.input"
+                android:resource="@xml/tv_input_source" />
+        </service>
+        <service
+            android:name="com.TvInput.EpgSyncService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name="com.mtest.activity.NTSCPAL_INFOActivity"
+            android:theme="@style/Theme.Holo.Light.NoActionBar.Fullscreen.Translucent" />
+        <activity
+            android:name="com.mtest.activity.Ethernet_Activity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.WiFi_Activity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.Power_SavingActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.BlueTooth_Activity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.HiddenActivity"
+            android:theme="@style/Theme.Holo.Light.Dialog.NoActionBar.NoBackground" />
+        <activity
+            android:name="com.mtest.activity.HiddenInputActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.SevenSegmentActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.SmartcardActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.HDDTestActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.LnbOnOffActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.DiseqC_1X_20"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.LedOnOffActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.Ant_5vActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.USB_Activity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.SD_Card_Activity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+        <activity
+            android:name="com.mtest.activity.BuzzerOnOffActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.MicrophoneActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.QEForHWActivity"
+            android:theme="@style/Theme.Holo.Light.NoActionBar.Fullscreen.Translucent" />
+        <activity
+            android:name="com.mtest.activity.QEActivity"
+            android:theme="@style/Theme.Holo.Light.NoActionBar.Fullscreen.Translucent" />
+        <activity
+            android:name="com.mtest.activity.ConnectPcToolActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.HDCP1xActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="com.mtest.activity.HDCP2xActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+
+        <service
+            android:name=".TestMiddleware.TestPipChannelChangeService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

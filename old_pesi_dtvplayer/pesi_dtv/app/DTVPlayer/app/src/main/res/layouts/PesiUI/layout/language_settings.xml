@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:layout_margin="0dp"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.LanguageSettingsActivity">
+
+    <include
+        android:id="@+id/langTitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/langHelpLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/help" />
+
+    <!--<TextView
+        android:id="@+id/menuLang"
+        android:text="@string/STR_MENU_LANGUAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toStartOf="@+id/screen_v_right"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/screen_v_left"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="0.1" />-->
+
+    <TextView
+        android:id="@+id/osd_Lang"
+        android:text="@string/STR_OSD_LANGUAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP" />
+
+    <TextView
+        android:id="@+id/firstLang"
+        android:text="@string/STR_FIRST_LANGUAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/osd_Lang"
+        app:layout_constraintTop_toBottomOf="@+id/osd_Lang" />
+
+    <TextView
+        android:id="@+id/secondLang"
+        android:text="@string/STR_SECOND_LANGUAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/firstLang"
+        app:layout_constraintTop_toBottomOf="@+id/firstLang" />
+
+    <TextView
+        android:id="@+id/subtitleDisplay"
+        android:text="@string/STR_SUBTITLE_DISPLAY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/secondLang"
+        app:layout_constraintTop_toBottomOf="@+id/secondLang" />
+
+    <TextView
+        android:id="@+id/subtitleLang"
+        android:text="@string/STR_SUBTITLE_LANGUAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/subtitleDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleDisplay" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxLeft_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxRight_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_END" />
+
+    <Spinner
+        android:id="@+id/menuLangOpt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:entries="@array/STR_MENU_LANGUAGE_OPTION"
+        app:layout_constraintBottom_toBottomOf="@+id/osd_Lang"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/osd_Lang" />
+
+    <Spinner
+        android:id="@+id/firstLangOpt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_FIRST_LANGUAGE_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/firstLang"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/firstLang" />
+
+    <Spinner
+        android:id="@+id/secondLangOpt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_SECOND_LANGUAGE_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/secondLang"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/secondLang" />
+
+    <Spinner
+        android:id="@+id/subtitleDisplayOpt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_SUBTITLE_DISPLAY_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/subtitleDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/subtitleDisplay" />
+
+    <Spinner
+        android:id="@+id/subtitleLangOpt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_SUBTITLE_LANGUAGE_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/subtitleLang"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/subtitleLang" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_v_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_v_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

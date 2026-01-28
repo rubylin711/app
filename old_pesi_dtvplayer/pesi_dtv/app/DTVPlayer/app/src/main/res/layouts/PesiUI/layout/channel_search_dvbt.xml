@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.ChannelSearchDVBTActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomHelpWoColorIconGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_WO_COLOR_ICON_EDGE"/>
+
+    <include
+        android:id="@+id/TitleViewLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/HelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomGuideline" />
+
+    <include
+        android:id="@+id/HelpViewWoColorIconLayout"
+        layout="@layout/activity_help_wo_color_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomHelpWoColorIconGuideline" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomGuideline"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toTopOf="@+id/topGuideline"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/centerVGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/centerHGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/barStartGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/barEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftContentEndGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45" />
+
+            <TextView
+                android:id="@+id/channelTXV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintEnd_toStartOf="@+id/channelSPINNER"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/freqTXV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintEnd_toStartOf="@+id/freqValueTXV"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/channelTXV" />
+
+            <TextView
+                android:id="@+id/scanModeTXV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/STR_SCAN_MODE"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintEnd_toStartOf="@+id/ScanModeSPINNER"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/freqTXV" />
+
+            <Spinner
+                android:id="@+id/channelSPINNER"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:dropDownSelector="@drawable/drop_down_selector"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:layout_constraintBottom_toBottomOf="@+id/channelTXV"
+                app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/channelTXV"
+                app:layout_constraintTop_toTopOf="@+id/channelTXV" />
+
+            <Spinner
+                android:id="@+id/ScanModeSPINNER"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:dropDownSelector="@drawable/drop_down_selector"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:layout_constraintBottom_toBottomOf="@+id/scanModeTXV"
+                app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/scanModeTXV"
+                app:layout_constraintTop_toTopOf="@+id/scanModeTXV" />
+
+            <TextView
+                android:id="@+id/freqValueTXV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintBottom_toBottomOf="@+id/freqTXV"
+                app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/freqTXV"
+                app:layout_constraintTop_toTopOf="@+id/freqTXV" />
+
+            <TextView
+                android:id="@+id/channelTypeTXV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/STR_CHANNEL_TYPE"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintEnd_toStartOf="@+id/channelTypeSPINNER"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scanModeTXV" />
+
+            <Spinner
+                android:id="@+id/channelTypeSPINNER"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:dropDownSelector="@drawable/drop_down_selector"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:layout_constraintBottom_toBottomOf="@+id/channelTypeTXV"
+                app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/channelTypeTXV"
+                app:layout_constraintTop_toTopOf="@+id/channelTypeTXV" />
+
+            <TextView
+                android:id="@+id/antenna5VTXV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/STR_ANTENNA_5V"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintEnd_toStartOf="@+id/antenna5VSPINNER"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/channelTypeTXV" />
+
+            <Spinner
+                android:id="@+id/antenna5VSPINNER"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:dropDownSelector="@drawable/drop_down_selector"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:layout_constraintBottom_toBottomOf="@+id/antenna5VTXV"
+                app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/antenna5VTXV"
+                app:layout_constraintTop_toTopOf="@+id/antenna5VTXV" />
+
+            <TextView
+                android:id="@+id/strengthTXV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/STR_STRENGTH"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintBottom_toTopOf="@+id/qualityTXV"
+                app:layout_constraintEnd_toStartOf="@+id/barStartGuideline"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/qualityTXV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/STR_QUALITY"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintBottom_toTopOf="@+id/berTXV"
+                app:layout_constraintEnd_toStartOf="@+id/barStartGuideline"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/berTXV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/str_signal_ber"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/barStartGuideline"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/strengthPROGBAR"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/CHANNELSEARCH_PROGBAR_HEIGHT"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/strengthTXV"
+                app:layout_constraintEnd_toStartOf="@+id/barEndGuideline"
+                app:layout_constraintStart_toStartOf="@+id/barStartGuideline"
+                app:layout_constraintTop_toTopOf="@+id/strengthTXV" />
+
+            <ProgressBar
+                android:id="@+id/qualityPROGBAR"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/CHANNELSEARCH_PROGBAR_HEIGHT"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/qualityTXV"
+                app:layout_constraintEnd_toStartOf="@+id/barEndGuideline"
+                app:layout_constraintStart_toStartOf="@+id/barStartGuideline"
+                app:layout_constraintTop_toTopOf="@+id/qualityTXV" />
+
+            <TextView
+                android:id="@+id/strengthValueTXV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/barEndGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/searchBTN" />
+
+            <TextView
+                android:id="@+id/qualityValueTXV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/barEndGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/strengthValueTXV" />
+
+            <TextView
+                android:id="@+id/berValueTXV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/barEndGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/qualityValueTXV" />
+
+            <Button
+                android:id="@+id/searchBTN"
+                android:layout_width="@dimen/CHANNELSEARCH_SEARCHBTN_WIDTH"
+                android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/selectbox"
+                android:text="@string/STR_AUTO_SEARCH"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+                android:focusableInTouchMode="true"
+                app:layout_constraintBottom_toTopOf="@+id/strengthTXV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

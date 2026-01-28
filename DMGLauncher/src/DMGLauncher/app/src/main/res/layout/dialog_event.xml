@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_trans"
+    android:focusable="false">
+
+    <RelativeLayout android:id="@+id/evtDialogBG"
+        android:layout_width="320dp"
+        android:layout_height="225dp"
+        android:layout_centerInParent="true"
+        android:paddingBottom="24dp"
+        android:background="@drawable/black_panel"
+        android:focusable="false">
+
+        <TextView android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:text="Do you want to cancel this record\nN/A?"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:focusable="false"
+            tools:ignore="HardcodedText" />
+
+        <View android:id="@+id/Line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/Title"
+            android:background="@color/show_panel_line"
+            android:focusable="false"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/ContentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/Line"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="vertical"
+            android:focusable="false">
+
+            <TextView android:id="@+id/button_yes"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Yes，cancel record"
+                android:textSize="16sp"
+                android:textColor="@color/opacity_white"
+                android:gravity="center"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/button_no"
+                tools:ignore="HardcodedText" />
+
+            <TextView android:id="@+id/button_no"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="No"
+                android:textSize="16sp"
+                android:textColor="@color/opacity_white"
+                android:gravity="center"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_yes"
+                tools:ignore="HardcodedText" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/button_yes_focus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:focusable="false"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="@id/button_yes"
+                app:layout_constraintBottom_toBottomOf="@id/button_yes" >
+                <View android:background="@drawable/list_focus_gradient_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:focusable="false"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <View android:background="@drawable/list_focus_gradient_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:focusable="false"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/button_no_focus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:focusable="false"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="@id/button_no"
+                app:layout_constraintBottom_toBottomOf="@id/button_no" >
+                <View android:background="@drawable/list_focus_gradient_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:focusable="false"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <View android:background="@drawable/list_focus_gradient_red"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:focusable="false"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+}
+
+def APP_NAME = "HOMEPLUS_VBM"
+def MAJOR = "1"
+def MINOR = "0"
+def PATCH = "5"
+
+def getVersionName = { ->
+    return "v" + MAJOR + "." + MINOR + "." + PATCH;
+}
+
+if (file('signing.gradle').exists()) {
+    apply from: 'signing.gradle'
+}
+
+android {
+    namespace 'com.prime.homeplus.vbm'
+    compileSdk 34
+
+    signingConfigs {
+        config_HomeplusPlatform {
+            storeFile file(project.HomeplusPlatformKey.storeFilePath)
+            storePassword project.HomeplusPlatformKey.storePassword
+            keyAlias project.HomeplusPlatformKey.keyAlias
+            keyPassword project.HomeplusPlatformKey.keyPassword
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.prime.homeplus.vbm"
+        minSdk 28
+        targetSdk 34
+        versionCode 6
+        versionName getVersionName()
+        signingConfig signingConfigs.config_HomeplusPlatform
+        setProperty("archivesBaseName", APP_NAME + "-" + getVersionName())
+    }
+    buildFeatures {
+        aidl true
+        buildConfig true
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config_HomeplusPlatform
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config_HomeplusPlatform
+        }
+    }
+}
+
+dependencies {
+    implementation project(':DataStructure')
+    implementation project(':PlayerService')
+    // BOM 對齊: 統一所有 Kotlin 套件版本到 1.8.10
+    implementation platform("org.jetbrains.kotlin:kotlin-bom:1.8.10")
+
+    // 避免拉到 leanback-grid（那個需要 compileSdk 35 + AGP 8.6）
+    implementation "androidx.leanback:leanback:1.0.0"   // 2018 的 AndroidX 穩定版
+    implementation "androidx.appcompat:appcompat:1.6.1" // 適用 compileSdk 33
+    implementation "com.google.android.material:material:1.9.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+
+    // 釘住傳遞相依，避免被升到要 API 34 的版本
+    implementation "androidx.core:core:1.9.0"           // 1.9 需要 compileSdk 33；OK
+    implementation "androidx.activity:activity:1.7.2"   // 1.8.0 起才要求 compileSdk 34
+    implementation "androidx.transition:transition:1.4.1"
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.android.volley:volley:1.2.1'
+}

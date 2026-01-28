@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="9dp"
+    android:background="@drawable/focus_list"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:paddingTop="4dp">
+
+
+    <TextView
+        android:id="@+id/rec_name"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:gravity="center"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/STR_TODO"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/rec_img"
+        app:layout_constraintStart_toStartOf="@+id/rec_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"/>
+
+    <ImageView
+        android:id="@+id/rec_img"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:background="@color/colorGray"
+        android:contentDescription="@string/STR_TODO"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rec_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

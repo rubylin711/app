@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">HomePlus MemberCenter</string>
+    <string name="membercenter">Member Center</string>
+    <string name="memberinfo">Member Information</string>
+    <string name="memberinfo_subtitle">Check your member information</string>
+    <string name="memberinfo_householdid">Household ID</string>
+    <string name="memberinfo_subscriberid">Subscriber ID</string>
+    <string name="memberinfo_stbid">STB ID</string>
+    <string name="memberinfo_scid">Smart Card ID</string>
+    <string name="channel_list">Channel list</string>
+    <string name="subscription">Subscription</string>
+    <string name="subscription_subtitle">Pay online and check your billing history</string>
+    <string name="subscription_onlinepayment">Online Payment</string>
+    <string name="subscription_billinghistory">Billing History</string>
+    <string name="subscription_allchannelinfo">All channel\nInformation</string>
+    <string name="subscription_onlinepayment_subtitle">Multi-select your items and pay</string>
+    <string name="subscription_onlinepayment_item">Item</string>
+    <string name="subscription_onlinepayment_serviceperiod">Service period</string>
+    <string name="subscription_onlinepayment_price">Price</string>
+    <string name="subscription_onlinepayment_checkall">Checked/All</string>
+    <string name="subscription_onlinepayment_contract">Contract</string>
+    <string name="subscription_onlinepayment_selectall">Select All</string>
+    <string name="subscription_onlinepayment_deselectall">Deselect All</string>
+    <string name="subscription_onlinepayment_pay">Pay</string>
+    <string name="subscription_billinghistory_subtitle">Check your billing history</string>
+    <string name="subscription_billinghistory_period">Period</string>
+    <string name="subscription_billinghistory_paymentdate">Payment Date</string>
+    <string name="subscription_billinghistory_unpaid_amount">Unpaid Amount</string>
+    <string name="subscription_allchannelinfo_subtitle">All channel information</string>
+    <string name="subscription_allchannelinfo_back">press Back to back</string>
+    <string name="vodpoint">VOD point</string>
+    <string name="vodpoint_subtitle">Check your VOD point information</string>
+    <string name="vodpoint_point">VOD point</string>
+    <string name="vodpoint_used">VOD point usage</string>
+    <string name="vodpoint_available">Available VOD point</string>
+    <string name="vodpoint_querytime">VOD Query time</string>
+    <string name="vodpoint_duedate">VOD point due</string>
+    <string name="vodpoint_voddiscount">VOD discount</string>
+    <string name="mail">Mail Inbox</string>
+    <string name="new_mail">NEW</string>
+    <string name="mail_unread">Unread:</string>
+    <string name="mail_limit">Max: </string>
+    <string name="mail_id">ID</string>
+    <string name="mail_title">Title</string>
+    <string name="mail_type">Type</string>
+    <string name="mail_date">Date</string>
+    <string name="mail_nolist">NO List</string>
+    <string name="mail_delete">Delete</string>
+    <string name="mail_delread">Delete read mail</string>
+    <string name="mail_markread">Mark all as read</string>
+    <string name="mail_read">Read</string>
+    <string name="question">Q&amp;A</string>
+    <string name="question_subtitle">Check Tutorial and Q&amp;A</string>
+    <string name="question_tutorial">Tutorial</string>
+    <string name="question_qa">Q&amp;A</string>
+
+    <string name="tutorial_skip">Skip</string>
+    <string name="tutorial_confirm">Confirm</string>
+    <string name="tutorial_next">Next</string>
+    <string name="tutorial_previous_next">Previous/Next</string>
+    <string name="tutorial_previous">Previous</string>
+    <string name="tutorial_dont_show_again">Don\'t Show Again</string>
+    <string name="tutorial_learn_more">Learn More</string>
+    <string name="tutorial_cancel">Cancel</string>
+    <string name="tutorial_popup_1">Confirmation</string>
+    <string name="tutorial_popup_2">Do you want to remind this tutorial again?</string>
+    <string name="tutorial_popup_3">The tutorial will be displayed every booting time</string>
+    <string name="tutorial_title1">Welcome to use Android STB</string>
+    <string name="tutorial_title2">Home</string>
+    <string name="tutorial_title3">Explore channels</string>
+    <string name="tutorial_title4">Enjoy contents</string>
+    <string name="tutorial_title5">OTT</string>
+    <string name="tutorial_description1">Start the new experience</string>
+    <string name="tutorial_description2">Home is your guide to entertainment, from here\n
+        you can explore what to watch by browsing entertainments apps to live TV</string>
+    <string name="tutorial_description3">Guide yourself by checking program information while watching easily\n
+        and use record and timeshift function for a better experience</string>
+    <string name="tutorial_description4">Watch various VOD and using your bbtv coins,\n
+        One click check to current status in the member center</string>
+    <string name="tutorial_description5">You can use various video and\n
+        music service on this STB</string>
+    <string name="tvmail_cancel">Close</string>
+    <string name="tvmail_open">Go</string>
+    <string name="tvmail_OK">確認</string>
+    <string name="tvmail_close">關閉</string>
+    <string name="settings_tvmail_setting">TvMail設定</string>
+    <string name="settings_tvmail_subtitle">設定Tv Mail伺服器地址</string>
+    <string name="settings_tvmail_server">伺服器地址</string>
+    <string name="settings_tvmail_heartbeat">心跳(分)</string>
+    <string name="settings_default">預設值</string>
+    <string name="settings_save">儲存</string>
+    <string name="settings_cancel">取消</string>
+
+    <string name="msg_ok">OK</string>
+    <string name="msg_cancel">Cancel</string>
+    <string name="msg_privacy">隱私權與個資蒐集</string>
+    <string name="msg_service">服務條款</string>
+    <string name="msg_important">Important</string>
+    <string name="msg_medium">Medium</string>
+    <string name="msg_normal">Normal</string>
+    <string name="msg_important_notice">Important Notice</string>
+    <string name="msg_notice">Notice</string>
+    <string name="msg_up">Up</string>
+    <string name="msg_down">Down</string>
+    <string name="msg_select">Select</string>
+
+</resources>

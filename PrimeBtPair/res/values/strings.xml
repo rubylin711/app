@@ -1,0 +1,48 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Prime BT AutoPair</string>
+    <!-- Preference which manages pairing new accessories. [CHAR LIMIT=50] -->
+    <string name="accessories_add">Add accessory</string>
+    <!-- Device Paring Status: Pairing. [CHAR LIMIT=50] -->
+    <string name="accessory_state_pairing">Pairing&#8230;</string>
+    <!-- Device Paring Status: Connecting. [CHAR LIMIT=50] -->
+    <string name="accessory_state_connecting">Connecting&#8230;</string>
+    <!-- Device Paring Status: Error. [CHAR LIMIT=50] -->
+    <string name="accessory_state_error">Couldn\'t pair</string>
+    <!-- Device Paring Status: Canceled. [CHAR LIMIT=50] -->
+    <string name="accessory_state_canceled">Canceled</string>
+    <!-- Device Paring Status: Pairing Complete. [CHAR LIMIT=50] -->
+    <string name="accessory_state_paired">Paired</string>
+    <!-- Preference which manages a single Paired Bluetooth accessory. [CHAR LIMIT=50] -->
+    <string name="accessory_options">Accessory</string>
+    <!-- Preference for unpairing a Bluetooth accessory[CHAR LIMIT=50] -->
+    <string name="accessory_unpair">Unpair</string>
+    <!-- Preference for displaying battery level percentage. % symbol if used must be escaped as %% [CHAR LIMIT=150] -->
+    <string name="accessory_battery">Battery <xliff:g id="percentage">%1$d</xliff:g>%%</string>
+    <!-- Description shown while we are waiting for a device unpair operation to finish[CHAR LIMIT=50] -->
+    <string name="accessory_unpairing">Unpairing device&#8230;</string>
+    <!-- Description for Connected accessory[CHAR LIMIT=50] -->
+    <string name="accessory_connected">Connected</string>
+    <!-- Title of preference item for renaming the bluetooth accessory [CHAR LIMIT=50] -->
+    <string name="accessory_change_name">Change name</string>
+    <!-- Title of dialog for renaming the bluetooth accessory [CHAR LIMIT=50] -->
+    <string name="accessory_change_name_title">Enter a new name for this accessory</string>
+    <!-- Description text for new accessories pairing screen. [CHAR LIMIT=150] -->
+    <string name="accessories_add_title">Searching for accessories&#8230;</string>
+    <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
+    <string name="accessories_add_bluetooth_inst">Before pairing your Bluetooth devices, make sure they\'re in pairing mode</string>
+    <!-- Description text for autopairing when the user is in the pairing activity due to pressing the back HW button.  %1 will be replaced with the countdown value. [CHAR LIMIT=150] -->
+    <string name="accessories_autopair_msg">A device was found and will automatically pair in <xliff:g id="countdown">%1$s</xliff:g> seconds</string>
+    <!-- Error message displayed to the user indicating that a selected action is not supported on this device. [CHAR LIMIT=150] -->
+    <string name="error_action_not_supported">This action isn\'t supported</string>
+    <string name="message">Keep pressing \"BACK\" key and \"HOME\" key to Pair Remote Device</string>
+
+    <string name="before_pair_hint_1">請同時按住 \" 回上層 \" 與 \" 回電視 \" 進入配對模式</string>
+    <string name="before_pair_hint_2">當燈號閃爍，即可放開按鈕…</string>
+    <string name="pairing_please_wait">配對中，請稍後…</string>
+    <string name="rcu_pair_complete">遙控器配對完成！</string>
+
+    <string name="init_before_pair_hint_1" translatable="false">請同時按住 \" 回上層 \" 與 \" 回電視 \" 進入配對模式\nPlease Hold Buttons to Enter Pairing Mode</string>
+    <string name="init_before_pair_hint_2" translatable="false">當燈號閃爍，即可放開按鈕…\nWhen the Light Flashes, Please Release Buttons</string>
+    <string name="init_pairing_please_wait" translatable="false">配對中，請稍後…\nPairing…</string>
+    <string name="init_rcu_pair_complete" translatable="false">遙控器配對完成！\nPairing Success！</string>
+</resources>

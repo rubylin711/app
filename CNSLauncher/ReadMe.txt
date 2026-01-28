@@ -1,0 +1,2 @@
+使用install_all_cns.bat來安裝所有用到的apk
+CNSLauncher/PrimeDtvService/PrimeTvInputFramework/HomePlusMemberCenter/HomePlusTV/HomePlusVBM/HomePlusSettings

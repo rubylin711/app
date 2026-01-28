@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lo_zapping_channel_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/zapping_channel_item_height"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:background="@drawable/list_item_zapping_bg_selector">
+
+    <ImageView
+        android:id="@+id/lo_zapping_channel_item_icon"
+        android:layout_width="@dimen/zapping_channel_item_icon_width"
+        android:layout_height="@dimen/zapping_channel_item_icon_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/zapping_channel_item_icon_margin_x"
+        android:focusable="false"/>
+
+    <TextView
+        android:id="@+id/lo_zapping_channel_item_ch_num"
+        android:layout_width="@dimen/zapping_channel_item_ch_num_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/zapping_channel_item_ch_num_margin_x"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/zapping_channel_item_ch_num_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:focusable="false"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/lo_zapping_channel_item_ch_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/zapping_channel_item_ch_name_margin_x"
+        android:layout_marginEnd="@dimen/zapping_channel_item_ch_name_margin_x"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/zapping_channel_item_ch_name_text_size"
+        android:textColor="@color/white"
+        android:focusable="false"/>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="settings_title_height">41dp</dimen>
+    <dimen name="settings_title_height_focused">136dp</dimen>
+    <dimen name="settings_recycler_view_height">420dp</dimen>
+
+    <dimen name="settings_expanded_height">210dp</dimen>
+    <dimen name="settings_parental_control_unlock_expanded_height">290dp</dimen>
+    <dimen name="settings_info_expanded_height">293dp</dimen>
+</resources>

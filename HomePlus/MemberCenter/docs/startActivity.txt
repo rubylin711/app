@@ -1,0 +1,2 @@
+[MemberCenter]
+am start -n com.prime.homeplus.membercenter/.MemberActivity

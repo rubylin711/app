@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lo_mail_envelop_dialog_content_layer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/lo_mail_envelop_dialog_icon"
+        android:layout_width="51dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="@dimen/lo_mail_envelop_dialog_icon_margintop"
+        android:layout_marginEnd="@dimen/lo_mail_envelop_dialog_icon_marginend"
+        android:layout_alignParentEnd="true" />
+    <LinearLayout
+        android:id="@+id/lo_mail_envelop_dialog_button_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/lo_mail_envelop_dialog_icon"
+        android:layout_marginEnd="@dimen/lo_mail_envelop_dialog_button_content_marginend"
+        android:layout_alignParentEnd="true">
+    </LinearLayout>
+</RelativeLayout>

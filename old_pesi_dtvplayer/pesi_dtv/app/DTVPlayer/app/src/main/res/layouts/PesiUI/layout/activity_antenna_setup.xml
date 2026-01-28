@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.AntennaSetupActivity">
+
+    <include layout="@layout/activity_title"
+        android:id="@+id/title_layout"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <include layout="@layout/activity_help"
+        android:id="@+id/help_layout"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="@id/gl_help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/typeTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="16dp"
+        android:text="@string/STR_TYPE"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/text_color"
+        android:background="@drawable/focus_list"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintBottom_toTopOf="@+id/gl_help"
+        app:layout_constraintVertical_bias="0"/>
+
+    <Spinner
+        android:id="@+id/diseqc_type_spinner"
+        android:layout_width="@dimen/ANTENNASETUP_DISEQC_TYPE_SPINNER_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:entries="@array/STR_DISEQC"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="afterDescendants"
+        app:layout_constraintTop_toTopOf="@+id/typeTxv"
+        app:layout_constraintBottom_toBottomOf="@+id/typeTxv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"/>
+    <Spinner
+        android:id="@+id/page_1_to_8_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="8dp"
+        android:entries="@array/STR_PAGE"
+        android:background="@drawable/selectbox"
+        android:gravity="center"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="afterDescendants"
+        app:layout_constraintStart_toStartOf="@id/diseqc_type_spinner"
+        app:layout_constraintEnd_toEndOf="@id/diseqc_type_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/diseqc_type_spinner"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/diseqc_off_ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/gl_help"
+        app:layout_constraintEnd_toEndOf="@id/diseqc_type_spinner"
+        app:layout_constraintStart_toStartOf="@id/typeTxv"
+        app:layout_constraintTop_toBottomOf="@+id/page_1_to_8_spinner">
+
+        <ImageView
+            android:id="@+id/antImage_diseqc_off"
+            android:layout_width="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:layout_height="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:contentDescription="@string/STR_NULL"
+            android:src="@drawable/antenna"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <ImageView
+            android:id="@+id/antLine_diseqc_off_base"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintEnd_toStartOf="@id/gl_spinner_diseqc_off"
+            app:layout_constraintStart_toEndOf="@+id/antImage_diseqc_off"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/diseqc_off_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gl_spinner_diseqc_off"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_spinner_diseqc_off"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.70" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/diseqc12_ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/gl_help"
+        app:layout_constraintEnd_toEndOf="@id/diseqc_type_spinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/typeTxv"
+        app:layout_constraintTop_toBottomOf="@+id/page_1_to_8_spinner"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/antImage_diseqc1_2"
+            android:layout_width="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:layout_height="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:contentDescription="@string/STR_NULL"
+            android:src="@drawable/antenna"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/antLine_base_12"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/antImage_diseqc1_2"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_13"
+            app:layout_constraintStart_toEndOf="@+id/antImage_diseqc1_2"
+            app:layout_constraintTop_toTopOf="@+id/antImage_diseqc1_2" />
+
+        <ImageView
+            android:id="@+id/antLine_base_13"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@id/antLine_base_17"
+            app:layout_constraintStart_toStartOf="@id/gl_diseqc12_center"
+            app:layout_constraintTop_toTopOf="@id/antLine_base_14" />
+
+        <ImageView
+            android:id="@+id/antLine_base_13_1"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_dark"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/antLine_base_12"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_13"
+            app:layout_constraintTop_toTopOf="@id/antLine_base_14" />
+
+        <ImageView
+            android:id="@+id/antLine_base_13_2"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_dark"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/antLine_base_12"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_13"
+            app:layout_constraintTop_toTopOf="@id/antLine_base_15" />
+
+        <ImageView
+            android:id="@+id/antLine_base_13_3"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_dark"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/antLine_base_16"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_13"
+            app:layout_constraintTop_toTopOf="@id/antLine_base_12" />
+
+        <ImageView
+            android:id="@+id/antLine_base_13_4"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@android:color/holo_blue_dark"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/antLine_base_13"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_13"
+            app:layout_constraintTop_toTopOf="@id/antLine_base_12" />
+
+
+        <ImageView
+            android:id="@+id/antLine_base_14"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/pos1_press"
+            app:layout_constraintEnd_toStartOf="@id/pos1_press"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_13"
+            app:layout_constraintTop_toTopOf="@+id/pos1_press"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/diseqc_pos1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/STR_POSITION_01"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_14"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_14"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_14" />
+
+        <TextView
+            android:id="@+id/pos1_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toTopOf="@+id/pos2_press"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/gl_spinner_diseqc12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <ImageView
+            android:id="@+id/antLine_base_15"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/pos2_press"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_14"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_13"
+            app:layout_constraintTop_toTopOf="@+id/pos2_press" />
+
+        <TextView
+            android:id="@+id/diseqc_pos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/STR_POSITION_02"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_15"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_15"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_15" />
+
+        <TextView
+            android:id="@+id/pos2_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toTopOf="@+id/pos3_press"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/pos1_press"
+            app:layout_constraintTop_toBottomOf="@+id/pos1_press" />
+
+        <ImageView
+            android:id="@+id/antLine_base_16"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/pos3_press"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_14"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_13"
+            app:layout_constraintTop_toTopOf="@+id/pos3_press" />
+
+        <TextView
+            android:id="@+id/diseqc_pos3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/STR_POSITION_03"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_16"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_16"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_16" />
+
+        <TextView
+            android:id="@+id/pos3_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toTopOf="@+id/pos4_press"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/pos1_press"
+            app:layout_constraintTop_toBottomOf="@+id/pos2_press" />
+
+        <ImageView
+            android:id="@+id/antLine_base_17"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/pos4_press"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_14"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_13"
+            app:layout_constraintTop_toTopOf="@+id/pos4_press" />
+
+        <TextView
+            android:id="@+id/diseqc_pos4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/STR_POSITION_04"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_17"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_17"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_17" />
+
+        <TextView
+            android:id="@+id/pos4_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/pos1_press"
+            app:layout_constraintTop_toBottomOf="@+id/pos3_press" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_diseqc12_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40" />
+<!--
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_diseqc1.2_hor1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_diseqc1.2_hor2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_diseqc1.2_hor3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.56" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_diseqc1.2_hor4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80" />
+-->
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_spinner_diseqc12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.70" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/diseqc10_ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/gl_help"
+        app:layout_constraintEnd_toEndOf="@id/diseqc_type_spinner"
+        app:layout_constraintStart_toStartOf="@id/typeTxv"
+        app:layout_constraintTop_toBottomOf="@+id/page_1_to_8_spinner">
+        <!--app:layout_constraintTop_toBottomOf="@+id/page_1_to_8_spinner"-->
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_baseline1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_baseline2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/lnb1_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toTopOf="@+id/lnb2_press"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gl_spinner"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lnb2_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toTopOf="@+id/lnb3_press"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/lnb1_press"
+            app:layout_constraintTop_toBottomOf="@+id/lnb1_press" />
+
+        <TextView
+            android:id="@+id/lnb3_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toTopOf="@+id/lnb4_press"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/lnb1_press"
+            app:layout_constraintTop_toBottomOf="@+id/lnb2_press" />
+
+        <TextView
+            android:id="@+id/lnb4_press"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:background="@drawable/focus_list"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/STR_NONE"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/lnb1_press"
+            app:layout_constraintTop_toBottomOf="@+id/lnb3_press" />
+
+        <ImageView
+            android:id="@+id/antImage1"
+            android:layout_width="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:layout_height="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:contentDescription="@string/STR_NULL"
+            android:src="@drawable/antenna"
+            app:layout_constraintBottom_toTopOf="@+id/antImage2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/ant_val1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_1"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_1"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_1" />
+
+        <ImageView
+            android:id="@+id/antImage2"
+            android:layout_width="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:layout_height="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:contentDescription="@string/STR_NULL"
+            android:src="@drawable/antenna"
+            app:layout_constraintBottom_toTopOf="@+id/antImage3"
+            app:layout_constraintStart_toStartOf="@id/antImage1"
+            app:layout_constraintTop_toBottomOf="@+id/antImage1" />
+
+        <TextView
+            android:id="@+id/ant_val2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_2"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_2"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_2" />
+
+        <ImageView
+            android:id="@+id/antImage3"
+            android:layout_width="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:layout_height="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:contentDescription="@string/STR_NULL"
+            android:src="@drawable/antenna"
+            app:layout_constraintBottom_toTopOf="@+id/antImage4"
+            app:layout_constraintStart_toStartOf="@id/antImage1"
+            app:layout_constraintTop_toBottomOf="@+id/antImage2" />
+
+        <TextView
+            android:id="@+id/ant_val3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_3"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_3"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_3" />
+
+        <ImageView
+            android:id="@+id/antImage4"
+            android:layout_width="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:layout_height="@dimen/ANTENNASETUP_ANTIMAGE_SIZE"
+            android:contentDescription="@string/STR_NULL"
+            android:src="@drawable/antenna"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/antImage1"
+            app:layout_constraintTop_toBottomOf="@+id/antImage3" />
+
+        <TextView
+            android:id="@+id/ant_val4"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:paddingBottom="1dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_4"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_4"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_4" />
+
+        <ImageView
+            android:id="@+id/antLine_base_1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintEnd_toStartOf="@id/antLine_base_5"
+            app:layout_constraintStart_toEndOf="@+id/antImage1"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_5" />
+
+        <ImageView
+            android:id="@+id/antLine_base_2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_9"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_5"
+            app:layout_constraintStart_toEndOf="@+id/antImage2"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_9" />
+
+        <ImageView
+            android:id="@+id/antLine_base_3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_10"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_5"
+            app:layout_constraintStart_toEndOf="@+id/antImage3"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_10" />
+
+        <ImageView
+            android:id="@+id/antLine_base_4"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_5"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_5"
+            app:layout_constraintStart_toEndOf="@+id/antImage4" />
+
+        <ImageView
+            android:id="@+id/antLine_base_5"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_7"
+            app:layout_constraintStart_toEndOf="@+id/gl_baseline1"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_7" />
+
+        <ImageView
+            android:id="@+id/connect_1_1"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_6"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_1"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_5" />
+
+        <ImageView
+            android:id="@+id/connect_2_1"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_6"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_1"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_2" />
+
+        <ImageView
+            android:id="@+id/connect_3_1"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_3"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_1"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_6" />
+
+        <ImageView
+            android:id="@+id/connect_4_1"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_4"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_1"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_6" />
+
+        <ImageView
+            android:id="@+id/antLine_base_6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintEnd_toEndOf="@id/gl_baseline2"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_5"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_7"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_7" />
+
+        <ImageView
+            android:id="@+id/antLine_base_7"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_11"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_6"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_8" />
+
+        <ImageView
+            android:id="@+id/connect_1_2"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_6"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_6"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_8" />
+
+        <ImageView
+            android:id="@+id/connect_2_2"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_6"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_6"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_9" />
+
+        <ImageView
+            android:id="@+id/connect_3_3"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_10"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_6"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_6" />
+
+        <ImageView
+            android:id="@+id/connect_4_4"
+            android:layout_width="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/STR_NULL"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/antLine_base_11"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_6"
+            app:layout_constraintTop_toTopOf="@+id/antLine_base_6" />
+
+        <ImageView
+            android:id="@+id/antLine_base_8"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lnb1_press"
+            app:layout_constraintEnd_toStartOf="@+id/lnb1_press"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_7"
+            app:layout_constraintTop_toTopOf="@+id/lnb1_press" />
+
+        <TextView
+            android:id="@+id/lnb1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:text="@string/STR_LNB_1"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_8"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_8"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_8" />
+
+        <ImageView
+            android:id="@+id/antLine_base_9"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/lnb2_press"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_8"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_7"
+            app:layout_constraintTop_toTopOf="@+id/lnb2_press" />
+
+        <TextView
+            android:id="@+id/lnb2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:text="@string/STR_LNB_2"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_9"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_9"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_9" />
+
+        <ImageView
+            android:id="@+id/antLine_base_10"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/lnb3_press"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_8"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_7"
+            app:layout_constraintTop_toTopOf="@+id/lnb3_press" />
+
+        <TextView
+            android:id="@+id/lnb3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:text="@string/STR_LNB_3"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_10"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_10"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_10" />
+
+        <ImageView
+            android:id="@+id/antLine_base_11"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ANTENNASETUP_ANTLINE_LENGTH"
+            android:background="@android:color/white"
+            android:contentDescription="@string/STR_NULL"
+            app:layout_constraintBottom_toBottomOf="@+id/lnb4_press"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_8"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_7"
+            app:layout_constraintTop_toTopOf="@+id/lnb4_press" />
+
+        <TextView
+            android:id="@+id/lnb4"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:text="@string/STR_LNB_4"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toEndOf="@id/antLine_base_11"
+            app:layout_constraintStart_toStartOf="@id/antLine_base_11"
+            app:layout_constraintTop_toBottomOf="@+id/antLine_base_11" />
+
+        <TextView
+            android:id="@+id/antImage_center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:background="@android:color/holo_blue_dark"
+            android:contentDescription="@string/STR_NULL"
+            android:gravity="center"
+            android:text="DiSEqC\n1.0"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toStartOf="@id/antLine_base_7"
+            app:layout_constraintStart_toEndOf="@+id/antLine_base_5"
+            app:layout_constraintTop_toTopOf="@id/antLine_base_9"
+            app:layout_constraintBottom_toBottomOf="@id/antLine_base_10"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Guide Line -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_help"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

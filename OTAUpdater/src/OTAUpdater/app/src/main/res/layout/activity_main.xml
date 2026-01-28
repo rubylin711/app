@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/SUREDIALOG_WIDTH"
+        android:layout_height="@dimen/SUREDIALOG_HEIGHT"
+        android:text="Hello World!"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:text="Hello World!"
+            android:background="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+    <!--
+    android:background="@android:color/primary_text_dark"
+    android:background="@color/cardview_dark_background"
+    -->
+            <TextView
+                android:id="@+id/ota_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE"
+                app:layout_constraintVertical_bias="0.2"
+                app:layout_constraintStart_toStartOf="@id/progressBar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/firmware_version_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ota_update"
+                app:layout_constraintBottom_toBottomOf="@id/ota_update"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/title_line"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ota_update" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/line"
+                app:layout_constraintBottom_toBottomOf="@id/line"/>
+
+            <!-- status -->
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE"
+                app:layout_constraintStart_toStartOf="@id/progressBar"
+                app:layout_constraintTop_toBottomOf="@id/version2"
+                app:layout_constraintBottom_toTopOf="@id/progressBar"
+                tools:ignore="HardcodedText" />
+
+            <!-- status_value -->
+            <TextView
+                android:id="@+id/status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text="Start system update"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE_18sp"
+                app:layout_constraintHorizontal_bias="0.00"
+                app:layout_constraintStart_toEndOf="@id/status"
+                app:layout_constraintTop_toTopOf="@id/status"
+                app:layout_constraintBottom_toBottomOf="@id/status"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <!-- version 1 -->
+            <TextView
+                android:id="@+id/version1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text="Current version : "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE_16sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/progressBar"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                app:layout_constraintBottom_toTopOf="@id/version2"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/version1_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE_16sp"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.01"
+                app:layout_constraintStart_toEndOf="@id/version1"
+                app:layout_constraintTop_toTopOf="@id/version1"
+                app:layout_constraintBottom_toBottomOf="@id/version1"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <!-- version 2 -->
+            <TextView
+                android:id="@+id/version2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text="Update version : "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE_16sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/progressBar"
+                app:layout_constraintTop_toBottomOf="@id/version1"
+                app:layout_constraintBottom_toTopOf="@id/status"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/version2_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE_16sp"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.01"
+                app:layout_constraintStart_toEndOf="@id/version2"
+                app:layout_constraintTop_toTopOf="@id/version2"
+                app:layout_constraintBottom_toBottomOf="@id/version2"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/progress_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:singleLine="true"
+                android:text="0 %"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/SUREDIALOG_TEXTSIZE"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/progressBar"
+                app:layout_constraintBottom_toBottomOf="@id/progressBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/status" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/readme"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="12dp"-->
+<!--                android:gravity="start|center_vertical"-->
+<!--                android:text=""-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="14sp"-->
+<!--                tools:ignore="HardcodedText"-->
+<!--                tools:layout_editor_absoluteX="0dp"-->
+<!--                tools:layout_editor_absoluteY="5dp" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/readmeBackground"
+        android:layout_width="650dp"
+        android:layout_height="350dp"
+        android:text="Hello World!"
+        android:background="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:text="Hello World!"
+            android:visibility="visible"
+            android:background="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <TextView
+                android:id="@+id/readme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_margin="12dp"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

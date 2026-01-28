@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llEpgGenreList"
+    android:layout_width="match_parent"
+    android:layout_height="32dp">
+
+    <RadioButton
+        android:id="@+id/rbEpgGenreList"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_vertical"
+        android:buttonTint="@color/colorWhiteOpacity50"
+        android:button="@drawable/layer_epg_genre_radio_btn_unchecked"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/tvEpgGenreListName"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:singleLine="true"
+        android:text="Genre"
+        android:textColor="@color/colorWhiteOpacity70"
+        android:textSize="15sp" />
+</LinearLayout>

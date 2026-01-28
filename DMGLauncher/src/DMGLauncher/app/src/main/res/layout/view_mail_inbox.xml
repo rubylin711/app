@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/lo_mail_inbox_rltvl_layer"
+        android:background="@drawable/mail_list_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.prime.dmg.launcher.EPG.MiddleFocusRecyclerView
+            android:id="@+id/lo_mail_inbox_rcv_list"
+            android:background="@drawable/mail_list_panel"
+            android:layout_width="@dimen/lo_mail_inbox_rcv_list_width"
+            android:layout_height="match_parent"/>
+        <com.prime.dmg.launcher.Mail.MailDetailView
+            android:id="@+id/lo_mail_inbox_view_mail_detail"
+            android:background="@drawable/mail_list_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/lo_mail_inbox_rcv_list"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/lo_mail_inbox_textv_list_hint"
+        android:textSize="@dimen/lo_mail_inbox_textv_list_hint_textsize"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:focusable="false"
+        android:visibility="gone"
+        android:layout_width="@dimen/lo_mail_inbox_textv_list_hint_width"
+        android:layout_height="match_parent"
+        android:text="@string/mail_no_data"/>
+    <TextView
+        android:id="@+id/lo_mail_inbox_textv_detail_hint"
+        android:textSize="@dimen/lo_mail_inbox_textv_detail_hint_textsize"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:focusable="false"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_data"
+        android:layout_toRightOf="@id/lo_mail_inbox_textv_list_hint"/>
+</RelativeLayout>

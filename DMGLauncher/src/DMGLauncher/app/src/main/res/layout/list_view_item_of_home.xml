@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/home_list_rcv_block_out_width"
+    android:layout_height="@dimen/home_list_rcv_block_out_height">
+    <!--
+    android:layout_width="@dimen/home_list_rcv_block_out_width"
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/home_list_rcv_block_width"
+        android:layout_height="@dimen/home_list_rcv_block_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/lo_rcv_item_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/lo_rcv_item_label"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_list_label_height"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/home_list_label_size"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/frame_focus_rcv_shadow"
+            android:singleLine="true"
+            android:focusable="false"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <View
+            android:id="@+id/lo_rcv_block_focus"
+            android:background="@drawable/frame_focus_rcv_block"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

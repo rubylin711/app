@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TVMiddleware.iml" filepath="$PROJECT_DIR$/TVMiddleware.iml" />
+      <module fileurl="file://D:\Edwin_Weng\Project\Android\git_repo\pesi_dtv\middle\TVMiddleware\TVMiddleware.iml" filepath="D:\Edwin_Weng\Project\Android\git_repo\pesi_dtv\middle\TVMiddleware\TVMiddleware.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\Edwin_Weng\Project\Android\git_repo\pesi_dtv\middle\TVMiddleware\app\app.iml" filepath="D:\Edwin_Weng\Project\Android\git_repo\pesi_dtv\middle\TVMiddleware\app\app.iml" />
+    </modules>
+  </component>
+</project>

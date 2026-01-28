@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_conflict_dialog_layout"
+    android:layout_width="@dimen/BOOKCONFLICTDIALOG_WIDTH"
+    android:layout_height="match_parent"
+    android:background="@drawable/banner"
+    tools:context="com.prime.dtvplayer.View.BookConflictDialogView">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRecyclerViewEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:id="@+id/titleTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/STR_BOOK_CONFLICT_TITLE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/titleLineIGV"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/title_line"
+        android:contentDescription="@string/STR_TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTXV" />
+
+    <LinearLayout
+        android:id="@+id/bookconflictLIV_ll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineRecyclerViewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warningTXV">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/conflictItemsRecycleView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:descendantFocusability="afterDescendants"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/warningTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_THE_FOLLOW_CONFLICTS_WILL_BE_REMOVED"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleLineIGV" />
+
+    <Button
+        android:id="@+id/cancelBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_selector"
+        android:text="@string/STR_CANCEL"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/okBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenterV"
+        app:layout_constraintTop_toTopOf="@+id/guidelineRecyclerViewEnd" />
+
+    <Button
+        android:id="@+id/okBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_selector"
+        android:text="@string/STR_OK"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cancelBTN"
+        app:layout_constraintTop_toTopOf="@+id/guidelineRecyclerViewEnd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

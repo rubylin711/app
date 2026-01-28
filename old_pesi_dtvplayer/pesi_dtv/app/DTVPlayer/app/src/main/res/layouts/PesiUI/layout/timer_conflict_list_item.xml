@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+>
+
+    <TextView
+        android:id="@+id/bookingConflictIdTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical|center_horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/STR_TIMER_LIST_TITLE_NO"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/left_guideline1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/bookingConflictTypeTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:ellipsize="marquee"
+        android:gravity="start|center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/STR_TIMER_CYCLE"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/left_guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/bookingConflictChnameTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ellipsize="marquee"
+        android:gravity="start|center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+
+        android:text="@string/STR_TIMER_LIST_TITLE_CHANNEL_NAME_PROGRAM"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/left_guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/left_guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/bookingConflictDateTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical|center_horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/STR_TIMER_DATE"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/left_guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/bookingConflictTimeTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:layout_marginStart="4dp"
+        android:ellipsize="marquee"
+        android:gravity="start|center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/STR_TIMER_LIST_TITLE_TIME"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/left_guideline1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

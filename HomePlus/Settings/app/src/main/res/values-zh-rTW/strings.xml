@@ -1,0 +1,430 @@
+<resources>
+    <string name="app_name">HomePlus Settings</string>
+    <string name="app_settings">com.android.tv.settings/.MainSettings</string>
+    <string name="settings">設定</string>
+    <string name="settings_save">儲存</string>
+    <string name="settings_cancel">取消</string>
+    <string name="settings_confirm">確認</string>
+    <string name="settings_confirm2">確定</string>
+    <string name="settings_submit">提交</string>
+    <string name="settings_submit_cable_only">提交(單C)</string>
+    <string name="settings_submit_internet_only">提交(單I)</string>
+    <string name="settings_refresh">重新整理</string>
+
+    <!-- general -->
+    <string name="settings_on">開啟</string>
+    <string name="settings_off">關閉</string>
+
+    <!-- settings_android -->
+    <string name="settings_android">Android 設定</string>
+    <string name="settings_android_press">按遙控器 \u0020</string>
+    <string name="settings_android_enter">\u0020 鍵進入 \u0020</string>
+    <string name="settings_android_page">\u0020 頁面</string>
+
+    <!-- settings_personal -->
+    <string name="settings_personal">個人環境</string>
+    <string name="parental_control">親子鎖設定</string>
+    <string name="system_information">系統資訊</string>
+    <string name="unit_of_display_time">秒</string>
+    <string name="open">開啟</string>
+    <string name="close">關閉</string>
+    <string name="tv_channel">電視頻道</string>
+    <string name="setting_list">設定清單</string>
+    <string-array name="settings_personal">
+        <item>系統升級</item>
+        <item>@string/parental_control</item>
+        <item>個人認證碼</item>
+        <item>語言設定</item>
+        <item>螢幕和音效設定</item>
+        <item>字幕設定</item>
+        <item>頻道資訊提示時間</item>
+        <item>搜尋頻道</item>
+        <item>@string/system_information</item>
+        <item>STB資料回傳設定</item>
+        <item>遙控器設定</item>
+        <item>新手導覽功能設定</item>
+    </string-array>
+    <string-array name="settings_personal_subtitle">
+        <item>可以升級系統至最新版本</item>
+        <item>您可以進行親子鎖設定，預設值請洽客服人員</item>
+        <item>可以設定個人認證碼</item>
+        <item>可以設定螢幕顯示語言</item>
+        <item>可以設定影音相關預設值</item>
+        <item>設定偏好的字幕語言</item>
+        <item>可以設定訊息自動消失的時間</item>
+        <item>可以掃描頻道並更新頻道表</item>
+        <item>可以確認系統軟體及硬體基本資訊</item>
+        <item>讓使用者可以設定個人資料回傳機制</item>
+        <item>可以設定遙控器控制電視機</item>
+        <item>機上盒功能導覽教學服務，使用者可以設定顯示開啟或關閉</item>
+    </string-array>
+
+    <!-- settings_system -->
+    <string name="settings_system">系統設定</string>
+    <string name="settings_system_pin">請輸入8位數工程密碼</string>
+    <string name="settings_system_pindel">按左鍵清除</string>
+    <string name="settings_system_pinwrong">輸入錯誤的PIN碼，請重試</string>
+    <string-array name="settings_system">
+        <item>系統升級</item>
+        <item>掃描頻道</item>
+        <item>訊號檢查</item>
+        <item>網路設定</item>
+        <item>CA資訊</item>
+        <item>重新設定機上盒</item>
+        <item>安裝工單回報</item>
+        <item>行動開通QR</item>
+        <item>Debug設定</item>
+        <item>格式化硬碟</item>
+    </string-array>
+    <string-array name="settings_system_subtitle">
+        <item>可以升級系統至最新版本</item>
+        <item>可以掃描頻道並更新頻道表</item>
+        <item>可以檢測機上盒鎖定頻率的訊號品質</item>
+        <item>可以設定網路組態</item>
+        <item>可以設定影音相關預設值</item>
+        <item>可以重設至出廠設定值</item>
+        <item>機上盒必須透過工單簡碼回報至系統以完成開通程序</item>
+        <item>可以顯示QR Code以啟動行動開通</item>
+        <item>可以檢查CPU及記憶體使用狀態</item>
+        <item>格式化硬碟須先連接機上盒與硬碟</item>
+    </string-array>
+
+    <!-- settings_update -->
+    <string name="settings_update_info">升級資訊</string>
+    <string name="settings_update_sysversion">系統版本</string>
+    <string name="settings_update_updateversion">升級版本</string>
+    <string name="settings_update_upgrade">升級</string>
+    <string name="settings_update_newest_version">已經是最新版本</string>
+    <string name="upgrade_status_upgrade">升級</string>
+    <string name="upgrade_status_confirm">確認</string>
+    <string name="upgrade_status_cancel">取消</string>
+    <string name="upgrade_status_checking">檢測中...</string>
+    <string name="upgrade_status_current_version">目前版本：</string>
+    <string name="upgrade_status_is_upgrade">現在要升級到新版本嗎?</string>
+    <string name="upgrade_status_new_version_for_upgrade">有新版本提供升級</string>
+    <string name="upgrade_status_new_version">新版本:</string>
+    <string name="upgrade_status_downloading">下載中...</string>
+    <string name="upgrade_status_upgrade_immediately">新軟件版本發布了，您需要現在升級嗎？</string>
+    <string name="upgrade_status_upgrade_confirm">升級</string>
+    <string name="upgrade_status_download_finish">新版本下載完成</string>
+    <string name="upgrade_status_reboot">系統重新啟動</string>
+    <string name="upgrade_status_second">%d 秒</string>
+    <string name="upgrade_status_newest_version">已安裝最新版本</string>
+    <string name="upgrade_status_no_free_space">硬碟空間不足</string>
+    <string name="upgrade_status_download_failed">下載失敗</string>
+
+    <!-- settings_parental_control -->
+    <string name="settings_parental_control_pg18">限制級</string>
+    <string name="settings_parental_control_pg15">輔15級</string>
+    <string name="settings_parental_control_pg12">輔12級</string>
+    <string name="settings_parental_control_pg6">保護級</string>
+    <string name="settings_parental_control_pin">請輸入四位數字親子鎖密碼</string>
+    <string name="settings_purchase_pin">請輸入個人認證碼</string>
+    <string name="settings_purchase_pin_title">個人認證碼</string>
+    <string name="settings_purchase_pin_sub">請輸入四位數字個人認證碼</string>
+    <string name="settings_parental_rating">分級設定</string>
+    <string name="settings_parental_rating_sub">您可以進行分級設定</string>
+    <string name="settings_parental_channel">頻道鎖設定</string>
+    <string name="settings_parental_channel_sub">請設定受限制的頻道</string>
+    <string name="settings_parental_channel_selectch">選擇頻道</string>
+    <string name="settings_parental_channel_selectall">全選</string>
+    <string name="settings_parental_channel_delselectall">全不選</string>
+    <string name="settings_parental_worktime">工作時段設定</string>
+    <string name="settings_parental_worktime_sub">請設定受限制的機上盒工作時間</string>
+    <string name="settings_parental_worktime_item1">限制工作時間設定</string>
+    <string name="settings_parental_worktime_item2">開始時間</string>
+    <string name="settings_parental_worktime_item3">結束時間</string>
+    <string name="settings_parental_changepin">修改親子鎖密碼</string>
+    <string name="settings_parental_changepin_title">修改密碼</string>
+    <string name="settings_parental_changepin_sub">請輸入四位數字親子鎖密碼</string>
+    <string name="settings_parental_changepin_item1">輸入新密碼</string>
+    <string name="settings_parental_changepin_item2">確認新密碼</string>
+    <string name="settings_parental_adult_show">成人娛樂顯示設定</string>
+    <string name="settings_parental_adult_show_sub">您可以進行成人娛樂顯示設定</string>
+    <string name="settings_lang_setting_chinese">繁體中文</string>
+    <string name="settings_lang_setting_english">English (英文)</string>
+    <!-- settings_video_audio -->
+    <string name="settings_av_setting_auto">自動</string>
+    <string name="settings_av_setting_aspect">顯示比例</string>
+    <string name="settings_av_setting_resoultuion">顯示解析度</string>
+    <string name="settings_av_setting_audiolang">聲音語言</string>
+    <string name="settings_av_setting_btn">影像與音效設定</string>
+    <string name="settings_av_setting_cecon">開啟</string>
+    <string name="settings_av_setting_cecoff">關閉</string>
+    <string name="settings_av_setting_lang_chinese">中文</string>
+    <string name="settings_av_setting_lang_english">英文</string>
+    <string name="video_aduio_title">螢幕和音效設定</string>
+    <string name="video_aduio_subtitle">設定偏好的影音選項</string>
+    <string name="video_aduio_aspectratio">顯示比例</string>
+    <string name="video_aduio_resolution">顯示解析度</string>
+    <string name="video_aduio_audiolang">聲音語言</string>
+    <string name="video_aduio_hdmicec">HDMI CEC</string>
+    <string name="video_aduio_hdcp">HDCP</string>
+    <string name="video_audio_cecon">開啟</string>
+    <string name="video_audio_cecoff">關閉</string>
+    <string name="aspect_ratio_16_9_pb">16:9 PB</string>
+    <string name="aspect_ratio_16_9_ps">16:9 PS</string>
+    <string name="aspect_ratio_4_3_lb">4:3 LB</string>
+    <string name="aspect_ratio_4_3_pb">4:3 PS</string>
+    <string name="resolution_comfirm_title">畫面確認</string>
+    <string name="resolution_comfirm_message_1">設定之解析度已套用</string>
+    <string name="resolution_comfirm_message_2">%d 秒內會自動恢復設定之解析度\n請確認解析度正確並按下確認按鈕</string>
+
+
+
+    <string-array name="audio_language_list">
+        <item>@string/settings_av_setting_lang_chinese</item>
+        <item>@string/settings_av_setting_lang_english</item>
+    </string-array>
+    <string-array name="subtitle_language_list">
+        <item>@string/settings_av_setting_lang_chinese</item>
+        <item>@string/settings_av_setting_lang_english</item>
+    </string-array>
+    <string-array name="aspect_ratio_list">
+        <item>@string/settings_av_setting_auto</item>
+        <item>@string/aspect_ratio_16_9_pb</item>
+        <item>@string/aspect_ratio_16_9_ps</item>
+        <item>@string/aspect_ratio_4_3_lb</item>
+        <item>@string/aspect_ratio_4_3_pb</item>
+    </string-array>
+    <!-- settings_subtitle & dialog_subtitle -->
+    <!--<string name="settings_subtitle_info">按下字幕設定按鈕</string>-->
+    <string name="settings_subtitle_info1">按下\u0020 </string>
+    <string name="settings_subtitle_info2">\u0020 字幕設定 \u0020</string>
+    <string name="settings_subtitle_info3">\u0020 按鈕</string>
+    <string name="settings_subtitle_description">更改字幕的設定值</string>
+    <string name="settings_subtitle_title">字幕設定</string>
+    <string name="settings_subtitle_subtitle">可以設定偏好的字幕語言</string>
+    <string name="settings_subtitle_text">字幕</string>
+    <!-- settings_system_info -->
+    <string name="settings_system_info_stbsn">機上盒序號</string>
+    <string name="settings_system_info_hwversion">硬體版本</string>
+    <string name="settings_system_info_swversion">軟體版本</string>
+    <string name="settings_system_info_loaderversion">載入器版本</string>
+    <string name="settings_system_info_hddsn">硬碟序號</string>
+    <string name="settings_system_info_scnumber">智慧卡號碼</string>
+    <string name="settings_system_info_caversion">CA版本</string>
+    <string name="settings_system_info_sysversion">系統版本</string>
+    <string name="settings_system_info_pvr">錄影功能</string>
+    <string name="settings_system_info_devnotready">裝置未就緒</string>
+    <string name="settings_system_info_devready">裝置已就緒</string>
+    <string name="settings_system_info_wvid">WV ID</string>
+    <string name="settings_system_info_area_code">AreaCode</string>
+    <string name="settings_system_info_cm_mode">CmMode</string>
+    <string name="settings_system_info_zip_code">ZIPCode</string>
+    <!-- STBDataReturnView -->
+    <string name="settings_datareturn_enable">開啟</string>
+    <string name="settings_datareturn_disable">關閉</string>
+
+    <string-array name="ac_subtitle">
+        <item>areaCode</item>
+        <item>Bouquet ID</item>
+        <item>AC0</item>
+        <item>AC1</item>
+        <item>AC2</item>
+        <item>AC3</item>
+        <item>AC4</item>
+        <item>AC5</item>
+        <item>AC6</item>
+    </string-array>
+
+    <string-array name="display_time_list">
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="debug_level_list">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="update_success">升級成功</string>
+    <string name="update_fail">升級失敗</string>
+
+    <!-- settings_channel_scan -->
+    <string name="settings_channel_scan_network">全頻段掃描</string>
+    <string name="settings_channel_scan_manual">單一頻段掃描</string>
+
+    <!-- settings_signal -->
+    <string name="settings_signal_press">按下</string>
+    <string name="settings_signal_button">按鈕</string>
+    <string name="settings_signal_signaldiag">訊號檢測</string>
+    <string name="settings_signal_description">可立即取得訊號檢測結果</string>
+    <string name="signal_diagnose_title">訊號檢測</string>
+    <string name="advanced_signal_diagnose_title">進階訊號檢測</string>
+    <string name="signal_diagnose_subtitle">按下檢測鍵進行檢測</string>
+    <string name="current_status">目前狀態</string>
+    <string name="current_status_1">搜尋完成!</string>
+    <string name="freq">頻率(KHz)</string>
+    <string name="symbol_rate">符碼率(Ks/sec)</string>
+    <string name="qam">調變模式(QAM)</string>
+    <string name="ber_new">位元錯誤率(BER)</string>
+    <string name="snr">信噪比(SNR)</string>
+    <string name="strength">訊號強度</string>
+    <string name="progress_new">搜尋進度</string>
+    <string name="search_scan">搜尋</string>
+    <string name="search_close">關閉</string>
+    <string name="signal_diagnose_diagnose">訊號檢測</string>
+    <string name="advance">進階</string>
+    <string name="send_aerm_vbm">回報AERM/VBM</string>
+    <string name="title_netscan_0">搜尋頻道 > 單一頻段掃描</string>
+    <string name="title_netscan_1">搜尋頻道 > 全頻段掃描</string>
+    <string name="title_netscan_2">搜尋頻道</string>
+    <string name="tv">電視</string>
+    <string name="radio">音樂</string>
+
+    <!-- settings_network & dialog_network & dialog_wifi & dialog_notice -->
+    <string name="cable_network">有線網路</string>
+    <string name="wifi">無線網路</string>
+    <string name="ethernet_setup">有線網路設定</string>
+    <string name="ethernet_setup_subtitle">設定有線網路環境</string>
+    <string name="ethernet_setup_ipassign">IP取得方式</string>
+    <string name="local_ip">本機IP</string>
+    <string name="subnet_mask">子網路遮罩</string>
+    <string name="gateway">通訊閘道</string>
+    <string name="dns">DNS伺服器</string>
+    <string name="net_dhcp">DHCP</string>
+    <string name="net_static">靜態</string>
+    <string name="connect_without_plugin">欲連無線請先拔除有線網路</string>
+    <string name="wifi_settings">無線網路設定</string>
+    <string name="wifi_settings_subtitle">選擇機上盒要連接的無線網路</string>
+    <string name="wifi_password">無線網路密碼</string>
+    <string name="wifi_password_input">輸入無線網路密碼</string>
+    <string name="left_to_delete">按下左鍵可刪除</string>
+    <string name="connect">連線中</string>
+    <string name="connected">已連線</string>
+    <string name="confirm">確認</string>
+    <string name="save_success">儲存成功</string>
+
+    <!-- settings_ca & dialog_ca_password & dialog_ca_pair & dialog_ca_operator & dialog_ca_operator_info & dialog_ca_info & dialog_ca_update_info -->
+    <string name="settings_ca_changepin">智慧卡密碼修改</string>
+    <string name="settings_ca_pairing">機卡配對</string>
+    <string name="settings_ca_operatorinfo">營運商資訊</string>
+    <string name="settings_ca_cainfo">CA資訊</string>
+    <string name="settings_ca_upgradeinfo">智慧卡升級資訊</string>
+    <string name="settings_ca_pasword_subtitle">輸入智慧卡密碼進入修改</string>
+    <string name="settings_ca_pasword_enterpin">輸入原密碼</string>
+    <string name="settings_ca_pasword_newpin">輸入新密碼</string>
+    <string name="settings_ca_pasword_confirmpin">確認密碼</string>
+    <string name="settings_ca_pair_subtitle">目前機卡配對狀態</string>
+    <string name="settings_ca_pair_number">號碼</string>
+    <string name="settings_ca_pair_noinfo">無機卡配對訊息</string>
+    <string name="settings_ca_operator_id">系統業者代碼</string>
+    <string name="settings_ca_operator_name">系統業者名稱</string>
+    <string name="settings_ca_operator_noinfo">無營運商資訊</string>
+    <string name="settings_ca_operatorinfo_product">授權資訊</string>
+    <string name="settings_ca_operatorinfo_product_id">節目授權ID</string>
+    <string name="settings_ca_operatorinfo_product_rec">錄影</string>
+    <string name="settings_ca_operatorinfo_product_expiredate">結束時間</string>
+    <string name="settings_ca_operatorinfo_product_noinfo">無授權資訊</string>
+    <string name="settings_ca_operatorinfo_eslot">電子錢包</string>
+    <string name="settings_ca_operatorinfo_eslot_id">錢包ID</string>
+    <string name="settings_ca_operatorinfo_eslot_credit">信用點數</string>
+    <string name="settings_ca_operatorinfo_eslot_balance">已花點數</string>
+    <string name="settings_ca_operatorinfo_eslot_noinfo">無電子錢包資訊</string>
+    <string name="settings_ca_operatorinfo_eigenvalue">特徵值</string>
+    <string name="settings_ca_operatorinfo_eigenvalue_name">名稱</string>
+    <string name="settings_ca_operatorinfo_eigenvalue_value">特徵值</string>
+    <string name="settings_ca_operatorinfo_eigenvalue_noinfo">無特徵值資訊</string>
+    <string name="settings_ca_info_caversion">CA版本</string>
+    <string name="settings_ca_update_time">升級時間</string>
+    <string name="settings_ca_update_status">升級狀態</string>
+    <string name="settings_ca_operatorinfo_product_status">節目授權狀態</string>
+
+    <!-- settings_reset & dialog_reset_to_default-->
+    <string name="settings_reset_press">按下</string>
+    <string name="settings_reset_button">按鈕</string>
+    <string name="settings_reset_resetstb">重新設定機上盒</string>
+    <string name="settings_reset_description">可以恢復到機上盒初始狀態值</string>
+    <string name="settings_reset_subtitle">確認恢復出廠預設值</string>
+    <string name="settings_reset_text">此動作無法恢復當前的儲存資料</string>
+
+    <!-- ReportView -->
+    <string name="settings_report_smsreport">安裝工單回報</string>
+    <string name="settings_report_description">開通工單為必要資訊</string>
+    <string name="workorder_inquiry_notexist">工作訂單不存在,請重試</string>
+    <string name="workorder_inquiry_neterror">網路不通,請先配置網路</string>
+    <string name="work_order_full_number">工單全碼</string>
+    <string name="worker_id">工程人員</string>
+    <string name="workorder_inquiry">工作訂單查詢</string>
+    <string name="workorder_inquiry_subtitle">輸入公司並查詢IVR號碼</string>
+    <string name="workorder_inquiry_company">公司</string>
+    <string name="workorder_inquiry_queryivr">查詢IVR</string>
+    <string name="workorder_inquiry_submit">提交</string>
+    <string name="workorder_inquiry_cancel">取消</string>
+    <string name="workorder_inquiry_save">儲存</string>
+    <string name="work_order_info">工單訊息</string>
+    <string name="work_msg">作業訊息</string>
+    <string name="activated">STB開通完成</string>
+    <string name="activate_failure">STB開通失敗</string>
+    <string name="activating">機上盒開通中...</string>
+    <string name="activate_title">確定</string>
+    <string name="author_title">機上盒授權開通</string>
+    <string name="author_company">公司</string>
+    <string name="author_stbsn">機上盒序號</string>
+    <string name="author_mobile_phone">手機號碼</string>
+    <string name="author_with_hdd">是否建硬碟</string>
+    <string name="author_hdd_sn">硬碟序號</string>
+    <string name="bp_name">週期費用</string>
+    <string name="cm_mode">CmMode</string>
+    <string name="change_engineer">變更工程師</string>
+    <string name="change_engineer2">變更工程人員</string>
+    <string name="company_id">公司別</string>
+    <string name="input_mobile_no">輸入行動電話號碼</string>
+    <string name="install_name">裝機類別</string>
+    <string name="return_value">回傳值</string>
+    <string name="mobile_phone">行動電話號碼</string>
+
+    <!-- ActivateQRView & dialog_qr & dialog_qr_code -->
+    <string name="settings_qrview_activation">行動開通QR</string>
+    <string name="settings_qrview_description">可以產生QR Code</string>
+    <string name="settings_qrview_activation_subtitle">輸入公司別以產生QR Code</string>
+    <string name="settings_qrview_activation_soid">公司別</string>
+    <string name="settings_qrview_activation_scan">啟動行動開通App並掃描QR Code</string>
+    <string name="settings_qrview_activation_status">開通狀態</string>
+    <string name="settings_qrview_activation_status_opened">已開通</string>
+    <string name="settings_qrview_activation_status_unopened">未開通</string>
+    <string name="settings_qrview_confrim_single_c">您現在選擇的是單C</string>
+    <string name="settings_qrview_confrim_single_i">您現在選擇的是單I</string>
+
+
+    <!-- DebugView & dialog_debug -->
+    <string name="settings_debug_configuration">Debug設定</string>
+    <string name="settings_debug_description">確認CPU/記憶體資訊及設定Debug Log層級</string>
+    <string name="settings_debug_subtitle">設定顯示在螢幕上的CPU/記憶體資訊</string>
+    <string name="settings_debug_cpumeminfo">CPU/記憶體資訊</string>
+    <string name="settings_debug_loglevel">Debug Log層級</string>
+
+    <!-- FormatDiskView & dialog_format_disk -->
+    <string name="settings_format_diskformat">硬碟格式化</string>
+    <string name="settings_format_description">可以進行硬碟格式化</string>
+    <string name="settings_format_notice">提示</string>
+    <string name="settings_format_disknotconnect">硬碟未連接</string>
+    <string name="settings_format_confirm">確認</string>
+    <string name="format_select_disk">請選擇一個硬碟進行格式化</string>
+    <string name="format_description">格式化硬碟作業會清除目前儲存在隨身碟的所有資料。為避免資料遺失，建議您先進行備份。</string>
+    <string name="format_user_label">硬碟 A</string>
+    <string name="format_size">0 GB</string>
+    <string name="format_formatting">格式化中...</string>
+    <string name="format_notice">提示</string>
+    <string name="format_disktotalspace">總空間</string>
+    <string name="format_result">已將「%1$s」格式化</string>
+
+    <!-- RemoteControlView -->
+    <string name="settings_rcu_press">按下</string>
+    <string name="settings_rcu_setting">遙控器設定</string>
+    <string name="settings_rcu_button">按鈕</string>
+    <!--<string name="settings_rcu_setting_info">按下 \'遙控器設定\' 按鈕</string>-->
+    <string name="settings_rcu_setting_description">可讓遙控器有控制電視的功能\n(注意 : 遙控器需先進行藍牙配對)</string>
+    <string name="settings_rcu_upgrade_btn">檢查/更新版本</string>
+    <string name="settings_rcu_setting_btn">遙控器設定</string>
+    <string name="settings_rcu_volume_lock_btn">切換音量控制</string>
+    <string name="settings_personal_rcu_rcuNotSupport">您目前使用的遙控器不支援此功能</string>
+    <string name="settings_personal_rcu_btNotSupport">藍牙未支援或開啟 !!</string>
+
+</resources>

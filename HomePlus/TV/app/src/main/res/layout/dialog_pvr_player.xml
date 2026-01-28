@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BF000000"
+    tools:context=".ui.activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPvrPlayerLastPosition"
+        android:layout_width="480dp"
+        android:layout_height="258dp"
+        android:background="@drawable/shape_r_corner_3_gray_37"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/pvr_last_position_title"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Divide line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="66dp"
+            android:background="#4C4C4C"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Msg line 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="94dp"
+            android:text="@string/pvr_last_position_line1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Msg line 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:text="@string/pvr_last_position_line2"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button: Play from last position -->
+        <Button
+            android:id="@+id/btnPvrPlayerContinue"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/state_pvr_dialog_button"
+            android:text="@string/pvr_last_position_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnPvrPlayerFromStart"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Button: Play from beginning -->
+        <Button
+            android:id="@+id/btnPvrPlayerFromStart"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/state_pvr_dialog_button"
+            android:text="@string/pvr_last_position_from_start"
+            android:textAllCaps="false"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/btnPvrPlayerContinue"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPvrPlayerEndPlayback"
+        android:layout_width="360dp"
+        android:layout_height="212dp"
+        android:background="@drawable/shape_r_corner_3_gray_37"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/pvr_end_playback_title"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Divide line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="63dp"
+            android:background="#4C4C4C"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Msg line 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pvr_end_playback_line1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Button: Exit -->
+        <Button
+            android:id="@+id/btnPvrPlayerExit"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/state_pvr_dialog_button"
+            android:text="@string/pvr_end_playback_exit"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnPvrPlayerReplay"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Button: Replay -->
+        <Button
+            android:id="@+id/btnPvrPlayerReplay"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/state_pvr_dialog_button"
+            android:text="@string/pvr_end_playback_replay"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/btnPvrPlayerExit"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPvrPlayerStopPlayback"
+        android:layout_width="360dp"
+        android:layout_height="212dp"
+        android:background="@drawable/shape_r_corner_3_gray_37"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/pvr_stop_playback_title"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Divide line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="63dp"
+            android:background="#4C4C4C"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Msg line 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pvr_stop_playback_line1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Button: Confirm stop -->
+        <Button
+            android:id="@+id/btnPvrPlayerConfirmStop"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/state_pvr_dialog_button"
+            android:text="@string/ok"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnPvrPlayerCancel"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Button: Cancel -->
+        <Button
+            android:id="@+id/btnPvrPlayerCancel"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/state_pvr_dialog_button"
+            android:text="@string/cancel"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/btnPvrPlayerConfirmStop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

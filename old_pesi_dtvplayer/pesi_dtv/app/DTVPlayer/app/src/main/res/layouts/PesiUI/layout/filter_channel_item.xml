@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/focus_list"
+    android:gravity="center"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/voice_input_channel_num"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:layout_marginStart="8dp"
+        android:gravity="start|center_vertical"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/text_color"
+        android:ellipsize="marquee"
+        android:background="@drawable/focus_list"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/voice_input_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:gravity="start|center_vertical"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/text_color"
+        android:ellipsize="marquee"
+        android:background="@drawable/focus_list"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/voice_input_channel_num"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

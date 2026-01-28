@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">DMGLauncher</string>
+
+    <!--
+    Home Recommendations
+    -->
+    <string name="home_recommend_hint">No program recommendations</string>
+    <string name="home_list_recommend_title_program">Popular this week</string>
+    <string name="home_list_recommend_title_app">Applications</string>
+    <string name="home_list_recommend_title_app_and_game">Apps&amp;Games</string>
+
+    <!--
+    QR Code
+    -->
+    <string name="rec_program_qrcode">Please scan QRcode and that will get more information</string>
+
+
+    <!--
+    Home Menu
+    -->
+    <string name="home_menu_search">Search</string>
+    <string name="home_menu_epg">EPG</string>
+    <string name="home_menu_record">DVR</string>
+    <string name="home_menu_weather">Weather</string>
+    <string name="home_menu_ranking">Ranking</string>
+    <string name="home_menu_mail">TV mail</string>
+    <string name="home_menu_account">Services</string>
+    <string name="home_menu_music">Music portal</string>
+    <string name="home_menu_notification">Notifications</string>
+    <string name="home_menu_settings">Settings</string>
+
+    <!--
+    Mini EPG
+    -->
+    <string name="mini_epg_record">Record</string>
+    <string name="mini_epg_menu">Menu</string>
+    <string name="mini_epg_remind">Remind</string>
+    <string name="mini_epg_genre">Genre</string>
+    <string name="mini_epg_info">Info</string>
+    <string name="epg_actors">Actors: </string>
+    <string name="epg_bottom">There is no earlier data on the EPG.</string>
+    <string name="epg_directors">Directors: </string>
+    <string name="epg_display_mode">Display</string>
+    <string name="epg_expired">Program expired</string>
+    <string name="epg_host">Host: </string>
+    <string name="epg_list_channel">Channel</string>
+    <string name="epg_list_date">Date</string>
+    <string name="epg_list_program">Program</string>
+    <string name="epg_loading">Loading...</string>
+    <string name="epg_lock_data">Blocked EPG Data</string>
+    <string name="epg_no_data">No EPG Data</string>
+    <string name="epg_no_genre">No channels in this category</string>
+    <string name="epg_today">Today</string>
+    <string name="epg_tomorrow">Tomorrow</string>
+    <string name="dialog_audio_pri">Primary Track</string>
+    <string name="dialog_audio_sec">Secondary Track</string>
+    <string name="dialog_count_channel">locked of channel</string>
+    <string name="dialog_function_menu">Function Menu</string>
+    <string name="dialog_item_audio">Audio Track</string>
+    <string name="dialog_item_caption">Caption</string>
+    <string name="dialog_item_hd">Resolution</string>
+    <string name="dialog_lang_ch">Chinese</string>
+    <string name="dialog_lang_disable">Disable</string>
+    <string name="dialog_lang_en">English</string>
+    <string name="dialog_lang_jp">Japanese</string>
+    <string name="dialog_lang_kr">Korean</string>
+    <string name="dialog_lang_none">N/A</string>
+    <string name="dialog_lang_vt">Vietnamese</string>
+    <string name="dialog_next_step">Next</string>
+    <string name="dialog_resolution_1080i">1080i</string>
+    <string name="dialog_resolution_1080p">1080P</string>
+    <string name="dialog_resolution_480p">480P</string>
+    <string name="dialog_resolution_720p">720P</string>
+    <string name="dialog_time_clear">Clear</string>
+    <string name="dialog_time_delete">Delete</string>
+    <string name="dialog_time_error">Time error</string>
+    <string name="dialog_time_lock_all_day">All Day</string>
+    <string name="dialog_time_lock_label">Single Time</string>
+    <string name="dialog_time_lock_time">Time</string>
+    <string name="dialog_time_lock_title">Time Lock</string>
+    <string name="dialog_title_channel_locked">Channel Lock</string>
+    <string name="dialog_und">Undefined</string>
+    <string name="dialog_unlock_channel">Unlock channels</string>
+
+    <!--
+    EPG
+    -->
+    <string name="lo_epg_textv_unlock_title_text1">Enter</string>
+    <string name="lo_epg_textv_unlock_title_text3">Password</string>
+
+    <string name="lo_epg_textv_pass_fail_incorrect_pass">Incorrect password, please try again.</string>
+
+    <string name="lo_epg_sub_textv_loading">Loading...</string>
+
+    <string name="lo_epg_sub_list_textv_channel">Channel</string>
+    <string name="lo_epg_sub_list_textv_date">Date</string>
+    <string name="lo_epg_sub_list_textv_program">Program</string>
+
+    <string name="genre_adult">Adult</string>
+    <string name="genre_all">All</string>
+    <string name="genre_current_highlight">Current Genre</string>
+    <string name="genre_current_hint">Current genre:</string>
+    <string name="genre_education">Education</string>
+    <string name="genre_hd">HD</string>
+    <string name="genre_kids">Kids</string>
+    <string name="genre_movie">Movie</string>
+    <string name="genre_music">Music</string>
+    <string name="genre_news">News</string>
+    <string name="genre_religion">Religion</string>
+    <string name="genre_shopping">Shopping</string>
+    <string name="genre_sports">Sports</string>
+    <string name="genre_uhd">4K</string>
+    <string name="genre_variety">Variety</string>
+
+    <!--
+    Weather
+    -->
+    <string name="start_voice_recognition">Start Voice Recognition</string>
+
+    <!--
+    Rank
+    -->
+    <string name="rank_box_num">STB Count</string>
+    <string name="rank_program">Program</string>
+    <string name="rank_ranking">Channel</string>
+    <string name="rank_ratio">Ratings%</string>
+    <string name="rank_ratio2">Ratings</string>
+    <string name="rank_title">Top Ranking</string>
+    <string name="rank_title2">Top Ranking</string>
+    <string name="rank_watching">people are watching</string>
+
+    <!--
+    Mail
+    -->
+    <string name="mail_inbox">Inbox</string>
+    <string name="mail_setting">Settings</string>
+    <string name="mail_no_data">Empty List</string>
+
+    <string name="mail_coupon">Event</string>
+    <string name="mail_latest_news">News</string>
+    <string name="mail_popular">Popular</string>
+    <string name="mail_service">Service</string>
+    <string name="mail_setting_hint">Switch to receive different types of messages</string>
+    <string name="mail_shopping">On Sale</string>
+
+    <string name="mail_close">Close</string>
+
+    <string name="no_data">No Data</string>
+
+    <!--
+    DMG Settings
+    -->
+    <string name="settings_signal_quality">Signal quality</string>
+    <string name="settings_signal_detecting_hint">Signal detection，please wait</string>
+    <string name="settings_signal_detecting_hint_detecting">Signal detected, updated value per second</string>
+    <string name="settings_signal_detecting_hint_fail">Unable to detect the signal, please confirm that the cable is properly connected</string>
+    <string name="settings_signal_strength">Signal strength</string>
+
+    <string name="settings_channel_current_highlight">Current Channel</string>
+    <string name="settings_channel_current_hint">Current channel:</string>
+    <string name="settings_channel_freq_scan">Single Freq. Scan</string>
+    <string name="settings_channel_frequency">Frequency</string>
+    <string name="settings_channel_lock_title">Enter Parental Password</string>
+    <string name="settings_channel_lock_title1">Enter</string>
+    <string name="settings_channel_lock_title2">Password</string>
+    <string name="settings_channel_prepare_scan_subtitle">Please check if the STB tuner is connected</string>
+    <string name="settings_channel_prepare_scan_title">Signal detection and channel scan</string>
+    <string name="settings_channel_qam">QAM</string>
+    <string name="settings_channel_scan">Channel Scan</string>
+    <string name="settings_channel_scan_clear">Clear</string>
+    <string name="settings_channel_scan_failed">Scan failed, no channels found.</string>
+    <string name="settings_channel_scan_no_signal">Scan failed, no signal.</string>
+    <string name="settings_channel_scan_reset">Scan reset</string>
+    <string name="settings_channel_scan_timeout">Scan failed, scan time out.</string>
+    <string name="settings_channel_scanning_back">Back</string>
+    <string name="settings_channel_scanning_completed">Channel Scan Completed!</string>
+    <string name="settings_channel_scanning_hint">Channel scanning，please wait</string>
+    <string name="settings_channel_scanning_progress_hint">progress</string>
+    <string name="settings_channel_scanning_sub_hint_audio">Radio Stations</string>
+    <string name="settings_channel_scanning_sub_hint_video">Channels</string>
+    <string name="settings_channel_signal_scan">Signal Detection</string>
+    <string name="settings_channel_symbol_rate">Symbol Rate</string>
+    <string name="settings_channel_unlock_title1">Enter Channel Lock Password</string>
+    <string name="settings_channel_unlock_title2">Enter Factory Password</string>
+    <string name="settings_rms_agree">Agree</string>
+    <string name="settings_rms_hint_title_first">I agree that my viewing and usage behavior on the applied services may be collected. If there are any changes in the future, I can click the “STOP COLLECTION” button on the set-top box to stop the data collection. If I change my mind later, I can click the “AGREE COLLECTION” button to resume data collection.\nIf you agree with the above statement, please click the “Agree” button, and a confirmation message will be sent to your set-top box.</string>
+    <string name="settings_rms_hint_title_second">For the reason that TBC has not received your reply to the SMS of about consent to collect viewing and use behavior records, do you need to get the SMS again for reply?</string>
+    <string name="settings_rms_not_agree">Cancel</string>
+    <string name="settings_rms_not_show_again">Do not show this again on boot</string>
+    <string name="settings_rms_title">TV Rating Survey</string>
+
+    <string name="settings_hint_rcu_dpad_select">Select</string>
+
+    <string name="dmg_settings_signal_connection_test_title">Connection Quality Test</string>
+    <string name="dmg_settings_signal_network_status">Network Status</string>
+    <string name="dmg_settings_signal_isp1">Point 1</string>
+    <string name="dmg_settings_signal_isp2">Point 2</string>
+    <string name="dmg_settings_signal_test_start_connection">Start</string>
+    <string name="dmg_settings_signal_network_disconnected">Disconnected</string>
+    <string name="dmg_settings_signal_ethernet_connected">Ethernet Connected</string>
+    <string name="dmg_settings_signal_wifi_connected">Wifi Connected</string>
+    <string name="dmg_settings_signal_excellent">Excellent</string>
+    <string name="dmg_settings_signal_good">Good</string>
+    <string name="dmg_settings_signal_moderate">Moderate</string>
+    <string name="dmg_settings_signal_poor">Poor</string>
+    <string name="dmg_settings_signal_test_stop_connection">Stop and Exit</string>
+
+    <string name="dmg_settings_category_title">Set-Top Box Settings</string>
+    <string name="dmg_settings_channel_lock">Channel lock</string>
+    <string name="dmg_settings_engineering_setting">Engineering Setting</string>
+    <string name="dmg_settings_engineering_setting_channel_scan">Signal detection and channel scan</string>
+    <string name="dmg_settings_engineering_setting_connect_test">Connection test</string>
+    <string name="dmg_settings_engineering_setting_error_log">Recorded error log</string>
+    <string name="dmg_settings_engineering_setting_info_hint">All message prompt</string>
+    <string name="dmg_settings_engineering_setting_usb_update">USB OTA update</string>
+    <string name="dmg_settings_connection_test">Connection test</string>
+    <string name="dmg_settings_signal_detect">Signal Detect</string>
+    <string name="dmg_settings_channel_scan">Channel Scan</string>
+    <string name="dmg_settings_introduction_time">Introduction Time</string>
+    <string name="dmg_settings_ratings_survey">Ratings survey</string>
+
+    <string name="dmg_settings_info_time_entries_three_second">3 seconds</string>
+    <string name="dmg_settings_info_time_entries_five_second">5 seconds</string>
+    <string name="dmg_settings_info_time_entries_ten_second">10 seconds</string>
+
+    <string name="dmg_settings_rms_switch_opening">Opening</string>
+    <string name="dmg_settings_rms_switch_on">On</string>
+    <string name="dmg_settings_rms_switch_off">Off</string>
+
+    <string name="parental_lock_entries_6">Parents Guidance Suggested</string>
+    <string name="parental_lock_entries_12">Parents Strongly Cautioned</string>
+    <string name="parental_lock_entries_15">Restricted</string>
+    <string name="parental_lock_entries_18">No One 17 and Under Admitted</string>
+    <string name="parental_lock_entries_0">General Audiences</string>
+
+    <string name="dmg_settings_channel_lock_channel_lock">Channel lock</string>
+    <string name="dmg_settings_channel_lock_channel_lock_count">0 locked of channel</string>
+    <string name="dmg_settings_channel_lock_channel_lock_count_no_number">locked of channel</string>
+    <string name="dmg_settings_channel_lock_parental_NC_17">No One 17 and Under Admitted</string>
+    <string name="dmg_settings_channel_lock_parental_PG">Parents Guidance Suggested</string>
+    <string name="dmg_settings_channel_lock_parental_PG_13">Parents Strongly Cautioned</string>
+    <string name="dmg_settings_channel_lock_parental_R">Restricted</string>
+    <string name="dmg_settings_channel_lock_parental_lock">Parental lock</string>
+    <string name="dmg_settings_channel_lock_password_hint">Please enter the channel lock password</string>
+    <string name="dmg_settings_channel_lock_password_hint_detail">Enter the channel lock password to unlock or press the back to return the Set-Top Box settings</string>
+    <string name="dmg_settings_channel_lock_set_password">Set personal password</string>
+    <string name="dmg_settings_channel_lock_time_lock"> Add Time Lock</string>
+    <string name="dmg_settings_channel_lock_time_lock_detail">Time Lock</string>
+    <string name="dmg_settings_channel_lock_time_lock_full">Add Time Lock</string>
+
+    <string name="dmg_settings_factory_lock_password_hint">Please enter the factory password</string>
+    <string name="dmg_settings_factory_lock_password_hint_detail">Enter the factory password to unlock or press the back to return the Set-Top Box settings</string>
+
+    <string name="watting_nagra_license_reset">Clear license...</string>
+    <string name="watting_nagra_reset">Clear CA Information...</string>
+    <string name="tv_nagra_reset_info">Are you sure you want to clear CA Information and reboot system?</string>
+    <string name="tv_nagra_reset_ok">Confirm</string>
+    <string name="tv_nagra_reset_cancel">Cancel</string>
+    <string name="tv_nagra_reset_title">Clear CA Information</string>
+    <string name="tv_nagra_license_reset_title">Clear license</string>
+    <string name="tv_nagra_license_reset_info">Are you sure you want to clear license and reboot system?</string>
+    <string name="tv_wvcas_license_reset_info">Are you sure you want to clear license?</string>
+    <string name="firmware_version_title">Image Version</string>
+    <string name="provision_info">Provision Info</string>
+    <string name="provision_info_SO">SO</string>
+    <string name="provision_info_Home_ID">Home ID</string>
+    <string name="provision_info_NIT">NIT</string>
+    <string name="provision_info_SI_NIT">SI NIT</string>
+    <string name="provision_info_MOBILE">Mobile</string>
+    <string name="provision_info_BAT_ID">BAT ID</string>
+    <string name="provision_info_ZIP_CODE">Zip Code</string>
+
+    <string name="dmg_settings_password_new_both_not_match">New password not match</string>
+    <string name="dmg_settings_password_new_hint">Enter New Password</string>
+    <string name="dmg_settings_password_new_hint_again">Enter Again New Password</string>
+    <string name="dmg_settings_password_new_update_success">Password update success</string>
+    <string name="dmg_settings_password_old_hint">Enter Old Password</string>
+    <string name="dmg_settings_password_old_no_match">Old password error</string>
+    <string name="dmg_settings_password_subtitle">Please enter a 4-digit password</string>
+    <string name="dmg_settings_password_title">Personal password</string>
+
+    <string name="dmg_settings_lock_cancel">Cancel</string>
+    <string name="dmg_settings_lock_done">OK</string>
+    <string name="dmg_settings_lock_channel_add">Add Channel Lock</string>
+    <string name="dmg_settings_lock_channel_hint">Setting channel lock</string>
+
+    <!--
+    Remind
+    -->
+    <string name="remind_dialog_cancel_no">No</string>
+    <string name="remind_hint_cancel">Cancel remind?</string>
+    <string name="remind_dialog_cancel_yes">Yes</string>
+    <string name="remind_dialog_channel_change_no">No</string>
+    <string name="remind_dialog_channel_change_title">The program \"%1$s\" will be starting soon, would you want to change channel to watch?</string>
+    <string name="remind_dialog_channel_change_yes">Yes</string>
+    <string name="remind_hint_duplicated">Other program have reminded at the same time.</string>
+    <string name="remind_hint_no_epg">No program can remind</string>
+    <string name="remind_program_too_close">Do not support reserve that too close next start time of program.</string>
+    <string name="remind_program_too_short">Do not support reserve that too shortest time of program.</string>
+    <string name="remind_hint_conflict">You have already made a reservation to watch \"%1$s\" program at the same time, would you want to change program?</string>
+    <string name="remind_hint_conflict_yes">Yes</string>
+    <string name="remind_hint_conflict_no">No</string>
+
+
+    <!--
+    Hint
+    -->
+    <string name="hint_check_channel_license">Check channel license...</string>
+    <string name="hint_check_hdd_space">Check HDD space...</string>
+    <string name="hint_current_mini">Now</string>
+    <string name="hint_current_program">Current Program：</string>
+    <string name="hint_enter_number">Enter Channel Number</string>
+    <string name="hint_next_mini">Next</string>
+    <string name="hint_next_program">Next Program：</string>
+    <string name="hint_over_time_mini">Too slow</string>
+    <string name="hint_rcu_cancel">Back</string>
+    <string name="hint_rcu_cancel_record">Cancel Record</string>
+    <string name="hint_rcu_cancel_remind">Cancel Remind</string>
+    <string name="hint_rcu_channel_down">Next page</string>
+    <string name="hint_rcu_channel_genre">Genre</string>
+    <string name="hint_rcu_channel_list">Channel list</string>
+    <string name="hint_rcu_channel_up">Prev page</string>
+    <string name="hint_rcu_delete">Delete</string>
+    <string name="hint_rcu_delete_all">Delete All</string>
+    <string name="hint_rcu_dpad_select">Select</string>
+    <string name="hint_rcu_hdd_modify">Modify</string>
+    <string name="hint_rcu_hdd_unpair">Unpair</string>
+    <string name="hint_rcu_lang">Language</string>
+    <string name="hint_rcu_manager">Manager</string>
+    <string name="hint_rcu_menu">Menu</string>
+    <string name="hint_rcu_move">Move</string>
+    <string name="hint_rcu_nextday">Next Day</string>
+    <string name="hint_rcu_now">Current Time</string>
+    <string name="hint_rcu_ok_confirm">OK</string>
+    <string name="hint_rcu_ok_info">Info</string>
+    <string name="hint_rcu_ok_more">More</string>
+    <string name="hint_rcu_open_ad">Open AD</string>
+    <string name="hint_rcu_open_network">Open Network Settings</string>
+    <string name="hint_rcu_pause">Pause</string>
+    <string name="hint_rcu_play">Play</string>
+    <string name="hint_rcu_prev">Prev page</string>
+    <string name="hint_rcu_prevday">Prev Day</string>
+    <string name="hint_rcu_record">Record</string>
+    <string name="hint_rcu_remind">Remind</string>
+    <string name="hint_rcu_select_all">Select All</string>
+    <string name="hint_rcu_sort">Sort</string>
+    <string name="hint_rcu_stop">Stop</string>
+    <string name="hint_rcu_stop_record">Stop Record</string>
+    <string name="hint_rcu_switch">Switch</string>
+    <string name="hint_rcu_unlock">Unlock</string>
+    <string name="hint_rcu_watch">Watch</string>
+    <string name="hint_rcu_zapping">Zapping</string>
+    <string name="hint_rcu_zoom">Amplification</string>
+    <string name="hint_recording">Recording</string>
+    <string name="hint_fullscreen">Fullscreen</string>
+    <string name="hint_program_record">Program Record</string>
+    <string name="hint_new_timer">New Timer</string>
+    <string name="hint_cancel_timer">Cancel Timer</string>
+    <string name="hint_open">Open</string>
+    <string name="hint_program_intro">Info</string>
+    <string name="hint_prev_page">Previous page</string>
+
+    <!--
+    Hottest
+    -->
+    <string name="hottest_app_not_install">The app not installed, please click app icon and the system will open Google Play Store app</string>
+    <string name="hottest_app_not_provide_recommend_video">The app not provide popular video, please run the app to get the latest recommendations.</string>
+    <string name="hottest_plan_hint">Plan description:</string>
+    <string name="hottest_play_video">Play Video</string>
+    <string name="hottest_purchase_hint">Buy</string>
+
+    <!--
+    channel
+    -->
+    <string name="channel_current_highlight">Current Channel</string>
+    <string name="channel_current_hint">Current channel:</string>
+    <string name="channel_freq_scan">Single Freq. Scan</string>
+    <string name="channel_frequency">Frequency</string>
+    <string name="channel_lock_title">Enter Parental Password</string>
+    <string name="channel_lock_title1">Enter</string>
+    <string name="channel_lock_title2">Password</string>
+    <string name="channel_prepare_scan_subtitle">Please check if the STB tuner is connected</string>
+    <string name="channel_prepare_scan_title">Signal detection and channel scan</string>
+    <string name="channel_qam">QAM</string>
+    <string name="channel_scan">Channel Scan</string>
+    <string name="channel_scan_clear">Clear</string>
+    <string name="channel_scan_failed">Scan failed, no channels found.</string>
+    <string name="channel_scan_no_signal">Scan failed, no signal.</string>
+    <string name="channel_scan_reset">Scan reset</string>
+    <string name="channel_scan_timeout">Scan failed, scan time out.</string>
+    <string name="channel_scanning_back">Back</string>
+    <string name="channel_scanning_completed">Channel Scan Completed!</string>
+    <string name="channel_scanning_hint">Channel scanning，please wait</string>
+    <string name="channel_scanning_progress_hint">progress</string>
+    <string name="channel_scanning_sub_hint_audio">Radio Stations</string>
+    <string name="channel_scanning_sub_hint_video">Channels</string>
+    <string name="channel_signal_scan">Signal Detection</string>
+    <string name="channel_symbol_rate">Symbol Rate</string>
+    <string name="channel_unlock_title1">Enter Channel Lock Password</string>
+    <string name="channel_unlock_title2">Enter Factory Password</string>
+    <string name="channel_next_step">Next Step</string>
+
+
+    <!--
+    PVR
+    -->
+    <string name="pvr_conflict_4k_replace_title">Only select one 4K program at the moment, \n please confirm.</string>
+    <string name="pvr_conflict_hd_replace_title">Only select two FullHD program at the moment, \n please cancel one.。</string>
+    <string name="pvr_conflict_normal_hint">Only select two FullHD or one 4K program at the moment</string>
+    <string name="pvr_conflict_replace_go_back">Back</string>
+    <string name="pvr_conflict_title">Record conflict! please select record program which you want to reserve</string>
+    <string name="pvr_dialog_cancel">Cancel</string>
+    <string name="pvr_dialog_confirm">OK</string>
+    <string name="pvr_event_dialog_episode_already_recorded_title">This episode is already recorded</string>
+    <string name="pvr_event_dialog_episode_already_recorded_title_confirm">Confirm</string>
+    <string name="pvr_event_dialog_episode_resume_scheduled_title">This episode resumes scheduled state</string>
+    <string name="pvr_event_dialog_episode_resume_scheduled_title_confirm">Confirm</string>
+    <string name="pvr_event_dialog_episodes">Record episodes</string>
+    <string name="pvr_event_dialog_hdd_remove_confirm">OK</string>
+    <string name="pvr_event_dialog_hdd_suddenly_remove_title">HDD suddenly remove!\nPlease check HDD install status</string>
+    <string name="pvr_event_dialog_next_album_cancel">No</string>
+    <string name="pvr_event_dialog_next_album_ok">Yes，ext episode</string>
+    <string name="pvr_event_dialog_next_album_title">Would you like to watch the next episode?</string>
+    <string name="pvr_event_dialog_play_last">Yes，play the last watched</string>
+    <string name="pvr_event_dialog_play_reset">No，replay</string>
+    <string name="pvr_event_dialog_play_status_title">Start playing from the last watched?</string>
+    <string name="pvr_event_dialog_record_cancel_no">No</string>
+    <string name="pvr_event_dialog_record_cancel_ok">Yes，cancel record</string>
+    <string name="pvr_event_dialog_record_cancel_title">Do you want to cancel this record\n%1$s?</string>
+    <string name="pvr_event_dialog_record_conflict_replace_one">Replace %1$s</string>
+    <string name="pvr_event_dialog_record_conflict_select_no">No, keep original</string>
+    <string name="pvr_event_dialog_record_conflict_title">Record conflict!\nOther recordings have been set at the same time, please replace one of these.</string>
+    <string name="pvr_event_dialog_record_manager_space">Storage management</string>
+    <string name="pvr_event_dialog_record_mgmt_cancel_title">Do you want to cancel %1$s? record?</string>
+    <string name="pvr_event_dialog_record_space_limit_title">HDD storage not enough!\nPlease choose one</string>
+    <string name="pvr_event_dialog_record_stop">Stop recording</string>
+    <string name="pvr_event_dialog_recorded_delete_no">No</string>
+    <string name="pvr_event_dialog_recorded_delete_ok">Yes</string>
+    <string name="pvr_event_dialog_recorded_mgmt_delete_title">Do you want to delete %1$s? recorded files?</string>
+    <string name="pvr_event_dialog_series_already_scheduled_title">This series is scheduled automatically\n to be recorded</string>
+    <string name="pvr_event_dialog_series_already_scheduled_title_confirm">Confirm</string>
+    <string name="pvr_event_dialog_series_video_title">Support series record, please choose...</string>
+    <string name="pvr_event_dialog_single_episode">Record single episode</string>
+    <string name="pvr_event_dialog_watched_delete_no">No, do not delete</string>
+    <string name="pvr_event_dialog_watched_delete_ok">Yes, delete watched history</string>
+    <string name="pvr_event_dialog_watched_delete_title">Please confirm watched history whether you want to delete\n\"%1$s\" ?</string>
+    <string name="pvr_exit_pause_mode_title">Cancel Time-Shift mode?</string>
+    <string name="pvr_exit_pause_mode_title_no">No</string>
+    <string name="pvr_exit_pause_mode_title_ok">Yes</string>
+    <string name="pvr_hint_rcu_more_recorded">More</string>
+    <string name="pvr_hint_rcu_pre_record">More</string>
+    <string name="pvr_hint_record_select"> selected</string>
+    <string name="pvr_hint_record_select_index" />
+    <string name="pvr_hint_record_select_pages" />
+    <string name="pvr_jump_conflict_cancel_item">Cancel %1$s錄影</string>
+    <string name="pvr_jump_conflict_first_item">Yes, channel change to </string>
+    <string name="pvr_jump_conflict_second_item">No, cancel reverse record, stay current channel</string>
+    <string name="pvr_message_delete">This recording will be deleted.</string>
+    <string name="pvr_message_delete_time">Do you want to delete the item?</string>
+    <string name="pvr_message_delete_watched">Please confirm whether to delete the viewing history\n</string>
+    <string name="pvr_message_delete_watched_cancel">NO，Do not delete</string>
+    <string name="pvr_message_delete_watched_confirm">YES，Delete Record</string>
+    <string name="pvr_message_enable_time_shift">Time-Shift recording not yet.</string>
+    <string name="pvr_message_error_fileinfo">The file content is incorrect and cannot be played</string>
+    <string name="pvr_message_file_noexist">File does not exist</string>
+    <string name="pvr_message_hdd_format_check">Do you need to format the HDD?</string>
+    <string name="pvr_message_hdd_format_completed">DVR HDD has format completed.</string>
+    <string name="pvr_message_hdd_format_completed_with_pairing">DVR HDD has format completed and pair finished.</string>
+    <string name="pvr_message_hdd_modify_check">Please enter the HDD name</string>
+    <string name="pvr_message_hdd_modify_failed">Modify Failed!</string>
+    <string name="pvr_message_hdd_modify_success">Modify Success!</string>
+    <string name="pvr_message_hdd_not_ready">No hard drive detected, please make sure your hard drive is connected to the USB port labeled DVR.</string>
+    <string name="pvr_message_hdd_pairing_kick">There are more than eight pairing records, please select one to remove from the current list.</string>
+    <string name="pvr_message_hdd_pairing_request">Your hard drive has not been paired. Do you want to bind it?</string>
+    <string name="pvr_message_hdd_pairing_request_hint">(The hard disk will be formatted. Please backup your data before binding.)</string>
+    <string name="pvr_message_hdd_remove_check">Do you need to remove the HDD?</string>
+    <string name="pvr_message_hdd_terms_fail">Reformatting disk is needed for DVR function.</string>
+    <string name="pvr_message_hdd_unpair_check">Please confirm whether to unpair.</string>
+    <string name="pvr_message_hdd_unpair_failed">Unpair Failed!</string>
+    <string name="pvr_message_hdd_unpair_hint">(Re-pairing HDD will format the HDD and erase data.)</string>
+    <string name="pvr_message_hdd_unpair_success">Unpair Success!</string>
+    <string name="pvr_message_hdd_unplug_when_recording">The HDD unplug while recording！</string>
+    <string name="pvr_message_hdd_wrong_port">A paired HDD is detected in the wrong USB port. Please reconnect your HDD to the DVR port.</string>
+    <string name="pvr_message_low_space">The total space of the USB storage for DVR is less than %1$dGB\nplease replace the larger storage device.</string>
+    <string name="pvr_message_low_speed">The speed of the USB storage for DVR requires USB 2.0 at least.</string>
+    <string name="pvr_message_not_acs_connect">Your device cannot connect to ACS, please check your network and try again later.</string>
+    <string name="pvr_message_port_error">There is no storage plugged in DVR port.</string>
+    <string name="pvr_message_reserve_shortest_time_program">Do not support reserve too shortest time of program.</string>
+    <string name="pvr_message_start_recording_hint">Start recording</string>
+    <string name="pvr_message_stop_recording_hint">Stop recording</string>
+    <string name="pvr_message_stop_recording_if_license_disable">The DVR license is not available that stop recording.</string>
+    <string name="pvr_message_stop_recording_if_network_problem">The DVR license is not available that stop recording.\n(The network signal abnormal.)</string>
+    <string name="pvr_message_stop_recording_if_no_watch">The DVR license is not available that stop recording.\n(The channel license is not available.)</string>
+    <string name="pvr_message_storage_not_enough_title">The HDD space is not enough!The system stop all recording channel at the moment.</string>
+    <string name="pvr_message_unknown">Unknown Fail Reason</string>
+    <string name="pvr_no_ready">If you want to use DVR service, please contact the customer service center.</string>
+    <string name="pvr_no_ready_dmg">DVR Service is under construction.</string>
+    <string name="pvr_operation_prohibited_while_scheduling">Under scheduling, DVR operation is prohibited temporarily.</string>
+    <string name="pvr_record_start_title">Do you want to channel change to record channel when program record start?</string>
+    <string name="pvr_recording_full_title">This behavior will stop all recordings, are you sure you want to continue?</string>
+    <string name="pvr_reserve_conflict_replace_all_title">2 FHD reservation conflict. Are you want to replace all ?</string>
+    <string name="pvr_reserve_conflict_replace_all_title_no">No</string>
+    <string name="pvr_reserve_conflict_replace_all_title_yes">Yes</string>
+    <string name="pvr_reserve_conflict_title">Reservation conflict. Please select item to replace.</string>
+    <string name="pvr_schedule_missed">Waiting Schedule</string>
+    <string name="pvr_select_channel_category_but_recording_is_full">Can not change channel category when other channels are recording</string>
+    <string name="pvr_stop_recording_cancel">No</string>
+    <string name="pvr_stop_recording_ok">Yes, cancel all recordings</string>
+    <string name="pvr_zapping_channel_but_recording_is_full">Would you want to cancel recently recording?</string>
+    <string name="pvr_record_management">Record Management</string>
+    <string name="pvr_timer_management">Timer Management</string>
+    <string name="pvr_epg_timer_management">Record</string>
+    <string name="pvr_record_programs">Record Programs</string>
+    <string name="pvr_memory_device_setting">Memory Device Setting</string>
+    <string name="pvr_hint_page">1/1 Page</string>
+    <string name="pvr_record_programs_message">Used %1$s HDD Space / Total %2$d Programs</string>
+    <string name="pvr_record_time">Record Time: </string>
+    <string name="pvr_usb_disk_is_extracted">USB disk is extracted</string>
+    <string name="pvr_would_you_like_to_resume_playback_from_where_you_left_off">Would you like to resume playback from where you left off?</string>
+    <string name="pvr_Your_hard_drive_has_not_been_paired_Do_you_want_to_bind_it">@string/pvr_message_hdd_pairing_request</string>
+    <string name="pvr_the_hard_disk_will_be_formatted_Please_backup_your_data_before_binding">@string/pvr_message_hdd_pairing_request_hint</string>
+    <string name="pvr_ejecting_usb_device">Ejecting %1$s…</string>
+    <string name="pvr_usb_device_ejected">%1$s is safely ejected</string>
+
+    <!-- Storage -->
+    <string name="storage_eject">Eject</string>
+    <string name="storage_format_failure">Couldn\'t format %1$s</string>
+    <string name="storage_format_success">%1$s is formatted</string>
+    <string name="storage_unmount_failure">Couldn\'t safely eject %1$s</string>
+    <string name="storage_unmount_success">%1$s is safely ejected</string>
+    <string name="storage_wizard_eject_private_description">Apps on this device storage will stop working when it\'s ejected. This USB drive is formatted to work on this device only. It won\'t work on any others.</string>
+    <string name="storage_wizard_eject_private_title">Eject device storage</string>
+    <string name="storage_wizard_eject_progress_title">Ejecting %1$s…</string>
+    <string name="storage_wizard_format_action">Format</string>
+    <string name="storage_wizard_format_as_public_description">After formatting, you can use this USB drive in other devices. All data will be erased. Consider backing up first by moving apps to other device storage.</string>
+    <string name="storage_wizard_format_as_public_title">Erase &amp; format</string>
+    <string name="storage_wizard_format_progress_description">This may take a moment. Please don\'t remove the drive.</string>
+    <string name="storage_wizard_format_progress_title">Formatting USB Drive…</string>
+    <string name="storage_wizard_format_slow_summary">You can continue, but apps moved to this location may stutter and data transfers may take a long time. Consider using a faster drive for better performance.</string>
+    <string name="storage_wizard_format_slow_title">This drive appears to be slow.</string>
+
+    <!--
+    DVR
+    -->
+    <string name="dvr_add_time_record">+  Add</string>
+    <string name="dvr_dialog_channel_title">Channel:</string>
+    <string name="dvr_dialog_record_confirm">Add</string>
+    <string name="dvr_dialog_record_freq_title">Record frequency:</string>
+    <string name="dvr_dialog_record_time_freq_every_day">EveryDay</string>
+    <string name="dvr_dialog_record_time_freq_once">Once</string>
+    <string name="dvr_dialog_record_time_freq_once_a_week">Once a week</string>
+    <string name="dvr_dialog_record_time_freq_weekday_day">Weekday</string>
+    <string name="dvr_dialog_record_time_length_120">120 min.</string>
+    <string name="dvr_dialog_record_time_length_30">30 min.</string>
+    <string name="dvr_dialog_record_time_length_60">60 min.</string>
+    <string name="dvr_dialog_record_time_length_title">Record Length:</string>
+    <string name="dvr_dialog_start_date_title">Start Date:</string>
+    <string name="dvr_dialog_start_time_title">Start Time:</string>
+    <string name="dvr_dialog_time_record_title">Time record</string>
+    <string name="dvr_manager">HDD Space</string>
+    <string name="dvr_mgr_auto_clear">Auto</string>
+    <string name="dvr_mgr_hdd_dvr_source">Remote</string>
+    <string name="dvr_mgr_hdd_error_log">Recorded error log</string>
+    <string name="dvr_mgr_hdd_formatting">HDD Formatting</string>
+    <string name="dvr_mgr_hdd_label">Label</string>
+    <string name="dvr_mgr_hdd_management">HDD Management</string>
+    <string name="dvr_mgr_hdd_model">Model</string>
+    <string name="dvr_mgr_hdd_not_ready">No HDD inserted.</string>
+    <string name="dvr_mgr_hdd_remove">HDD Safely Remove</string>
+    <string name="dvr_mgr_hdd_size">Size</string>
+    <string name="dvr_mgr_hdd_sn">Serial No.</string>
+    <string name="dvr_mgr_limit">Space Management</string>
+    <string name="dvr_mgr_manual_clear">Manual</string>
+    <string name="dvr_mgr_pre_record_time">Pre-Record:</string>
+    <string name="dvr_no_data">empty list</string>
+    <string name="dvr_other_channel_recording">Record fail, the other channel is recording</string>
+    <string name="dvr_play_recorded_music_label">Title:</string>
+    <string name="dvr_prerecord_list">Record</string>
+    <string name="dvr_quota_space_hint">Used %1$s HDD Space / Total %2$d Programs</string>
+    <string name="dvr_record_sort">Sort:</string>
+    <string name="dvr_record_sort_newest">Newest</string>
+    <string name="dvr_record_sort_oldest">Oldest</string>
+    <string name="dvr_record_sort_time">Time</string>
+    <string name="dvr_record_time">Record time:</string>
+    <string name="dvr_recorded_list">Recorded</string>
+    <string name="dvr_recorded_sort_newest">Newest</string>
+    <string name="dvr_recorded_sort_oldest">Oldest</string>
+    <string name="dvr_recording_fail">Recording fail</string>
+    <string name="dvr_time_record">Dayparts</string>
+    <string name="dvr_type_instant_record">Instant</string>
+    <string name="dvr_type_next_record_time">Next Record Time:</string>
+    <string name="dvr_type_record_size">Recorded Size:</string>
+    <string name="dvr_type_record_time">Recorded Time:</string>
+    <string name="dvr_type_series_record">Series</string>
+    <string name="dvr_type_single_record">Single</string>
+    <string name="dvr_type_time_hint">Period</string>
+    <string name="dvr_type_time_record">Period</string>
+    <string name="dvr_video_time_length">Length:</string>
+    <string name="dvr_watched_list">Watched</string>
+    <string name="dvr_watched_progress">Watch progress:</string>
+
+    <!--
+    Install Activity
+    -->
+    <string name="detail_cancel_downloading">Cancel</string>
+    <string name="detail_downloading" tools:ignore="TypographyEllipsis">Downloading...</string>
+    <string name="detail_install">Install</string>
+    <string name="detail_installing" tools:ignore="TypographyEllipsis">Installing...</string>
+    <string name="detail_open">Open</string>
+    <string name="detail_screen_capture">Screenshots</string>
+    <string name="detail_update">Update</string>
+
+    <!--
+     error message
+    -->
+    <!--<string name="error_e010">The error code is E010. You have not purchased this channel.</string>-->
+    <string name="error_e010">The error code is E010. You have not purchased this channel. If you want to watch it, please contact the customer service center. If you have purchased this channel, please unplug the power supply of the set-top box. If you still ca n’t watch the video, please call the customer service center or search for the E010 processing steps on the Frequently Asked Questions on the official website.</string>
+    <string name="error_e200">The error code is E200. No signal or signal is bad, please confirm whether the cable at the rear of the device is connected. If the error always exists, please reboot the device and try again. If you have any problem, please call customer service center or leave the message on the official website.</string>
+    <string name="error_e201">The error code is E201. Channel searching, please wait for 10 minutes. If the error always exists, please reboot the device and try again. If you have any problem, please call customer service center or leave the message on the official website.</string>
+    <string name="error_e213">The error code is E213. Please wait a moment for this channel signal adjustment. If the error always exists, please reboot the device and try again. If you have any problem, please call customer service center or leave the message on the official website.</string>
+    <string name="error_e301">The error code is E301. Your STB is not authorized for use in the area, please call the customer service center.</string>
+    <string name="error_e501">The error code is E501. Due to insufficient battery power in the remote control, the upgrade failed. Please replace the batteries to facilitate the version update.</string>
+    <string name="error_e502">The error code is E502. The remote control software upgrade failed. Please try the operation again.</string>
+    <string name="error_e503">The error code is E503. The remote control software upgrade timed out. Please try the operation again.</string>
+    <!--<string name="error_e504">The error code is E504. The system has detected TBC\'s network service. Please check your network cable and connect to the TBC network service. If you encounter any connection issues, kindly call the customer service hotline for assistance.</string>-->
+    <string name="error_e504">The error code is E504. The network is not connected, please replug the network cable. If you still have problems, please call the customer service center.</string>
+    <!--<string name="error_e505">The error code is E505. The system has detected TBC\'s network service. Please check your network cable and connect to the TBC network service. If you encounter any connection issues, kindly call the customer service hotline for assistance.</string>-->
+    <string name="error_e505">The error code is E505. Network signal abnormal, please replug the network cable. If you still have problems, please call the customer service center.</string>
+    <!--<string name="error_e506">The error code is E506. The system has detected that your device is unable to sync with the TBC server. Please contact the customer service center by phone or leave a message on the \'Contact Us\' page on the official website, and provide the error code E506.</string>-->
+    <string name="error_e506">The error code is E506. ACS has not responded for a long time, please replug the network cable. If you still have problems, please call the customer service center.</string>
+    <string name="error_e507">The error code is E507. This device has not yet been activated through ACS.</string>
+    <!--<string name="error_e508">The error code is E508. You are connected to a non-TBC network. Please check your network connection to ensure the functionality of the set-top box and the version update mechanism. If the issue persists, please contact the customer service center or search for the E508 troubleshooting steps on the \'FAQ\' section of the official website.</string>-->
+    <string name="error_e508">The error code is E508. The IP you connected is a non-TBC network, please check the network. If you still have problems, please call the customer service center.</string>
+    <!--<string name="error_e510">The error code is E510. CAS authorization error.</string>-->
+    <string name="error_e510">The error code is E510. The license is not available, please check the network. If you still have problems, please call the customer service center.</string>
+    <!--<string name="error_e511">The error code is E511. Your account has been temporarily suspended. To resume viewing, please contact the customer service center. If your account has been restored, please unplug and replug the set-top box power. If you still cannot view, please contact the customer service center or search for the E511 troubleshooting steps on the \'FAQ\' section of the official website.</string>-->
+    <string name="error_e511">The error code is E511. Your license is suspended, please call the customer service center.</string>
+    <string name="error_e512">The error code is E512. Your device is not registered, please call the customer service center.</string>
+    <string name="error_e601">E601. The HDD not ready</string>
+    <string name="error_e602">E602. The HDD storage not enough</string>
+    <string name="error_e603">E603. The HDD unplug on recording</string>
+    <string name="error_e604">E604. The DVR license is not available</string>
+    <string name="error_e605">E605. Record conflict</string>
+    <string name="error_e606">E606 No signal while recording</string>
+    <string name="error_e611">E611. The HDD unplug while playing recorded file.</string>
+    <string name="error_e612">E612. No license can play recorded file.</string>
+    <string name="error_e621">E621. The HDD storage space less than 250G.</string>
+    <string name="error_e622">E622. The speed of HDD is too slow.</string>
+    <string name="error_e623">E623, The format of HDD is incorrect.</string>
+    <string name="error_e624">E624, The HDD partition is incorrect.</string>
+    <string name="error_e625">E625, The HDD cannot get serial number.</string>
+
+    <string name="enter_pass">Four-Digit Password</string>
+    <string name="enter_pass_eight">Eight-Digit Password</string>
+    <string name="incorrect_pass">Incorrect password, please try again.</string>
+
+
+    <!--
+    lock
+    -->
+    <string name="lock_adult">Adult</string>
+    <string name="lock_cancel">Cancel</string>
+    <string name="lock_channel">Channel</string>
+    <string name="lock_channel_add">Add Channel Lock</string>
+    <string name="lock_channel_hint">Setting channel lock</string>
+    <string name="lock_done">OK</string>
+    <string name="lock_parent">Parental</string>
+    <string name="lock_program">Blocked program</string>
+    <string name="lock_time">Time</string>
+    <string name="lock_time_add">Add Time Lock</string>
+    <string name="lock_time_end">End Time</string>
+    <string name="lock_time_hint">Setting time lock，\nPlease input 00:00-23:59</string>
+    <string name="lock_time_modify">Modify Time Lock</string>
+    <string name="lock_time_start">Start Time</string>
+    <string name="lock_worker">Factory</string>
+
+    <!--
+    acs data
+    -->
+    <string name="project_name_dmg">DMG</string>
+    <string name="project_name_tbc">TBC</string>
+
+    <!--
+    Quick Tune
+    -->
+    <string name="title_add_quick_tune">Quick Tune - Add Channel</string>
+    <string name="title_move_quick_tune">Quick Tune - Move Channel</string>
+    <string name="title_quick_tune">Quick Tune</string>
+
+    <!--
+    Favorite
+    -->
+    <string name="favorite_add">Add</string>
+    <string name="favorite_add_hint">-Add channels</string>
+    <string name="favorite_add_up_to_limit">Add channel up to limit</string>
+    <string name="favorite_delete">Delete</string>
+    <string name="favorite_title">Favorite</string>
+    <string name="favorite_title_1">Favorite 1</string>
+    <string name="favorite_title_2">Favorite 2</string>
+    <string name="favorite_title_3">Favorite 3</string>
+    <string name="favorite_title_4">Favorite 4</string>
+    <string name="favorite_title_5">Favorite 5</string>
+
+    <!--
+    TV Package
+    -->
+    <string name="package_channel_purchase">Purchased</string>
+    <string name="package_hint">If you want to order the %1$s package, please scan the QR Code via your mobile phone to enter the order page or call customer service center</string>
+    <string name="package_no_data">No data of TV package</string>
+
+    <!-- otl -->
+    <string name="otl_app_can_not_open">App cannot open!</string>
+    <string name="otl_menu_account">Services</string>
+    <string name="otl_menu_apps">Apps&amp;Games</string>
+    <string name="otl_menu_dvr">DVR</string>
+    <string name="otl_menu_epg">EPG</string>
+    <string name="otl_menu_favorite">Favorite</string>
+    <string name="otl_menu_mail">TV mail</string>
+    <string name="otl_menu_music">Music portal</string>
+    <string name="otl_menu_network_settings">Network Settings</string>
+    <string name="otl_menu_notification">Notifications</string>
+    <string name="otl_menu_ranking">Ranking</string>
+    <string name="otl_menu_system_settings">Settings</string>
+    <string name="otl_menu_tips">Tips</string>
+    <string name="otl_menu_voice">Search</string>
+    <string name="otl_menu_weather">Weather</string>
+    <string name="otl_popular_this_week">Popular this week</string>
+    <string name="otl_rec_apps">Applications</string>
+    <string name="otl_rec_video">Programs</string>
+    <string name="otl_rec_video_no_data">No recommendation programs</string>
+
+    <!-- member -->
+    <string name="member_hint">Dear user, \nIf you want to %1$s \nIt is recommended that you scan the QR Code on the left with your phone, \nenter the %2$s page, \n or call customer service center</string>
+    <string name="member_payment">Bill Payment</string>
+    <string name="member_qcode_1">Scan to Apply Repair</string>
+    <string name="member_qcode_2">Scan to Pay Bill</string>
+    <string name="member_qcode_3">Scan to Register Member</string>
+    <string name="member_register">Member Register</string>
+    <string name="member_repair">Apply Repair</string>
+    <string name="member_sub_payment">Payment</string>
+    <string name="member_sub_repair">Repair</string>
+
+    <string name="dmg_service_number">(02) 8253–8966</string>
+    <string name="tbc_service_number">(04) 4050–5858</string>
+    <!-- ota -->
+    <string name="ota_content_message">System Update : A new version is now available.</string>
+    <string name="ota_more_options">More Options</string>
+    <string name="ota_update_now">Update Now</string>
+
+    <string name="install_system_update">Install System Update</string>
+    <string name="install_time_now">Install Now</string>
+    <string name="install_time_2hr">Remind Me in 2 Hours</string>
+    <string name="install_time_1day">Remind Me in 1 Day</string>
+    <string name="install_stop_reminding">Stop Reminding</string>
+    <string name="setting_last_check_time">Last check time</string>
+    <string name="setting_check_for_update">Check for update</string>
+    <string name="system_update">System Update</string>
+    <string name="current_version_prefix">current version:</string>
+
+    <!-- book info-->
+    <string name="book_cycle_one_time">Once</string>
+    <string name="book_cycle_daily">EveryDay</string>
+    <string name="book_cycle_weekly">Weekly</string>
+    <string name="book_cycle_weekend">Weekend</string>
+    <string name="book_cycle_weekdays">Weekdays</string>
+    <string name="book_week_day_sunday">Sun.</string>
+    <string name="book_week_day_monday">Mon.</string>
+    <string name="book_week_day_tuesday">Tue.</string>
+    <string name="book_week_day_wednesday">Wed.</string>
+    <string name="book_week_day_thursday">Thu.</string>
+    <string name="book_week_day_friday">Fri.</string>
+    <string name="book_week_day_saturday">Sat.</string>
+    <string name="book_type_record">Record</string>
+
+    <!-- reserve timer-->
+    <string name="reserve_timer_channel_select">Channel selection:</string>
+    <string name="reserve_timer_date">ReserveDate:</string>
+    <string name="reserve_timer_time">ReserveTime:</string>
+    <string name="reserve_timer_duration">ReserveDuration:</string>
+    <string name="reserve_timer_cycle">ReserveCycle:</string>
+    <string name="reserve_timer_cycle_once">Once</string>
+    <string name="reserve_timer_cycle_everyday">Everyday</string>
+    <string name="reserve_timer_cycle_weekly">Weekly</string>
+    <string name="reserve_timer_cycle_weekend">Weekend</string>
+    <string name="reserve_timer_cycle_weekdays">WeekDays</string>
+    <string name="reserve_timer_type">ReserveType:</string>
+    <string name="reserve_timer_type_record">Record</string>
+    <string name="reserve_timer_conflict">A conflict was detected, please select the item you want to keep. The other item will be cancelled.</string>
+    <string name="reserve_timer_expired">Please enter a time after now.</string>
+
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+
+    <string name="sunday_short">SUN</string>
+    <string name="monday_short">MON</string>
+    <string name="tuesday_short">TUE</string>
+    <string name="wednesday_short">WED</string>
+    <string name="thursday_short">THU</string>
+    <string name="friday_short">FRI</string>
+    <string name="saturday_short">SAT</string>
+
+    <string name="hrs">hrs</string>
+    <string name="mins">mins</string>
+
+    <string name="usb_devices">USB Devices</string>
+    <string name="total_space">Total Space</string>
+    <string name="free_space">Free Space</string>
+    <string name="used_space">Used Space</string>
+    <string name="type">Type</string>
+    <string name="remove_usb">Remove USB</string>
+    <string name="used">Used</string>
+
+    <!-- other -->
+    <!-- other -->
+    <string name="unmute_by_volume_up">Your volume has been reduced to the lowest level, please use the volume up button to unmute.</string>
+    <string name="ota_status">Status</string>string>
+    <string name="ota_status_idle">Idle</string>string>
+    <string name="ota_status_downloading">Downloading</string>string>
+    <string name="ota_status_download_completed">Download Completed</string>string>
+    <string name="ota_status_download_fail">Download Fail</string>string>
+    <string name="ota_upgrade_status">Upgrade status</string>string>
+    <string name="ota_verify_status">Verify status</string>string>
+</resources>

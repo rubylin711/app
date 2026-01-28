@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto"
+    android:sharedUserId="android.uid.system">
+    <uses-permission android:name="com.android.providers.tv.permission.READ_TV_LISTINGS" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_TV_LISTINGS" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+    <uses-permission android:name="android.permission.ACCESS_TV_DESCRAMBLER" />
+    <uses-permission android:name="android.permission.ACCESS_TV_TUNER" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.TUNER_RESOURCE_ACCESS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATIONS" />
+    <uses-permission android:name="com.android.providers.tv.permission.ACCESS_ALL_EPG_DATA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
+    <uses-permission android:name="android.permission.REBOOT" tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="com.litv.liad.sdk.authorities.GET_DAY_FREQUENCY"/>
+
+    <!-- for AlarmManager-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="Manifest.permission#SCHEDULE_EXACT_ALARM SCHEDULE_EXACT_ALARM"/>
+
+    <protected-broadcast android:name="com.prime.launcher.timer_record"/>
+    <protected-broadcast android:name="com.prime.launcher.timer_power_on"/>
+    <protected-broadcast android:name="com.prime.launcher.timer_change_channel"/>
+
+    <protected-broadcast android:name="com.prime.launcher.KEYCODE_VOLUME_DOWN"/>
+
+    <queries>
+        <package android:name="com.prime.dtv"/>
+    </queries>
+    <queries>
+        <package android:name="com.prime.android.tv.otaservice" />
+        <package android:name="com.prime.aidlservice" />
+    </queries>
+
+    <application
+        android:name=".HomeApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Launcher.FullScreen"
+        android:usesCleartextTraffic="true"
+        android:grantUriPermissions="true"
+        android:hardwareAccelerated="true"
+        tools:targetApi="31">
+
+        <profileable android:shell="true" />
+
+<!--        <provider-->
+<!--            android:name="com.prime.dtv.database.DTVContentProvider"-->
+<!--            android:authorities="com.prime.dtv.database.DTVContentProvider"-->
+<!--            android:exported="true" />-->
+        <provider
+            android:name="com.prime.dtv.service.database.DVBContentProvider"
+            android:authorities="com.prime.launcher.database.DVBContentProvider"
+            android:exported="true" />
+        <provider
+            android:name="com.prime.dtv.service.database.PvrContentProvider"
+            android:authorities="com.prime.launcher.database.PvrContentProvider"
+            android:exported="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:taskAffinity=""
+            android:stateNotNeeded="true"
+            android:resumeWhilePausing="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER_APP" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Home.Recommend.Activity.SideMenuActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.Side.Menu" />
+
+        <activity
+            android:name=".Home.Recommend.Stream.StreamActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Home.Recommend.Installer.InstallerActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Home.LiveTV.TvPackage.PurchaseActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Hottest.HottestActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EPG.EpgActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.FullScreen"/>
+
+        <activity
+            android:name=".Weather.WeatherActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".member.MemberActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Rank.RankActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.FullScreen"/>
+
+        <activity
+            android:name=".Mail.MailActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.FullScreen"/>
+
+        <activity
+            android:name=".Settings.TBCSpeedTestActivity"
+            android:configChanges="navigation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Settings.ChannelScanningActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Settings.UnlockChannelActivity"
+            android:theme="@style/Theme.Prime.Leanback.Preferences"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Settings.ChannelPreScanningActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Settings.ChannelLockActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Settings.TimeLockActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Settings.PasswordActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Settings.DMGSettingsActivity"
+            android:theme="@style/Theme.Prime.Leanback.Preferences"
+            android:exported="true"/>
+
+        <activity
+            android:name="com.prime.launcher.Settings.ResetCAActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="com.prime.launcher.Settings.ResetCALicenseActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".Settings.RmsCollectActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Launcher.Transparent"/>
+
+        <activity
+            android:name=".Utils.System.IPAlertActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.FullScreen"/>
+
+        <activity
+            android:name=".Utils.System.ForcePaHintActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.FullScreen"/>
+
+        <activity
+            android:name=".Utils.System.ForceScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.FullScreen"/>
+
+        <activity
+            android:name=".OTA.OtaUserSelectTimeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.FullScreen"/>
+
+        <activity
+            android:name=".OTA.OtaNewVersionCheckActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Launcher.FullScreen"/>
+
+        <activity android:name=".PVR.Management.BookRecordManagementActivity"
+            android:exported="true" />
+
+        <activity android:name=".PVR.Management.TimerManagementActivity"
+            android:exported="true" />
+
+        <activity android:name=".PVR.Management.MemoryDeviceSettingActivity"
+            android:exported="true" />
+
+        <activity android:name=".PVR.Management.RecordProgramsActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name=".GlobalKeyReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.prime.launcher.GLOBAL_BUTTON"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".HomeBackgroundService"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+         <!-- ✅ 測試 DSMCC 用 Service，建議 export 設為 false -->
+        <service android:name="com.prime.dtv.service.dsmcc.DsmccService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.prime.dtv.service.dsmcc.DsmccService.action" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

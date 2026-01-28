@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lo_mini_epg_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:visibility="visible">
+
+    <!-- Background -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mini_epg_root_height"
+        android:background="@drawable/live_shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Record Hint Icon -->
+    <ImageView
+        android:id="@+id/lo_mini_epg_record_hint_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/icon_rec_single"
+        android:focusable="false"
+        app:layout_constraintTop_toTopOf="@id/lo_mini_epg_record_hint_text"
+        app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_record_hint_text"
+        app:layout_constraintEnd_toStartOf="@id/lo_mini_epg_record_hint_text"
+        tools:ignore="ContentDescription" />
+    <!-- Record Hint Text -->
+    <TextView
+        android:id="@+id/lo_mini_epg_record_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mini_epg_hint_recording_text_margin_start"
+        android:layout_marginEnd="5dp"
+        android:text="CH067"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:visibility="invisible"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="5"
+        app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_record_hint_postfix"
+        app:layout_constraintTop_toTopOf="@id/lo_mini_epg_record_hint_postfix"
+        app:layout_constraintEnd_toStartOf="@id/lo_mini_epg_record_hint_postfix"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/lo_mini_epg_record_hint_postfix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_recording"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:visibility="invisible"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="5"
+        app:layout_constraintBottom_toTopOf="@id/lo_mini_epg_layout"
+        app:layout_constraintEnd_toEndOf="@id/lo_mini_epg_layout"
+        tools:ignore="HardcodedText" />
+
+    <!-- root -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lo_mini_epg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mini_epg_root_height"
+        android:layout_marginStart="@dimen/mini_epg_root_margin_x"
+        android:layout_marginEnd="@dimen/mini_epg_root_margin_x"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Channel Genre -->
+        <TextView
+            android:id="@+id/lo_mini_epg_ch_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mini_epg_ch_genre_margin_y"
+            android:textSize="@dimen/mini_epg_ch_genre_text_size"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <!-- System Time -->
+        <LinearLayout
+            android:id="@+id/lo_mini_epg_time_view"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mini_epg_time_view_margin_10dp"
+            android:layout_marginEnd="@dimen/mini_epg_time_view_margin_5dp"
+            android:layout_marginBottom="@dimen/mini_epg_time_view_margin_5dp"
+            android:focusable="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <!-- weather -->
+            <ImageView
+                android:id="@+id/lo_mini_epg_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_weather_suncloud"
+                android:visibility="gone"
+                android:focusable="false"
+                tools:ignore="ContentDescription" />
+            <!-- temperature -->
+            <TextView
+                android:id="@+id/lo_mini_epg_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23oC"
+                android:textSize="@dimen/mini_epg_time_temperature_text_size"
+                android:textColor="@color/white"
+                android:focusable="false"
+                android:gravity="bottom|center_horizontal"
+                android:visibility="gone"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="5"
+                android:textAllCaps="false"
+                tools:ignore="HardcodedText" />
+            <!-- date -->
+            <TextClock
+                android:id="@+id/lo_mini_epg_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_epg_time_view_margin_10dp"
+                android:textSize="@dimen/mini_epg_time_date_text_size"
+                android:textColor="@color/white"
+                android:focusable="false"
+                android:includeFontPadding="false"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="5"
+                android:fontFamily="@font/custom_font"
+                android:format12Hour="MM/dd"
+                android:format24Hour="MM/dd"/>
+            <!-- week -->
+            <TextClock
+                android:id="@+id/lo_mini_epg_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_epg_time_view_margin_5dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="@dimen/mini_epg_time_week_text_size"
+                android:textColor="@color/white"
+                android:includeFontPadding="false"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="5"
+                android:focusable="false"
+                android:fontFamily="@font/custom_font"
+                android:format12Hour="EEEE"
+                android:format24Hour="EEEE"/>
+            <!-- time -->
+            <TextClock
+                android:id="@+id/lo_mini_epg_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mini_epg_time_HH_MM_text_size"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:gravity="bottom|center_horizontal"
+                android:fontFamily="@font/custom_font"
+                android:format12Hour="hh:mm"
+                android:format24Hour="HH:mm"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:includeFontPadding="false"
+                android:clickable="false"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="5"/>
+            <!-- AM PM -->
+            <TextClock
+                android:id="@+id/lo_mini_epg_am_pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mini_epg_time_AM_PM_text_size"
+                android:textColor="@color/white"
+                android:gravity="bottom|start"
+                android:fontFamily="@font/custom_font"
+                android:format12Hour="aa"
+                android:format24Hour=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="5"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+        <!-- Channel Icon -->
+        <ImageView
+            android:id="@+id/lo_mini_epg_ch_icon"
+            android:layout_width="@dimen/mini_epg_ch_icon_width"
+            android:layout_height="@dimen/mini_epg_ch_icon_height"
+            android:layout_marginTop="@dimen/mini_epg_ch_icon_margin_top"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:focusable="false"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+        <!-- Channel Num -->
+        <TextView
+            android:id="@+id/lo_mini_epg_ch_num"
+            android:layout_width="@dimen/mini_epg_ch_num_width"
+            android:layout_height="@dimen/mini_epg_ch_num_height"
+            android:text="000"
+            android:textSize="@dimen/mini_epg_ch_num_text_size"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_ch_icon"
+            app:layout_constraintTop_toTopOf="@id/lo_mini_epg_ch_icon"
+            app:layout_constraintStart_toEndOf="@id/lo_mini_epg_ch_icon"
+            tools:ignore="HardcodedText" />
+        <!-- Channel Title -->
+        <TextView
+            android:id="@+id/lo_mini_epg_ch_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="No Channel"
+            android:textSize="@dimen/mini_epg_ch_title_size"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:gravity="center"
+            android:singleLine="true"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:selectAllOnFocus="true"
+            android:textIsSelectable="true"
+            app:layout_constraintEnd_toEndOf="@id/lo_mini_epg_ch_num"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_mini_epg_ch_icon"
+            tools:ignore="HardcodedText" />
+        <!-- Current Program -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lo_mini_epg_curr_pg"
+            android:layout_width="@dimen/mini_epg_curr_pg_width"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/mini_epg_curr_pg_margin_start"
+            android:layout_marginTop="@dimen/mini_epg_curr_pg_margin_top"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:descendantFocusability="blocksDescendants"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lo_mini_epg_ch_icon"
+            app:layout_constraintStart_toEndOf="@id/lo_mini_epg_ch_num">
+            <TextView
+                android:id="@+id/lo_mini_epg_curr_pg_status"
+                android:layout_width="@dimen/mini_epg_curr_pg_status_width"
+                android:layout_height="wrap_content"
+                android:text="@string/epg_no_data"
+                android:textSize="@dimen/mini_epg_curr_pg_status_size"
+                android:textColor="@color/hint"
+                android:focusable="false"
+                android:singleLine="true"
+                android:ellipsize="none"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/lo_mini_epg_curr_pg_time_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_epg_curr_pg_time_margin_start"
+                android:text="00:00"
+                android:textSize="@dimen/mini_epg_curr_pg_time_size"
+                android:textColor="@color/hint"
+                android:focusable="false"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg_status"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/lo_mini_epg_curr_pg_time_dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "
+                android:textSize="@dimen/mini_epg_curr_pg_time_size"
+                android:textColor="@color/hint"
+                android:focusable="false"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg_time_start"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/lo_mini_epg_curr_pg_time_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="@dimen/mini_epg_curr_pg_time_size"
+                android:textColor="@color/hint"
+                android:focusable="false"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg_time_dash"
+                tools:ignore="HardcodedText" />
+            <ImageView
+                android:id="@+id/lo_mini_epg_curr_pg_quality"
+                android:visibility="gone"
+                android:layout_width="@dimen/mini_epg_hd_4k_icon_width"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/mini_epg_curr_pg_quality_margin_start"
+                android:layout_marginTop="@dimen/mini_epg_curr_pg_quality_margin_y"
+                android:layout_marginBottom="@dimen/mini_epg_curr_pg_quality_margin_y"
+                android:focusable="false"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg_time_end"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/lo_mini_epg_curr_pg_grading"
+                android:visibility="gone"
+                android:layout_width="@dimen/mini_epg_parental_rate_icon_width"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/mini_epg_parental_rate_icon_margin_start"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg_quality"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/lo_mini_epg_curr_pg_record"
+                android:visibility="gone"
+                android:layout_width="@dimen/mini_epg_parental_rate_icon_width"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/mini_epg_parental_rate_icon_margin_start"
+                android:focusable="false"
+                android:src="@drawable/icon_rec_single"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg_grading"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/lo_mini_epg_curr_pg_reminder"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/mini_epg_curr_pg_reminder_margin_start"
+                android:src="@drawable/icon_calendar_yellow"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_curr_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg_record"
+                tools:ignore="ContentDescription" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:focusable="false"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lo_mini_epg_curr_pg_status">
+                <View
+                    android:id="@+id/lo_mini_epg_curr_pg_audio_anim"
+                    android:layout_width="@dimen/mini_epg_curr_pg_audio_anim_width"
+                    android:layout_height="@dimen/mini_epg_curr_pg_audio_anim_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/mini_epg_pg_audio_anim_margin_top"
+                    android:layout_marginEnd="@dimen/mini_epg_pg_audio_anim_margin_end"
+                    android:visibility="gone"
+                    android:focusable="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                    <!--
+                        vumeter:vumeter_backgroundColor="@color/white"
+                        vumeter:vumeter_blockNumber="5"
+                        vumeter:vumeter_blockSpacing="5px"
+                        vumeter:vumeter_speed="5"
+                        vumeter:vumeter_startOff="false"
+                        vumeter:vumeter_stopSize="5px"
+                    -->
+                <TextView
+                    android:id="@+id/lo_mini_epg_curr_pg_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/epg_no_data"
+                    android:textSize="@dimen/mini_epg_pg_title_size"
+                    android:textColor="@color/hint"
+                    android:focusable="false"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    app:layout_constraintTop_toTopOf="@id/lo_mini_epg_curr_pg_audio_anim"
+                    app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_curr_pg_audio_anim"
+                    app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg_audio_anim"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Next Program -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lo_mini_epg_next_pg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/mini_epg_next_pg_margin_start"
+            android:layout_marginTop="@dimen/mini_epg_next_pg_margin_top"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:descendantFocusability="blocksDescendants"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lo_mini_epg_curr_pg"
+            app:layout_constraintTop_toTopOf="@id/lo_mini_epg_ch_icon"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <TextView
+                android:id="@+id/lo_mini_epg_next_pg_status"
+                android:layout_width="@dimen/mini_epg_curr_pg_status_width"
+                android:layout_height="wrap_content"
+                android:text="@string/epg_no_data"
+                android:textSize="@dimen/mini_epg_curr_pg_status_size"
+                android:textColor="@color/hint"
+                android:singleLine="true"
+                android:ellipsize="none"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:focusable="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/lo_mini_epg_next_pg_time_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_epg_next_pg_time_margin_start"
+                android:text="00:00"
+                android:textSize="@dimen/mini_epg_next_pg_time_size"
+                android:textColor="@color/hint"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_next_pg_status"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/lo_mini_epg_next_pg_time_dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - "
+                android:textSize="@dimen/mini_epg_next_pg_time_size"
+                android:textColor="@color/hint"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_next_pg_time_start"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/lo_mini_epg_next_pg_time_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="@dimen/mini_epg_next_pg_time_size"
+                android:textColor="@color/hint"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_next_pg_time_dash"
+                tools:ignore="HardcodedText" />
+            <ImageView
+                android:id="@+id/lo_mini_epg_next_pg_quality"
+                android:visibility="gone"
+                android:layout_width="@dimen/mini_epg_hd_4k_icon_width"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/mini_epg_next_pg_quality_margin_start"
+                android:layout_marginTop="@dimen/mini_epg_next_pg_quality_margin_y"
+                android:layout_marginBottom="@dimen/mini_epg_next_pg_quality_margin_y"
+                android:focusable="false"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_next_pg_time_end"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/lo_mini_epg_next_pg_grading"
+                android:visibility="gone"
+                android:layout_width="@dimen/mini_epg_parental_rate_icon_width"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/mini_epg_parental_rate_icon_margin_start"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_next_pg_quality"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/lo_mini_epg_next_pg_record"
+                android:visibility="gone"
+                android:layout_width="@dimen/mini_epg_parental_rate_icon_width"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/mini_epg_parental_rate_icon_margin_start"
+                android:src="@drawable/icon_rec_single"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_next_pg_grading"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/lo_mini_epg_next_pg_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/mini_epg_curr_pg_reminder_margin_start"
+                android:src="@drawable/icon_calendar_yellow"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintTop_toTopOf="@id/lo_mini_epg_next_pg_status"
+                app:layout_constraintStart_toEndOf="@id/lo_mini_epg_next_pg_record"
+                tools:ignore="ContentDescription" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lo_mini_epg_next_pg_status">
+                <View
+                    android:id="@+id/lo_mini_epg_next_pg_audio_anim"
+                    android:layout_width="@dimen/mini_epg_curr_pg_audio_anim_width"
+                    android:layout_height="@dimen/mini_epg_curr_pg_audio_anim_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/mini_epg_pg_audio_anim_margin_top"
+                    android:layout_marginEnd="@dimen/mini_epg_pg_audio_anim_margin_end"
+                    android:visibility="gone"
+                    android:focusable="false"
+                    app:layout_constraintTop_toBottomOf="@id/lo_mini_epg_next_pg_status"
+                    app:layout_constraintStart_toStartOf="@id/lo_mini_epg_next_pg_status"/>
+                    <!--
+                        vumeter:vumeter_backgroundColor="@color/white"
+                        vumeter:vumeter_blockNumber="5"
+                        vumeter:vumeter_blockSpacing="5px"
+                        vumeter:vumeter_speed="5"
+                        vumeter:vumeter_startOff="false"
+                        vumeter:vumeter_stopSize="5px"
+                    -->
+                <TextView
+                    android:id="@+id/lo_mini_epg_next_pg_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/epg_no_data"
+                    android:textSize="@dimen/mini_epg_pg_title_size"
+                    android:textColor="@color/hint"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:focusable="false"
+                    app:layout_constraintTop_toTopOf="@id/lo_mini_epg_next_pg_audio_anim"
+                    app:layout_constraintBottom_toBottomOf="@id/lo_mini_epg_next_pg_audio_anim"
+                    app:layout_constraintStart_toEndOf="@id/lo_mini_epg_next_pg_audio_anim"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Program Progress -->
+        <ProgressBar
+            android:id="@+id/lo_mini_epg_curr_pg_progress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mini_epg_curr_pg_progress_h"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_marginStart="@dimen/mini_epg_curr_pg_progress_margin_start"
+            android:layout_marginTop="@dimen/mini_epg_curr_pg_progress_margin_top"
+            android:max="100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lo_mini_epg_ch_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/Theme.Launcher.MiniEPG.Progress"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 紅、綠、黃、藍、介紹 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/mini_epg_hint_func_height"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/lo_hint_info"
+        app:layout_constraintBottom_toBottomOf="@id/lo_hint_info"
+        app:layout_constraintEnd_toStartOf="@id/lo_hint_info">
+
+        <!-- 錄影 -->
+        <ImageView
+            android:id="@+id/lo_mini_epg_func_record_img"
+            android:layout_width="@dimen/mini_epg_hint_func_img_width"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_info_icon_margin_end"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:src="@drawable/hint_red"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/lo_mini_epg_func_record_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_func_txt_margin_end"
+            android:visibility="gone"
+            android:text="@string/mini_epg_record"
+            android:textSize="@dimen/mini_epg_hint_func_text_size"
+            android:textColor="@color/white"/>
+
+        <!-- 功能選單 -->
+        <ImageView
+            android:layout_width="@dimen/mini_epg_hint_func_img_width"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_info_icon_margin_end"
+            android:scaleType="centerInside"
+            android:src="@drawable/hint_green"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_func_txt_margin_end"
+            android:text="@string/mini_epg_menu"
+            android:textSize="@dimen/mini_epg_hint_func_text_size"
+            android:textColor="@color/white"/>
+
+        <!-- 預約提醒 -->
+        <ImageView
+            android:id="@+id/lo_mini_epg_func_remind_img"
+            android:layout_width="@dimen/mini_epg_hint_func_img_width"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_info_icon_margin_end"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:src="@drawable/hint_yellow"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/lo_mini_epg_func_remind_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_func_txt_margin_end"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:text="@string/mini_epg_remind"
+            android:textSize="@dimen/mini_epg_hint_func_text_size"
+            android:textColor="@color/white"/>
+
+        <!-- 類別 -->
+        <ImageView
+            android:layout_width="@dimen/mini_epg_hint_func_img_width"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_info_icon_margin_end"
+            android:scaleType="centerInside"
+            android:src="@drawable/hint_blue"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_func_txt_margin_end"
+            android:scaleType="centerInside"
+            android:text="@string/mini_epg_genre"
+            android:textSize="@dimen/mini_epg_hint_func_text_size"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- 節目簡介 -->
+    <LinearLayout
+        android:id="@+id/lo_hint_info"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/mini_epg_hint_func_height"
+        android:layout_marginBottom="32.5dp"
+        android:layout_marginEnd="@dimen/mini_epg_hint_info_margin_end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:layout_width="@dimen/mini_epg_hint_info_width"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_info_icon_margin_end"
+            android:scaleType="centerInside"
+            android:src="@drawable/hint_intro"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_func_txt_margin_end"
+            android:gravity="center"
+            android:text="@string/mini_epg_info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mini_epg_hint_func_text_size"/>
+        <ImageView
+            android:id="@+id/lo_hint_unlock_icon"
+            android:layout_width="@dimen/mini_epg_hint_info_lock_icon_width"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_info_icon_margin_end"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:src="@drawable/hint_ok"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/lo_hint_unlock_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/mini_epg_hint_func_txt_margin_end"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/hint_rcu_unlock"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mini_epg_hint_func_text_size"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

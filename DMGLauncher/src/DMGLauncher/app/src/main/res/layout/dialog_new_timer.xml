@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/new_timer_container_layer"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_panel"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/new_timer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+            android:text="@string/hint_new_timer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/lo_new_timer_dialog_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_timer_channel_select_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_timer_title">
+
+            <TextView
+                android:id="@+id/new_timer_channel_select_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/reserve_timer_channel_select"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintStart_toStartOf="@id/new_timer_channel_select_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_channel_select_item" />
+
+            <TextView
+                android:id="@+id/new_timer_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lo_new_timer_dialog_value_margin_start"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="25東森YOYO(HD)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintEnd_toEndOf="@id/new_timer_channel_select_item"
+                app:layout_constraintStart_toStartOf="@id/new_timer_channel_select_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_channel_select_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_timer_reserve_date_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_timer_channel_select_item">
+
+            <TextView
+                android:id="@+id/new_timer_reserve_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/reserve_timer_date"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_date_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_date_item" />
+
+            <TextView
+                android:id="@+id/new_timer_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lo_new_timer_dialog_value_margin_start"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="YYYY/MM/DD"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintEnd_toEndOf="@id/new_timer_reserve_date_item"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_date_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_date_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_timer_reserve_time_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_timer_reserve_date_item">
+
+            <TextView
+                android:id="@+id/new_timer_reserve_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/reserve_timer_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_time_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_time_item" />
+
+            <TextView
+                android:id="@+id/new_timer_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lo_new_timer_dialog_value_margin_start"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="HH:mm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintEnd_toEndOf="@id/new_timer_reserve_time_item"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_time_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_time_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_timer_reserve_duration_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_timer_reserve_time_item">
+
+            <TextView
+                android:id="@+id/new_timer_reserve_duration_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/reserve_timer_duration"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_duration_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_duration_item" />
+
+            <TextView
+                android:id="@+id/new_timer_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lo_new_timer_dialog_value_margin_start"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="HH小時mm分鐘"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintEnd_toEndOf="@id/new_timer_reserve_duration_item"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_duration_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_duration_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_timer_reserve_cycle_type_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_timer_reserve_duration_item">
+
+            <TextView
+                android:id="@+id/new_timer_reserve_cycle_type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/reserve_timer_cycle"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_cycle_type_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_cycle_type_item" />
+
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="200dp"
+                android:src="@drawable/hint_left"
+                app:layout_constraintBottom_toBottomOf="@id/new_timer_cycle"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_cycle_type_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_cycle" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="200dp"
+                android:src="@drawable/hint_right"
+                app:layout_constraintBottom_toBottomOf="@id/new_timer_cycle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/new_timer_cycle" />
+
+            <TextView
+                android:id="@+id/new_timer_cycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lo_new_timer_dialog_value_margin_start"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/reserve_timer_cycle_once"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintEnd_toEndOf="@id/new_timer_reserve_cycle_type_item"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_cycle_type_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_cycle_type_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_timer_reserve_cycle_day_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_timer_reserve_cycle_type_item">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="200dp"
+                android:src="@drawable/hint_left"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/new_timer_cycle_day"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_cycle_day_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_cycle_day" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="200dp"
+                android:src="@drawable/hint_right"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/new_timer_cycle_day"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/new_timer_cycle_day" />
+
+            <TextView
+                android:id="@+id/new_timer_cycle_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lo_new_timer_dialog_value_margin_start"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/saturday"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/new_timer_reserve_cycle_day_item"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_cycle_day_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_cycle_day_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_timer_reserve_type_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_timer_reserve_cycle_day_item">
+
+            <TextView
+                android:id="@+id/new_timer_reserve_type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/reserve_timer_type"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_type_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_type_item" />
+
+            <TextView
+                android:id="@+id/new_timer_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/lo_new_timer_dialog_value_margin_start"
+                android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+                android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+                android:text="@string/reserve_timer_type_record"
+                android:textColor="@color/white"
+                android:textSize="@dimen/lo_new_timer_dialog_text_size"
+                app:layout_constraintEnd_toEndOf="@id/new_timer_reserve_type_item"
+                app:layout_constraintStart_toStartOf="@id/new_timer_reserve_type_item"
+                app:layout_constraintTop_toTopOf="@id/new_timer_reserve_type_item" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/new_timer_new_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+            android:text="@string/favorite_add"
+            android:textColor="@color/white"
+            android:textSize="@dimen/lo_new_timer_dialog_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_timer_reserve_type_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.prime.dmg.launcher.PVR.Management.PrimeCalendarView
+        android:id="@+id/new_timer_calendar_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/new_timer_container_layer"
+        app:layout_constraintStart_toStartOf="@id/new_timer_container_layer"
+        app:layout_constraintTop_toTopOf="@id/new_timer_container_layer"
+        app:layout_constraintBottom_toBottomOf="@id/new_timer_container_layer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

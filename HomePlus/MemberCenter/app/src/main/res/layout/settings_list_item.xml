@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="0dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:src="@drawable/ic_launcher_background"
+            android:text="Reset"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Android設定"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16dp" />
+    </LinearLayout>
+</LinearLayout>

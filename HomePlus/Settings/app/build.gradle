@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+def MAJOR = "1"
+def MINOR = "0"
+def PATCH = "7"
+
+def getVersionName = { ->
+    return "v" + MAJOR + "." + MINOR + "." + PATCH;
+}
+
+ext.HomeplusPlatformKey = [
+        storeFilePath : '1319D_CNS_PLATFORM.jks',
+        storePassword : 'pesi1234',
+        keyAlias      : 'key0',
+        keyPassword   : 'pesi1234',
+]
+
+if (file('signing.gradle').exists()) {
+    apply from: 'signing.gradle'
+}
+
+android {
+    signingConfigs {
+        config_HomeplusPlatform {
+            storeFile file(project.HomeplusPlatformKey.storeFilePath)
+            storePassword project.HomeplusPlatformKey.storePassword
+            keyAlias project.HomeplusPlatformKey.keyAlias
+            keyPassword project.HomeplusPlatformKey.keyPassword
+        }
+    }
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.prime.homeplus.settings'
+        minSdkVersion 28
+        targetSdk 34
+        versionCode 6
+        versionName getVersionName()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config_HomeplusPlatform
+        setProperty("archivesBaseName", "HOMEPLUS_SETTINGS-" + versionName)
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config_HomeplusPlatform
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config_HomeplusPlatform
+        }
+    }
+    namespace 'com.prime.homeplus.settings'
+}
+
+def frameworkJar = new File(project.projectDir, "../../../PrimePlayer/libs/framework.jar").canonicalFile
+dependencies {
+    // 不用 flatDir，直接 files()
+    if (frameworkJar.exists()) {
+        compileOnly files(frameworkJar)
+    } else {
+        logger.warn("WARNING: framework.jar not found at ${frameworkJar}")
+    }
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':DataStructure')
+    implementation project(':PlayerService')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'com.github.bumptech.glide:glide:5.0.5'
+    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.zxing:core:3.5.4'
+    implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
+}

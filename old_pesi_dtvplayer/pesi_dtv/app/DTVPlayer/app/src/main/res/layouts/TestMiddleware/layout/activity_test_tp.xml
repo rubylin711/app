@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.TestMiddleware.TestTpActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTTP_GUIDELINE_RIGHT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTTP_GUIDELINE_LEFT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTTP_GUIDELINE_CENTER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTTP_GUIDELINE_TITLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTTP_GUIDELINE_HELP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+
+    <include
+        android:id="@+id/ID_TESTTP_LAYOUT_TITLE"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/ID_TESTTP_GUIDELINE_TITLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/ID_TESTTP_LAYOUT_HELP"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ID_TESTTP_GUIDELINE_HELP" />
+
+    <TextView
+        android:id="@+id/ID_TESTTP_TXV_INPUT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical|horizontal"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/ID_TESTTP_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@+id/ID_TESTTP_TXV_OUTPUT"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ID_TESTTP_GUIDELINE_CENTER"
+        app:layout_constraintTop_toTopOf="@+id/ID_TESTTP_GUIDELINE_TITLE" />
+
+    <TextView
+        android:id="@+id/ID_TESTTP_TXV_OUTPUT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical|horizontal"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/ID_TESTTP_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@+id/ID_TESTTP_GUIDELINE_RIGHT"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ID_TESTTP_TXV_INPUT"
+        app:layout_constraintTop_toTopOf="@+id/ID_TESTTP_GUIDELINE_TITLE" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ID_TESTTP_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@id/ID_TESTTP_GUIDELINE_CENTER"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ID_TESTTP_GUIDELINE_LEFT"
+        app:layout_constraintTop_toBottomOf="@id/ID_TESTTP_GUIDELINE_TITLE"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/ID_TESTTP_BTN_TPINFOGET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnTpInfoGet_OnClick"
+                android:text="TpInfoGet()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTTP_BTN_TPINFOGETLIST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnTpInfoGetList_OnClick"
+                android:text="TpInfoGetList()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTTP_BTN_TPINFOGETLISTBYSATID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnTpInfoGetListBySatId_OnClick"
+                android:text="TpInfoGetListBySatId()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTTP_BTN_TPINFOSAVE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnTpInfoAddAndUpdate_OnClick"
+                android:text="TpInfoAdd/Update()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTTP_BTN_TPINFOSAVELIST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnTpInfoSaveList_OnClick"
+                android:text="TpInfoSaveList()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTTP_BTN_TPINFODELETE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnTpInfoDelete_OnClick"
+                android:text="TpInfoDelete()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

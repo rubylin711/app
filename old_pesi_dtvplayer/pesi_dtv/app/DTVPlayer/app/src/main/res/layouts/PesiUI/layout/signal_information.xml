@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.SignalInformationActivity">
+
+    <!--
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/STR_TODO"
+        android:src="@color/colorBlue"
+        app:layout_constraintBottom_toTopOf="@+id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idSignalInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="0dp"
+        android:gravity="center"
+        android:text="@string/STR_SIGNAL_INFORMATION_TITLE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/title_limit"
+        app:layout_constraintStart_toStartOf="@+id/receiverInfo_v_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+    -->
+
+    <include
+        android:id="@+id/signalInfoTitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/receiverInfo_v_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/receiverInfo_v_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <TextView
+        android:id="@+id/idChNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/STR_CH_NO"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/receiverInfo_v_right"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/receiverInfo_v_left"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="0.1" />
+    <!--
+    <TextView
+        android:id="@+id/idAntenna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_ANTENNA"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idChNo" />
+    -->
+    <TextView
+        android:id="@+id/idSymbolRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_SYMBOLRATE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idChNo" />
+
+    <TextView
+        android:id="@+id/idFreq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_FREQUENCY"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idSymbolRate" />
+    <!--
+
+    <TextView
+        android:id="@+id/idPol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_POLARIZATION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/idFreq"
+        app:layout_constraintTop_toBottomOf="@+id/idFreq" />
+-->
+
+    <TextView
+        android:id="@+id/idVideoPid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_VIDEO_PID"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idFreq" />
+
+    <TextView
+        android:id="@+id/idAudioPid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_AUDIO_PID"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idVideoPid" />
+
+    <TextView
+        android:id="@+id/idAudioPidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idAudioPid"
+        app:layout_constraintTop_toTopOf="@+id/idAudioPid" />
+
+    <TextView
+        android:id="@+id/idPcrPid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_PCR_PID"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idAudioPid" />
+
+    <TextView
+        android:id="@+id/idPcrPidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idPcrPid"
+        app:layout_constraintTop_toTopOf="@+id/idPcrPid" />
+
+    <TextView
+        android:id="@+id/idStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_STRENGTH"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idPcrPid" />
+
+    <ProgressBar
+        android:id="@+id/idStrengthPrgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/SIGNALINFORMATION_PROGBAR_HEIGHT"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="@+id/idStrength"
+        app:layout_constraintEnd_toStartOf="@+id/progress_right_v"
+        app:layout_constraintStart_toEndOf="@+id/idStrength"
+        app:layout_constraintTop_toTopOf="@+id/idStrength" />
+
+    <TextView
+        android:id="@+id/idStrengthValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/progress_right_v"
+        app:layout_constraintTop_toTopOf="@+id/idStrength" />
+
+    <TextView
+        android:id="@+id/idQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_QUALITY"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idStrength" />
+
+    <TextView
+        android:id="@+id/idBer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_signal_ber"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idChNo"
+        app:layout_constraintTop_toBottomOf="@+id/idQuality" />
+
+    <TextView
+        android:id="@+id/idBerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idBer"
+        app:layout_constraintTop_toTopOf="@+id/idBer" />
+
+    <ProgressBar
+        android:id="@+id/idQualityPrgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/SIGNALINFORMATION_PROGBAR_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginEnd="8dp"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="@+id/idQuality"
+        app:layout_constraintEnd_toEndOf="@+id/idStrengthPrgBar"
+        app:layout_constraintStart_toStartOf="@+id/idStrengthPrgBar"
+        app:layout_constraintTop_toTopOf="@+id/idQuality" />
+
+    <TextView
+        android:id="@+id/idQualityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/progress_right_v"
+        app:layout_constraintTop_toTopOf="@+id/idQuality" />
+
+
+    <TextView
+        android:id="@+id/idServPid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/STR_SERVICE_ID"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toStartOf="@+id/receiverInfo_v_right"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/idVideoPid"
+        app:layout_constraintTop_toTopOf="@+id/idVideoPid" />
+
+    <TextView
+        android:id="@+id/idServIdValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idServPid"
+        app:layout_constraintTop_toTopOf="@+id/idServPid" />
+
+    <TextView
+        android:id="@+id/idTid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:text="@string/STR_TID"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idServPid"
+        app:layout_constraintTop_toBottomOf="@+id/idServPid" />
+
+    <TextView
+        android:id="@+id/idTidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idTid"
+        app:layout_constraintTop_toTopOf="@+id/idTid" />
+
+    <TextView
+        android:id="@+id/idLock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:text="@string/STR_LOCK"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/idTid"
+        app:layout_constraintTop_toBottomOf="@+id/idTid" />
+
+    <TextView
+        android:id="@+id/idLockValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idLock"
+        app:layout_constraintTop_toTopOf="@+id/idLock" />
+
+    <TextView
+        android:id="@+id/idChNoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idChNo"
+        app:layout_constraintTop_toTopOf="@+id/idChNo" />
+    <!--
+
+    <TextView
+        android:id="@+id/idAntValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idAntenna"
+        app:layout_constraintTop_toTopOf="@+id/idAntenna" />
+-->
+
+    <TextView
+        android:id="@+id/idSymRateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idSymbolRate"
+        app:layout_constraintTop_toTopOf="@+id/idSymbolRate" />
+
+    <TextView
+        android:id="@+id/idFreqValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idFreq"
+        app:layout_constraintTop_toTopOf="@+id/idFreq" />
+    <!--
+
+    <TextView
+        android:id="@+id/idPolValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idPol"
+        app:layout_constraintTop_toTopOf="@+id/idPol" />
+-->
+
+    <TextView
+        android:id="@+id/idVideoPidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/idVideoPid"
+        app:layout_constraintTop_toTopOf="@+id/idVideoPid" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/progress_right_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

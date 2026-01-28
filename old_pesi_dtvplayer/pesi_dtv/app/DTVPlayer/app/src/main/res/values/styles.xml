@@ -1,0 +1,120 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="MyDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+    <!--parent="@android:style/Theme.Dialog"-->
+    <style name="transparentDialog" >
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+    <style name="Transparent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name ="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorForeground">#fff</item>
+<!--        <item name="android:typeface">monospace</item>-->
+
+        <item name="android:fontFamily">sans-serif-medium</item>
+<!--        <item name="android:fontFamily">sans-serif-black</item>-->
+<!--        <item name="android:fontFamily">sans-serif</item>-->
+    </style>
+    <style name="Fullscreen" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <!--<style name="Fullscreen" parent="@android:style/Theme.NoTitleBar.Fullscreen">-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--<style name="BackgroundDark" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">-->
+    <style name="BackgroundDark" parent="Transparent">
+        <item name="android:windowBackground">@android:color/background_dark</item>
+    </style>
+
+    <style name="TimePickerDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:colorControlHighlight">@color/colorTimePickerBackground</item>
+        <item name="android:colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="DatePickerDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:colorControlHighlight">@color/colorTimePickerBackground</item>
+        <item name="android:colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Theme.Holo.Light.NoActionBar.Fullscreen.Translucent" parent="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="Theme.Holo.Light.Dialog.NoActionBar.NoBackground" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.Leanback.PesiVoiceSearch" parent="@style/Theme.Leanback">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="ControlHighlight" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+    </style>
+
+    <style name="TextAppearance_16sp">
+        <!-- item text size in menu-->
+        <item name="android:textSize">16sp</item>
+        <!-- item size in menu-->
+        <!--<item name="android:listPreferredItemHeightSmall">40dp</item>
+        <item name="listPreferredItemHeightSmall">40dp</item>-->
+        <!-- item padding left in menu-->
+        <!--<item name="android:listPreferredItemPaddingLeft">8dp</item>
+        <item name="listPreferredItemPaddingLeft">8dp</item>-->
+        <!-- item padding right in menu-->
+        <!--<item name="android:listPreferredItemPaddingRight">8dp</item>
+        <item name="listPreferredItemPaddingRight">8dp</item>-->
+    </style>
+
+    <style name="ShapeAppearanceOverlay_HalfRound">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeBottomRight">50%</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+    </style>
+</resources>

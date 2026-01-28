@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 先畫紅框(新版企業色為綠框) -->
+    <item
+        android:drawable="@drawable/shape_rect_bd_2_corporate_color"
+        android:left="-2dp"
+        android:right="-2dp"
+        />
+</layer-list>

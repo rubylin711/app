@@ -1,0 +1,15 @@
+android_app {
+    name: "AppDownloadManager_apk",
+    srcs: [
+        "app/src/main/java/**/*.java",
+    ],
+    resource_dirs: ["app/src/main/res"],
+    manifest: "app/src/main/AndroidManifest.xml",
+    certificate: "platform",
+    platform_apis: true,
+    static_libs: [
+        "androidx.annotation_annotation",
+        "androidx.legacy_legacy-support-v4",
+    ]
+
+}

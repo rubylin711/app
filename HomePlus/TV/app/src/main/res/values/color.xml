@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="white_description">#d2d2d2</color>
+    <color name="white_time">#afc8de</color>
+    <color name="colorWhiteOpacity10">#1affffff</color>
+    <color name="colorWhiteOpacity15">#26ffffff</color>
+    <color name="colorWhiteOpacity20">#33ffffff</color>
+    <color name="colorWhiteOpacity30">#4dffffff</color>
+    <color name="colorWhiteOpacity40">#66ffffff</color>
+    <color name="colorWhiteOpacity50">#80ffffff</color>
+    <color name="colorWhiteOpacity70">#b3ffffff</color>
+    <color name="colorWhiteOpacity75">#bfffffff</color>
+    <color name="colorWhiteOpacity80">#ccffffff</color>
+
+    <color name="colorBlackOpacity30">#4d000000</color>
+    <color name="colorBlackOpacity50">#80000000</color>
+    <color name="colorBlackOpacity70">#b3000000</color>
+    <color name="colorBlackOpacity80">#cc000000</color>
+
+    <color name="colorTextNotSelect">#b2b2b2</color>
+    <color name="colorScrollBarGray">#b2b2b2</color>
+    <color name="colorB2b2b2Opacity50">#80b2b2b2</color>
+    <color name="colorB2b2b2Opacity70">#b3b2b2b2</color>
+    <color name="colorB2b2b2Opacity80">#ccb2b2b2</color>
+    <color name="colorButtonTextGray">#bfbfbf</color>
+
+    <color name="color34363dOpacity90">#e634363d</color>
+    <color name="colorC2c3c5">#c2c3c5</color>
+    <color name="color9fb8cb">#9fb8cb</color>
+    <color name="color9fb8cbOpacity30">#4d9fb8cb</color>
+    <color name="color9fb8cbOpacity50">#809fb8cb</color>
+
+    <color name="colorAfc8deOpacity80">#ccafc8de</color>
+
+    <color name="colorBlueSubtitle">#ff8da4b9</color>
+
+    <color name="colorButton2">#2f3238</color>
+
+    <color name="colorBgMask">#8003293e</color>
+
+    <color name="colorGold">#eccb8d</color>
+    <color name="colorGold2">#ebca8c</color>
+    <color name="colorGoldOpacity70">#b3ebca8c</color>
+    <color name="colorGoldOpacity80">#ccebca8c</color>
+
+    <color name="colorEpgSelect">#51545a</color>
+
+    <color name="corporateColor">#00a199</color>
+    <color name="colorTabSelect">#00a199</color>
+
+    <color name="colorTextTitle">#3b3c41</color>
+    <color name="colorSettingsLayoutBg">#0db2d2ff</color>
+
+    <color name="colorRedWarning">#ffea5b5b</color>
+
+    <color name="progress_gary">#23242c</color>
+
+    <color name="channel_1">#dc622f</color>
+    <color name="channel_2">#3d29ba</color>
+    <color name="channel_3">#1b93a9</color>
+    <color name="channel_4">#3d3c76</color>
+    <color name="channel_5">#8e3d3c</color>
+    <color name="channel_6">#7a8c42</color>
+    <color name="channel_7">#1b3c41</color>
+    <color name="channel_8">#366e6f</color>
+    <color name="channel_9">#366e6f</color>
+
+    <array name="channel_search_color">
+        <item>@color/channel_1</item>
+        <item>@color/channel_2</item>
+        <item>@color/channel_3</item>
+        <item>@color/channel_4</item>
+        <item>@color/channel_5</item>
+        <item>@color/channel_6</item>
+        <item>@color/channel_7</item>
+        <item>@color/channel_8</item>
+        <item>@color/channel_9</item>
+    </array>
+</resources>

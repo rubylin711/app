@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/edittext_bg3">
+
+    </item>
+    <item android:state_enabled="false" android:state_focused="true" android:drawable="@drawable/edittext_bg2">
+
+    </item>
+    <item android:state_pressed="true" android:drawable="@drawable/edittext_bg2">
+
+    </item>
+    <item android:state_focused="true" android:drawable="@drawable/edittext_bg2" >
+
+    </item>
+    <item >
+        <shape>
+            <gradient android:angle="90" android:endColor="@color/colorButton2" android:startColor="@color/colorButton2" />
+        </shape>
+    </item>
+
+</selector>

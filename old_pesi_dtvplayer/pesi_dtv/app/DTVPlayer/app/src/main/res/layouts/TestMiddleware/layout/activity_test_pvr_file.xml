@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.TestMiddleware.TestPVRFileActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTPVR_GUIDELINE_RIGHT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTPVR_GUIDELINE_LEFT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTPVR_GUIDELINE_CENTER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTPVR_GUIDELINE_TITLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTPVR_GUIDELINE_HELP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <include
+        android:id="@+id/ID_TESTPVR_LAYOUT_TITLE"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/ID_TESTPVR_GUIDELINE_TITLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/ID_TESTPVR_LAYOUT_HELP"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ID_TESTPVR_GUIDELINE_HELP" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ID_TESTPVR_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@id/ID_TESTPVR_GUIDELINE_CENTER"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ID_TESTPVR_GUIDELINE_LEFT"
+        app:layout_constraintTop_toBottomOf="@id/ID_TESTPVR_GUIDELINE_TITLE"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_PvrFileRemove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="PvrFileRemove_OnClick"
+                android:text="PvrFileRemove()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_PvrFileRename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="PvrFileRename_OnClick"
+                android:text="PvrFileRename()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_PvrFileGetDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="PvrFileGetDuration_OnClick"
+                android:text="PvrFileGetDuration()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_PvrFileGetSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="PvrFileGetSize_OnClick"
+                android:text="PvrFileGetSize()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_PvrFileGetAllInfo_OnClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="PvrFileGetAllInfo_OnClick"
+                android:text="PvrFileGetAllInfo()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_PvrFileGetExtraInfo_OnClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="PvrFileGetExtraInfo_OnClick"
+                android:text="PvrFileGetExtraInfo()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_pvrFileGetEpgInfo_OnClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="pvrFileGetEpgInfo_OnClick"
+                android:text="pvrFileGetEpgInfo()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_pvrTotalRecordFileOpen_OnClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="pvrTotalRecordFileOpen_OnClick"
+                android:text="pvrTotalRecordFileOpen()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_pvrTotalRecordFileGet_OnClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="pvrTotalRecordFileGet_OnClick"
+                android:text="pvrTotalRecordFileGet()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTPVR_BTN_pvrTotalRecordFileSort_OnClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="pvrTotalRecordFileSort_OnClick"
+                android:text="pvrTotalRecordFileSort()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ID_TESTPVR_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@+id/ID_TESTPVR_GUIDELINE_RIGHT"
+        app:layout_constraintStart_toStartOf="@+id/ID_TESTPVR_GUIDELINE_CENTER"
+        app:layout_constraintTop_toBottomOf="@id/ID_TESTPVR_GUIDELINE_TITLE">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resultTXV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

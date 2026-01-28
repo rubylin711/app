@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.TestMiddleware.TestBookManagerActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTBOOKMANAGER_GUIDELINE_RIGHT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTBOOKMANAGER_GUIDELINE_LEFT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTBOOKMANAGER_GUIDELINE_CENTER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTBOOKMANAGER_GUIDELINE_TITLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTBOOKMANAGER_GUIDELINE_HELP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+
+    <include
+        android:id="@+id/ID_TESTBOOKMANAGER_LAYOUT_TITLE"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/ID_TESTBOOKMANAGER_GUIDELINE_TITLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/ID_TESTBOOKMANAGER_LAYOUT_HELP"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ID_TESTBOOKMANAGER_GUIDELINE_HELP" />
+
+    <TextView
+        android:id="@+id/ID_TESTBOOKMANAGER_TXV_INPUT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical|horizontal"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/ID_TESTBOOKMANAGER_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@+id/ID_TESTBOOKMANAGER_TXV_OUTPUT"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ID_TESTBOOKMANAGER_GUIDELINE_CENTER"
+        app:layout_constraintTop_toTopOf="@+id/ID_TESTBOOKMANAGER_GUIDELINE_TITLE" />
+
+    <TextView
+        android:id="@+id/ID_TESTBOOKMANAGER_TXV_OUTPUT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical|horizontal"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/ID_TESTBOOKMANAGER_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@+id/ID_TESTBOOKMANAGER_GUIDELINE_RIGHT"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ID_TESTBOOKMANAGER_TXV_INPUT"
+        app:layout_constraintTop_toTopOf="@+id/ID_TESTBOOKMANAGER_GUIDELINE_TITLE" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ID_TESTBOOKMANAGER_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@id/ID_TESTBOOKMANAGER_GUIDELINE_CENTER"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ID_TESTBOOKMANAGER_GUIDELINE_LEFT"
+        app:layout_constraintTop_toBottomOf="@id/ID_TESTBOOKMANAGER_GUIDELINE_TITLE"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_BOOKMANAGER"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnBookManager_OnClick"
+                android:text="BookManager()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_CHECKEXIST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnCheckExist_OnClick"
+                android:text="CheckExist()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_CHECKFULL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnCheckFull_OnClick"
+                android:text="CheckFull()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_GETEMPTYBOOKID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnGetEmptyBookId_OnClick"
+                android:text="GetEmptyBookId()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_ADDBOOKINFO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnAddBookInfo_OnClick"
+                android:text="AddBookInfo()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_DELBOOKINFO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnDelBookInfo_OnClick"
+                android:text="DelBookInfo()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_GETENDTIME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnGetEndTime_OnClick"
+                android:text="GetEndTime()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_CHECKBOOKAFTERNOW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnCheckBookAfterNow_OnClick"
+                android:text="CheckBookAfterNow()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_SAVE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnSave_OnClick"
+                android:text="Save()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTBOOKMANAGER_BTN_BOOKMANAGERINIT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnBookManagerInit_OnClick"
+                android:text="BookManagerInit()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

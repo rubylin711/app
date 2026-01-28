@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtest.activity.ConnectPcToolActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="400dp"
+        android:layout_height="25dp"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="@string/str_connect_pctool"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="340dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/pctool_connect_msg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/pctool_connect_msg"
+        android:layout_width="340dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toTopOf="@+id/pctool_OTA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/pctool_OTA"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/str_ota"
+        android:scaleType="fitCenter"
+        android:src="@drawable/red_btn"
+        app:layout_constraintEnd_toStartOf="@+id/pctool_item_OTA"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/pctool_item_OTA"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_rectangle_disable"
+        android:gravity="center"
+        android:text="@string/str_ota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

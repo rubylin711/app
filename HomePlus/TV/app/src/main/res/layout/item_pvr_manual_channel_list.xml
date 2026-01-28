@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llPvrManualChannelList"
+    android:layout_width="165dp"
+    android:layout_height="38dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPvrManualChannelList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:buttonTint="@color/colorWhiteOpacity50"
+            android:button="@drawable/state_epg_genre_radio_btn"
+            android:gravity="center|left"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tvPvrManualChannelListChannelNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginRight="3dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:text="1000"
+            android:textColor="@color/state_selected_white_normal_ebca8c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvPvrManualChannelListChannelName"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:maxWidth="85dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="Colorbar"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorWhiteOpacity20"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="18dp" />
+</LinearLayout>

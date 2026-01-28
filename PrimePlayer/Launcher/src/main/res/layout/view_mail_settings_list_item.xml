@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@drawable/mail_item_bg_focus"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <TextView
+        android:id="@+id/lo_mail_settings_list_item_textv_label"
+        android:textSize="@dimen/lo_mail_settings_list_item_textv_label_textsize"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/lo_mail_settings_list_item_textv_label_marginleft"
+        android:layout_alignParentLeft="true"/>
+
+    <Switch
+        android:id="@+id/lo_mail_settings_list_item_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/lo_mail_settings_list_item_switch_marginright"
+        android:thumb="@drawable/switch_custom_thumb_selector"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:track="@drawable/switch_custom_track_selector"
+        android:switchMinWidth="@dimen/lo_mail_settings_list_item_switch_switchminwidth"/>
+</RelativeLayout>

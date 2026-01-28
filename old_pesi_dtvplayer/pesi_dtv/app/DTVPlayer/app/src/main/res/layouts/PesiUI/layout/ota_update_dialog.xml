@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/OTAUPDATEDIALOG_WIDTH"
+    android:layout_height="wrap_content"
+    android:background="@drawable/banner">
+
+    <ImageView
+        android:id="@+id/otatitlelineIGV"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/title_line"
+        android:contentDescription="@string/STR_TODO"
+        app:layout_constraintEnd_toStartOf="@+id/ota_dialog_right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/ota_dialog_left_guideline"
+        app:layout_constraintTop_toTopOf="@+id/otadialogtitleTXV" />
+
+
+    <TextView
+        android:id="@+id/otadialogtitleTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_OTA_UPDATE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/ota_dialog_left_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/otadialogtpidTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/STR_DOWNLAOAD_PID"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/ota_dialog_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/otatitlelineIGV" />
+
+    <TextView
+        android:id="@+id/otadialogfreqTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/STR_FREQUENCY"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toEndOf="@+id/ota_dialog_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/otadialogtpidTXV" />
+
+    <TextView
+        android:id="@+id/otasymTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/STR_SYMBOLRATE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/ota_dialog_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/otadialogfreqTXV" />
+
+    <TextView
+        android:id="@+id/otabandwithTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/STR_ISDBT_BANDWIDTH"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/ota_dialog_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/otadialogfreqTXV" />
+
+    <TextView
+        android:id="@+id/otaqamTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/STR_QAM"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/ota_dialog_left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/otasymTXV" />
+
+    <EditText
+        android:id="@+id/otatpidEDV"
+        android:layout_width="@dimen/OTAUPDATEDIALOG_EDV_WIDTH"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:maxLength="3"
+        android:text="100"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:labelFor="@id/otatpidEDV"
+        app:layout_constraintBottom_toBottomOf="@+id/otadialogtpidTXV"
+        app:layout_constraintEnd_toStartOf="@+id/ota_dialog_right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/otadialog_middle_guideline"
+        app:layout_constraintTop_toTopOf="@+id/otadialogtpidTXV" />
+
+
+    <EditText
+        android:id="@+id/otafreqEDV"
+        android:layout_width="@dimen/OTAUPDATEDIALOG_EDV_WIDTH"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:maxLength="6"
+        android:text="506"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:labelFor="@id/otafreqEDV"
+        app:layout_constraintBottom_toBottomOf="@+id/otadialogfreqTXV"
+        app:layout_constraintEnd_toStartOf="@+id/ota_dialog_right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/otadialog_middle_guideline"
+        app:layout_constraintTop_toTopOf="@+id/otadialogfreqTXV" />
+
+
+    <EditText
+        android:id="@+id/otasymbolEDV"
+        android:layout_width="@dimen/OTAUPDATEDIALOG_EDV_WIDTH"
+        android:layout_height="@dimen/OTAUPDATEDIALOG_OTASYMBOLEDV_HEIGHT"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:maxLength="7"
+        android:text="6875"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:labelFor="@id/otasymbolEDV"
+        app:layout_constraintBottom_toBottomOf="@+id/otasymTXV"
+        app:layout_constraintEnd_toStartOf="@+id/ota_dialog_right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/otadialog_middle_guideline"
+        app:layout_constraintTop_toTopOf="@+id/otasymTXV" />
+
+    <Spinner
+        android:id="@+id/otabandwidthSPINNER"
+        android:layout_width="@dimen/OTAUPDATEDIALOG_SPINNER_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:entries="@array/STR_ARRAY_OTA_BANDWIDTH"
+        app:layout_constraintBottom_toBottomOf="@+id/otasymTXV"
+        app:layout_constraintEnd_toStartOf="@+id/ota_dialog_right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/otadialog_middle_guideline"
+        app:layout_constraintTop_toTopOf="@+id/otasymTXV" />
+
+
+    <TextView
+        android:id="@+id/freqUnitTXV"
+        android:layout_width="@dimen/OTAUPDATEDIALOG_TXV_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_MHZ"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/otafreqEDV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/otafreqEDV"
+        app:layout_constraintTop_toTopOf="@+id/otafreqEDV" />
+
+    <TextView
+        android:id="@+id/symbolUnitTXV"
+        android:layout_width="@dimen/OTAUPDATEDIALOG_TXV_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_MSPS"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/otasymbolEDV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/otasymbolEDV"
+        app:layout_constraintTop_toTopOf="@+id/otasymbolEDV" />
+
+    <Spinner
+        android:id="@+id/otaqamSPINNER"
+        android:layout_width="@dimen/OTAUPDATEDIALOG_SPINNER_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:entries="@array/STR_ARRAY_QAMLIST"
+        app:layout_constraintBottom_toBottomOf="@+id/otaqamTXV"
+        app:layout_constraintEnd_toStartOf="@+id/ota_dialog_right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/otadialog_middle_guideline"
+        app:layout_constraintTop_toTopOf="@+id/otaqamTXV" />
+
+    <Button
+        android:id="@+id/otadialogcancelBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/OTAUPDATEDIALOG_BTN_HEIGHT"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_selector"
+        android:text="@string/STR_CANCEL"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/otadialog_middle_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/otaqamTXV" />
+
+    <Button
+        android:id="@+id/otadialogokBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/OTAUPDATEDIALOG_BTN_HEIGHT"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_selector"
+        android:text="@string/STR_OK"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/otadialogcancelBTN"
+        app:layout_constraintStart_toStartOf="@+id/otadialog_middle_guideline"
+        app:layout_constraintTop_toTopOf="@+id/otadialogcancelBTN"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ota_dialog_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/otadialog_middle_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ota_dialog_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ota_dialog_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

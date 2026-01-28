@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/banner">
+
+    <TextView
+        android:id="@+id/pos_edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/STR_EDIT_POSITION"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/title_line"
+        android:layout_width="@dimen/EDITPOS32DIALOG_TITLE_LINE_WIDTH"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_line"
+        android:contentDescription="@string/STR_NULL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pos_edit_title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/satTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="100dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_SATELLITE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_line"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/tp_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_DVBS_TP"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/satTxv"/>
+
+    <TextView
+        android:id="@+id/txvMoveSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_MOVEMENT_SPEED"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/tp_txv"/>
+
+    <TextView
+        android:id="@+id/txvMoveDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_MOVE_DISH"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/txvMoveSpeed"/>
+
+    <TextView
+        android:id="@+id/txvCenterPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_CENTER_POSITION"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/txvMoveDish"/>
+
+    <TextView
+        android:id="@+id/txvSetLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_SET_LIMIT"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/txvCenterPos"/>
+
+
+
+    <TextView
+        android:id="@+id/txvOK_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_OK"
+        android:gravity="center"
+        android:focusable="true"
+        android:background="@drawable/focus_list"
+        app:layout_constraintStart_toStartOf="@+id/sat_spinner"
+        app:layout_constraintEnd_toEndOf="@+id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/txvCenterPos"
+        app:layout_constraintBottom_toBottomOf="@+id/txvCenterPos"/>
+
+    <TextView
+        android:id="@+id/txvSetLimit_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_DISABLE"
+        android:gravity="center"
+        android:focusable="true"
+        android:background="@drawable/focus_list"
+        android:nextFocusDown="@id/sat_spinner"
+        app:layout_constraintStart_toStartOf="@+id/sat_spinner"
+        app:layout_constraintEnd_toEndOf="@+id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/txvSetLimit"
+        app:layout_constraintBottom_toBottomOf="@+id/txvSetLimit"/>
+
+    <TextView
+        android:id="@+id/strength_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_STRENGTH"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/txvSetLimit"/>
+
+    <TextView
+        android:id="@+id/quality_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_QUALITY"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/strength_txv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Spinner
+        android:id="@+id/sat_spinner"
+        android:layout_width="@dimen/EDITPOS32DIALOG_SAT_SPINNER_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:nextFocusUp="@id/txvSetLimit_button"
+        app:layout_constraintTop_toTopOf="@+id/satTxv"
+        app:layout_constraintBottom_toBottomOf="@+id/satTxv"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Spinner
+        android:id="@+id/transponder_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/selectbox"
+        android:popupBackground="@drawable/banner"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="@+id/tp_txv"
+        app:layout_constraintStart_toStartOf="@id/sat_spinner"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/tp_txv"/>
+
+    <Spinner
+        android:id="@+id/sp_move_speed"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:entries="@array/STR_ARY_MV_SPEED"
+        app:layout_constraintStart_toStartOf="@id/sat_spinner"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/txvMoveSpeed"
+        app:layout_constraintBottom_toBottomOf="@+id/txvMoveSpeed"/>
+
+    <Spinner
+        android:id="@+id/sp_move_dish"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:entries="@array/STR_ARY_MV_DISH"
+        app:layout_constraintStart_toStartOf="@id/sat_spinner"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/txvMoveDish"
+        app:layout_constraintBottom_toBottomOf="@+id/txvMoveDish"/>
+
+    <TextView
+        android:id="@+id/strength_percent_txv"
+        android:layout_width="@dimen/EDITPOS32DIALOG_STRENGTH_PERCENT_TXV_WIDTH"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="0 %"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/strength_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/strength_txv"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/quality_percent_txv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0 %"
+        android:gravity="end"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/strength_percent_txv"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/quality_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/quality_txv"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/strength_progressbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/strength_txv"
+        app:layout_constraintEnd_toStartOf="@id/strength_percent_txv"
+        app:layout_constraintTop_toTopOf="@+id/strength_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/strength_txv"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/quality_progressbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/strength_progressbar"
+        app:layout_constraintEnd_toEndOf="@id/strength_progressbar"
+        app:layout_constraintTop_toTopOf="@id/quality_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/quality_txv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

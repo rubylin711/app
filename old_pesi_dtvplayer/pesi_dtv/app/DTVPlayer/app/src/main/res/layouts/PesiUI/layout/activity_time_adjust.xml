@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:layout_margin="0dp"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.TimeAdjustActivity">
+
+    <include
+        android:id="@+id/timeAdjustTitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <include
+        android:id="@+id/timeAdjustHelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/help" />
+
+
+
+    <TextView
+        android:id="@+id/autoTimeSettingTV"
+        android:text="@string/STR_AUTO_TIME_SETTING"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP" />
+
+
+
+
+    <TextView
+        android:id="@+id/gmtoffsetTV"
+        android:text="@string/STR_GMT_OFFSET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/autoTimeSettingTV"
+        app:layout_constraintTop_toBottomOf="@+id/autoTimeSettingTV" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/summerTimeTV"
+        android:text="@string/STR_SUMMER_TIME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/gmtoffsetTV"
+        app:layout_constraintTop_toBottomOf="@+id/gmtoffsetTV" />
+
+
+    <TextView
+        android:id="@+id/currentDateTV"
+        android:text="@string/STR_CURRENT_DATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/summerTimeTV"
+        app:layout_constraintTop_toBottomOf="@+id/summerTimeTV" />
+
+    <TextView
+        android:id="@+id/currentTimeTV"
+        android:text="@string/STR_CURRENT_TIME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/currentDateTV"
+        app:layout_constraintTop_toBottomOf="@+id/currentDateTV" />
+
+        <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxLeft_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxRight_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_END" />
+
+    <Spinner
+        android:id="@+id/autoTimeSettingSPIN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_AUTO_TIME_SETTING_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/autoTimeSettingTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/autoTimeSettingTV" />
+
+    <Spinner
+        android:id="@+id/gmtoffsetSPIN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_GTM_OFFSET_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/gmtoffsetTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/gmtoffsetTV" />
+
+    <Spinner
+        android:id="@+id/summerTimeSPIN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_SUMMER_TIME_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/summerTimeTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/summerTimeTV" />
+
+    <TextView
+        android:id="@+id/currentdateTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/item_selector"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:gravity="center"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/currentDateTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/currentDateTV" />
+
+    <TextView
+        android:id="@+id/currentTimeTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:gravity="center"
+        android:focusable="true"
+        android:background="@drawable/item_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/currentTimeTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/currentTimeTV" />
+
+    <TextView
+        android:id="@+id/timeRegionTV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toStartOf="@+id/screen_v_right"
+        app:layout_constraintStart_toStartOf="@+id/screen_v_left"
+        app:layout_constraintTop_toBottomOf="@+id/currentTimeTV" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_v_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_v_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerHGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

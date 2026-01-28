@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/parental_locked_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="195dp"
+                android:background="@drawable/button_item2"
+                android:button="@drawable/radio_button_inset"
+                android:buttonTint="#ffffff"
+                android:checked="true"
+                android:drawablePadding="20dp"
+                android:paddingLeft="0dp"
+                android:text="@string/settings_channel_scan_network"
+                android:textColor="@color/state_selected_white_normal_white70"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="380dp"
+                android:background="@drawable/button_item2"
+                android:button="@drawable/radio_button_inset"
+                android:buttonTint="#ffffff"
+                android:text="@string/settings_channel_scan_manual"
+                android:textColor="@color/state_selected_white_normal_white70"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</LinearLayout>

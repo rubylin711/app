@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tv_tuner_index"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_blue_bright"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tuner_freq"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:labelFor="@id/et_tuner_freq"
+        android:text="@string/str_frequency"
+        app:layout_constraintStart_toEndOf="@+id/tv_tuner_index"
+        app:layout_constraintTop_toTopOf="@+id/tv_tuner_index" />
+
+    <EditText
+        android:id="@+id/et_tuner_freq"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:focusable="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tuner_freq"
+        app:layout_constraintTop_toTopOf="@+id/tv_tuner_freq" />
+
+    <TextView
+        android:id="@+id/tv_tuner_symbol_rate"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:labelFor="@id/et_tuner_symbol_rate"
+        android:text="@string/str_symbol_rate"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/et_tuner_freq"
+        app:layout_constraintTop_toTopOf="@+id/et_tuner_freq" />
+
+    <EditText
+        android:id="@+id/et_tuner_symbol_rate"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:focusable="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="number"
+        android:maxLength="5"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tv_tuner_symbol_rate"
+        app:layout_constraintTop_toTopOf="@+id/tv_tuner_symbol_rate" />
+
+    <TextView
+        android:id="@+id/tv_tuner_qam"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_qam"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/et_tuner_symbol_rate"
+        app:layout_constraintTop_toTopOf="@+id/et_tuner_symbol_rate" />
+
+    <TextView
+        android:id="@+id/tv_tuner_qam_value"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tv_tuner_qam"
+        app:layout_constraintTop_toTopOf="@+id/tv_tuner_qam" />
+
+    <ImageView
+        android:id="@+id/iv_tuner_qam_up"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/up_triangle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tuner_qam_value"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tuner_qam_value"
+        app:layout_constraintStart_toStartOf="@+id/tv_tuner_qam_value"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_tuner_qam_down"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/down_triangle"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tuner_qam_value"
+        app:layout_constraintStart_toStartOf="@+id/tv_tuner_qam_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tuner_qam_value"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_tuner_bandwidth"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_bandwidth"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/et_tuner_freq"
+        app:layout_constraintTop_toTopOf="@+id/et_tuner_freq" />
+
+    <TextView
+        android:id="@+id/tv_tuner_bandwidth_value"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tv_tuner_bandwidth"
+        app:layout_constraintTop_toTopOf="@+id/tv_tuner_bandwidth" />
+
+    <ImageView
+        android:id="@+id/iv_tuner_bandwidth_up"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/up_triangle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tuner_bandwidth_value"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tuner_bandwidth_value"
+        app:layout_constraintStart_toStartOf="@+id/tv_tuner_bandwidth_value"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_tuner_bandwidth_down"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/down_triangle"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tuner_bandwidth_value"
+        app:layout_constraintStart_toStartOf="@+id/tv_tuner_bandwidth_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tuner_bandwidth_value"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_tuner_rf"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_rf1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/et_tuner_symbol_rate"
+        app:layout_constraintTop_toTopOf="@+id/et_tuner_symbol_rate" />
+
+    <TextView
+        android:id="@+id/tv_tuner_generation"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_generation_s2"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tv_tuner_rf"
+        app:layout_constraintTop_toTopOf="@+id/tv_tuner_rf" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

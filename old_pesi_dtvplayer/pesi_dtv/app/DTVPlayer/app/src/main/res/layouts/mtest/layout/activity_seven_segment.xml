@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtest.activity.SevenSegmentActivity">
+
+    <TextView
+        android:id="@+id/tv_item03_title"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="@string/str_test_item_seven_segment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_item03_up_triangle"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/up_triangle"
+        app:layout_constraintBottom_toTopOf="@+id/tv_item03_seven_segment"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item03_seven_segment"
+        app:layout_constraintStart_toStartOf="@+id/tv_item03_seven_segment" />
+
+    <TextView
+        android:id="@+id/tv_item03_seven_segment"
+        android:layout_width="140dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center"
+        android:text="@string/str_seven_segment_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item03_title" />
+
+    <ImageView
+        android:id="@+id/iv_item03_down_triangle"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/down_triangle"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item03_seven_segment"
+        app:layout_constraintStart_toStartOf="@+id/tv_item03_seven_segment"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item03_seven_segment"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_item03_pass"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/str_pass"
+        android:scaleType="fitCenter"
+        android:src="@drawable/blue_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item03_down_triangle" />
+
+    <TextView
+        android:id="@+id/tv_item03_pass"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_pass"
+        app:layout_constraintStart_toEndOf="@+id/iv_item03_pass"
+        app:layout_constraintTop_toTopOf="@+id/iv_item03_pass" />
+
+    <ImageView
+        android:id="@+id/iv_item03_fail"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/red_btn"
+        app:layout_constraintStart_toEndOf="@+id/tv_item03_pass"
+        app:layout_constraintTop_toTopOf="@+id/iv_item03_pass"
+        android:contentDescription="@string/str_fail" />
+
+    <TextView
+        android:id="@+id/tv_item03_fail"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_fail"
+        app:layout_constraintStart_toEndOf="@+id/iv_item03_fail"
+        app:layout_constraintTop_toTopOf="@+id/iv_item03_pass" />
+</androidx.constraintlayout.widget.ConstraintLayout>

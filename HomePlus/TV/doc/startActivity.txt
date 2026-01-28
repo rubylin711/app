@@ -1,0 +1,8 @@
+[LiveTV]
+am start -n com.hwacom.homeplus.tv/.ui.activity.MainActivity
+
+[EPG]
+am start -n com.hwacom.homeplus.tv/.ui.activity.MainActivity --es Action "EPG"
+
+[PVR]
+am start -n com.hwacom.homeplus.tv/.ui.activity.PvrActivity

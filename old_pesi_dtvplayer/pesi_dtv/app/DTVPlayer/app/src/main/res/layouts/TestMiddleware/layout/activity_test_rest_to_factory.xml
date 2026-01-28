@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.prime.dtvplayer.TestMiddleware.TestRestToFactoryActivity">
+
+    <Button
+        android:id="@+id/buttonTestRestToFactory"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="100dp"
+        android:onClick="BtnResetToFactory_OnClick"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/invoketest_bn"
+        app:layout_constraintStart_toStartOf="@+id/invoketest_bn" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonTestRestToFactory"
+        app:layout_constraintStart_toStartOf="@+id/callbacktest_txt" />
+
+    <Button
+        android:id="@+id/invoketest_bn"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="342dp"
+        android:text="Invoke test"
+        android:onClick="BtnInvokeTest_OnClick"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTestRestToFactory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/invoketest_txt"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="60dp"
+        android:text="Invoke status"
+        app:layout_constraintBottom_toBottomOf="@+id/invoketest_bn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/invoketest_bn" />
+
+    <TextView
+        android:id="@+id/callbacktest_txt"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:text="Callback status"
+        app:layout_constraintBottom_toTopOf="@+id/textResult"
+        app:layout_constraintStart_toStartOf="@+id/invoketest_txt"
+        app:layout_constraintTop_toBottomOf="@+id/invoketest_txt" />
+</androidx.constraintlayout.widget.ConstraintLayout>

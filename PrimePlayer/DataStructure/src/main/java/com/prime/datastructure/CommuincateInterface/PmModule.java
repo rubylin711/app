@@ -1,0 +1,53 @@
+package com.prime.datastructure.CommuincateInterface;
+
+import static com.prime.datastructure.CommuincateInterface.CommandBase.CMD_ServicePlayer_PM_Base;
+
+public class PmModule {
+    public static final int CMD_ServicePlayer_PM_GposInfoGet = CMD_ServicePlayer_PM_Base + 0x01;
+    public static final int CMD_ServicePlayer_PM_GposInfoUpdate = CMD_ServicePlayer_PM_Base + 0x02;
+    public static final int CMD_ServicePlayer_PM_GposSaveKeyValueString = CMD_ServicePlayer_PM_Base + 0x03;
+    public static final int CMD_ServicePlayer_PM_GposSaveKeyValueInteger = CMD_ServicePlayer_PM_Base + 0x04;
+    public static final int CMD_ServicePlayer_PM_GposSaveKeyValueLong = CMD_ServicePlayer_PM_Base + 0x05;
+    public static final int CMD_ServicePlayer_PM_GetProgramInfoList = CMD_ServicePlayer_PM_Base + 0x06;
+    public static final int CMD_ServicePlayer_PM_GetProgramByChannelId = CMD_ServicePlayer_PM_Base + 0x07;
+    public static final int CMD_ServicePlayer_PM_GetProgramByChnum = CMD_ServicePlayer_PM_Base + 0x08;
+    public static final int CMD_ServicePlayer_PM_GetProgramByLcn = CMD_ServicePlayer_PM_Base + 0x09;
+    public static final int CMD_ServicePlayer_PM_GetProgramByServiceId = CMD_ServicePlayer_PM_Base + 0x0A;
+    public static final int CMD_ServicePlayer_PM_GetProgramByServiceIdTransportStreamId = CMD_ServicePlayer_PM_Base + 0x0B;
+    public static final int CMD_ServicePlayer_PM_UpdateProgramInfo = CMD_ServicePlayer_PM_Base + 0x0C;
+    public static final int CMD_ServicePlayer_PM_DeleteProgram = CMD_ServicePlayer_PM_Base + 0x0D;
+    public static final int CMD_ServicePlayer_PM_SaveTable = CMD_ServicePlayer_PM_Base + 0x0E;
+    public static final int CMD_ServicePlayer_PM_SetDefaultOpenChannel = CMD_ServicePlayer_PM_Base + 0x0F;
+    public static final int CMD_ServicePlayer_PM_GetDefaultChannel = CMD_ServicePlayer_PM_Base + 0x10;
+    public static final int CMD_ServicePlayer_PM_FavInfoGetList = CMD_ServicePlayer_PM_Base + 0x11;
+    public static final int CMD_ServicePlayer_PM_FavInfoGet = CMD_ServicePlayer_PM_Base + 0x12;
+    public static final int CMD_ServicePlayer_PM_FavInfoUpdateList = CMD_ServicePlayer_PM_Base + 0x13;
+    public static final int CMD_ServicePlayer_PM_FavInfoDelete = CMD_ServicePlayer_PM_Base + 0x14;
+    public static final int CMD_ServicePlayer_PM_FavInfoDeleteAll = CMD_ServicePlayer_PM_Base + 0x15;
+    public static final int CMD_ServicePlayer_PM_FavInfoSaveDb = CMD_ServicePlayer_PM_Base + 0x16;
+    public static final int CMD_ServicePlayer_PM_FavGroupNameGet = CMD_ServicePlayer_PM_Base + 0x17;
+    public static final int CMD_ServicePlayer_PM_FavGroupNameUpdate = CMD_ServicePlayer_PM_Base + 0x18;
+    public static final int CMD_ServicePlayer_PM_SatInfoGetList = CMD_ServicePlayer_PM_Base + 0x19;
+    public static final int CMD_ServicePlayer_PM_SatInfoGet = CMD_ServicePlayer_PM_Base + 0x1A;
+    public static final int CMD_ServicePlayer_PM_SatInfoAdd = CMD_ServicePlayer_PM_Base + 0x1B;
+    public static final int CMD_ServicePlayer_PM_SatInfoUpdate = CMD_ServicePlayer_PM_Base + 0x1C;
+    public static final int CMD_ServicePlayer_PM_SatInfoUpdateList = CMD_ServicePlayer_PM_Base + 0x1D;
+    public static final int CMD_ServicePlayer_PM_SatInfoDelete = CMD_ServicePlayer_PM_Base + 0x1E;
+    public static final int CMD_ServicePlayer_PM_TpInfoGetListBySatId = CMD_ServicePlayer_PM_Base + 0x1F;
+    public static final int CMD_ServicePlayer_PM_TpInfoGet = CMD_ServicePlayer_PM_Base + 0x20;
+    public static final int CMD_ServicePlayer_PM_TpInfoAdd = CMD_ServicePlayer_PM_Base + 0x21;
+    public static final int CMD_ServicePlayer_PM_TpInfoUpdate = CMD_ServicePlayer_PM_Base + 0x22;
+    public static final int CMD_ServicePlayer_PM_TpInfoUpdateList = CMD_ServicePlayer_PM_Base + 0x23;
+    public static final int CMD_ServicePlayer_PM_TpInfoDelete = CMD_ServicePlayer_PM_Base + 0x24;
+    public static final int CMD_ServicePlayer_PM_UpdatePMT = CMD_ServicePlayer_PM_Base + 0x25;
+    public static final int CMD_ServicePlayer_PM_StopMonitorTable = CMD_ServicePlayer_PM_Base + 0x26;
+    public static final int CMD_ServicePlayer_PM_StartMonitorTable = CMD_ServicePlayer_PM_Base + 0x27;
+    public static final int CMD_ServicePlayer_PM_ResetCheckAD = CMD_ServicePlayer_PM_Base + 0x28;
+    public static final int CMD_ServicePlayer_PM_BackupDatabase = CMD_ServicePlayer_PM_Base + 0x29;
+    public static final int CMD_ServicePlayer_PM_CategoryUpdateToFav  = CMD_ServicePlayer_PM_Base + 0x2A;
+    public static final int CMD_ServicePlayer_PM_SetTvInputId = CMD_ServicePlayer_PM_Base + 0x2B;
+    public static final int CMD_ServicePlayer_PM_GetTvInputId = CMD_ServicePlayer_PM_Base + 0x2C;
+    public static final int CMD_ServicePlayer_PM_GetProgramBySIdOnIdTsId = CMD_ServicePlayer_PM_Base + 0x2D;
+    public static final String TvInputId_String = "TvInputId";
+    public static final String KeyName_String = "KeyName";
+}

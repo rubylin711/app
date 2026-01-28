@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.HOMEPLUS_VBM" parent="@style/Theme.AppCompat.Light.NoActionBar" />
+</resources>

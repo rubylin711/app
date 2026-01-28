@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/pvr_red_color"/>
+            <corners android:radius="2dp"/>
+            <padding android:left="10dp" android:top="7dp" android:right="10dp" android:bottom="7dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="#a0555555" android:endColor="#a0555555" android:angle="270" android:centerColor="#a0555555"/>
+            <corners android:radius="2dp"/>
+            <padding android:left="10dp" android:top="7dp" android:right="10dp" android:bottom="7dp"/>
+        </shape>
+    </item>
+</selector>

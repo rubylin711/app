@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.HOMEPLUS_TV" parent="@style/Theme.AppCompat.NoActionBar" />
+</resources>

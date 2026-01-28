@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.prime.dtvplayer.View.InfoDetailView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Transparent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA">
+
+    <ImageView
+        android:id="@+id/detailBgIGV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/vertical_black_bg_round_corner"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/detailTitleTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/INFODETAIL_DETAILTITLETXV_HEIGHT"
+        android:gravity="center_vertical"
+        android:text="@string/STR_PROGRAM_DETAIL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintLeft_toLeftOf="@+id/LeftGuideline"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/titleLineIGV"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/gradient_title_line"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/LeftGuideline"
+        app:layout_constraintRight_toLeftOf="@+id/RightGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTitleTXV"
+        app:srcCompat="@drawable/title_line" />
+
+    <TextView
+        android:id="@+id/strengthTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="@string/STR_STRENGTH"
+        android:singleLine="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/LeftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/eventScrollSCV" />
+
+    <TextView
+        android:id="@+id/qualityTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/STR_QUALITY"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/LeftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/strengthTXV" />
+
+    <TextView
+        android:id="@+id/berTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/str_signal_ber"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/LeftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/qualityTXV" />
+
+    <ProgressBar
+        android:id="@+id/strengthProgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/INFODETAIL_PROGBAR_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/strengthTXV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/StrPogGuideline"
+        app:layout_constraintRight_toLeftOf="@+id/StrValGuideline"
+        app:layout_constraintTop_toTopOf="@+id/strengthTXV" />
+
+    <ProgressBar
+        android:id="@+id/qualityProgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/INFODETAIL_PROGBAR_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/qualityTXV"
+        app:layout_constraintEnd_toStartOf="@+id/StrValGuideline"
+        app:layout_constraintStart_toStartOf="@+id/strengthProgBar"
+        app:layout_constraintTop_toBottomOf="@+id/strengthProgBar"
+        app:layout_constraintTop_toTopOf="@+id/qualityTXV" />
+
+    <TextView
+        android:id="@+id/strengthValueTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        android:text="0"
+        android:singleLine="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/strengthTXV"
+        app:layout_constraintLeft_toLeftOf="@+id/StrValGuideline"
+        app:layout_constraintRight_toLeftOf="@+id/RightGuideline"
+/>
+
+    <TextView
+        android:id="@+id/qualityValueTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        android:text="0"
+        android:singleLine="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/qualityTXV"
+        app:layout_constraintLeft_toLeftOf="@+id/StrValGuideline"
+        app:layout_constraintRight_toLeftOf="@+id/RightGuideline"
+/>
+
+    <TextView
+        android:id="@+id/berValueTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/berTXV"
+        app:layout_constraintLeft_toLeftOf="@+id/StrValGuideline"
+    />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/LeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/RightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.925" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/TopGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MiddleGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <ScrollView
+        android:id="@+id/eventScrollSCV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:fadeScrollbars="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/MiddleGuideline"
+        app:layout_constraintLeft_toLeftOf="@+id/LeftGuideline"
+        app:layout_constraintRight_toLeftOf="@+id/RightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/detailTitleTXV"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/eventDetailTXV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_SIZE" />
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/StrPogGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/StrValGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.83" />
+
+</com.prime.dtvplayer.View.InfoDetailView>

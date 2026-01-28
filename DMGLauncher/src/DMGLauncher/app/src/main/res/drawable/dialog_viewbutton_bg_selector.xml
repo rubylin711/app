@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <layer-list>
+            <item
+                android:left="@dimen/live_tv_dialog_viewbutton_bg_selector_item_2px"
+                android:top="@dimen/live_tv_dialog_viewbutton_bg_selector_item_0px"
+                android:right="@dimen/live_tv_dialog_viewbutton_bg_selector_item_2px"
+                android:bottom="@dimen/live_tv_dialog_viewbutton_bg_selector_item_0px">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="@dimen/live_tv_dialog_viewbutton_bg_selector_stroke_2px"
+                        android:color="@color/pvr_red_color"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item
+                android:left="@dimen/live_tv_dialog_viewbutton_bg_selector_item_2px"
+                android:top="@dimen/live_tv_dialog_viewbutton_bg_selector_item_0px"
+                android:right="@dimen/live_tv_dialog_viewbutton_bg_selector_item_2px"
+                android:bottom="@dimen/live_tv_dialog_viewbutton_bg_selector_item_0px">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="@dimen/live_tv_dialog_viewbutton_bg_selector_stroke_2px"
+                        android:color="@color/trans"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

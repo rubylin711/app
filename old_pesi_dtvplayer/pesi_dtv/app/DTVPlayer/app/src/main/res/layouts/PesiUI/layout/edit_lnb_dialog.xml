@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/banner">
+
+    <TextView
+        android:id="@+id/lnb_edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/STR_EDIT_LNB"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/title_line"
+        android:layout_width="@dimen/EDITLNBDIALOG_TITLE_LINE_WIDTH"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_line"
+        android:contentDescription="@string/STR_NULL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lnb_edit_title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/satTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_SATELLITE"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_line"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0.10"/>
+
+    <TextView
+        android:id="@+id/lnbTypeTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_LNB_TYPE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/satTxv"/>
+
+    <TextView
+        android:id="@+id/lnbLowFreqTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_LNB_LOW_FREQ"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/lnbTypeTxv"/>
+
+    <TextView
+        android:id="@+id/lnbHighFreqTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_LNB_HIGH_FREQ"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/lnbLowFreqTxv"/>
+
+    <TextView
+        android:id="@+id/KHZ22_TONE_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_DVBS_22KHZ_TONE"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/lnbHighFreqTxv"/>
+
+    <!--
+    <TextView
+        android:id="@+id/LNB_POWER_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_LNB_POWER"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/KHZ22_TONE_txv"/>
+    -->
+
+    <TextView
+        android:id="@+id/tp_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_DVBS_TP"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/KHZ22_TONE_txv"/>
+
+    <TextView
+        android:id="@+id/strength_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_STRENGTH"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/tp_txv"/>
+
+    <TextView
+        android:id="@+id/quality_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_QUALITY"
+        app:layout_constraintStart_toStartOf="@+id/satTxv"
+        app:layout_constraintTop_toBottomOf="@+id/strength_txv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Spinner
+        android:id="@+id/sat_spinner"
+        android:layout_width="@dimen/EDITLNBDIALOG_SAT_SPINNER_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:nextFocusUp="@id/transponder_spinner"
+        app:layout_constraintTop_toTopOf="@+id/satTxv"
+        app:layout_constraintBottom_toBottomOf="@+id/satTxv"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Spinner
+        android:id="@+id/lnb_type_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:entries="@array/STR_LNB_TYPE"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="afterDescendants"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/lnbTypeTxv"
+        app:layout_constraintBottom_toBottomOf="@+id/lnbTypeTxv"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"/>
+
+    <EditText
+        android:id="@+id/lnb_low_freq_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="0"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        app:layout_constraintTop_toTopOf="@+id/lnbLowFreqTxv"
+        app:layout_constraintBottom_toBottomOf="@+id/lnbLowFreqTxv"
+        app:layout_constraintStart_toStartOf="@id/lnb_type_spinner"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        tools:ignore="HardcodedText,LabelFor" />
+    <ImageView
+        android:id="@+id/lnb_low_freq_image"
+        android:layout_width="@dimen/VIEW_HEIGHT"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:gravity="center"
+        android:src="@drawable/dialpad"
+        android:background="@drawable/focus_list"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/lnb_low_freq_edt"
+        app:layout_constraintBottom_toBottomOf="@+id/lnb_low_freq_edt"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/lnb_high_freq_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:maxLength="5"
+        app:layout_constraintTop_toTopOf="@+id/lnbHighFreqTxv"
+        app:layout_constraintBottom_toBottomOf="@+id/lnbHighFreqTxv"
+        app:layout_constraintStart_toStartOf="@id/lnb_low_freq_edt"
+        app:layout_constraintEnd_toEndOf="@+id/lnb_low_freq_edt"
+        tools:ignore="HardcodedText,LabelFor" />
+    <ImageView
+        android:id="@+id/lnb_high_freq_image"
+        android:layout_width="@dimen/VIEW_HEIGHT"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:gravity="center"
+        android:src="@drawable/dialpad"
+        android:background="@drawable/focus_list"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/lnb_high_freq_edt"
+        app:layout_constraintBottom_toBottomOf="@+id/lnb_high_freq_edt"
+        tools:ignore="ContentDescription" />
+
+    <Spinner
+        android:id="@+id/tone_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="8dp"
+        android:entries="@array/STR_DVBS_ARRAY_22KHZ_TONE"
+        android:background="@drawable/selectbox"
+        android:popupBackground="@drawable/banner"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintStart_toStartOf="@+id/sat_spinner"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/KHZ22_TONE_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/KHZ22_TONE_txv"/>
+
+    <!--
+    <Spinner
+        android:id="@+id/lnbPower_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:entries="@array/STR_ONOFF"
+        app:layout_constraintTop_toTopOf="@+id/LNB_POWER_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/LNB_POWER_txv"
+        app:layout_constraintStart_toStartOf="@id/tone_spinner"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"/>
+    -->
+
+    <Spinner
+        android:id="@+id/transponder_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/selectbox"
+        android:popupBackground="@drawable/banner"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:focusable="true"
+        android:nextFocusDown="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/tp_txv"
+        app:layout_constraintStart_toStartOf="@id/sat_spinner"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/tp_txv"/>
+
+    <TextView
+        android:id="@+id/strength_percent_txv"
+        android:layout_width="@dimen/EDITLNBDIALOG_STRENGTH_PERCENT_TXV_WIDTH"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="0 %"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/strength_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/strength_txv"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/quality_percent_txv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0 %"
+        android:gravity="end"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/strength_percent_txv"
+        app:layout_constraintEnd_toEndOf="@id/sat_spinner"
+        app:layout_constraintTop_toTopOf="@+id/quality_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/quality_txv"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/strength_progressbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/strength_txv"
+        app:layout_constraintEnd_toStartOf="@id/strength_percent_txv"
+        app:layout_constraintTop_toTopOf="@+id/strength_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/strength_txv"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/quality_progressbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/strength_progressbar"
+        app:layout_constraintEnd_toEndOf="@id/strength_progressbar"
+        app:layout_constraintTop_toTopOf="@id/quality_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/quality_txv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

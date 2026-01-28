@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/member_wallpaper">
+    <ImageView
+        android:id="@+id/lo_package_qr_code"
+        android:layout_width="@dimen/purchase_package_qr_code_layout_width"
+        android:layout_height="@dimen/purchase_package_qr_code_layout_height"
+        android:layout_marginEnd="@dimen/purchase_package_qr_code_layout_marginEnd"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/lo_package_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/purchase_package_purchase_layout_marginStart"
+        android:layout_marginEnd="@dimen/purchase_package_purchase_layout_marginEnd"
+        android:layout_toStartOf="@+id/lo_package_qr_code"
+        android:layout_centerVertical="true"
+        android:text="@string/package_hint"
+        android:textSize="@dimen/purchase_package_purchase_textSize"
+        android:textColor="@color/white"
+        android:gravity="start"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2" />
+    <com.prime.dmg.launcher.CustomView.TimeViewKeyHint
+        android:id="@+id/lo_hottest_time_view_key_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/purchase_package_time_view_layout_marginStart"
+        android:layout_marginBottom="@dimen/purchase_package_time_view_layout_marginBottom"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/banner">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="8dp"
+        android:text="@string/STR_NEW_TP"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/title_line"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_line"
+        android:contentDescription="@string/STR_NULL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/freq_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_FREQUENCY"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_line"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0"/>
+    <TextView
+        android:id="@+id/symbol_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_SYMBOLRATE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/freq_txv"
+        app:layout_constraintTop_toBottomOf="@+id/freq_txv"/>
+    <TextView
+        android:id="@+id/pol_txv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/STR_POLARIZATION"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="@+id/freq_txv"
+        app:layout_constraintTop_toBottomOf="@+id/symbol_txv"/>
+
+
+
+    <EditText
+        android:id="@+id/freq_input_txv"
+        android:layout_width="@dimen/ADDTPDIALOG_FREQ_INPUT_TXV_WIDTH"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="0"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:maxLength="5"
+        app:layout_constraintStart_toEndOf="@+id/freq_txv"
+        app:layout_constraintTop_toTopOf="@+id/freq_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/freq_txv"
+        tools:ignore="HardcodedText,LabelFor,TextFields" />
+    <EditText
+        android:id="@+id/symbol_input_txv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="0"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:maxLength="5"
+        app:layout_constraintStart_toStartOf="@+id/freq_input_txv"
+        app:layout_constraintEnd_toEndOf="@id/freq_input_txv"
+        app:layout_constraintTop_toTopOf="@+id/symbol_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/symbol_txv"
+        tools:ignore="HardcodedText,LabelFor,TextFields" />
+
+
+    <ImageView
+        android:id="@+id/freq_dial_icon"
+        android:layout_width="@dimen/VIEW_HEIGHT"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/dialpad"
+        android:background="@drawable/focus_list"
+        android:contentDescription="@string/STR_FREQUENCY"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/freq_input_txv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/freq_input_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/freq_input_txv" />
+    <ImageView
+        android:id="@+id/symbol_dial_icon"
+        android:layout_width="@dimen/VIEW_HEIGHT"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/dialpad"
+        android:background="@drawable/focus_list"
+        android:visibility="invisible"
+        android:contentDescription="@string/STR_FREQUENCY"
+        app:layout_constraintStart_toEndOf="@+id/symbol_input_txv"
+        app:layout_constraintTop_toTopOf="@+id/symbol_input_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/symbol_input_txv" />
+
+    <Spinner
+        android:id="@+id/pol_spinner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/selectbox"
+        android:popupBackground="@drawable/banner"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:entries="@array/STR_ARRAY_POLAR"
+        android:nextFocusDown="@+id/txv_ok"
+        app:layout_constraintStart_toStartOf="@+id/freq_input_txv"
+        app:layout_constraintEnd_toEndOf="@+id/freq_input_txv"
+        app:layout_constraintTop_toTopOf="@+id/pol_txv"
+        app:layout_constraintBottom_toBottomOf="@+id/pol_txv"/>
+
+    <TextView
+        android:id="@+id/txv_cancel"
+        android:layout_width="@dimen/ADDTPDIALOG_OK_CANCEL_TXV_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/STR_CANCEL"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/text_color"
+        android:background="@drawable/focus_list"
+        android:focusable="true"
+        android:gravity="center"
+        android:nextFocusDown="@+id/freq_input_txv"
+        app:layout_constraintTop_toBottomOf="@+id/pol_spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/pol_spinner"/>
+
+    <TextView
+        android:id="@+id/txv_ok"
+        android:layout_width="@dimen/ADDTPDIALOG_OK_CANCEL_TXV_WIDTH"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:text="@string/STR_OK"
+        android:layout_marginEnd="16dp"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:textColor="@color/text_color"
+        android:background="@drawable/focus_list"
+        android:focusable="true"
+        android:gravity="center"
+        android:nextFocusDown="@+id/freq_input_txv"
+        app:layout_constraintTop_toTopOf="@+id/txv_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/txv_cancel"
+        app:layout_constraintEnd_toStartOf="@id/txv_cancel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

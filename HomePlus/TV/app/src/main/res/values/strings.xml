@@ -1,0 +1,284 @@
+<resources>
+    <string name="app_name">HOMEPLUS_TV</string>
+
+    <!-- Mini EPG -->
+    <string name="miniepg_channel_list">Channel List</string>
+
+    <!-- EPG -->
+    <string name="epg">EPG</string>
+
+    <!-- PVR -->
+    <string name="pvr">PVR</string>
+
+    <!-- Genre List -->
+    <string name="genre_favorite_channels">Favorite Channels</string>
+    <string name="genre_all_channels">All Channels</string>
+    <string name="genre_welfare_religion">Welfare/Religion</string>
+    <string name="genre_drama_music">Drama/Music</string>
+    <string name="genre_news_finance">News/Finance</string>
+    <string name="genre_leisure_knowledge">Leisure/Knowledge</string>
+    <string name="genre_children_animation">Children/Animation</string>
+    <string name="genre_films_series">Films/Series</string>
+    <string name="genre_variety">Variety</string>
+    <string name="genre_shopping">Home Shopping</string>
+    <string name="genre_foreign_language">Foreign language</string>
+    <string name="genre_hd">HD</string>
+    <string name="genre_sports_others">Sports/Others</string>
+    <string name="genre_adult">Adult</string>
+
+    <!-- Error code messages -->
+    <string name="error_e000">Smart card communication error. Please contact the Service Center. (Code: E000)</string>
+    <string name="error_e002">Smartcard Chip Cleaning Required. Please remove the Smartcard from the set-top box, clean the chip with a dry rag. Reinsert the card and power cycle. Please contact the Service Center if issue is still existed. (Code: E002)</string>
+    <string name="error_e006">Set-top box doesn\'t register in proxy server. Please contact the Service Center. (Code: E006)</string>
+    <string name="error_e005">Smart card has not been activated. Please contact the Service Center. (Code: E005)</string>
+    <string name="error_e007">Smartcard is expired. Please contact the Service Center. (Code: E007)</string>
+    <string name="error_e009">Smartcard Contact Error. Please ensure the Smartcard is provided by Homeplus Digital. Reinsert the card and power cycle. Please contact the Service Center if issue is still existed. (Code: E009)</string>
+    <string name="error_e010">Smart card not authorized. Please contact the Service Center. (Code: E010)</string>
+    <string name="error_e014">Service is suspended. Please check on website or contact the Service Center. (Code: E014)</string>
+    <string name="error_e015">Channel license is expired. Please subscribe this program by pressing [BLUE] button or contact the Service Center. (Code: E015)</string>
+    <string name="error_e016">Smartcard is suspended. re-insert Smartcard then reboot STB. Please contact the Service Center if issue is still existed. (Code: E016)</string>
+    <string name="error_e017">The Smart Card introduced is not valid for this receiver. Please contact the Service Center. (Code: E017)</string>
+    <string name="error_e018">Current service is out of working hours. Please contact the Service Center. (Code: E018)</string>
+    <string name="error_e019">Current program is limited by watch level. Please contact the Service Center. (Code: E019)</string>
+    <string name="error_e020">Descrypt Fail. Please contact the Service Center. (Code: E020)</string>
+    <string name="error_e021">The Smart Card introduced is not valid for this receiver. Please contact the Service Center. (Code: E021)</string>
+    <string name="error_e022">Please restart the Set-top Box. (Code: E022)</string>
+    <string name="error_e023">Set-top Box is locked. Please contact the  Service Center. (Code: E023)</string>
+    <string name="error_e024">The Smart Card introduced is not valid for this receiver. Please contact the Service Center. (Code: E024)</string>
+    <string name="error_e025">Access denied, please subscribe this program by pressing [BLUE] button. (Code: E025)</string>
+    <string name="error_e026">Access denied, please subscribe this program by pressing [BLUE] button. (Code: E026)</string>
+    <string name="error_e027">Failed to subscribe this program, Please contact the Service Center. (Code: E027)</string>
+    <string name="error_e028">ECM missing. Please contact the Service Center. (Code: E028)</string>
+    <string name="error_e029">Something is wrong in signal. Please try to power cycle set-top box. Please contact the Service Center if issue is still existed. (Code: E029)</string>
+    <string name="error_e030">The device id of this set-top box is invalid. Please contact the Service Center. (Code: E030)</string>
+    <string name="error_e200">Check connection of RF cable then reboot STB. Please contact the Service Center if issue is still existed. (Code: E200)</string>
+    <string name="error_e201">Master set-top box is not reachable, please make sure master set-top box is power on and network is available. (Code: E201)</string>
+    <string name="error_e202">HDCP protocol is not supported by your display device. Please contact to manufacturer of your purchased device. (Code: E202)</string>
+    <string name="error_e300">No correct internet access for current device. Try to make sure that the device connect to correct broadband. Please contact the Service Center if issue is still existed. (Code: E300)</string>
+    <string name="error_e911">Network issue. Try to make sure that the device connect to correct broadband. Please contact the Service Center if issue is still existed. (Code: E911)</string>
+    <string name="error_e999">No internet access for current device. Please contact the Service Center. (Code: E999)</string>
+    <string name="error_unknown">Unknown error (Code: %1$s)</string>
+
+    <!-- PVR Error code messages -->
+    <string name="error_pvr001">Please contact Service Center to subscribe PVR function. (Code: PVR001)</string>
+    <string name="error_pvr002">Please make sure hard drive disk connected. (Code: PVR002)</string>
+    <string name="error_pvr003">Please make sure entitled hard drive disk connected. (Code: PVR003)</string>
+    <string name="error_pvr004">Please contact Service Center to subscribe disk space for PVR. (Code: PVR004)</string>
+    <string name="error_pvr005">Device is busy, please try again later. (Code: PVR005)</string>
+    <string name="error_pvr006">Device is busy, please try again later. (Code: PVR006)</string>
+    <string name="error_pvr007">Unknown causes error recording. (Code: PVR007)</string>
+    <string name="error_pvr008">Disk is full, please delete out-of-date recordings. (Code: PVR008)</string>
+    <string name="error_pvr009">Connected hard drive disk is not formatted, please contact Service Center. (Code: PVR009)</string>
+    <string name="error_pvr010">Play back recording failed, please make sure hard drive disk connected. (Code: PVR010)</string>
+    <string name="error_pvr011">Low disk space reminder, recommend to delete out-of-date recordings. (Code: PVR011)</string>
+    <string name="error_pvr012">Radio service recording is not available. (Code: PVR012)</string>
+    <string name="error_pvr013">Only one recording device is supported, remove. (Code: PVR013)</string>
+    <string name="error_pvr014">Not enough space for PVR recording, please install at least 32GB hard drive disk. (Code: PVR014)</string>
+    <string name="error_pvr015">External HDD is connected incorrectly, please check and re-connect. (Code: PVR015)</string>
+    <string name="error_pvr016">Incorrect recording, please delete this file. Sorry for inconvenience. (Code: PVR016)</string>
+    <string name="error_pvr017">Reservation is not valid, please try again. Sorry for inconvenience. (Code: PVR017)</string>
+    <string name="error_pvr018">Reservation capacity is full. Please cancel current reservation before making new one. (Code: PVR018)</string>
+    <string name="error_pvr019">Current service recording is not available. (Code: PVR019)</string>
+
+    <!-- others -->
+    <string name="adult_lock_info_hint">This channel requires adult verification</string>
+    <string name="adult_lock_info_ok">Press OK to proceed with the authentication</string>
+    <string name="add_favourite">Favorite Channel</string>
+
+    <string name="bilingual">Audio</string>
+    <string name="bilingual_switch">Audio</string>
+    <string name="back">Back</string>
+
+    <string name="channel_lock_info_hint">You must unlock to watch the locked channel</string>
+    <string name="channel_lock_info_ok">Press OK to proceed with the authentication</string>
+    <string name="channel_lock_info_path"><![CDATA[Change at Setting > Personal Setting > Parental Control > Parental Channel]]></string>
+    <string name="caption_startrecording">Recording started</string>
+    <string name="caption_ok_en">OK</string>
+    <string name="close">Close</string>
+    <string name="channel_tune">Channel Tune</string>
+    <string name="channel_list_favorite_channel">Favorite Channels</string>
+    <string name="channel_list_up_down">Up/Down</string>
+    <string name="channel_list_switching_list">Switching List</string>
+    <string name="channel_list_locked_channel">Locked Channel</string>
+    <string name="channel_list_adult_channel">Adult Channel</string>
+    <string name="channel_list_parental_rated_program">Parental Rated Program</string>
+    <string name="cancel">Cancel</string>
+    <string name="channel">Channel</string>
+    <string name="channel_genre">Channel Genre</string>
+
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete all</string>
+    <string name="delete_favourite">Delete Favorite</string>
+    <string name="date">Date</string>
+    <string name="date_duration_divider">|</string>
+    <string name="direction">Direction</string>
+
+    <string name="epg_title">Channel Guide</string>
+    <string name="epg_unlock_hint">Please press the blue key to \'Unlock All\'</string>
+    <string name="epg_locked_channel">Locked Channel</string>
+
+    <string name="format_toast_no_such_channel">%s channel does not exist. If you have any questions, please contact customer service.</string>
+
+    <string name="live_search_msg_1_1">Press</string>
+    <string name="live_search_msg_1_2">key to voice search</string>
+    <string name="live_search_msg_1_3">When the green light is on the remote control, it means the microphone is on the radio</string>
+    <string name="live_search_msg_2">Enter the channel you want to search</string>
+    <string name="live_search_msg_3">Listening</string>
+    
+    <string name="music_introduction">Enjoy variety genre of music</string>
+    <string name="miniepg_channel_search">Search Channel</string>
+    <string name="miniepg_locked_channel">Locked Channel</string>
+    <string name="miniepg_adult_channel">Adult Channel</string>
+    <string name="miniepg_parental_rated_program">Parental Rated Program</string>
+
+    <string name="none">none</string>
+    <string name="no_program_info">No Program Info</string>
+    <string name="no_channel_list">No List</string>
+    <string name="no_channels_available_msg">No channels available, Please scan.</string>
+
+    <string name="ok">OK</string>
+
+    <string name="parental_lock_authorization_title">Authorization</string>
+    <string name="parental_lock_authorization_msg">Enter your 4 digit parental PIN</string>
+    <string name="parental_lock_authorization_incorrect_pin">Incorrect PIN entered</string>
+    <string name="parental_lock_authorization_press_left_to_delete">Press left to delete</string>
+    <string name="program">Program</string>
+    <string name="program_title">Program Title</string>
+    <string name="please_confirm">Confirmation</string>
+
+    <string name="rating_lock_info_hint">You must unlock to watch the Parental rated program</string>
+    <string name="rating_lock_info_ok">Press OK to proceed with the authentication</string>
+    <string name="rating_lock_info_path"><![CDATA[Change at Setting > Personal Setting > Parental Control > Parental Rating]]></string>
+    <string name="record">Record</string>
+
+    <string name="subtitle">Subtitle</string>
+
+    <string name="text_Chinese">Chinese</string>
+    <string name="text_English">English</string>
+    <string name="text_all_channels">All channels</string>
+
+    <string name="unlock_all">Unlock All</string>
+
+    <string name="reminder_epg_watch">Reminder</string>
+    <string name="reminder_epg_cancel">Cancel Reminder</string>
+    <string name="reminder_floating_title">Reminder</string>
+    <string name="reminder_floating_start_in_n_sec_line1">It starts in\u0020</string>
+    <string name="reminder_floating_start_in_n_sec_line2">\u0020second</string>
+    <string name="reminder_watch">Watch</string>
+    <string name="reminder_set">Set Reminder</string>
+    <string name="reminder_cancel">Cancel Reminder</string>
+    <string name="reminder_go_to_list">Go to Reminder List</string>
+    <string name="reminder_list">Reminder List</string>
+    <string name="reminder_start_end_time">Start-end time</string>
+    <string name="reminder_no_watch_list">NO REMINDER LIST</string>
+    <string name="reminder_enter_parental_control">Enter PIN</string>
+    <string name="reminder_delete_msg">Do you want to delete this reservation?</string>
+    <string name="reminder_conflict_title">Reminder Conflict</string>
+    <string name="reminder_conflict_msg">Do you want to replace a scheduled reminder to the new program?</string>
+    <string name="reminder_new_event">New reminder event</string>
+    <string name="reminder_existing_event">Existing reminder event</string>
+    <string name="reminder_schedule_format" translatable="false">%1$s-%2$s</string>
+
+    <string name="record_title">Record</string>
+    <string name="recorded_list">Recorded List</string>
+    <string name="recorded_duration">Duration</string>
+    <string name="recorded_file_size">Capacity</string>
+    <string name="recorded_no_recorded_list">No recorded list</string>
+    <string name="recorded_series_list">Series</string>
+    <string name="recorded_total_disk_size">Total</string>
+    <string name="recorded_disk_available">Available:</string>
+    <string name="recorded_disk_empty_space">0 B</string>
+    <string name="recorded_content_delete_msg">Do you want to delete this recorded content?</string>
+    <string name="recording_title">Recording</string>
+    <string name="recording_schedule">Recording Schedule</string>
+    <string name="recording_schedule_start_end_time">Start-end time</string>
+    <string name="recording_schedule_no_scheduled_list">No recording schedule list</string>
+    <string name="recording_setup">Set up recording</string>
+    <string name="recording_setup_select_option">Select the recording option</string>
+    <string name="recording_setup_epg">Program based Recording</string>
+    <string name="recording_setup_manual">Manual Recording</string>
+    <string name="recording_setting_single_record">Single Record</string>
+    <string name="recording_setting_series_record">Series Record</string>
+    <string name="recording_setting_select_record_mode">Please select option to record</string>
+    <string name="recording_setting_record_one">Record One</string>
+    <string name="recording_setting_cancel_single_record">Cancel Single Record</string>
+    <string name="recording_setting_cancel_series">Cancel Series Record</string>
+    <string name="recording_setting_add_recording_success">Program recording is successfully scheduled</string>
+    <string name="recording_setting_add_recording_fail">Failed to schedule the recording</string>
+    <string name="recording_setting_cancel_record">Cancel Record</string>
+    <string name="recording_setting_go_to_list">Go to Record List</string>
+
+    <string name="recording_setting_conflict_msg_1">Recording Conflict</string>
+    <string name="recording_setting_conflict_msg_2">2 channels are already reserved or recording. Select one to cancel</string>
+    <string name="recording_setting_conflict_msg_3">New recording event</string>
+    <string name="recording_setting_conflict_msg_4">Existing recording events</string>
+
+    <string name="pvr_start_time">00:00:00</string>
+    <string name="pvr_bilingual">Audio</string>
+    <string name="pvr_pause">Pause</string>
+    <string name="pvr_play">Play</string>
+    <string name="pvr_rewind">Rewind</string>
+    <string name="pvr_fast_forward">Fast-forward</string>
+    <string name="pvr_seek_backward">Skip backward</string>
+    <string name="pvr_seek_forward">Skip forward</string>
+    <string name="pvr_player_info">Info</string>
+    <string name="pvr_program_info">Program Info</string>
+    <string name="pvr_format_step_mins">%+d min</string>
+    <string name="pvr_last_position_title">Play Recording</string>
+    <string name="pvr_last_position_line1">You have watched history</string>
+    <string name="pvr_last_position_line2">Do you want to continue watching?</string>
+    <string name="pvr_last_position_continue">Continue watching</string>
+    <string name="pvr_last_position_from_start">Watch from start</string>
+    <string name="pvr_end_playback_title">End Playback</string>
+    <string name="pvr_end_playback_line1">Playing the recording has been completed.</string>
+    <string name="pvr_end_playback_exit">Exit</string>
+    <string name="pvr_end_playback_replay">Replay</string>
+    <string name="pvr_stop_playback_title">Stop Playback</string>
+    <string name="pvr_stop_playback_line1">Do you want to stop to play recording?</string>
+    <string name="pvr_manual_recording_title">Manual Recording</string>
+    <string name="pvr_manual_recording_step">STEP</string>
+    <string name="pvr_manual_recording_select_channel">Select Channel</string>
+    <string name="pvr_manual_recording_set_record_mode">Set record mode/time</string>
+    <string name="pvr_manual_step1_genre">Genre</string>
+    <string name="pvr_manual_step2_record_mode">Record Mode</string>
+    <string name="pvr_manual_step2_single_time">Single Time</string>
+    <string name="pvr_manual_step2_daily">Daily</string>
+    <string name="pvr_manual_step2_weekly">Weekly</string>
+    <string name="pvr_manual_step2_day_of_the_week">Day of the Week</string>
+    <string name="pvr_manual_step2_monday">\nMon</string>
+    <string name="pvr_manual_step2_tuesday">\nTue</string>
+    <string name="pvr_manual_step2_wednesday">\nWed</string>
+    <string name="pvr_manual_step2_thursday">\nThu</string>
+    <string name="pvr_manual_step2_friday">\nFri</string>
+    <string name="pvr_manual_step2_saturday">\nSat</string>
+    <string name="pvr_manual_step2_sunday">\nSun</string>
+    <string name="pvr_manual_step2_set_time">Set Time</string>
+    <string name="pvr_manual_step2_start_date">Start Date</string>
+    <string name="pvr_manual_step2_start_time">Start Time</string>
+    <string name="pvr_manual_step2_enter_in_10_mins">Enter in 10 minute increments</string>
+    <string name="pvr_manual_step2_end_time">End Time</string>
+    <string name="pvr_manual_step2_max_duration_4_hours">Maximum duration is 4 hours</string>
+    <string name="pvr_manual_step2_hour_out_of_range">Hour out of range(0~23)</string>
+    <string name="pvr_manual_step2_minute_out_of_range">Minute out of range(0~50)</string>
+    <string name="pvr_manual_step2_schedule_must_after_now">Recording time must be greater than the current time</string>
+    <string name="pvr_manual_confirmation">Confirmation</string>
+    <string name="pvr_manual_success_msg">Program recording is successfully scheduled</string>
+    <string name="pvr_manual_success_start_msg">Start|</string>
+
+    <string name="preferred_setting_msg">Set your preferred audio/subtitle/global language</string>
+    <string name="preferred_setting_audio_lang">Audio Lang.</string>
+    <string name="preferred_setting_subtitle">Subtitle</string>
+    <string name="preferred_setting_global_lang">Global Lang.</string>
+
+    <string name="slash">/</string>
+    <string name="select">Select</string>
+    <string name="setting">Setting</string>
+    <string name="save">Save</string>
+
+    <string name="vertical_divider">｜</string>
+
+    <string name="worktime_lock_info_hint">You must unlock to watch the current time</string>
+    <string name="worktime_lock_info_ok">Press OK to proceed with authentication</string>
+    <string name="worktime_lock_info_path"><![CDATA[Change at Setting > Personal Setting > Parental Control > Time Setting]]></string>
+    <string name="undefined_language">Undefined</string>
+</resources>

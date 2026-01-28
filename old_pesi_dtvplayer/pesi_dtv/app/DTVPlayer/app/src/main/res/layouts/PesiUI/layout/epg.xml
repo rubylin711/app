@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.EpgActivity">
+
+
+    <include
+        android:id="@+id/TitleViewLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/titleGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/HelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/helpGuideline" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/titleGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/helpGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLinearLayoutTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/chtitleTXV_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <TextView
+        android:id="@+id/chtitleTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/STR_TV_CH_GUIDE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineLinearLayoutTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenterV"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+        app:layout_constraintStart_toStartOf="@id/chtitleTXV_left"
+        app:layout_constraintTop_toTopOf="@+id/titleGuideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/curTimeTXV_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <TextView
+        android:id="@+id/curDateTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineLinearLayoutTop"
+        app:layout_constraintEnd_toStartOf="@+id/curTimeTXV_right"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenterV"
+        app:layout_constraintTop_toTopOf="@+id/titleGuideline" />
+
+    <LinearLayout
+        android:id="@+id/chLIV_ll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineDetail"
+        app:layout_constraintEnd_toEndOf="@+id/chtitleTXV"
+        app:layout_constraintStart_toStartOf="@+id/chtitleTXV"
+        app:layout_constraintTop_toTopOf="@+id/guidelineLinearLayoutTop">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chLIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eventLIV_ll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chLIV_ll"
+        app:layout_constraintEnd_toEndOf="@+id/curDateTXV"
+        app:layout_constraintStart_toStartOf="@+id/curDateTXV"
+        app:layout_constraintTop_toTopOf="@+id/guidelineLinearLayoutTop">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventLIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/EventInfoTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:maxLines="1"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/eventLIV_ll"
+        app:layout_constraintStart_toStartOf="@+id/chLIV_ll"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineDetail" />
+
+    <TextView
+        android:id="@+id/detailTXV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:gravity="start"
+        android:maxLines="2"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_LAD_1D_EPG_DETAIL_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/helpGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/eventLIV_ll"
+        app:layout_constraintStart_toStartOf="@+id/chLIV_ll"
+        app:layout_constraintTop_toBottomOf="@+id/EventInfoTXV" />
+
+    <TextView
+        android:id="@+id/noInFoTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/EPG_TXV_HEIGHT"
+        android:gravity="center_horizontal"
+        android:text="@string/STR_NO_INFO_AVAILABLE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/eventLIV_ll"
+        app:layout_constraintEnd_toEndOf="@+id/eventLIV_ll"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="@+id/eventLIV_ll"
+        app:layout_constraintTop_toTopOf="@+id/eventLIV_ll" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

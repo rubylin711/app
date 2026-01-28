@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="android.uid.system">
+
+<!--    <uses-permission android:name="android.permission.ACCESS_TV_TUNER" />-->
+<!--    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>-->
+
+<!--    <application-->
+<!--        android:name="com.prime.dtv.ServiceApplication"-->
+<!--        android:allowBackup="true"-->
+<!--        android:icon="@mipmap/ic_launcher"-->
+<!--        android:label="@string/app_name"-->
+<!--        android:roundIcon="@mipmap/ic_launcher_round"-->
+<!--        android:supportsRtl="true"-->
+<!--        android:theme="@style/Theme.PrimePlayer">-->
+<!--        <service android:name="com.prime.dtv.DtvAidlService"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.prime.dtv.DtvAidlService.action" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+<!--        <receiver android:name="com.prime.dtv.BootReceiver"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        <provider-->
+<!--            android:name="com.prime.dtv.database.DTVContentProvider"-->
+<!--            android:authorities="com.prime.dtv.database.DTVContentProvider"-->
+<!--            android:exported="true" />-->
+<!--        <provider-->
+<!--            android:name="com.prime.dtv.service.database.DVBContentProvider"-->
+<!--            android:authorities="com.prime.dtv.service.database.DVBContentProvider"-->
+<!--            android:exported="true" />-->
+<!--        <provider-->
+<!--            android:name="com.prime.dtv.service.database.PvrContentProvider"-->
+<!--            android:authorities="com.prime.dtv.service.database.PvrContentProvider"-->
+<!--            android:exported="true" />-->
+<!--    </application>-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_TV_DESCRAMBLER" />
+    <uses-permission android:name="android.permission.ACCESS_TV_TUNER" />
+    <uses-permission android:name="android.permission.HDMI_CEC" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- for AlarmManager-->
+    <!--
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="Manifest.permission#SCHEDULE_EXACT_ALARM SCHEDULE_EXACT_ALARM"/>
+    -->
+</manifest>

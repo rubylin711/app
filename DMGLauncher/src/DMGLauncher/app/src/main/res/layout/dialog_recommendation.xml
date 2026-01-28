@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lo_recommendation_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recommendation_view_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/otl_lite_shadow"
+        android:focusable="false"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/lo_recommendation_view_popular_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/recommendation_view_AppTitle_layout_height"
+            android:layout_marginStart="@dimen/recommendation_view_AppTitle_layout_marginStart"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/otl_popular_this_week"
+            android:textSize="@dimen/recommendation_view_AppTitle_textSize"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="2"/>
+
+        <com.prime.dmg.launcher.Home.LiveTV.Recommendation.PopularListView
+            android:id="@+id/lo_recommendation_view_popular_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/recommendation_view_RecLinkList_layout_height"
+            android:layout_marginTop="@dimen/recommendation_view_RecLinkList_layout_marginTop"
+            android:layout_below="@+id/lo_recommendation_view_popular_title" />
+
+        <TextView
+            android:id="@+id/lo_recommendation_view_program_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/recommendation_view_ProgramTitle_layout_height"
+            android:layout_marginStart="@dimen/recommendation_view_AppTitle_layout_marginStart"
+            android:layout_marginBottom="@dimen/recommendation_view_ProgramTitle_layout_marginBottom"
+            android:layout_gravity="center_vertical"
+            android:text="@string/otl_rec_video"
+            android:textSize="@dimen/recommendation_view_AppTitle_textSize"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:layout_below="@+id/lo_recommendation_view_popular_list"/>
+
+        <com.prime.dmg.launcher.Home.LiveTV.Recommendation.AdListView
+            android:id="@+id/lo_recommendation_view_ad_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/recommendation_view_RecProgramList_layout_height"
+            android:layout_below="@+id/lo_recommendation_view_program_title" />
+
+        <TextView
+            android:id="@+id/lo_recommendation_view_program_list_hint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/recommendation_view_RecProgramList_layout_height"
+            android:layout_below="@+id/lo_recommendation_view_program_title"
+            android:text="@string/otl_rec_video_no_data"
+            android:textSize="@dimen/recommendation_view_textSize"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:gravity="center"
+            android:focusableInTouchMode="false"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

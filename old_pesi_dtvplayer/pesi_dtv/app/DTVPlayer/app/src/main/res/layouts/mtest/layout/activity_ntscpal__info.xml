@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtest.activity.NTSCPAL_INFOActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:id="@+id/layout_ntscpalinfo_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:background="@android:color/holo_blue_bright"
+            android:gravity="center"
+            android:text="@string/str_test_item_ntsc_pal_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/tuner_view01"
+            layout="@layout/tuner_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <include
+            android:id="@+id/tuner_view02"
+            layout="@layout/tuner_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuner_view01" />
+
+        <include
+            android:id="@+id/tuner_view03"
+            layout="@layout/tuner_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuner_view02" />
+
+        <include
+            android:id="@+id/tuner_view04"
+            layout="@layout/tuner_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuner_view03" />
+
+        <TextView
+            android:id="@+id/tv_iptv_index"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_rectangle_blue_bright"
+            android:gravity="center_vertical|center_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tuner_view04" />
+
+        <EditText
+            android:id="@+id/et_iptv_videosource"
+            android:layout_width="400dp"
+            android:layout_height="25dp"
+            android:background="@drawable/shape_rectangle_orange"
+            android:focusable="false"
+            android:imeOptions="actionDone"
+            android:inputType="textUri"
+            android:text="@string/str_ntsc_pal_activity_ip"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_iptv_index"
+            app:layout_constraintTop_toTopOf="@+id/tv_iptv_index"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/tv_signal_strength"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/STR_STRENGTH"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_iptv_index" />
+
+        <TextView
+            android:id="@+id/tv_signal_quality"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_QUALITY"
+            app:layout_constraintStart_toStartOf="@+id/tv_signal_strength"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signal_strength" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_signal_ber"-->
+            <!--android:layout_width="75dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:text="@string/str_signal_ber"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/tv_signal_strength"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/tv_signal_quality" />-->
+
+        <ProgressBar
+            android:id="@+id/progbar_signal_strength"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_signal_strength"
+            app:layout_constraintTop_toTopOf="@+id/tv_signal_strength" />
+
+        <ProgressBar
+            android:id="@+id/progbar_signal_quality"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_signal_quality"
+            app:layout_constraintTop_toTopOf="@+id/tv_signal_quality" />
+
+        <TextView
+            android:id="@+id/tv_signal_strength_value"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_signal_strength"
+            app:layout_constraintStart_toEndOf="@+id/progbar_signal_strength" />
+
+        <TextView
+            android:id="@+id/tv_signal_quality_value"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:gravity="end"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_signal_quality"
+            app:layout_constraintStart_toEndOf="@+id/progbar_signal_quality" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_signal_ber_value"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="22dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--app:layout_constraintBaseline_toBaselineOf="@+id/tv_signal_ber"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/tv_signal_ber" />-->
+
+        <ImageView
+            android:id="@+id/iv_clear_tp"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/str_clear_tp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/green_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progbar_signal_quality" />
+
+        <TextView
+            android:id="@+id/tv_clear_tp"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_clear_tp"
+            app:layout_constraintStart_toEndOf="@+id/iv_clear_tp"
+            app:layout_constraintTop_toTopOf="@+id/iv_clear_tp" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/str_search"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ok_btn"
+            app:layout_constraintStart_toEndOf="@+id/tv_clear_tp"
+            app:layout_constraintTop_toTopOf="@+id/tv_clear_tp" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_search"
+            app:layout_constraintStart_toEndOf="@+id/iv_search"
+            app:layout_constraintTop_toTopOf="@+id/iv_search" />
+
+        <ImageView
+            android:id="@+id/iv_split_screen"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/str_split_screen"
+            android:scaleType="fitCenter"
+            android:src="@drawable/up_btn"
+            app:layout_constraintStart_toEndOf="@+id/tv_search"
+            app:layout_constraintTop_toTopOf="@+id/tv_search" />
+
+        <TextView
+            android:id="@+id/tv_split_screen"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_split_screen"
+            app:layout_constraintStart_toEndOf="@+id/iv_split_screen"
+            app:layout_constraintTop_toTopOf="@+id/iv_split_screen" />
+
+        <ImageView
+            android:id="@+id/iv_pass"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/str_pass"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blue_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_clear_tp" />
+
+        <TextView
+            android:id="@+id/tv_pass"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_pass"
+            app:layout_constraintStart_toEndOf="@+id/iv_pass"
+            app:layout_constraintTop_toTopOf="@+id/iv_pass" />
+
+        <ImageView
+            android:id="@+id/iv_fail"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/str_fail"
+            android:scaleType="fitCenter"
+            android:src="@drawable/red_btn"
+            app:layout_constraintStart_toEndOf="@+id/tv_pass"
+            app:layout_constraintTop_toTopOf="@+id/tv_pass" />
+
+        <TextView
+            android:id="@+id/tv_fail"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_fail"
+            app:layout_constraintStart_toEndOf="@+id/iv_fail"
+            app:layout_constraintTop_toTopOf="@+id/iv_fail" />
+
+        <ImageView
+            android:id="@+id/iv_OSD"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/str_osd_show_display"
+            android:scaleType="fitCenter"
+            android:src="@drawable/yellow_btn"
+            app:layout_constraintStart_toEndOf="@+id/tv_fail"
+            app:layout_constraintTop_toTopOf="@+id/tv_fail" />
+
+        <TextView
+            android:id="@+id/tv_OSD"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_osd_show_display"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_OSD"
+            app:layout_constraintTop_toTopOf="@+id/iv_OSD" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_error_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

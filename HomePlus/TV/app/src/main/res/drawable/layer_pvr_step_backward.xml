@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list>
+    <item xmlns:android="http://schemas.android.com/apk/res/android"  android:drawable="@drawable/shape_round_50_gray_30_trans_6f"/>
+    <item xmlns:android="http://schemas.android.com/apk/res/android"
+        android:drawable="@drawable/vector_step_backward_20"
+        android:left="12dp"
+        android:top="5dp"
+        android:right="10dp"
+        android:bottom="19dp"/>
+</layer-list>

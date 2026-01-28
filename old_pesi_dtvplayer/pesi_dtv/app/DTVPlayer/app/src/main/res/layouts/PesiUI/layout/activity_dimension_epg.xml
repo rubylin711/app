@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/full_black_background"
+    tools:context="com.prime.dtvplayer.Activity.DimensionEPG">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/titleGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/helpGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <include
+        android:id="@+id/TitleViewLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/titleGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/HelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/helpGuideline" />
+
+    <SurfaceView
+        android:id="@+id/videoView2"
+        android:layout_width="@dimen/DIMENSIONEPG_TABLE_CLOCK_WIDTH"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineChannel"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/TitleViewLayout"/>
+
+    <TextView
+        android:id="@+id/curTimeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DIMENSIONEPG_TXV_HEIGHT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:gravity="end|center_vertical"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/titleGuideline" />
+
+    <TextView
+        android:id="@+id/channelNameTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/DIMENSIONEPG_LAD_TXV_SMALL_HEIGHT"
+        android:gravity="start|center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/DIMENSIONEPG_CHANNELNAMETXV_TEXTSIZE"
+        app:layout_constraintEnd_toStartOf="@+id/curTimeTXV"
+        app:layout_constraintStart_toEndOf="@+id/videoView2"
+        app:layout_constraintTop_toBottomOf="@+id/TitleViewLayout" />
+
+    <TextView
+        android:id="@+id/eventNameTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/DIMENSIONEPG_EVENTNAMETXV_HEIGHT"
+        android:gravity="start|center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/channelNameTXV"
+        app:layout_constraintTop_toBottomOf="@+id/channelNameTXV" />
+
+    <TextView
+        android:id="@+id/eventInfoTXV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="top|start|center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_LAD_2D_EPG_EVENT_INFO_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineChannel"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/eventNameTXV"
+        app:layout_constraintTop_toBottomOf="@+id/eventNameTXV" />
+
+    <TextView
+        android:id="@+id/clock"
+        android:layout_width="@dimen/DIMENSIONEPG_TABLE_CLOCK_WIDTH"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineChannel" />
+
+    <com.prime.dtvplayer.View.guide.TimelineRow
+        android:id="@+id/time_row"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+
+        app:layout_constraintStart_toEndOf="@+id/clock"
+        app:layout_constraintTop_toTopOf="@+id/guidelineChannel" />
+
+    <LinearLayout
+        android:id="@+id/GridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+
+
+        app:layout_constraintEnd_toEndOf="@+id/time_row"
+        app:layout_constraintStart_toStartOf="@+id/clock"
+        app:layout_constraintTop_toBottomOf="@+id/time_row">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/current_time_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        android:src="@drawable/program_guide_time_indicator"
+        app:layout_constraintStart_toStartOf="@+id/time_row"
+        app:layout_constraintTop_toTopOf="@+id/clock"/>
+
+    <TextView
+        android:id="@+id/endLineTXV"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/GridLayout"
+        app:layout_constraintEnd_toEndOf="@+id/GridLayout"
+        app:layout_constraintTop_toTopOf="@+id/time_row" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<!-- Animation frames are wheel0.png through wheel5.png
+     files inside the res/drawable/ folder -->
+<animation-list android:id="@+id/selected"
+    android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/giphy1" android:duration="50" />
+
+
+
+    <!--item android:drawable="@drawable/giphy10" android:duration="50" />
+
+
+
+
+    <item android:drawable="@drawable/giphy20" android:duration="50" />
+
+    <item android:drawable="@drawable/giphy30" android:duration="50" />
+    <item android:drawable="@drawable/giphy40" android:duration="50" />
+
+
+    <item android:drawable="@drawable/giphy50" android:duration="50" />
+
+    <item android:drawable="@drawable/giphy60" android:duration="50" />
+
+
+   <item android:drawable="@drawable/giphy70" android:duration="50" />
+    <item android:drawable="@drawable/giphy80" android:duration="50" />
+
+    <item android:drawable="@drawable/giphy90" android:duration="50" />
+ <item android:drawable="@drawable/giphy100" android:duration="50" />
+
+     <item android:drawable="@drawable/giphy110" android:duration="50" />
+ <item android:drawable="@drawable/giphy120" android:duration="50" />
+
+
+
+
+  <item android:drawable="@drawable/giphy130" android:duration="50" />
+ <item android:drawable="@drawable/giphy140" android:duration="50" />
+
+ <item android:drawable="@drawable/giphy150" android:duration="50" />
+ <item android:drawable="@drawable/giphy160" android:duration="50" />
+
+
+     <item android:drawable="@drawable/giphy170" android:duration="50" />
+
+   <item android:drawable="@drawable/giphy180" android:duration="50" />
+   <item android:drawable="@drawable/giphy190" android:duration="50" />
+
+
+    <item android:drawable="@drawable/giphy200" android:duration="50" />
+
+  <item android:drawable="@drawable/giphy210" android:duration="50" />
+
+
+    <item android:drawable="@drawable/giphy220" android:duration="50" />
+   <item android:drawable="@drawable/giphy230" android:duration="50" />
+
+    <item android:drawable="@drawable/giphy240" android:duration="50" />
+    <item android:drawable="@drawable/giphy250" android:duration="50" />
+
+   <item android:drawable="@drawable/giphy260" android:duration="50" />-->
+
+
+
+
+
+
+
+
+
+ </animation-list>

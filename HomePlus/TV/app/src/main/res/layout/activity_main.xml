@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/epg_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTvFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.media.tv.TvView
+            android:id="@+id/TvView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <include
+            android:id="@+id/include_clEpgTvFrame"
+            layout="@layout/layout_epg_tv_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_fcc_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <SurfaceView
+            android:id="@+id/sv_fcc_0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1.0"
+            android:visibility="visible" />
+ 
+        <SurfaceView
+            android:id="@+id/sv_fcc_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:alpha="1.0"
+            android:visibility="visible" />
+        <SurfaceView
+            android:id="@+id/sv_fcc_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:alpha="1.0"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/include_clLiveOverlay"
+        layout="@layout/layout_live_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/include_clLiveRecordingStatus"
+        layout="@layout/layout_live_recording_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/include_rlLiveChannelSearch"
+        layout="@layout/layout_live_channel_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/include_clMiniEpg"
+        layout="@layout/layout_miniepg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/include_clMiniEpgDescription"
+        layout="@layout/layout_miniepg_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/include_clNumberKeyChannelList"
+        layout="@layout/layout_number_key_channel_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/include_clLeftChannelList"
+        layout="@layout/layout_left_channel_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/include_rlLivePreferredSetting"
+        layout="@layout/layout_live_preferred_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/live_signal_info_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/include_clNoChannelsAvailable"
+        layout="@layout/layout_no_channels_available"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <!-- 1. 頂部跑馬燈 (TOP) -->
+    <!--    - 寬度佔滿父容器，高度自適應 -->
+    <!--    - 約束：頂部貼著父容器頂部 -->
+    <com.prime.homeplus.tv.Ticker.TickerView
+        android:id="@+id/lo_ticker_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:focusable="false"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 2. 左側跑馬燈 (LEFT) -->
+    <!--    - 高度佔滿父容器，寬度自適應 -->
+    <!--    - 約束：左側貼著父容器左側 -->
+    <com.prime.homeplus.tv.Ticker.TickerView
+        android:id="@+id/lo_ticker_view_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Left Ticker"
+        tools:background="#8000ff00"
+        tools:visibility="visible" />
+
+    <!-- 3. 右側跑馬燈 (RIGHT) -->
+    <!--    - 高度佔滿父容器，寬度自適應 -->
+    <!--    - 約束：右側貼著父容器右側 -->
+    <com.prime.homeplus.tv.Ticker.TickerView
+        android:id="@+id/lo_ticker_view_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Right Ticker"
+        tools:background="#800000ff"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

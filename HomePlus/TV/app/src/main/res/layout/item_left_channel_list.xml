@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llLeftChannelList"
+    android:layout_width="330dp"
+    android:layout_height="75dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="left"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|left">
+
+        <TextView
+            android:id="@+id/tvLeftChannelListChannelNum"
+            android:layout_width="wrap_content"
+            android:minWidth="25dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:textColor="@color/colorGold2"
+            android:text="000"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/ivLeftChannelListPadlock"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/icon_ch_lock_d"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/ivLeftChannelListMusic"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/icon_ch_music_d"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/ivLeftChannelListStar"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/icon_ch_favorite_d"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tvLeftChannelListChannelName"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:text="ch_name"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|left">
+
+        <TextView
+            android:id="@+id/tvLeftChannelListProgramName"
+            android:layout_width="wrap_content"
+            android:minWidth="25dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:text="pg_name"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|left">
+
+        <TextView
+            android:id="@+id/tvLeftChannelListPgStartTime"
+            android:layout_width="wrap_content"
+            android:minWidth="25dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="00:00"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="11dp" />
+
+        <ProgressBar
+            android:id="@+id/pbLeftChannelList"
+            style="@style/progress_channel"
+            android:layout_width="150dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="7dp"
+            android:progressBackgroundTint="@color/colorWhiteOpacity20"
+            android:progressTint="@color/colorWhiteOpacity50"
+            />
+
+        <TextView
+            android:id="@+id/tvLeftChannelListPgEndTime"
+            android:layout_width="wrap_content"
+            android:minWidth="25dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="7dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="23:59"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="11dp" />
+
+    </LinearLayout>
+</LinearLayout>

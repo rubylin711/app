@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/recommendation_ad_item_layer_frame_select_size"
+                android:color="@color/pvr_red_color"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle"/>
+    </item>
+</selector>

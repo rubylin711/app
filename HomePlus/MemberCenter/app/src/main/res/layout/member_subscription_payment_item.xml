@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="38dp"
+    android:gravity="center|left"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="38dp"
+        android:layout_height="match_parent"
+        android:gravity="center|right"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/paymentCheckBox"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:buttonTint="@color/state_selected_white_normal_80ffffff"
+            android:focusable="false"
+            android:text="123" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/paymentItem"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginLeft="7dp"
+            android:gravity="center"
+            android:text="項目"
+            android:textColor="@color/state_selected_white_normal_80ffffff"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/paymentServicePeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:text="服務期間"
+            android:textColor="@color/state_selected_white_normal_80ffffff"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/paymentPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:text="價格"
+            android:textColor="@color/state_selected_white_normal_b3ebca8c"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="125dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/paymentMediabillno"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="虛擬媒體單號"
+            android:textColor="@color/colorGoldOpacity80"
+            android:textSize="15dp" />
+    </LinearLayout>
+</LinearLayout>

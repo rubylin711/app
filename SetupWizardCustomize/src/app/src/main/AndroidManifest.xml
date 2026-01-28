@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"    
+    android:versionName="1.8.01"
+    android:sharedUserId="android.uid.system"
+    package="com.prime.setupwizard"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SetupWizardCustomize"
+        tools:targetApi="31">
+
+        <!-- This Receiver marks this app as being eligible to provide resources which influence
+        the behavior and look of TV Setup. -->
+        <receiver android:name=".SetupCustomizationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.tvsetup.action.PARTNER_CUSTOMIZATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

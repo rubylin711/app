@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prime.tvinputframework"
+    android:sharedUserId="android.uid.system">
+    <uses-permission android:name="com.android.providers.tv.permission.READ_TV_LISTINGS" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_TV_LISTINGS" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+    <uses-permission android:name="android.permission.READ_TV_LISTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+    <uses-permission android:name="com.android.providers.tv.permission.ACCESS_ALL_EPG_DATA" />
+    <uses-permission android:name="android.permission.ACCESS_TV_TUNER" />
+    <uses-permission android:name="android.permission.TUNER_RESOURCE_ACCESS" />
+    <uses-permission android:name="android.permission.TV_TUNER" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_TV_DESCRAMBLER" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
+    <uses-permission android:name="com.android.tv.permission.RECEIVE_INPUT_EVENT" />
+    <uses-permission android:name="android.permission.REBOOT" tools:ignore="ProtectedPermissions" />
+
+
+    <uses-permission android:name="com.litv.liad.sdk.authorities.GET_DAY_FREQUENCY"/>
+
+    <!-- for AlarmManager-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="Manifest.permission#SCHEDULE_EXACT_ALARM SCHEDULE_EXACT_ALARM"/>
+
+    <protected-broadcast android:name="com.prime.launcher.timer_record"/>
+    <protected-broadcast android:name="com.prime.launcher.timer_power_on"/>
+    <protected-broadcast android:name="com.prime.launcher.timer_change_channel"/>
+
+    <protected-broadcast android:name="com.prime.launcher.KEYCODE_VOLUME_DOWN"/>
+    <uses-permission android:name="android.Manifest.permission.MODIFY_AUDIO_ROUTING" />
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
+    <uses-feature android:name="android.hardware.live_tv" android:required="true" />
+
+    <!--    <uses-feature android:name="android.software.live_tv" android:required="true" />-->
+
+    <application
+        android:name=".PrimeTvInputFrameworkApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:grantUriPermissions="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.PrimePlayer">
+        <!-- Setup Activity -->
+        <activity
+            android:name=".TvInputActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <!-- 測試用 Activity：singleTop + 接收 VIEW vnd.android.tv/channel -->
+        <activity
+            android:name=".tunetest.TuneTestActivity"
+            android:launchMode="singleTop"
+            android:exported="true">
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="vnd.android.tv/channel"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.prime.dtv.DtvAidlService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.prime.dtv.DtvAidlService.action" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".PrimeTvInputService"
+            android:exported="true"
+            android:permission="android.permission.BIND_TV_INPUT">
+            <intent-filter>
+                <action android:name="android.media.tv.TvInputService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.media.tv.input"
+                android:resource="@xml/tv_input" />
+        </service>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            tools:replace="android:authorities"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+        </provider>
+        <!-- EPG Sync Service -->
+        <service
+            android:name=".EpgSyncJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true" />
+        <receiver android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

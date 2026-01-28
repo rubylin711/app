@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPvrMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgd_pvrhomeplus"
+    tools:context=".ui.activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPvrList"
+        android:layout_width="252dp"
+        android:layout_height="match_parent"
+        android:background="#171719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPvrListTitle"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Top-left background icon -->
+            <ImageView
+                android:layout_width="118dp"
+                android:layout_height="118dp"
+                android:translationX="0dp"
+                android:translationY="0dp"
+                android:src="@drawable/bg_pvr_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/record_title"
+                android:textColor="@color/colorWhiteOpacity75"
+                android:textSize="19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="83dp"
+                android:gravity="left|center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/icon_twoway_time" />
+
+                <TextView
+                    android:id="@+id/tvPvrDateTime"
+                    android:layout_width="205dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="3dp"
+                    android:gravity="center|left"
+                    android:text="12.31 (週四) 23:59"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPvrMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            app:layout_constraintStart_toStartOf="@+id/clPvrListTitle"
+            app:layout_constraintTop_toBottomOf="@+id/clPvrListTitle"
+            app:layout_constraintVertical_bias="0.0"
+            android:divider="@null" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/include_clPvrRecordedList"
+        layout="@layout/layout_pvr_recorded_list"
+        android:layout_width="708dp"
+        android:layout_height="fill_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/include_clPvrScheduledList"
+        layout="@layout/layout_pvr_scheduled_list"
+        android:layout_width="708dp"
+        android:layout_height="fill_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/include_clPvrSetupList"
+        layout="@layout/layout_pvr_setup_list"
+        android:layout_width="708dp"
+        android:layout_height="fill_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

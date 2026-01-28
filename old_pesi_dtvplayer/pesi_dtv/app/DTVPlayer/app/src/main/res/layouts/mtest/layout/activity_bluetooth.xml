@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtest.activity.BlueTooth_Activity">
+
+    <ImageView
+        android:id="@+id/iv_item26_fail"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/str_fail"
+        android:scaleType="fitCenter"
+        android:src="@drawable/red_btn"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@+id/tv_item26_pass"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item26_bluetooth" />
+
+    <ImageView
+        android:id="@+id/iv_item26_pass"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/str_pass"
+        android:scaleType="fitCenter"
+        android:src="@drawable/blue_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item26_bluetooth" />
+
+    <TextView
+        android:id="@+id/tv_item26_bluetooth"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_fail"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="KEY:ff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item26_message" />
+
+    <TextView
+        android:id="@+id/tv_item26_pass"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_pass"
+        app:layout_constraintLeft_toRightOf="@+id/iv_item26_pass"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item26_bluetooth" />
+
+    <TextView
+        android:id="@+id/tv_item26_fail"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_fail"
+        app:layout_constraintLeft_toRightOf="@+id/iv_item26_fail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item26_bluetooth" />
+
+    <TextView
+        android:id="@+id/tv_item26_message"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item26_title" />
+
+    <TextView
+        android:id="@+id/tv_item26_pair"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_pair"
+        app:layout_constraintStart_toEndOf="@+id/iv_item26_pair"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item26_bluetooth" />
+
+    <TextView
+        android:id="@+id/tv_item26_title"
+        android:layout_width="400dp"
+        android:layout_height="25dp"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_test_item_bluetooth"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_item26_pair"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/str_pair"
+        android:src="@drawable/yellow_btn"
+        app:layout_constraintStart_toEndOf="@+id/tv_item26_fail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item26_bluetooth" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

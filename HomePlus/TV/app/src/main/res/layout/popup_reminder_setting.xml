@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlackOpacity70">
+
+    <!-- Reminder Menu -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clReminderMenu"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_r_corner_3_gray_37"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnReminderMenuAddReminder"
+            android:layout_width="185dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/button_item2"
+            android:text="@string/reminder_set"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnReminderMenuGoToList"
+            android:layout_width="185dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/button_item2"
+            android:text="@string/reminder_go_to_list"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnReminderMenuCancel"
+            android:layout_width="185dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="142dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button_item2"
+            android:text="@string/close"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Reminder Conflict -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clReminderConflict"
+        android:layout_width="575dp"
+        android:layout_height="355dp"
+        android:background="#34363c"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/reminder_conflict_title"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvReminderConflictTopDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/colorWhiteOpacity10"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="540dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReminderConflictTopDivider">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/reminder_conflict_msg"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/reminder_new_event"
+                android:textColor="#8da4b9"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="0dp"
+                android:background="@color/colorButton2"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvReminderConflictNewChannelNumber"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="00"
+                    android:textColor="@color/colorGoldOpacity70"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvReminderConflictNewChannelName"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:text="ch name"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvReminderConflictNewProgramName"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:lines="1"
+                    android:gravity="center|left"
+                    android:text="pg name"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvReminderConflictNewTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center|left"
+                    android:text="05:00-06:00"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorWhiteOpacity10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:text="@string/reminder_existing_event"
+                android:textColor="#8da4b9"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="0dp"
+                android:background="@color/colorButton2"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvReminderConflictExistingChannelNumber"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="00"
+                    android:textColor="@color/colorGoldOpacity70"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tvReminderConflictExistingChannelName"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:text="ch name"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvReminderConflictExistingProgramName"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:text="pg name"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvReminderConflictExistingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center|left"
+                    android:text="05:00-06:00"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:text=""
+            android:textColor="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnReminderConflictSave"
+                android:layout_width="125dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item2"
+                android:checked="true"
+                android:drawablePadding="20dp"
+                android:paddingLeft="0dp"
+                android:textAllCaps="false"
+                android:text="@string/ok"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/btnReminderConflictCancel"
+                android:layout_width="125dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item2"
+                android:checked="true"
+                android:drawablePadding="20dp"
+                android:paddingLeft="0dp"
+                android:textAllCaps="false"
+                android:text="@string/cancel"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Reminder Main -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clReminderMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_home_1920_w"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rlReminderMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="-10dp"
+                android:contentDescription="@string/ok"
+                android:src="@drawable/bg_epg_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/reminder_list"
+                android:textColor="#ffffff"
+                android:textSize="22dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/rlReminderListMain"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="23dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/colorkey_direction" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/direction"
+                    android:textColor="#818181"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvReminderBlueKey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawableStart="@drawable/shape_round_10_blue_3fa7fe"
+                    android:drawablePadding="3dp"
+                    android:text="@string/reminder_enter_parental_control"
+                    android:textColor="#818181"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvReminderRedKey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawableStart="@drawable/shape_round_10_red_ea4e4f"
+                    android:drawablePadding="3dp"
+                    android:text="@string/delete"
+                    android:textColor="#818181"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/key_ok" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/select"
+                    android:textColor="#818181"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/key_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/back"
+                    android:textColor="#818181"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlReminderListMain"
+                android:layout_width="778dp"
+                android:layout_height="400dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:background="@drawable/round_corner_square2">
+
+                <RelativeLayout
+                    android:id="@+id/rlReminderListTitle"
+                    android:layout_width="778dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#26282d">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/channel"
+                        android:textColor="@color/colorWhiteOpacity50"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="169.5dp"
+                        android:text="@string/program_title"
+                        android:textColor="@color/colorWhiteOpacity50"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="78dp"
+                        android:layout_height="39dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="117dp"
+                        android:gravity="center"
+                        android:text="@string/date"
+                        android:textColor="@color/colorWhiteOpacity50"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="107dp"
+                        android:layout_height="39dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:text="@string/reminder_start_end_time"
+                        android:textColor="@color/colorWhiteOpacity50"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="#262626" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@color/colorWhiteOpacity40" />
+
+                <!-- 收視提醒列表區塊 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rlReminderListTitle"
+                    android:layout_alignStart="@id/rlReminderListTitle">
+
+                    <!-- 目前無收視提醒 -->
+                    <TextView
+                        android:id="@+id/tvReminderNoWatchList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="@string/reminder_no_watch_list"
+                        android:textColor="@color/colorWhiteOpacity50"
+                        android:textSize="15sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvProgramReminderList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@color/colorBlackOpacity30"
+                        android:dividerHeight="1dp">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorWhiteOpacity40" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

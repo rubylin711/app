@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WebBrowser</string>
+    <string name="ssl_title">此網站使用私人憑證，是否繼續前往?</string>
+    <string name="ssl_agree">確認</string>
+    <string name="ssl_disagree">取消</string>
+    <string name="url_error">連結內容錯誤</string>
+</resources>

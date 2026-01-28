@@ -1,0 +1,15 @@
+{
+  "Configuration Download Config Cycle": 30,
+	"Configuration Remote URL": [
+		"http://10.1.4.157/0000"
+		,"http://10.1.4.157/1111"
+		,"http://10.1.4.157/2222"
+		,"http://10.1.4.157/aaaa"
+	],
+    "OTA File": {
+        "payload":            "http://10.1.4.157/payload.bin",
+        "payload properties": "http://10.1.4.157/payload_properties.txt",
+        "metadata":           "http://10.1.4.157/metadata",
+        "force update": true
+	}
+}

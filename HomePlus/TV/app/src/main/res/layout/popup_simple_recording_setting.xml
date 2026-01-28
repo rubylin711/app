@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <!-- Recording Setting Menu -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRecordingSettingMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackOpacity70"
+        android:visibility="visible" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_r_corner_3_gray_37"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnRecordingSettingMenuSingleRecord"
+                android:layout_width="185dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button_item2"
+                android:text="@string/recording_setting_single_record"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnRecordingSettingMenuSeriesRecord"
+                android:layout_width="185dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/button_item2"
+                android:text="@string/recording_setting_series_record"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRecordingSettingMenuSingleRecord" />
+
+            <Button
+                android:id="@+id/btnRecordingSettingMenuGoToList"
+                android:layout_width="185dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/button_item2"
+                android:text="@string/recording_setting_go_to_list"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRecordingSettingMenuSeriesRecord" />
+
+            <Button
+                android:id="@+id/btnRecordingSettingMenuCancel"
+                android:layout_width="185dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_item2"
+                android:text="@string/close"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRecordingSettingMenuGoToList" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Recording Setting Conflict -->
+    <include
+        android:id="@+id/include_clRecordingSettingConflict"
+        layout="@layout/layout_recording_setting_conflict"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Recording Setting Bottom Message -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRecordingSettingBottomMessage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#34363c"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvRecordingSettingBottomMessage"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/recording_setting_add_recording_success"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Recording Setting Bottom Bar -->
+    <RelativeLayout
+        android:id="@+id/rlRecordingSettingBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#34363c"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tvRecordingSettingBottomBarProgramName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="77dp"
+                android:text="ProgramName"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRecordingSettingBottomBarProgramName"
+                android:layout_alignLeft="@id/tvRecordingSettingBottomBarProgramName"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/recording_setting_select_record_mode"
+                android:textColor="#8da4b9"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llRecordingSettingBottomBarRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/btnRecordingSettingBottomBarCancel"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRecordingSettingBottomBarRecordOne"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:background="@drawable/button_item2"
+                android:text="@string/recording_setting_record_one"
+                android:textAllCaps="false"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnRecordingSettingBottomBarSeriesRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:background="@drawable/button_item2"
+                android:text="@string/recording_setting_series_record"
+                android:textAllCaps="false"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRecordingSettingBottomBarCancelRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/btnRecordingSettingBottomBarCancel"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRecordingSettingBottomBarCancelSingleRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:background="@drawable/button_item2"
+                android:text="@string/recording_setting_cancel_single_record"
+                android:textAllCaps="false"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnRecordingSettingBottomBarCancelSeries"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:background="@drawable/button_item2"
+                android:text="@string/recording_setting_cancel_series"
+                android:textAllCaps="false"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRecordingSettingBottomBarCancel"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="77dp"
+            android:background="@drawable/button_item2"
+            android:text="@string/close"
+            android:textAllCaps="false"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

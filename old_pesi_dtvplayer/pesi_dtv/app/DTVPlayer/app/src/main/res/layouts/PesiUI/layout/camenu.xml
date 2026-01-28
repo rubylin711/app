@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context=".Activity.CAMenuActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <include
+        android:id="@+id/TitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loaderBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:text="@string/STR_LOADER_INFO"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TitleLayout" />
+
+    <Button
+        android:id="@+id/irdBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:text="@string/STR_IRD_INFO"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/loaderBTN"
+        app:layout_constraintStart_toStartOf="@+id/loaderBTN"
+        app:layout_constraintTop_toBottomOf="@+id/loaderBTN" />
+
+    <Button
+        android:id="@+id/caBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:text="@string/STR_CA_INFO"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/loaderBTN"
+        app:layout_constraintStart_toStartOf="@+id/loaderBTN"
+        app:layout_constraintTop_toBottomOf="@+id/irdBTN" />
+</androidx.constraintlayout.widget.ConstraintLayout>

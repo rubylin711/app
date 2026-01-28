@@ -1,0 +1,7 @@
+runtime_resource_overlay {
+    name: "PrimeSettingsProviderOverlay_Source",
+    certificate: "platform",
+    resource_dirs: ["res"],
+    system_ext_specific: true,
+    sdk_version: "current",
+}

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.TestMiddleware.TestEPGEventActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTEPGEVENT_GUIDELINE_RIGHT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTEPGEVENT_GUIDELINE_LEFT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTEPGEVENT_GUIDELINE_CENTER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTEPGEVENT_GUIDELINE_TITLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ID_TESTEPGEVENT_GUIDELINE_HELP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+
+    <include
+        android:id="@+id/ID_TESTEPGEVENT_LAYOUT_TITLE"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/ID_TESTEPGEVENT_GUIDELINE_TITLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/ID_TESTEPGEVENT_LAYOUT_HELP"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ID_TESTEPGEVENT_GUIDELINE_HELP" />
+
+    <TextView
+        android:id="@+id/ID_TESTEPGEVENT_TXV_RESULT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="horizontal|vertical"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/ID_TESTEPGEVENT_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@+id/ID_TESTEPGEVENT_GUIDELINE_RIGHT"
+        app:layout_constraintStart_toStartOf="@+id/ID_TESTEPGEVENT_GUIDELINE_CENTER"
+        app:layout_constraintTop_toTopOf="@+id/ID_TESTEPGEVENT_GUIDELINE_TITLE" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ID_TESTEPGEVENT_GUIDELINE_HELP"
+        app:layout_constraintEnd_toStartOf="@id/ID_TESTEPGEVENT_GUIDELINE_CENTER"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ID_TESTEPGEVENT_GUIDELINE_LEFT"
+        app:layout_constraintTop_toBottomOf="@id/ID_TESTEPGEVENT_GUIDELINE_TITLE"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/ID_TESTEPGEVENT_BTN_EPGGETPRESENT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnEPGEventGetPresentEvent_OnClick"
+                android:text="EPGEventGetPresentEvent()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTEPGEVENT_BTN_EPGGETFOLLOW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnEPGEventGetFollowEvent_OnClick"
+                android:text="EPGEventGetFollowEvent()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTEPGEVENT_BTN_EPGGETBYEVENTID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnEpgEventGetEPGByEventId_OnClick"
+                android:text="EpgEventGetEPGByEventId()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTEPGEVENT_BTN_EPGGETLIST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnEpgEventGetEPGEventList_OnClick"
+                android:text="EpgEventGetEPGEventList()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTEPGEVENT_BTN_EPGGETSHORT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnEpgEventGetShortDescription_OnClick"
+                android:text="EpgEventGetShortDescription()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTEPGEVENT_BTN_EPGGETDETAIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnEpgEventGetDetailDescription_OnClick"
+                android:text="EpgEventGetDetailDescription()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTEPGEVENT_BTN_EPGSETLANGCODE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnEpgEventSetLanguageCode_OnClick"
+                android:text="EpgEventSetLanguageCode()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+
+            <Button
+                android:id="@+id/ID_TESTEPGEVENT_BTN_EPGSTART"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_selector"
+                android:onClick="BtnEpgEventStartEPG_OnClick"
+                android:text="EpgEventStartEPG()"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

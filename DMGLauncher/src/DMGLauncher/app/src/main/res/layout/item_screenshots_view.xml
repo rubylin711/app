@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:focusable="true"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+    <!-- cardCornerRadius 圓角半徑 -->
+    <!-- cardElevation 陰影大小 -->
+    <ImageView
+        android:id="@+id/lo_screenshot_image"
+        android:layout_width="238dp"
+        android:layout_height="134dp"
+        tools:ignore="ContentDescription" />
+</androidx.cardview.widget.CardView>

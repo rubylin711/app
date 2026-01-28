@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/new_timer_calendar_layer"
+    android:layout_width="400dp"
+    android:layout_height="310dp"
+    android:background="@drawable/gradient_panel">
+
+    <TextView
+        android:id="@+id/new_timer_calendar_year_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/lo_new_timer_dialog_text_size"
+        android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+        android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+        android:textColor="@color/white"
+        android:text="年"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/new_timer_calendar_year_layer"
+        app:layout_constraintStart_toStartOf="@id/new_timer_calendar_layer"
+        app:layout_constraintTop_toTopOf="@id/new_timer_calendar_layer" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/new_timer_calendar_year_layer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_zapping_bg_selector"
+        android:focusable="true"
+        app:layout_constraintStart_toEndOf="@id/new_timer_calendar_year_title"
+        app:layout_constraintEnd_toEndOf="@id/new_timer_calendar_layer"
+        app:layout_constraintTop_toTopOf="@id/new_timer_calendar_year_title"
+        app:layout_constraintBottom_toBottomOf="@id/new_timer_calendar_year_title"
+        android:nextFocusUp="@id/new_timer_calendar_year_layer"
+        android:nextFocusLeft="@id/new_timer_calendar_year_layer"
+        android:nextFocusRight="@id/new_timer_calendar_year_layer"
+        android:nextFocusDown="@id/new_timer_calendar_month_layer">
+
+        <ImageView
+            android:id="@+id/new_timer_calendar_year_left"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/hint_left"
+            app:layout_constraintBottom_toBottomOf="@id/new_timer_calendar_year_layer"
+            app:layout_constraintStart_toStartOf="@id/new_timer_calendar_year_layer"
+            app:layout_constraintTop_toTopOf="@id/new_timer_calendar_year_layer" />
+
+        <ImageView
+            android:id="@+id/new_timer_calendar_year_right"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/hint_right"
+            app:layout_constraintBottom_toBottomOf="@id/new_timer_calendar_year_layer"
+            app:layout_constraintEnd_toEndOf="@id/new_timer_calendar_year_layer"
+            app:layout_constraintTop_toTopOf="@id/new_timer_calendar_year_layer" />
+
+        <TextView
+            android:id="@+id/new_timer_calendar_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+            android:text="2024"
+            android:textColor="@color/white"
+            android:textSize="@dimen/lo_new_timer_dialog_text_size"
+            app:layout_constraintEnd_toStartOf="@id/new_timer_calendar_year_right"
+            app:layout_constraintStart_toEndOf="@id/new_timer_calendar_year_left"
+            app:layout_constraintTop_toTopOf="@id/new_timer_calendar_year_layer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/new_timer_calendar_month_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/lo_new_timer_dialog_text_size"
+        android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+        android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+        android:textColor="@color/white"
+        android:text="月份"
+        app:layout_constraintEnd_toEndOf="@id/new_timer_calendar_year_title"
+        app:layout_constraintStart_toStartOf="@id/new_timer_calendar_year_title"
+        app:layout_constraintTop_toBottomOf="@id/new_timer_calendar_year_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/new_timer_calendar_month_layer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_zapping_bg_selector"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="@id/new_timer_calendar_year_layer"
+        app:layout_constraintEnd_toEndOf="@id/new_timer_calendar_year_layer"
+        app:layout_constraintTop_toTopOf="@id/new_timer_calendar_month_title"
+        app:layout_constraintBottom_toBottomOf="@id/new_timer_calendar_month_title"
+        android:nextFocusUp="@id/new_timer_calendar_year_layer"
+        android:nextFocusLeft="@id/new_timer_calendar_month_layer"
+        android:nextFocusRight="@id/new_timer_calendar_month_layer">
+
+        <ImageView
+            android:id="@+id/new_timer_calendar_month_left"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/hint_left"
+            app:layout_constraintBottom_toBottomOf="@id/new_timer_calendar_month_layer"
+            app:layout_constraintStart_toStartOf="@id/new_timer_calendar_month_layer"
+            app:layout_constraintTop_toTopOf="@id/new_timer_calendar_month_layer" />
+
+        <ImageView
+            android:id="@+id/new_timer_calendar_month_right"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/hint_right"
+            app:layout_constraintBottom_toBottomOf="@id/new_timer_calendar_month_layer"
+            app:layout_constraintEnd_toEndOf="@id/new_timer_calendar_month_layer"
+            app:layout_constraintTop_toTopOf="@id/new_timer_calendar_month_layer" />
+
+        <TextView
+            android:id="@+id/new_timer_calendar_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/lo_new_timer_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_new_timer_dialog_padding_up"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/lo_new_timer_dialog_text_size"
+            app:layout_constraintEnd_toStartOf="@id/new_timer_calendar_month_right"
+            app:layout_constraintStart_toEndOf="@id/new_timer_calendar_month_left"
+            app:layout_constraintTop_toTopOf="@id/new_timer_calendar_month_layer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/new_timer_calendar_recycler_iew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/new_timer_calendar_layer"
+        app:layout_constraintEnd_toEndOf="@id/new_timer_calendar_layer"
+        app:layout_constraintTop_toBottomOf="@id/new_timer_calendar_month_layer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

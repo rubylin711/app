@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">https://atvgwlab.kbro.tv/OTA_file/A1B_72115_0.1</domain>
+		<domain includeSubdomains="true">http://10.1.4.95:8082</domain>
+    </domain-config>
+</network-security-config>

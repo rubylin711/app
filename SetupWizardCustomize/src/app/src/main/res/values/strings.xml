@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SetupWizardCustomize</string>
+    <string name="check_provision_data">Checking the connection and updating the provision data...</string>
+    <string name="provision_data_fail">Your device has not been provision yet, please wait for the engineers to finish the provision step. Error code: E507</string>
+    <string name="license_title">Term of Service</string>
+    <string name="license_content">By continuing, you agree to terms such as %s</string>
+    <string name="license_item">《%s》</string>
+    <string name="license_agree">I have Read and Agree</string>
+
+    <string name="tutorial_title0">Welcome to use Android STB</string>
+    <string name="tutorial_title1">Home</string>
+    <string name="tutorial_title2">Explore channels</string>
+    <string name="tutorial_title3">Enjoy contents</string>
+    <string name="tutorial_title4">OTT</string>
+
+    <string name="tutorial_desc0">Start the new experience</string>
+    <string name="tutorial_desc1">Home is your guide to entertainment, from here\n you can explore what to watch by browsing entertainments apps to live TV</string>
+    <string name="tutorial_desc2">Guide yourself by checking program information while watching easily\n and sue record and timeshift function for a better experience</string>
+    <string name="tutorial_desc3">Watch various VOD and using your bbtv coins,\n One click check to current status in the member center</string>
+    <string name="tutorial_desc4">You can use various video\n and music service on this STB</string>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_rect_black_gradient_f5_db_00_76"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <TextView
+                android:id="@+id/tvPvrProgramInfoChannelNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#EBCA8C"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPvrProgramInfoChannelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9.5dp"
+                android:textColor="#D2D2D2"
+                android:textSize="21sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="200dp"
+            android:layout_marginTop="55.5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <TextView
+                android:id="@+id/tvPvrProgramInfoProgramName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxWidth="530dp"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/ivPvrProgramInfoChannelRating"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/ok" />
+
+            <ImageView
+                android:id="@+id/ivPvrProgramInfoNowRecording"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="1dp"
+                android:src="@drawable/icon_miniguide_rec_loading"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                android:contentDescription="@string/ok" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/svPvrProgramInfoDescription"
+            android:layout_width="540dp"
+            android:layout_height="70.5dp"
+            android:layout_marginTop="95.5dp"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@color/colorTextNotSelect"
+            android:scrollbarSize="1.5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvPvrProgramInfoDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white_description"
+                android:textSize="16dp" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnPvrProgramInfoClose"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="184dp"
+            android:background="@drawable/state_pvr_dialog_button"
+            android:text="@string/close"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context=".Activity.CAInfoActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/infoGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <include
+        android:id="@+id/TitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/caStatusTXV"
+        android:text="@string/str_ca_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP" />
+
+    <TextView
+        android:id="@+id/caStatusInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/caStatusTXV"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/caStatusTXV" />
+
+    <TextView
+        android:id="@+id/authTXV"
+        android:text="@string/str_auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/caStatusTXV"
+        app:layout_constraintTop_toBottomOf="@+id/caStatusTXV" />
+
+    <TextView
+        android:id="@+id/authInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/authTXV"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/authTXV" />
+
+    <TextView
+        android:id="@+id/deauthTXV"
+        android:text="@string/str_deauth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/authTXV"
+        app:layout_constraintTop_toBottomOf="@+id/authTXV" />
+
+    <TextView
+        android:id="@+id/deauthInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/deauthTXV"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/deauthTXV" />
+
+
+    <TextView
+        android:id="@+id/ecmTXV"
+        android:text="@string/str_ecm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/deauthTXV"
+        app:layout_constraintTop_toBottomOf="@+id/deauthTXV" />
+
+    <TextView
+        android:id="@+id/ecmInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/ecmTXV"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/ecmTXV" />
+
+    <TextView
+        android:id="@+id/emmTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/str_emm"
+        app:layout_constraintStart_toStartOf="@+id/ecmTXV"
+        app:layout_constraintTop_toBottomOf="@+id/ecmTXV" />
+
+    <TextView
+        android:id="@+id/emmInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/emmTXV"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/emmTXV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

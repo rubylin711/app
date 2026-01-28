@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PrimeSetting</string>
+    <string name="setting_usb_update">USB update</string>
+    <string name="settings_category_title">TV Setting</string>
+</resources>

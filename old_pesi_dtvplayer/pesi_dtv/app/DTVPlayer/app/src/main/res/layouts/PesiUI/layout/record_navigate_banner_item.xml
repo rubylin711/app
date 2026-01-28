@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="25dp"
+    android:layout_marginStart="18dp"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/record_banner_width"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:elevation="12dp"
+        android:layout_centerHorizontal="true"
+        android:innerRadius="5dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:id="@+id/record_banner_img"
+                android:layout_width="@dimen/record_banner_width"
+                android:layout_height="@dimen/record_banner_height"
+                android:background="@android:color/black"
+                android:contentDescription="@string/STR_TODO"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/record_banner_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/record_banner_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/record_banner_title_height"
+                android:gravity="center"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:background="@color/DarkTransparent"
+                android:singleLine="true"
+                android:text="@string/STR_TODO"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/TEXT_SIZE"
+                app:layout_constraintEnd_toEndOf="@id/record_banner_img"
+                app:layout_constraintStart_toStartOf="@id/record_banner_img"
+                app:layout_constraintTop_toBottomOf="@id/record_banner_img"
+                app:layout_constraintVertical_bias="1"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

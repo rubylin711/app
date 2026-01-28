@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLeftChannelList"
+        android:layout_width="630dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_black_channel_list2"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="93dp"
+                    android:src="@drawable/two_way_left_ch_list" />
+                <TextView
+                    android:id="@+id/tvLeftChannelListTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:minWidth="180dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/channel_list_favorite_channel"
+                    android:textColor="@color/colorWhiteOpacity75"
+                    android:textSize="19dp" />
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/two_way_right_ch_list" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLeftChannelList"
+                    android:layout_width="330dp"
+                    android:layout_height="380dp"
+                    android:layout_marginLeft="47dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/llLeftChannelListNoChannelList"
+                    android:layout_width="330dp"
+                    android:layout_height="380dp"
+                    android:layout_marginLeft="47dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/no_channel_list"
+                        android:textColor="@color/colorWhiteOpacity50"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!-- 左邊留白，避免上下台icon設gone時內縮 -->
+                <View
+                    android:layout_width="37dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="0dp">
+                </View>
+                <!-- 上下台 -->
+                <LinearLayout
+                    android:id="@+id/llLeftChannelListUpDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:id="@+id/ivLeftChannelListUpDown"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/colorkey_direction_updown"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+                    <TextView
+                        android:id="@+id/tvLeftChannelListUpDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/channel_list_up_down"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="#b2b2b2"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <!-- 切換分類 -->
+                <LinearLayout
+                    android:id="@+id/llLeftChannelListSwitchingList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:id="@+id/ivLeftChannelListSwitchingList"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/colorkey_direction_leftright"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+                    <TextView
+                        android:id="@+id/tvLeftChannelListSwitchingList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/channel_list_switching_list"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="#b2b2b2"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <!-- 遙控器黃色鍵/頻道收藏 -->
+                <LinearLayout
+                    android:id="@+id/llLeftChannelListFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:id="@+id/ivLeftChannelListFavorite"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/colorkey_y"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+                    <TextView
+                        android:id="@+id/tvLeftChannelListFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_favourite"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="#b2b2b2"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <!-- 選取 -->
+                <LinearLayout
+                    android:id="@+id/llLeftChannelListOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:id="@+id/ivLeftChannelListOk"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/key_ok"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+                    <TextView
+                        android:id="@+id/tvLeftChannelListOk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/channel_tune"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="#b2b2b2"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <!-- 關閉 -->
+                <LinearLayout
+                    android:id="@+id/llLeftChannelListClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:id="@+id/ivLeftChannelListClose"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/key_arrow"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+                    <TextView
+                        android:id="@+id/tvLeftChannelListClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/close"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="#b2b2b2"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

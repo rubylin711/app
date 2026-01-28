@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.TimerSettingActivity">
+
+    <include
+        android:id="@+id/activityTitleViewLayoutTimerSetting"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/title_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--include
+        android:id="@+id/activityHelpViewLayoutTimerSetting"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help_guideline" />-->
+
+    <include
+        android:id="@+id/HelpViewWoColorIconLayout"
+        layout="@layout/activity_help_wo_color_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomHelpWoColorIconGuideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_END" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textViewRightGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/RightItemLeftGuilde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomHelpWoColorIconGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_WO_COLOR_ICON_EDGE"/>
+
+    <TextView
+        android:id="@+id/currenttimeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toBottomOf="@id/activityTitleViewLayoutTimerSetting" />
+
+    <TextView
+        android:id="@+id/timernumberTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_TIMER_NUMBER"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP"
+        app:layout_constraintStart_toEndOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/currenttimeTXV"/>
+
+    <TextView
+        android:id="@+id/channelnameTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_TIMER_CHANNEL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/timernumberTXV"
+        app:layout_constraintTop_toBottomOf="@id/timernumberTXV"/>
+
+    <TextView
+        android:id="@+id/timercycleTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_TIMER_CYCLE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/timernumberTXV"
+        app:layout_constraintTop_toBottomOf="@id/channelnameTXV"/>
+
+    <TextView
+        android:id="@+id/eventtypeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_TIMER_TYPE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/timernumberTXV"
+        app:layout_constraintTop_toBottomOf="@id/timercycleTXV"/>
+
+    <TextView
+        android:id="@+id/timerdateTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_TIMER_DATE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/timernumberTXV"
+        app:layout_constraintTop_toBottomOf="@id/eventtypeTXV"/>
+
+    <TextView
+        android:id="@+id/timertimeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_TIMER_TIME"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/timerdateTXV"
+        app:layout_constraintTop_toBottomOf="@id/timerdateTXV"/>
+
+    <TextView
+        android:id="@+id/timerdurationTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_TIMER_DURATION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/timerdateTXV"
+        app:layout_constraintTop_toBottomOf="@id/timertimeTXV"/>
+
+    <TextView
+        android:id="@+id/timerenableTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_TIMER_ENABLE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@id/timerdateTXV"
+        app:layout_constraintTop_toBottomOf="@id/timerdurationTXV" />
+
+    <TextView
+        android:id="@+id/timernumTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@id/timernumberTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@id/timernumberTXV" />
+
+    <Button
+        android:id="@+id/channelselectBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/item_selector"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@id/channelnameTXV"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@id/channelnameTXV" />
+
+    <Spinner
+        android:id="@+id/timercycleSPINNER"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@id/timercycleTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@id/timercycleTXV" />
+
+    <Spinner
+        android:id="@+id/eventtypeSPINNER"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@id/eventtypeTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@id/eventtypeTXV" />
+
+    <Button
+        android:id="@+id/timerdateBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:background="@drawable/item_selector"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@id/timerdateTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@id/timerdateTXV" />
+
+    <!--Button
+        android:id="@+id/timertimeBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:gravity="center"
+        android:text="02:00"
+        android:textColor="@color/text_color"
+        android:background="@drawable/item_selector"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@id/timertimeTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde" /-->
+
+    <EditText
+        android:id="@+id/timerstartEDV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="time"
+        android:maxLength="5"
+        android:text="02:00"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+        app:layout_constraintBottom_toBottomOf="@id/timertimeTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@+id/timertimeTXV" />
+
+    <!--Button
+        android:id="@+id/timerdurationBTN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:gravity="center"
+        android:text="02:00"
+        android:textColor="@color/text_color"
+        android:background="@drawable/item_selector"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@id/timerdurationTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde" /-->
+
+    <EditText
+        android:id="@+id/timerdurationEDV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="01:00"
+        android:ems="10"
+        android:inputType="time"
+        android:maxLength="5"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/timerdurationTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@+id/timerdurationTXV" />
+
+    <Spinner
+        android:id="@+id/timerenableSPINNER"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@id/timerenableTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@id/timerenableTXV" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/separate_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/separate_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <Spinner
+        android:id="@+id/timerweeklySPINNER"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:visibility="invisible"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintTop_toTopOf="@id/timerdateTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintBottom_toBottomOf="@id/timerdateTXV" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

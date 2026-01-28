@@ -1,0 +1,29 @@
+1. LoaderDtv 存放在Android 8的branch
+2. 使用時須修改以下檔案
+    a. app\DTVPlayer\app\src\main\AndroidManifest.xml 
+       a.1. 將被註解Loader activity打開的(關鍵字 //LoaderDTV need open)
+             <!--<activity android:name="com.loader.MainActivity">-->
+             (中間省略)
+             <!--</activity>-->
+       a.2. 將ViewActivity註解
+         <activity
+         android:name=".Activity.ViewActivity"
+         (中間省略)
+         </activity>
+    b. app\DTVPlayer\app\src\main\java\com\prime\dtvplayer\Activity\PesiBroadcastReceiver.java
+       搜尋//LoaderDTV need open 有兩筆
+       b.1 將被註解的打開   //Intent newActivityIntent = new Intent(context, MainActivity.class);
+       b.2 將上方對應的註解 Intent newActivityIntent = new Intent(context, ViewActivity.class);
+4.設定tuner type
+  目前僅支援DVB Cable, Terrestrial, T2 和ISDBT介面
+  app\DTVPlayer\app\src\main\java\com\loader\MainActivity.java
+  設定dvb_type(1為cable, 4為Terrestrial, 8為T2, 16為isdbt)  
+5.build code
+    a. 執行Build -> Build Apks
+    b. 執行後的apk在，app\DTVPlayer\app\build\outputs\apk\debug
+    c. 將Android Studio 做出的apk複製到海思的project的packages\apps\DTVPlayer
+    d. 執行下面shell script指令重build後，並推送到STB重開
+        1. rdtv 
+        2. bdtv [STB IP] Ex: bdtv 10.1.4.10
+        3. udtv
+        4. adb reboot

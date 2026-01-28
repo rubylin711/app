@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/lo_mail_menu_view_frame"
+        android:background="@color/lo_menu"
+        android:visibility="gone"
+        android:layout_width="@dimen/lo_mail_menu_view_frame_width"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:id="@+id/lo_mail_menu_rltvl_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

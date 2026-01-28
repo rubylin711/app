@@ -1,0 +1,89 @@
+package com.prime.datastructure.config;
+
+public class PropertyDefine {
+    public static final String PROPERTY_ENCODING = "persist.sys.prime.encoding" ;
+    public static final String PROPERTY_MULTIAUDIO = "persist.sys.prime.multiaudio" ;
+    public static final String PROPERTY_FCC_ENABLE = "persist.sys.prime.fcc" ;
+    public static final String PROPERTY_FCC_V2 = "persist.sys.prime.fcc_v2";
+    public static final String PROPERTY_AV_ON_UI = "persist.sys.prime.av_on_ui";
+    public static final String PROPERTY_AVSYNC_MODE = "persist.sys.prime.avsync_mode" ;
+    public static final String PROPERTY_ECM_ENABLE = "persist.sys.prime.ecm_enable" ;
+    public static final String PROPERTY_EMM_ENABLE = "persist.sys.prime.emm_enable" ;
+    public static final String PROPERTY_EPG_PF_ENABLE = "persist.sys.prime.enable_epg_pf" ;
+    public static final String PROPERTY_SI_UPDATE = "persist.sys.prime.si_update" ;
+    public static final String PROPERTY_EPG_SCHEDULER_ENABLE = "persist.sys.prime.enable_epg_scheduler" ;
+    public static final String PROPERTY_PMT_UPDATE = "persist.sys.prime.pmt_update" ;
+    public static final String PROPERTY_TOT_UPDATE = "persist.sys.prime.tot_update" ;
+    public static final String PROPERTY_LAST_CHANNEL = "persist.sys.prime.last_channel_enable" ;
+    public static final String PROPERTY_INTERNET_EPG = "persist.sys.prime.enable_internet_epg" ;
+    public static final String PROPERTY_APP_RECOMMENDS = "persist.sys.prime.enable_app_recommends" ;
+    public static final String PROPERTY_SUPPORT_LANGUAGE = "persist.sys.prime.support_language" ;
+    public static final String PROPERTY_LAUNCHER_MODULE = "persist.sys.prime.launcher_module" ;
+    public static final String PROPERTY_CA_TYPE = "persist.sys.prime.ca_type" ;
+    public static final String PROPERTY_TUNER_TYPE = "persist.sys.prime.hardware.tuner_type" ;
+
+    public static final String PROPERTY_DEBUG_PMT = "persist.sys.prime.debug.pmt_update";
+    public static final String PROPERTY_DEBUG_SUB_LANG_CHANGED = "persist.sys.prime.debug.pmt.sublang";
+    public static final String PROPERTY_DEBUG_AUD_LANG_CHANGED = "persist.sys.prime.debug.pmt.audlang";
+    public static final String PROPERTY_DEBUG_AV_PID_CHANGED = "persist.sys.prime.debug.pmt.avpid";
+    public static final String PROPERTY_PARENTAL_LOCK = "persist.sys.prime.parental_lock";
+    public static final String PROPERTY_TIME_LOCK = "persist.sys.prime.time_lock";
+    public static final String PROPERTY_CHANNEL_ICON = "persist.sys.prime.channel_icon";
+    public static final String PROPERTY_CABLE_BANDWIDTH = "persist.sys.prime.cable_bandwidth" ;
+    public static final String PROPERTY_WAIT_SURFACE_READY = "persist.sys.prime.wait_surface_ready";
+    public static final String PROPERTY_PVRPJ = "persist.sys.prime.pvr_pj";
+    public static final String PROPERTY_BAT_ID = "persist.sys.prime.bat_id";
+    public static final String PROPERTY_TV_INPUT_ID = "persist.sys.prime.tv_input_id";
+    public static final String PROPERTY_PRIME_DTV_SERVICE_ENABLE = "persist.sys.prime.dtvservice_enable";
+    public static final String PROPERTY_PRIME_TV_INPUT_ENABLE = "persist.sys.prime.tif_enable";
+
+    public static final String PROPERTY_TIMESHIFTPBUFF_4K = "persist.sys.prime.timshfit_buff.4k";
+    public static final String PROPERTY_TIMESHIFTPBUFF_HD = "persist.sys.prime.timshfit_buff.hd";
+    public static final String PROPERTY_TIMESHIFTPBUFF_SD = "persist.sys.prime.timshfit_buff.sd";
+    public static final String PROPERTY_TIMESHIFT_FORWARD = "persist.sys.prime.timeshift_forward";
+    public static final String PROPERTY_TIMESHIFT_REWIND = "persist.sys.prime.timeshift_rewind";
+    public static final String PROPERTY_RECORD_MUSIC = "persist.sys.prime.record_music";
+    public static final String PROPERTY_PVR_HDD_LIMIT_SIZE = "persist.sys.prime.pvr_hdd_limit_size";
+    public static final String PROPERTY_PVR_HDD_CRITICAL_SIZE = "persist.sys.prime.pvr_hdd_critical_size";
+    public static final String PROPERTY_PVR_HDD_TOTAL_SIZE_LIMIT = "persist.sys.prime.pvr_hdd_total_size_limit";
+    public static final String PROPERTY_PVR_HDD_AUTHORIZED_SIZE = "persist.sys.prime.pvr_hdd_authorized_size";
+    public static final String PROPERTY_CHECK_SECTION_COMPLETED = "persist.sys.prime.check_section_completed";
+    public static final String PROPERTY_USE_CASN = "persist.sys.prime.use_casn";
+    public static final String PROPERTY_LIAD_FEATURE = "persist.sys.prime.liad_feature";
+    public static final String PROPERTY_LIAD_DEBUG = "persist.sys.prime.liad_debug";
+    public static final String PROPERTY_CHECK_AD_TIME = "persist.sys.prime.check_ad_time";
+    public static final String PROPERTY_CHECK_ILLEGAL_NETWORK = "persist.sys.prime.check_illegal_network";
+    public static final String PROPERTY_E213_CHECK_TIME = "persist.sys.prime.check_e213_time";
+    public static final String PROPERTY_ENABLE_EPG_EVENT_MAP = "persist.sys.prime.enable_epg_event_map";
+    public static final String PROPERTY_FIXED_MODULE_TYPE = "persist.sys.prime.fixed_module_type";
+    public static final String PROPERTY_RUN_REFRESHCAS_BY_TIME = "persist.sys.prime.run_refreshcas_by_time";
+    public static final String PROPERTY_FIXED_REFRESH_TIME = "persist.sys.prime.fixd_refreshcas_time";
+    public static final String PROPERTY_UPDATE_RF_TDT = "persist.sys.prime.update_rf_tdt";
+    public static final String PROPERTY_IS_TTC_IMAGE = "persist.sys.prime.ttc_image";
+
+    public static final String PROPERTY_USE_SHARE_TUNER = "persist.sys.prime.use_share_tuner";
+    public static final String PERSIST_DISABLE_TABLE_ON_TIMESHIFT = "persist.sys.prime.disable_table_on_timeshift";
+
+    public static final String PROPERTY_AREA_CODE = "persist.sys.prime.area_code";
+    public static final String PROPERTY_ZIP_CODE = "persist.sys.prime.zip_code";
+    public static final String PROPERTY_DEVICE_SN = "persist.sys.prime.device_sn";
+    public static final String PROPERTY_FIRMWARE_VERSION = "ro.firmwareVersion";
+    public static final String PROPERTY_LOADER_FIRMWARE_VERSION = "ro.loader_firmwareVersion";
+    public static final String PROPERTY_CNS_TICKER_TRANSACTION_ID = "persist.sys.cns.ticker_transaction_id";
+    public static final String PROPERTY_CNS_AD_TRANSACTION_ID = "persist.sys.cns.ad_transaction_id";
+    public static final String PROPERTY_HIDE_Launcher_Pvr = "persist.sys.prime.hide_launcher_pvr";//eric lin 20251224 hide launcher pvr
+    public static final String PROPERTY_LITV_ONOFF_SYSTEM_PROPERTY = "persist.sys.inspur.litv.onoff";
+    public static final String PROPERTY_AREA_LIMITATION = "persist.sys.area_limitation";
+    public static final String PROPERTY_ERROR_CODE_REPORT_URL = "persist.sys.error_code_report_url";
+    public static final String PROP_HDD_PAIR_SN = "persist.sys.prime.hdd_pair_sn";
+    public static final String PROP_PVR_ENCRYPT_KEY = "persist.sys.prime.pvr_encrypt_key";
+    public static final String PROP_PVR_TUNER_RESOURCE = "persist.sys.prime.pvr_tuner_resource";
+    public static final String PROP_VBM_URL  = "persist.sys.vbmurl";
+    public static final String PROPERTY_ATV_GROUP_ID = "persist.sys.atv_group_id";
+    public static final String PROPERTY_ATV_MODE= "persist.sys.atv_mode";
+    public static final String PROPERTY_ATV_PROPERTIES= "persist.sys.atv_properties";
+    public static final String PROPERTY_ATV_AD_VENDOR= "persist.sys.atv_ad_vendor";
+    public static final String PROPERTY_ATV_AD_ENABLE= "persist.sys.atv_ad_enable";
+    public static final String PROPERTY_ATV_AD_PROPERTIES= "persist.sys.atv_ad_properties";
+    public static final String PROPERTY_CNS_OVERDUE_PAYMENT= "persist.sys.inspur.cns_overdue_payment";
+}

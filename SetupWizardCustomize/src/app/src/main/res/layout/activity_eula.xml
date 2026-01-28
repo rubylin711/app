@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ButtonLayout"
+        android:layout_width="560px"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="130px"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:id="@+id/i_agree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/licence_focus"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="40px"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="@string/license_agree"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/licence_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/licence_focus"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="40px"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="@string/license_item"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220px"
+        android:layout_marginTop="270px"
+        android:layout_marginRight="50px"
+        android:layout_toLeftOf="@+id/ButtonLayout"
+        android:layout_alignParentLeft="true">
+        <!--<ImageView
+            android:id="@+id/imageView"
+            android:layout_width="204px"
+            android:layout_height="60px"
+            app:srcCompat="@mipmap/tbc_logo"/>-->
+        <TextView
+            android:textSize="36sp"
+            android:textColor="@android:color/white"
+            android:id="@+id/MainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:text="@string/license_title"/>
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:id="@+id/SubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:text="@string/license_content"/>
+    </LinearLayout>
+</RelativeLayout>

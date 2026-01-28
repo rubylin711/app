@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionName="1.0"
+    android:sharedUserId="android.uid.system">
+
+    <permission android:name = "com.pesi.remote_service.server.response"/>
+    <permission android:name = "com.pesi.remote_service.server.response.text"/>
+    <permission android:name = "com.pesi.remote_service.send.mic.open"/>
+    <permission android:name = "com.pesi.remote_service.send.mic.close"/>
+    <permission android:name = "com.pesi.remote_service.send.receive.audio.data"/>
+
+    <uses-permission android:name = "com.pesi.voice_assist.start"/>
+    <uses-permission android:name = "com.pesi.voice_assist.close"/>
+    <uses-permission android:name = "com.git spesi.voice_assist.close.mic"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+<!--    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"-->
+<!--        tools:ignore="ProtectedPermissions" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TestBluetoothGATT"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <receiver android:name=".RcuReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.GLOBAL_BUTTON" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <!-- <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+                <action android:name="android.bluetooth.device.action.BOND_STATE_CHANGED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED" /> -->
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".RcuVoiceBluetoothService"
+            android:exported="true">
+        </service>
+    </application>
+
+</manifest>

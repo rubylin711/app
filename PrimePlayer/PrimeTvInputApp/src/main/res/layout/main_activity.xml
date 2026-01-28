@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/Scan_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="68dp" />
+
+    <Button
+        android:id="@+id/LiveTv_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LiveTv"
+        app:layout_constraintStart_toStartOf="@+id/Scan_btn"
+        app:layout_constraintTop_toBottomOf="@+id/Scan_btn" />
+
+    <Button
+        android:id="@+id/Epg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EPG"
+        app:layout_constraintStart_toStartOf="@+id/LiveTv_btn"
+        app:layout_constraintTop_toBottomOf="@+id/LiveTv_btn" />
+
+    <Button
+        android:id="@+id/callback_test_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="callback_test"
+        app:layout_constraintStart_toStartOf="@+id/Epg_btn"
+        app:layout_constraintTop_toBottomOf="@+id/Epg_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

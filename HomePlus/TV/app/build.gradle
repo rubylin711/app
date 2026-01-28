@@ -1,0 +1,146 @@
+plugins {
+    id 'com.android.application'
+}
+
+def APP_NAME = "HOMEPLUS_TV"
+def MAJOR = "1"
+def MINOR = "0"
+def PATCH = "5"
+
+def getVersionName = { ->
+    return "v" + MAJOR + "." + MINOR + "." + PATCH
+}
+
+def getVersionNameDetails = { ->
+    try {
+        def patch_p = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-list', 'HEAD', '--count'
+            standardOutput = patch_p
+            // 把錯誤輸出吃掉，避免沒 git repo 時在 console 一堆 fatal 訊息
+            errorOutput = new ByteArrayOutputStream()
+            ignoreExitValue = true
+        }
+        def patch = patch_p.toString().trim()
+        if (!patch) {
+            patch = PATCH
+        }
+
+        def git_hash_p = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'log', '-n', '1', '--pretty=format:%h'
+            standardOutput = git_hash_p
+            errorOutput = new ByteArrayOutputStream()
+            ignoreExitValue = true
+        }
+        def git_hash = git_hash_p.toString().trim()
+        if (!git_hash) {
+            git_hash = "nogit"
+        }
+
+        def date_string_p = new ByteArrayOutputStream()
+        exec {
+            commandLine 'date', '+%s'
+            standardOutput = date_string_p
+            errorOutput = new ByteArrayOutputStream()
+            ignoreExitValue = true
+        }
+        def date_string = date_string_p.toString().trim()
+        if (!date_string) {
+            date_string = "0"
+        }
+
+        return MAJOR + "." + MINOR + "." + patch + " [" + git_hash + "-" + date_string + "]"
+    } catch (ignored) {
+        return MAJOR + "." + MINOR + "." + PATCH
+    }
+}
+
+if (file('signing.gradle').exists()) {
+    apply from: 'signing.gradle'
+}
+
+android {
+    namespace 'com.prime.homeplus.tv'
+    compileSdk 34
+
+    signingConfigs {
+        config_HomeplusPlatform {
+            storeFile file(project.HomeplusPlatformKey.storeFilePath)
+            storePassword project.HomeplusPlatformKey.storePassword
+            keyAlias project.HomeplusPlatformKey.keyAlias
+            keyPassword project.HomeplusPlatformKey.keyPassword
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.prime.homeplus.tv"
+        minSdk 28
+        targetSdk 34
+        versionCode 6
+        versionName getVersionNameDetails()
+        signingConfig signingConfigs.config_HomeplusPlatform
+        setProperty("archivesBaseName", APP_NAME + "-" + getVersionName())
+
+        // 這裡有自訂 BuildConfig 欄位 → 必須開啟 buildConfig feature
+        buildConfigField "String", "BUILD_TIME", "\"${new Date().format("yyyy-MM-dd HH:mm:ss")}\""
+    }
+
+    // ★★★ 關鍵修正：開啟 BuildConfig 產生功能 ★★★
+    buildFeatures {
+        buildConfig true
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config_HomeplusPlatform
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config_HomeplusPlatform
+        }
+    }
+
+    // 如有需要 Java 版本可以在這邊補（選配）
+    // compileOptions {
+    //     sourceCompatibility JavaVersion.VERSION_11
+    //     targetCompatibility JavaVersion.VERSION_11
+    // }
+}
+def frameworkJar = new File(project.projectDir, "../../../PrimePlayer/libs/framework.jar").canonicalFile
+
+dependencies {
+    // 不用 flatDir，直接 files()
+    implementation project(':DataStructure')
+    implementation project(':PlayerService')
+    implementation project(':ADManager')
+    if (frameworkJar.exists()) {
+        compileOnly files(frameworkJar)
+    } else {
+        logger.warn("WARNING: framework.jar not found at ${frameworkJar}")
+    }
+    implementation 'com.google.code.gson:gson:2.8.9'
+    // BOM 對齊: 統一所有 Kotlin 套件版本到 1.8.10
+    implementation platform("org.jetbrains.kotlin:kotlin-bom:1.8.10")
+
+    // 避免拉到 leanback-grid（那個需要 compileSdk 35 + AGP 8.6）
+    implementation "androidx.leanback:leanback:1.0.0"   // 2018 的 AndroidX 穩定版
+    implementation "androidx.appcompat:appcompat:1.6.1" // 適用 compileSdk 33
+    implementation "com.google.android.material:material:1.9.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+
+    // 釘住傳遞相依，避免被升到要 API 34 的版本
+    implementation "androidx.core:core:1.9.0"           // 1.9 需要 compileSdk 33；OK
+    implementation "androidx.activity:activity:1.7.2"   // 1.8.0 起才要求 compileSdk 34
+    implementation "androidx.transition:transition:1.4.1"
+    implementation 'androidx.tvprovider:tvprovider:1.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'com.google.zxing:core:3.5.2'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+}

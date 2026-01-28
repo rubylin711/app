@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid
+                android:color="@color/pvr_red_color"/>
+            <corners
+                android:radius="@dimen/live_tv_dialog_show_panel_button_layout_2dp"/>
+            <padding
+                android:left="@dimen/live_tv_dialog_show_panel_button_layout_10dp"
+                android:top="@dimen/live_tv_dialog_show_panel_button_layout_7dp"
+                android:right="@dimen/live_tv_dialog_show_panel_button_layout_10dp"
+                android:bottom="@dimen/live_tv_dialog_show_panel_button_layout_7dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/show_panel_button_unfocused"
+                android:endColor="@color/show_panel_button_unfocused"
+                android:angle="270"
+                android:centerColor="@color/show_panel_button_unfocused"/>
+            <corners
+                android:radius="@dimen/live_tv_dialog_show_panel_button_layout_2dp"/>
+            <padding
+                android:left="@dimen/live_tv_dialog_show_panel_button_layout_10dp"
+                android:top="@dimen/live_tv_dialog_show_panel_button_layout_7dp"
+                android:right="@dimen/live_tv_dialog_show_panel_button_layout_10dp"
+                android:bottom="@dimen/live_tv_dialog_show_panel_button_layout_7dp"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.prime.acsclient"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="8"
+    android:versionName="1.6241204">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+
+    <uses-permission android:name="android.permission.HDMI_CEC" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="com.android.tv.settings.READ_PERMISSION"/>
+    <uses-permission android:name="com.android.tv.settings.WRITE_PERMISSION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="Manifest.permission#SCHEDULE_EXACT_ALARM SCHEDULE_EXACT_ALARM"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <protected-broadcast android:name="com.prime.acsclient.otaalarm.start"/>
+    <protected-broadcast android:name="com.prime.acsclient.otaalarm.end"/>
+    <protected-broadcast android:name="com.prime.android.tv.otaservice.abupdate.download.complete"/>
+    <protected-broadcast android:name="com.prime.android.tv.otaservice.abupdate.download.error"/>
+    <protected-broadcast android:name="com.prime.android.tv.otaservice.abupdate.error"/>
+    <protected-broadcast android:name="com.prime.android.tv.otaservice.abupdate.complete"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ACSClient"
+        tools:targetApi="34">
+        <service android:name="com.prime.acsclient.ACSService" android:enabled="true" android:exported="true"/>
+        <service android:name="org.eclipse.paho.android.service.MqttService"/>
+        <receiver android:name="com.prime.acsclient.BootReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+        <provider
+            android:name=".prodiver.ACSDataContentProvider"
+            android:authorities="com.prime.acsclient.prodiver"
+            android:exported="true"
+            android:grantUriPermissions="true"/>
+    </application>
+
+</manifest>

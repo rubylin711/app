@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llChannelSearchResult"
+    android:layout_width="165dp"
+    android:layout_height="92dp"
+    android:layout_marginTop="17dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center|left"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingLeft="7dp">
+
+        <TextView
+            android:id="@+id/tvChannelSearchResultNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="112"
+            android:textColor="@color/colorGoldOpacity70"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/ivChannelSearchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Reset"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvChannelSearchResultName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:gravity="left"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="ChannelName"
+        android:textColor="#ffffff"
+        android:textSize="16dp" />
+</LinearLayout>

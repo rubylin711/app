@@ -1,0 +1,2 @@
+ sudo docker run --rm   -u $(id -u):$(id -g)   -v "$PWD":/work -w /work minlag/mermaid-cli   -i docs/dsmcc_flow.mmd -o docs/dsmcc_flow.png -w 2400
+ sudo docker run --rm   -u $(id -u):$(id -g)   -v "$PWD":/work -w /work minlag/mermaid-cli   -i docs/dsmcc-sequence-biop.mmd -o docs/dsmcc-sequence-biop.png -w 2400

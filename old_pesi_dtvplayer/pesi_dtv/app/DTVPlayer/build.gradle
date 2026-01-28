@@ -1,0 +1,40 @@
+ext {
+    var = '28.0.0'
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        protobufVersion = '0.8.10'
+    }
+
+    repositories {
+        /*maven {//when download gradle fail open this url
+            url 'https://dl.google.com/dl/android/maven2'
+        }*/
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.10'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs.add('-Xbootclasspath/p:app/libs/arm/framework.jar')
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

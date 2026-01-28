@@ -1,0 +1,104 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.prime.dmg.launcher'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.prime.dmg.launcher"
+        minSdk 30
+        targetSdk 34
+        versionCode 70
+        versionName '1.1.70-20250815'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    signingConfigs {
+        release {
+            //storeFile file("jdk_A1B.jks")
+            //storeFile file("AOSP_public_wellknow_key.jks")
+            storeFile file("rtd1319D_DMG.jks")
+            storePassword 'pesi1234'
+            keyAlias 'key0'
+            keyPassword 'pesi1234'
+        }
+        debug {
+            //storeFile file("jdk_A1B.jks")
+            //storeFile file("AOSP_public_wellknow_key.jks")
+            storeFile file("rtd1319D_DMG.jks")
+            storePassword 'pesi1234'
+            keyAlias 'key0'
+            keyPassword 'pesi1234'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        cruncherProcesses = 0
+    }
+}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+dependencies {
+    implementation 'androidx.leanback:leanback:1.2.0-alpha04'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.leanback:leanback-preference:1.2.0-alpha04'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'androidx.tvprovider:tvprovider:1.0.0'
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation files('libs/PrimeAudioTrack.jar')
+    implementation files('libs\\PrimeSystemAPP.jar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    compileOnly files('libs/framework.jar')
+    implementation files('libs/IDtvService.jar')
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.github.romandanylyk:PageIndicatorView:v.1.0.3'
+    implementation files('libs/IMiscService.jar')
+    implementation files('libs/IMediaService.jar')
+    // QR code
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
+    // Jetpack Media3 簡介
+    // https://developer.android.com/media/implement/playback-app?hl=zh-tw
+    implementation "androidx.media3:media3-exoplayer:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-dash:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-hls:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-ima:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-midi:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-rtsp:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-smoothstreaming:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-workmanager:1.4.1"
+    implementation "androidx.media3:media3-ui:1.4.1"
+    implementation "androidx.media3:media3-common:1.4.1"
+    implementation "androidx.work:work-runtime:2.9.0"
+}

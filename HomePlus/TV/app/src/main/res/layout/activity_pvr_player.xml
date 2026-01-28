@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPvrMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgd_pvrhomeplus"
+    tools:context=".ui.activity.PvrPlayerActivity">
+
+    <android.media.tv.TvView
+        android:id="@+id/pvrPlayerTvView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/include_clPvrPlayerDashboard"
+        layout="@layout/layout_pvr_player_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivPvrPlayerPlayStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="54dp"
+        android:visibility="gone"
+        android:src="@drawable/layer_pvr_pause"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPvrPlayerPlayStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@id/ivPvrPlayerPlayStatus"
+        app:layout_constraintRight_toRightOf="@id/ivPvrPlayerPlayStatus"
+        app:layout_constraintTop_toTopOf="@id/ivPvrPlayerPlayStatus"
+        app:layout_constraintBottom_toBottomOf="@id/ivPvrPlayerPlayStatus"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <include
+        android:id="@+id/include_clPvrPlayerProgramInfo"
+        layout="@layout/layout_pvr_player_program_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

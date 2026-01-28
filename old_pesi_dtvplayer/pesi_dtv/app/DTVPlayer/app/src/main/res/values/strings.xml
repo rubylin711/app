@@ -1,0 +1,2321 @@
+<resources>
+<!--    <string name="app_name">DTVPlayer</string>-->
+    <string name="app_name">Cablevision</string>
+    <string name="STR_PROGRAM_DETAIL">Detailed Program Info</string>
+    <string name="STR_PROGRESS">Progress</string>
+    <string name="STR_STRENGTH">Strength</string>
+    <string name="STR_QUALITY">Quality</string>
+
+    <!-- Voice Input -->
+    <string name="STR_FILTER">"Filter "</string>
+    <string name="STR_NUMBER_">"number "</string>
+    <string name="STR_NUMBER">"number"</string>
+    <string name="STR_REGEX_DIGITAL">"\\d+(?:\\.\\d+)?"</string>
+    <string name="STR_CHANNEL_NAME">Channel Name</string>
+    <string name="STR_CHANNEL_NUMBER">Channel Number</string>
+    <string name="STR_CHANNEL_NOT_FOUND">Channel Name\nNot Found</string>
+    <string name="STR_NUMBER_NOT_FOUND">Channel Number\nNot Found</string>
+    <array name="STR_ARRAY_NUM">
+        <item>zero</item>
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four</item>
+        <item>five</item>
+        <item>six</item>
+        <item>seven</item>
+        <item>eight</item>
+        <item>nine</item>
+    </array>
+    <array name="STR_ARRAY_CH_DOWN_CASE_A">
+        <item>Channeldown</item>
+        <item>Anaya.</item>
+        <item>Anoka</item>
+        <item>anna.</item>
+        <item>Anna.</item>
+        <item>Anadarko</item>
+        <item>channel.</item>
+        <item>Chanel.</item>
+        <item>Chinatown</item>
+        <item>China.</item>
+        <item>chattanoogan</item>
+        <item>chattanooga</item>
+        <item>countdown</item>
+        <item>canada</item>
+        <item>Canada</item>
+        <item>Dino.</item>
+        <item>Florida</item>
+        <item>hello.</item>
+        <item>jenna.</item>
+        <item>jordan</item>
+        <item>NFL</item>
+        <item>no.</item>
+        <item>pteranodon</item>
+        <item>paradigm</item>
+        <item>Shenandoah</item>
+        <item>Showdown</item>
+        <item>Shinigami</item>
+        <item>Senegal</item>
+        <item>shinagawa</item>
+        <item>sinigang</item>
+        <item>tramadol</item>
+        <item>trinidadian</item>
+        <item>trinidad</item>
+        <item>Trinidad</item>
+        <item>tribeca</item>
+        <item>toronto</item>
+        <item>tribout</item>
+        <item>turnabout</item>
+        <item>weather</item>
+    </array>
+    <array name="STR_ARRAY_CH_DOWN_CASE_B1">
+        <item>下一台</item>
+        <item>An</item>
+        <item>are</item>
+        <item>air</item>
+        <item>Channel</item>
+        <item>channel</item>
+        <item>chanel</item>
+        <item>chad</item>
+        <item>camp</item>
+        <item>champ</item>
+        <item>chat</item>
+        <item>chernoff</item>
+        <item>chern</item>
+        <item>china</item>
+        <item>chenle</item>
+        <item>chyna</item>
+        <item>chynna</item>
+        <item>chin</item>
+        <item>can</item>
+        <item>cannot</item>
+        <item>count</item>
+        <item>chana</item>
+        <item>call</item>
+        <item>good</item>
+        <item>hair</item>
+        <item>in</item>
+        <item>I</item>
+        <item>general</item>
+        <item>ken</item>
+        <item>kennel</item>
+        <item>no</item>
+        <item>Shirley</item>
+        <item>shut</item>
+        <item>show</item>
+        <item>sure</item>
+        <item>turn</item>
+        <item>true</item>
+        <item>tried</item>
+        <item>truth</item>
+        <item>trap</item>
+        <item>try</item>
+        <item>trinidad</item>
+        <item>turning</item>
+        <item>trailer</item>
+        <item>treasure</item>
+        <item>Trevor</item>
+        <item>throw</item>
+        <item>journal</item>
+        <item>junior</item>
+        <item>juno</item>
+        <item>jenna</item>
+        <item>pick</item>
+        <item>picking</item>
+        <item>pikmin</item>
+        <item>pair</item>
+        <item>you\'re</item>
+    </array>
+    <array name="STR_ARRAY_CH_DOWN_CASE_B2">
+        <item>about</item>
+        <item>adult</item>
+        <item>3</item>
+        <item>buy</item>
+        <item>call</item>
+        <item>come</item>
+        <item>Down</item>
+        <item>Diana</item>
+        <item>dawn</item>
+        <item>down</item>
+        <item>dom</item>
+        <item>don</item>
+        <item>dal</item>
+        <item>doubt</item>
+        <item>dollar</item>
+        <item>download</item>
+        <item>dumb</item>
+        <item>doll</item>
+        <item>dolls</item>
+        <item>Donna</item>
+        <item>out.</item>
+        <item>out</item>
+        <item>on.</item>
+        <item>on</item>
+        <item>town</item>
+        <item>tao</item>
+        <item>not.</item>
+        <item>night.</item>
+        <item>laugh.</item>
+        <item>laugh</item>
+        <item>guide</item>
+        <item>gone</item>
+        <item>go</item>
+        <item>knockdown</item>
+        <item>know.</item>
+        <item>dewan</item>
+        <item>die</item>
+        <item>dog</item>
+    </array>
+    <array name="STR_ARRAY_CH_UP_CASE_A">
+        <item>app</item>
+        <item>antelope</item>
+        <item>Channelup</item>
+        <item>Chanel</item>
+        <item>chanel</item>
+        <item>channellock</item>
+        <item>candelabra</item>
+        <item>cannalope</item>
+        <item>cantaloupe</item>
+        <item>cannot</item>
+        <item>cantaloupe</item>
+        <item>enough</item>
+        <item>funeral</item>
+        <item>generous</item>
+        <item>generosity</item>
+        <item>general</item>
+        <item>General</item>
+        <item>General.</item>
+        <item>pick-me-up</item>
+        <item>shernoff</item>
+        <item>Sherlock</item>
+        <item>up</item>
+    </array>
+    <array name="STR_ARRAY_CH_UP_CASE_B1">
+        <item>上一台</item>
+        <item>best</item>
+        <item>Channel</item>
+        <item>channel</item>
+        <item>chanel</item>
+        <item>chernoff</item>
+        <item>chern</item>
+        <item>china</item>
+        <item>chenle</item>
+        <item>chyna</item>
+        <item>chin</item>
+        <item>cherno</item>
+        <item>can</item>
+        <item>cancel</item>
+        <item>general</item>
+        <item>General</item>
+        <item>General.</item>
+        <item>i</item>
+        <item>I</item>
+        <item>kindle</item>
+        <item>Kindle</item>
+        <item>Kingdom</item>
+        <item>King</item>
+        <item>Shirley</item>
+        <item>shut</item>
+        <item>sure</item>
+        <item>scanner</item>
+        <item>turn</item>
+        <item>try</item>
+        <item>trainer</item>
+        <item>tracker</item>
+        <item>turner</item>
+        <item>Trevor</item>
+        <item>treasure</item>
+        <item>trailer</item>
+        <item>turning</item>
+        <item>trina</item>
+        <item>journal</item>
+        <item>junior</item>
+        <item>juno</item>
+        <item>jenna</item>
+        <item>juneau</item>
+        <item>pick</item>
+        <item>picking</item>
+        <item>pikmin</item>
+        <item>QR</item>
+    </array>
+    <string name="STR_YOUTUBE">"http://www.youtube.com/"</string>
+    <array name="STR_ARRAY_CH_UP_CASE_B2">
+        <item>up</item>
+        <item>app</item>
+        <item>arthur</item>
+        <item>audible</item>
+        <item>ali</item>
+        <item>art</item>
+        <item>alpha</item>
+        <item>apply</item>
+        <item>auto</item>
+        <item>app</item>
+        <item>apps</item>
+        <item>Arthur</item>
+        <item>chernoff</item>
+        <item>code</item>
+        <item>enough</item>
+        <item>hospital</item>
+        <item>Hearts</item>
+        <item>help</item>
+        <item>know</item>
+        <item>lineup</item>
+        <item>lap</item>
+        <item>lock</item>
+        <item>locks</item>
+        <item>Lee</item>
+        <item>not</item>
+        <item>Nuff</item>
+        <item>Noah</item>
+        <item>of</item>
+        <item>off</item>
+        <item>off.</item>
+        <item>offer</item>
+        <item>opera</item>
+        <item>put</item>
+        <item>play</item>
+        <item>rap</item>
+        <item>rapper</item>
+        <item>talk</item>
+        <item>wok</item>
+        <item>watch</item>
+        <item>you</item>
+        <item>zod</item>
+    </array>
+    <array name="STR_ARRAY_YOUTUBE_CASE">
+        <item>YouTube</item>
+        <item>You Tube</item>
+        <item>You Tube app</item>
+        <item>you too</item>
+        <item>your tooth</item>
+        <item>yourTube app</item>
+        <item>U2</item>
+    </array>
+
+    <!-- PVR, Record List,  -->
+    <string name="STR_RECORDS_LIST">Records List</string>
+    <string name="STR_RECORD_PATH_NOT_AVAILABLE">Record Path Not Available</string>
+    <string name="STR_SPACE">&#160;</string>
+    <string name="STR_0">0</string>
+    <string name="STR_SLASH">/</string>
+    <string name="STR_DASH">-</string>
+    <string name="STR_X">X</string>
+    <string name="STR_2X_FF">2X</string>
+    <string name="STR_4X_FF">4X</string>
+    <string name="STR_8X_FF">8X</string>
+    <string name="STR_16X_FF">16X</string>
+    <string name="STR_32X_FF">32X</string>
+    <string name="STR_2X_BF">-2X</string>
+    <string name="STR_4X_BF">-4X</string>
+    <string name="STR_8X_BF">-8X</string>
+    <string name="STR_16X_BF">-16X</string>
+    <string name="STR_32X_BF">-32X</string>
+    <string name="STR_TS">.ts</string>
+    <string name="STR_0MB">0 MB</string>
+    <string name="STR_RECORD_DIR">/Records/</string>
+    <string name="STR_LOADING">Loading…</string>
+    <string name="STR_FILE_SIZE">File Size:</string>
+    <string name="STR_REC_DATE">REC Date:</string>
+    <string name="STR_PVR_TIME">Time:</string>
+    <string name="STR_PVR_PARENTAL_RATE">Parental rate:</string>
+    <string name="STR_HD_FREE_SIZE">HD FreeSize:</string>
+    <string name="STR_HD_TOTAL_SIZE">HD TotalSize:</string>
+    <string name="STR_FILE_LIST">File List</string>
+    <string name="STR_EMPTY_FILE_LIST">Empty File List</string>
+    <string name="STR_EMPTY_FILE">Empty File</string>
+    <string name="STR_OK_TO_FULL_SCREEN"> Use OK to full screen, ▲▼ for navigation, Page+/Page- to change page,\n INFO for program information and BACK to close </string>
+    <string name="STR_OK_TO_PLAY_RECORD"> Use OK to play record, ▲▼ for navigation, Page+/Page- to change page,\n INFO for program information and BACK to close </string>
+    <string name="STR_BACK_TO_CLOSE_DETAIL">Use INFO or BACK to close Detailed Program Info</string>
+    <string name="STR_DETAIL_NOT_FOUND">Program Info not found</string>
+    <string name="STR_DO_YOU_WANT_TO_DELETE_THE_RECORDING">Do you want to delete the recording?</string>
+    <string name="STR_DO_YOU_WANT_TO_DELETE_All_RECORD_FILES">Do you want to delete all record files?</string>
+    <string name="STR_DO_YOU_WANT_TO_PLAY_THE_FILE_FROM_LAST_TIME">Do you want to play the file from the last stop time?</string>
+    <string name="STR_REC_MADE_IN_ANOTHER_RECEIVER">Record has been made in another receiver.\nPlayback is not supported.</string>
+
+    <!-- Channel Search -->
+    <string name="STR_FREQUENCY">Frequency</string>
+    <string name="STR_SYMBOLRATE">Symbol rate</string>
+    <string name="STR_QAM">QAM</string>
+    <string name="STR_SEARCH">Search</string>
+    <string name="STR_CANCEL">Cancel</string>
+    <string name="STR_COMPLETE">Complete</string>
+    <string name="STR_KHZ">Khz</string>
+    <string name="STR_MHZ">MHz</string>
+    <string name="STR_KSPS">Ksps</string>
+    <string name="STR_MSPS">Msps</string>
+    <string name="STR_TITLE_CHANNEL_SEARCH">Installation > Channel Search</string>
+    <string name="STR_TITLE_MANUAL_SEARCH">Installation > Manual Search</string>
+    <string name="STR_TITLE_NETWORK_SEARCH">Installation > Network Search</string>
+    <string name="STR_TITLE_VMX_SEARCH">Installation > VMX Search</string>
+    <string name="STR_TITLE_AUTO_SEARCH">Installation > Auto Search</string>
+    <string name="STR_AUTO_SEARCH">Auto Search</string>
+    <string name="STR_MANUAL_SEARCH">Manual Search</string>
+    <string name="STR_TV">TV</string>
+    <string name="STR_RADIO">Radio</string>
+    <string name="STR_VIEW">View</string>
+    <string name="STR_FREQ">Freq</string>
+    <string name="STR_SYM">Sym</string>
+    <string name="STR_NO_FAV_CHANNEL">No Favorite Channel</string>
+
+    <string name="STR_SCAN_MODE">Scan Mode</string>
+    <string name="STR_CHANNEL_TYPE">Channel Type</string>
+    <string name="STR_FTA_SCRAMBLE">FTA &#038; $</string>
+    <string name="STR_FTA">FTA</string>
+    <string name="STR_SCRAMBLE">$</string>
+    <string name="STR_TV_ANDE_RADIO">TV &#038; Radio</string>
+    <string name="STR_SEARCH_BUTTON_HELPTEXT">Use OK to start search, ◀▶ to change, ▲▼ for navigation and BACK to close </string>
+    <string name="STR_NO_CHANNELS_FOUND">No channels Found</string>
+    <string name="STR_ANTENNA_5V">Antenna 5V</string>
+
+    <string name="STR_SEARCH_FAIL">Search Failed.</string>
+    <string name="STR_SEARCH_COMPLETE">Search Completed.</string>
+
+    <array name="STR_ARRAY_SCAN_MODE" translatable="false">
+        <item>@string/STR_FTA_SCRAMBLE</item>
+        <item>@string/STR_SCRAMBLE</item>
+        <item>@string/STR_FTA</item>
+    </array>
+
+    <array name="STR_ARRAY_CHANNEL_TYPE" translatable="false">
+        <item>@string/STR_TV_ANDE_RADIO</item>
+        <item>@string/STR_TV</item>
+        <item>@string/STR_RADIO</item>
+    </array>
+
+    <array name="STR_ARRAY_ANTENNA_5V" translatable="false">
+        <item>@string/STR_OFF</item>
+        <item>@string/STR_ON</item>
+    </array>
+
+    <array name="STR_ARRAY_QAMLIST" translatable="false">
+        <item>16 QAM</item>
+        <item>32 QAM</item>
+        <item>64 QAM</item>
+        <item>128 QAM</item>
+        <item>256 QAM</item>
+        <!--<item>Auto</item>-->
+    </array>
+
+    <!-- Main Menu -->
+    <string name="STR_TODO">TODO</string>
+    <string name="STR_INSTALLATION">Installation</string>
+    <string name="STR_CHANNEL">Channel</string>
+    <string name="STR_SETTING">Setting</string>
+    <string name="STR_SERVICE">Service</string>
+    <string name="STR_MEDIA_CENTER">Media Center</string>
+    <string name="STR_CHANNEL_SEARCH">Channel Search</string>
+    <string name="STR_RECEIVER_INFORMATION">Receiver Information</string>
+    <string name="STR_SIGNAL_INFORMATION">Signal Information</string>
+    <string name="STR_USB_UPDATE">USB Software Update</string>
+    <string name="STR_OTA_UPDATE">OTA Software Update</string>
+    <string name="STR_TV_CHANNEL">TV Channel</string>
+    <string name="STR_RADIO_CHANNEL">Radio Channel</string>
+    <string name="STR_TV_PROGRAMME_GUIDE">TV Programme Guide</string>
+    <string name="STR_TV_DIMENSION_EPG">Dimension EPG</string>
+    <string name="STR_LANGUAGE_SETTINGS">Language Settings</string>
+    <string name="STR_OUTPUT_SETTINGS">Output Settings</string>
+    <string name="STR_SYSTEM_SETTINGS">System Settings</string>
+    <string name="STR_PARENTAL_CONTROL">Parental Control</string>
+    <string name="STR_RESET_FACTORY_DEFAULT">Reset Factory Default</string>
+    <string name="STR_CA_INFORMATION">CA Information</string>
+    <string name="STR_TIMER">Timer</string>
+    <string name="STR_TIME_ADJUST">Time Adjust</string>
+    <string name="STR_SUMMARY">Summary</string>
+    <string name="STR_NO_UPDATE_FILES">No Update Files</string>
+    <string name="STR_PLEASE_CHECK_USB_UPDATE_FILE">Please Check USB Update File</string>
+    <string name="STR_USB_DISK_NOT_READY">USB Disk Not Ready</string>
+    <string name="STR_USB_DISK_READY">USB Disk Ready</string>
+    <string name="STR_OTA_UPDATE_FAIL">OTA SoftWare Update Fail</string>
+    <string name="STR_PVR_SETTINGS">PVR Settings</string>
+    <string name="STR_STORAGE_SETTINGS">Storage Settings</string>
+    <string name="STR_STORAGE_DEVICE_IS_NOT_AVAILABLE">Storage device is not available</string>
+    <string name="STR_RECORD_SETTINGS">Record Settings</string>
+    <string name="STR_6MHZ">6 MHz</string>
+    <string name="STR_7MHZ">7 MHz</string>
+    <string name="STR_8MHZ">8 MHz</string>
+    <string name="STR_DOWNLAOAD_PID">Download PID</string>
+
+    <!-- Main Menu3 -->
+    <string name="nav_header_title">Prime</string>
+    <string name="nav_header_subtitle">prime@pesi.com.tw</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="str_live_channel">Live Channel</string>
+
+    <array name="STR_ARRAY_OTA_BANDWIDTH" translatable="false">
+        <item>@string/STR_6MHZ</item>
+        <item>@string/STR_7MHZ</item>
+        <item>@string/STR_8MHZ</item>
+    </array>
+
+    <!-- OTA Update By Internet Dialog -->
+    <string name="STR_OTA_DOWNLOAD_TITLE">Installation > OTA Download</string>
+    <string name="STR_STATUS">Status</string>
+    <string name="STR_PERCENT">%</string>
+    <string name="STR_ONE_HUNDRED_PERCENT">100%</string>
+    <string name="STR_DO_YOU_WANT_TO_STOP_DOWNLOAD">Do you want to stop download ?</string>
+    <string name="STR_OTA_DOWNLOAD_ALARM_TITLE">OTA Download Alarm : </string>
+    <string name="STR_OTA_COUNTDOWN_ALARM">The OTA upgrade will take place after 10 seconds.</string>
+
+
+    <!-- Subtitle Dialog -->
+    <string name="STR_SUBTITLES">Subtitles</string>
+    <string name="STR_TXT">TXT</string>
+    <string name="STR_DVB">DVB</string>
+    <string name="STR_SUBTITLES_ARE_NOT_AVAILABLE">Subtitles are not available</string>
+
+    <!-- Audio Dialog -->
+    <string name="STR_AUDIO_LANGUAGE">Audio Language</string>
+    <string name="STR_RIGHT_ONLY">Right Only</string>
+    <string name="STR_LEFT_ONLY">Left Only</string>
+    <string name="STR_STEREO">Stereo</string>
+
+    <!-- Language Settings -->
+    <string name="STR_LANGUAGE_SETTINGS_TITTLE">Setting > Language Settings</string>
+    <string name="STR_LANGUAGE_SETTINGS_HELP_INFO">@string/STR_PARENT_HELP_INFO</string>
+
+    <string name="STR_ENGLISH">English</string>
+    <string name="STR_FINNISH">Finnish</string>
+    <string name="STR_FRENCH">French</string>
+    <string name="STR_GERMAN">German</string>
+    <string name="STR_GREEK">Greek</string>
+    <string name="STR_HUNGARIAN">Hungarian</string>
+    <string name="STR_ITALIAN">Italian</string>
+    <string name="STR_NORWEGIAN">Norwegian</string>
+    <string name="STR_POLISH">Polish</string>
+    <string name="STR_PORTUGUESE">Portuguese</string>
+    <string name="STR_ROMANIAN">Romanian</string>
+    <string name="STR_RUSSIAN">Russian</string>
+    <string name="STR_SLOVENIAN">Slovenian</string>
+    <string name="STR_SPANISH">Spanish</string>
+    <string name="STR_SWEDISH">Swedish</string>
+    <string name="STR_TURKISH">Turkish</string>
+    <string name="STR_ARABIC">Arabic</string>
+    <string name="STR_CHINESE">Chinese</string>
+    <string name="STR_CZECH">Czech</string>
+    <string name="STR_DANISH">Danish</string>
+    <string name="STR_DUTCH">Dutch</string>
+    <string name="STR_SLOVAK">Slovak</string>
+    <!--<string name="STR_ORIGINAL">Original</string>-->
+    <string name="STR_UKRAINIAN">Ukrainian</string>
+    <string name="STR_TATAR">Tatar</string>
+    <string name="STR_MOLDAVIAN">Moldavian</string>
+    <string name="STR_BELARUSIAN">Belarusian</string>
+
+    <string name="STR_ENGLISH_CODE">eng</string>
+    <string name="STR_FINNISH_CODE">fin</string>
+    <string name="STR_FRENCH_CODE">fra</string>
+    <string name="STR_GERMAN_CODE">ger</string>
+    <string name="STR_GREEK_CODE">gre</string>
+    <string name="STR_HUNGARIAN_CODE">hun</string>
+    <string name="STR_ITALIAN_CODE">ita</string>
+    <string name="STR_NORWEGIAN_CODE">nor</string>
+    <string name="STR_POLISH_CODE">pol</string>
+    <string name="STR_PORTUGUESE_CODE">por</string>
+    <string name="STR_ROMANIAN_CODE">rum</string>
+    <string name="STR_RUSSIAN_CODE">rus</string>
+    <string name="STR_SLOVENIAN_CODE">slv</string>
+    <string name="STR_SPANISH_CODE">spa</string>
+    <string name="STR_SWEDISH_CODE">sve</string>
+    <string name="STR_TURKISH_CODE">tur</string>
+    <string name="STR_ARABIC_CODE">ara</string>
+    <string name="STR_CHINESE_CODE">chi</string>
+    <string name="STR_CZECH_CODE">ces</string>
+    <string name="STR_DANISH_CODE">dan</string>
+    <string name="STR_DUTCH_CODE">dut</string>
+    <string name="STR_SLOVAK_CODE">slo</string>
+    <!--<string name="STR_ORIGINAL_CODE">qaa</string>-->
+    <string name="STR_UKRAINIAN_CODE">ukr</string>
+    <string name="STR_TATAR_CODE">tat</string>
+    <string name="STR_MOLDAVIAN_CODE">mol</string>
+    <string name="STR_BELARUSIAN_CODE">bel</string>
+
+    <string name="STR_OSD_LANGUAGE">OSD Language</string>
+    <string name="STR_MENU_LANGUAGE">Menu Language</string>
+    <string name="STR_DO_YOU_WANT_TO_DEFINE_START_CHANNEL">Do you want to define a fixed start channel?</string>
+    <string name="STR_EN_US">"en_US"</string>
+    <string name="STR_FI_FI">"fi_FI"</string>
+    <string name="STR_FR_FR">"fr_FR"</string>
+    <string name="STR_DE_DE">"de_DE"</string>
+    <string name="STR_EL_GR">"el_GR"</string>
+    <string name="STR_HU_HU">"hu_HU"</string>
+    <string name="STR_IT_IT">"it_IT"</string>
+    <string name="STR_NB_NO">"nb_NO"</string>
+    <string name="STR_PL_PL">"pl_PL"</string>
+    <string name="STR_PT_PT">"pt_PT"</string>
+    <string name="STR_RO_RO">"ro_RO"</string>
+    <string name="STR_RU_RU">"ru_RU"</string>
+    <string name="STR_SL_SI">"sl_SI"</string>
+    <string name="STR_ES_ES">"es_ES"</string>
+    <string name="STR_SV_SE">"sv_SE"</string>
+    <string name="STR_TR_TR">"tr_TR"</string>
+    <string name="STR_AR">"ar"</string>
+    <string name="STR_ZH_TW">"zh_TW"</string>
+    <string name="STR_CS_CZ">"cs_CZ"</string>
+    <string name="STR_DA_DK">"da_DK"</string>
+    <string name="STR_NL_NL">"nl_NL"</string>
+    <string name="STR_SK_SK">"sk_SK"</string>
+    <string name="STR_UK_UA">"uk_UA"</string>
+    <string name="STR_TT">"tt"</string>
+    <string name="STR_MO">"mo"</string>
+    <string name="STR_BE_BY">"be_BY"</string>
+    <array name="STR_OSD_LANGUAGE_CODE">
+        <item>@string/STR_EN_US</item>
+        <!--<item>@string/STR_FI_FI</item>-->
+        <!--<item>@string/STR_FR_FR</item>-->
+        <!--<item>@string/STR_DE_DE</item>-->
+        <!--<item>@string/STR_EL_GR</item>-->
+        <!--<item>@string/STR_HU_HU</item>-->
+        <!--<item>@string/STR_IT_IT</item>-->
+        <!--<item>@string/STR_NB_NO</item>-->
+        <!--<item>@string/STR_PL_PL</item>-->
+        <!--<item>@string/STR_PT_PT</item>-->
+        <!--<item>@string/STR_RO_RO</item>-->
+        <!--<item>@string/STR_RU_RU</item>-->
+        <!--<item>@string/STR_SL_SI</item>-->
+        <!--<item>@string/STR_ES_ES</item>-->
+        <!--<item>@string/STR_SV_SE</item>-->
+        <!--<item>@string/STR_TR_TR</item>-->
+        <!--<item>@string/STR_AR</item>-->
+        <!--<item>@string/STR_ZH_TW</item>-->
+        <!--<item>@string/STR_CS_CZ</item>-->
+        <!--<item>@string/STR_DA_DK</item>-->
+        <!--<item>@string/STR_NL_NL</item>-->
+        <!--<item>@string/STR_SK_SK</item>-->
+        <!--<item>@string/STR_UK_UA</item>-->
+        <!--<item>@string/STR_TT</item>-->
+        <!--<item>@string/STR_MO</item>-->
+        <!--<item>@string/STR_BE_BY</item>-->
+    </array>
+    <array name="STR_MENU_LANGUAGE_OPTION">
+        <item>@string/STR_ENGLISH</item>
+        <!--<item>@string/STR_FINNISH</item>-->
+        <!--<item>@string/STR_FRENCH</item>-->
+        <!--<item>@string/STR_GERMAN</item>-->
+        <!--<item>@string/STR_GREEK</item>-->
+        <!--<item>@string/STR_HUNGARIAN</item>-->
+        <!--<item>@string/STR_ITALIAN</item>-->
+        <!--<item>@string/STR_NORWEGIAN</item>-->
+        <!--<item>@string/STR_POLISH</item>-->
+        <!--<item>@string/STR_PORTUGUESE</item>-->
+        <!--<item>@string/STR_ROMANIAN</item>-->
+        <!--<item>@string/STR_RUSSIAN</item>-->
+        <!--<item>@string/STR_SLOVENIAN</item>-->
+        <!--<item>@string/STR_SPANISH</item>-->
+        <!--<item>@string/STR_SWEDISH</item>-->
+        <!--<item>@string/STR_TURKISH</item>-->
+        <!--<item>@string/STR_ARABIC</item>-->
+        <!--<item>@string/STR_CHINESE</item>-->
+        <!--<item>@string/STR_CZECH</item>-->
+        <!--<item>@string/STR_DANISH</item>-->
+        <!--<item>@string/STR_DUTCH</item>-->
+        <!--<item>@string/STR_SLOVAK</item>-->
+        <!--&lt;!&ndash;<item>@string/STR_ORIGINAL</item>&ndash;&gt;-->
+        <!--<item>@string/STR_UKRAINIAN</item>-->
+        <!--<item>@string/STR_TATAR</item>-->
+        <!--<item>@string/STR_MOLDAVIAN</item>-->
+        <!--<item>@string/STR_BELARUSIAN</item>-->
+    </array>
+    <string name="STR_FIRST_LANGUAGE">Audio First Language</string>
+    <array name="STR_FIRST_LANGUAGE_OPTION">
+        <item>@string/STR_ENGLISH</item>
+        <item>@string/STR_FINNISH</item>
+        <item>@string/STR_FRENCH</item>
+        <item>@string/STR_GERMAN</item>
+        <item>@string/STR_GREEK</item>
+        <item>@string/STR_HUNGARIAN</item>
+        <item>@string/STR_ITALIAN</item>
+        <item>@string/STR_NORWEGIAN</item>
+        <item>@string/STR_POLISH</item>
+        <item>@string/STR_PORTUGUESE</item>
+        <item>@string/STR_ROMANIAN</item>
+        <item>@string/STR_RUSSIAN</item>
+        <item>@string/STR_SLOVENIAN</item>
+        <item>@string/STR_SPANISH</item>
+        <item>@string/STR_SWEDISH</item>
+        <item>@string/STR_TURKISH</item>
+        <item>@string/STR_ARABIC</item>
+        <item>@string/STR_CHINESE</item>
+        <item>@string/STR_CZECH</item>
+        <item>@string/STR_DANISH</item>
+        <item>@string/STR_DUTCH</item>
+        <item>@string/STR_SLOVAK</item>
+        <!--<item>@string/STR_ORIGINAL</item>-->
+        <item>@string/STR_UKRAINIAN</item>
+        <item>@string/STR_TATAR</item>
+        <item>@string/STR_MOLDAVIAN</item>
+        <item>@string/STR_BELARUSIAN</item>
+    </array>
+    <string name="STR_SECOND_LANGUAGE">Audio Second Language</string>
+    <array name="STR_SECOND_LANGUAGE_OPTION">
+        <item>@string/STR_ENGLISH</item>
+        <item>@string/STR_FINNISH</item>
+        <item>@string/STR_FRENCH</item>
+        <item>@string/STR_GERMAN</item>
+        <item>@string/STR_GREEK</item>
+        <item>@string/STR_HUNGARIAN</item>
+        <item>@string/STR_ITALIAN</item>
+        <item>@string/STR_NORWEGIAN</item>
+        <item>@string/STR_POLISH</item>
+        <item>@string/STR_PORTUGUESE</item>
+        <item>@string/STR_ROMANIAN</item>
+        <item>@string/STR_RUSSIAN</item>
+        <item>@string/STR_SLOVENIAN</item>
+        <item>@string/STR_SPANISH</item>
+        <item>@string/STR_SWEDISH</item>
+        <item>@string/STR_TURKISH</item>
+        <item>@string/STR_ARABIC</item>
+        <item>@string/STR_CHINESE</item>
+        <item>@string/STR_CZECH</item>
+        <item>@string/STR_DANISH</item>
+        <item>@string/STR_DUTCH</item>
+        <item>@string/STR_SLOVAK</item>
+        <!--<item>@string/STR_ORIGINAL</item>-->
+        <item>@string/STR_UKRAINIAN</item>
+        <item>@string/STR_TATAR</item>
+        <item>@string/STR_MOLDAVIAN</item>
+        <item>@string/STR_BELARUSIAN</item>
+    </array>
+    <string name="STR_SUBTITLE_DISPLAY">Subtitle Display</string>
+    <array name="STR_SUBTITLE_DISPLAY_OPTION">
+        <item>@string/STR_OFF</item>
+        <item>@string/STR_ON</item>
+    </array>
+    <string name="STR_SUBTITLE_LANGUAGE">Subtitle Language</string>
+    <array name="STR_SUBTITLE_LANGUAGE_OPTION">
+        <item>@string/STR_ENGLISH</item>
+        <item>@string/STR_FINNISH</item>
+        <item>@string/STR_FRENCH</item>
+        <item>@string/STR_GERMAN</item>
+        <item>@string/STR_GREEK</item>
+        <item>@string/STR_HUNGARIAN</item>
+        <item>@string/STR_ITALIAN</item>
+        <item>@string/STR_NORWEGIAN</item>
+        <item>@string/STR_POLISH</item>
+        <item>@string/STR_PORTUGUESE</item>
+        <item>@string/STR_ROMANIAN</item>
+        <item>@string/STR_RUSSIAN</item>
+        <item>@string/STR_SLOVENIAN</item>
+        <item>@string/STR_SPANISH</item>
+        <item>@string/STR_SWEDISH</item>
+        <item>@string/STR_TURKISH</item>
+        <item>@string/STR_ARABIC</item>
+        <item>@string/STR_CHINESE</item>
+        <item>@string/STR_CZECH</item>
+        <item>@string/STR_DANISH</item>
+        <item>@string/STR_DUTCH</item>
+        <item>@string/STR_SLOVAK</item>
+        <!--<item>@string/STR_ORIGINAL</item>-->
+        <item>@string/STR_UKRAINIAN</item>
+        <item>@string/STR_TATAR</item>
+        <item>@string/STR_MOLDAVIAN</item>
+        <item>@string/STR_BELARUSIAN</item>
+    </array>
+
+    <array name="STR_LANGUAGE_CODES_ISO639">
+        <item>@string/STR_ENGLISH_CODE</item>
+        <item>@string/STR_FINNISH_CODE</item>
+        <item>@string/STR_FRENCH_CODE</item>
+        <item>@string/STR_GERMAN_CODE</item>
+        <item>@string/STR_GREEK_CODE</item>
+        <item>@string/STR_HUNGARIAN_CODE</item>
+        <item>@string/STR_ITALIAN_CODE</item>
+        <item>@string/STR_NORWEGIAN_CODE</item>
+        <item>@string/STR_POLISH_CODE</item>
+        <item>@string/STR_PORTUGUESE_CODE</item>
+        <item>@string/STR_ROMANIAN_CODE</item>
+        <item>@string/STR_RUSSIAN_CODE</item>
+        <item>@string/STR_SLOVENIAN_CODE</item>
+        <item>@string/STR_SPANISH_CODE</item>
+        <item>@string/STR_SWEDISH_CODE</item>
+        <item>@string/STR_TURKISH_CODE</item>
+        <item>@string/STR_ARABIC_CODE</item>
+        <item>@string/STR_CHINESE_CODE</item>
+        <item>@string/STR_CZECH_CODE</item>
+        <item>@string/STR_DANISH_CODE</item>
+        <item>@string/STR_DUTCH_CODE</item>
+        <item>@string/STR_SLOVAK_CODE</item>
+        <!--<item>@string/STR_ORIGINAL_CODE</item>-->
+        <item>@string/STR_UKRAINIAN_CODE</item>
+        <item>@string/STR_TATAR_CODE</item>
+        <item>@string/STR_MOLDAVIAN_CODE</item>
+        <item>@string/STR_BELARUSIAN_CODE</item>
+    </array>
+
+    <!-- Output Settings -->
+    <string name="STR_OUTPUT_SETTINGS_TITLE">Setting > Output Settings</string>
+    <string name="STR_OUTPUT_SETTINGS_HELP_INFO">@string/STR_PARENT_HELP_INFO</string>
+    <string name="STR_TV_RATIO">TV Ratio</string>
+    <string name="STR_AUDIO_OUTPUT">Audio output</string>
+    <string name="STR_BITSTREAM">BitStream</string>
+    <string name="STR_PCM">PCM</string>
+    <string name="STR_ARE_YOU_SURE_TO_SWITCH_IT">Are you sure to switch it?</string>
+
+    <array name="STR_TV_RATIO_OPTION">
+        <item>16:9</item>
+        <item>4:3</item>
+    </array>
+    <string name="STR_CONVERSION">Conversion</string>
+    <array name="STR_CONVERSION_OPTION">
+        <item>Widescreen</item>
+        <item>Pillarbox</item>
+        <item>Combined</item>
+    </array>
+    <array name="STR_CONVERSION4X3_OPTION">
+        <item>Widescreen</item>
+        <item>Letter box</item>
+        <item>Combined</item>
+    </array>
+    <string name="STR_HDMI_RESOLUTION">HDMI Resolution</string>
+    <string name="STR_HDMI_RESOLUTION_HELP_INFO">After resolution change you may see a black screen. If this happens, you must wait 10 seconds without pressing any key, so previous resolution will be set back.</string>
+    <array name="STR_HDMI_RESOLUTION_OPTION">
+        <item>480p</item>
+        <item>720p</item>
+        <item>1080i</item>
+        <item>1080p</item>
+    </array>
+
+    <array name="STR_ARRAY_AUDIO_OUTPUT">
+        <item>@string/STR_PCM</item>
+        <item>@string/STR_BITSTREAM</item>
+    </array>
+
+    <string name="STR_AUTO_STANDBY">Auto Standby</string>
+    <array name="STR_AUTO_STANDBY_OPTION_ENTRIES">
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>12 hours</item>
+        <item>Never</item>
+    </array>
+    <string-array name="STR_AUTO_STANDBY_OPTION_ENTRIES_VALUES">
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>10800000</item>
+        <item>21600000</item>
+        <item>43200000</item>
+        <item>-1</item>
+    </string-array>
+    <!-- Receiver Information -->
+    <string name="STR_RECEIVER_INFORMATION_TITLE">Installation > Receiver Information</string>
+    <string name="STR_STB_MODEL">STB Model</string>
+    <string name="STR_CLIENT_ID">Client ID</string>
+    <string name="STR_SERVICE_VERSION">Service Version</string>
+    <string name="STR_SW_VERSION">SW Version</string>
+    <string name="STR_DATABASE_VERSION">Database Version</string>
+    <string name="STR_HW_VERSION">HW Version</string>
+    <string name="STR_LOADER_VERSION">Loader Version</string>
+    <string name="STR_STB_MODEL_VALUE">DDN82_3796</string>
+    <string name="STR_CLIENT_ID_VALUE">7006650533(3)</string>
+    <string name="STR_SW_VERSION_VALUE">DDN V1.0.0</string>
+    <string name="STR_DATABASE_VERSION_VALUE">1.0</string>
+    <string name="STR_HW_VERSION_VALUE">MBN-208</string>
+    <string name="STR_LOADER_VERSION_VALUE">0.0.0</string>
+    <string name="STR_PLEASE_WAIT_TEN_SECS">Please Wait 10 seconds and then reboot</string>
+    <string name="STR_PLEASE_CHECK_APK_AND_SERVICE_VERSION">Please Check Apk and Service Version</string>
+    <string name="STR_CPU_INFO">CPU Info</string>
+    <string name="STR_STORAGE_INFO">Storage(Free)</string>
+    <string name="STR_MEMORY_FREE_INFO">Memory(Free)</string>
+    <string name="STR_MEMORY_TOTAL_INFO">Memory(Total)</string>
+
+    <!-- Signal Information -->
+    <string name="STR_SIGNAL_INFORMATION_TITLE">Installation > Signal Information</string>
+    <string name="STR_NO_SIGNAL_INFORMATION">No Signal Information</string>
+    <string name="STR_CH_NO">CH No</string>
+    <string name="STR_ANTENNA">Antenna</string>
+    <string name="STR_POLARIZATION">Polarization</string>
+    <string name="STR_VIDEO_PID">Video PID</string>
+    <string name="STR_AUDIO_PID">Audio PID</string>
+    <string name="STR_NO_AUDIO_PID">No Audio PID</string>
+    <string name="STR_PCR_PID">PCR PID</string>
+    <string name="STR_SERVICE_ID">Service ID</string>
+    <string name="STR_TID">TID</string>
+    <string name="STR_NULL">null</string>
+    <string name="STR_TPID">TPID</string>
+    <string name="STR_TABLE_ID">TABLE ID</string>
+
+    <!-- Antenna Setup -->
+    <string name="STR_ANTENNA_SETUP">Antenna Setup</string>
+    <string name="STR_ANTENNA_SETUP_TITLE">Installation > Antenna Setup Page</string>
+    <string name="STR_ANTENNA_SETUP_HELP">@string/STR_PARENT_HELP_INFO</string>
+    <string name="STR_ANTENNA_SETUP_HELP_SELECT_SATELLITE">Select your satellite and dish for highest signals.</string>
+    <string name="STR_ANT_CHANGE_CONFIRM">Do you want to change the Antenna configuration?</string>
+    <string name="STR_LIMIT_SETUP_CONFIRM">Would you like to set east limit of DiSEqC motor?</string>
+    <string name="STR_LIMIT_SETUP_CONFIRM_RESET">Would you like to reset limit for DiSEqC position?</string>
+    <string name="STR_TYPE">Type</string>
+    <string name="STR_LNB_1">LNB 1</string>
+    <string name="STR_LNB_2">LNB 2</string>
+    <string name="STR_LNB_3">LNB 3</string>
+    <string name="STR_LNB_4">LNB 4</string>
+    <string name="STR_NONE">None</string>
+    <string name="STR_POSITION">Position </string>
+    <string name="STR_POSITION_01">Position 01</string>
+    <string name="STR_POSITION_02">Position 02</string>
+    <string name="STR_POSITION_03">Position 03</string>
+    <string name="STR_POSITION_04">Position 04</string>
+    <string name="STR_EDIT_LNB">Edit LNB</string>
+    <string name="STR_EDIT">Edit</string>
+    <string name="STR_EDIT_POSITION">Edit Position</string>
+    <string name="STR_SATELLITE">@string/STR_DVBS_SATELLITE</string>
+    <string name="STR_LNB_TYPE">@string/STR_DVBS_LNB_TYPE</string>
+    <string name="STR_LNB_LOW_FREQ">LNB Low Freq.</string>
+    <string name="STR_LNB_HIGH_FREQ">LNB High Freq.</string>
+    <string name="STR_LNB_POWER">LNB Power</string>
+    <string name="STR_NEW_TP">New TP</string>
+    <string name="STR_SAT_EDIT">SAT Edit</string>
+    <string name="STR_SAVE">Save</string>
+    <string name="STR_MOVEMENT_SPEED">Movement speed</string>
+    <string name="STR_MOVE_DISH">Move dish</string>
+    <string name="STR_CENTER_POSITION">Center position</string>
+    <string name="STR_SET_LIMIT">Set limit</string>
+    <string name="STR_LIMIT_SETUP">Limit Setup</string>
+    <string name="STR_EAST_LIMIT">East Limit</string>
+    <string name="STR_WEST_LIMIT">West Limit</string>
+    <string name="STR_RESET_DISEQC_LIMIT">Reset DiSEqC limit</string>
+    <string name="STR_START">Start</string>
+    <string name="STR_STOP">Stop</string>
+    <string name="STR_MOVING_E">Moving &#62;&#62; E</string>
+    <string name="STR_MOVING_W">W &#60;&#60; Moving</string>
+    <string name="STR_SET">Set</string>
+    <string name="STR_NOT_SET">Not Set</string>
+    <string name="STR_DELETE_ALL">Delete ALL</string>
+    <array name="STR_LNB_TYPE" translatable="false">
+        <item>@string/STR_DVBS_LNB_TYPE_LNBF</item>
+        <item>@string/STR_DVBS_LNB_TYPE_UNIVERSAL</item>
+        <item>@string/STR_DVBS_LNB_TYPE_NORMAL</item>
+    </array>
+    <array name="STR_ONOFF" translatable="false">
+        <item>@string/STR_ON</item>
+        <item>@string/STR_OFF</item>
+    </array>
+    <array name="STR_ARY_MV_SPEED" translatable="false">
+        <item>Slow</item>
+        <item>Quick</item>
+    </array>
+    <array name="STR_ARY_MV_DISH" translatable="false">
+        <item>@string/STR_STOP</item>
+        <item>@string/STR_MOVING_E</item>
+        <item>@string/STR_MOVING_W</item>
+    </array>
+    <array name="STR_EW" translatable="false">
+        <item>E</item>
+        <item>W</item>
+    </array>
+    <array name="STR_DISEQC">
+        <item>DiSEqC OFF</item>
+        <item>DiSEqC 1.0</item>
+        <item>DiSEqC 1.2</item>
+    </array>
+    <array name="STR_PAGE">
+        <item>PAGE 1/8</item>
+        <item>PAGE 2/8</item>
+        <item>PAGE 3/8</item>
+        <item>PAGE 4/8</item>
+        <item>PAGE 5/8</item>
+        <item>PAGE 6/8</item>
+        <item>PAGE 7/8</item>
+        <item>PAGE 8/8</item>
+    </array>
+
+    <!-- System Settings -->
+    <string name="STR_SYSTEM_SETTINGS_TITLE">Setting > System Settings</string>
+    <string name="STR_SYSTEM_SETTINGS_STARTUP_CH_MSG">You can set a Switch ON channel</string>
+    <string name="STR_SYSTEM_SETTINGS_OTHER_MSG">@string/STR_PARENT_HELP_INFO</string>
+    <string name="STR_FIXED_CH_HELP_INFO">Use OK to select, ▲▼ for navigation, Page+/Page- to change page and BACK to close.</string>
+    <string name="STR_STARTUP_CHANNEL">Startup Channel</string>
+    <string name="STR_LAST_WATCHED">Last Watched</string>
+    <string name="STR_FIXED_CHANNEL_SELECT">Fixed Channel</string>
+    <string-array name="STR_STARTUP_CHANNEL_ARY">
+        <item>@string/STR_LAST_WATCHED</item>
+        <item>@string/STR_FIXED_CHANNEL_SELECT</item>
+    </string-array>
+
+    <string name="STR_BANNER_DISPLAY_TIME">Banner display time</string>
+    <string-array name="STR_BANNER_DISPLAY_TIME_ARY">
+        <item>1 sec</item>
+        <item>2 sec</item>
+        <item>3 sec</item>
+        <item>4 sec</item>
+        <item>5 sec</item>
+        <item>6 sec</item>
+        <item>7 sec</item>
+        <item>8 sec</item>
+        <item>9 sec</item>
+        <item>10 sec</item>
+        <item>11 sec</item>
+        <item>12 sec</item>
+        <item>13 sec</item>
+        <item>14 sec</item>
+        <item>15 sec</item>
+        <item>16 sec</item>
+        <item>17 sec</item>
+        <item>18 sec</item>
+        <item>19 sec</item>
+        <item>20 sec</item>
+    </string-array>
+
+    <string name="STR_OSD_TRANSPARENCY">OSD Transparency</string>
+    <string-array name="STR_OSD_TRANSPARENCY_ARY">
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>Not transparent</item>
+    </string-array>
+
+    <string name="STR_DEEP_STANDBY_AFTER">Deep Standby After</string>
+    <string-array name="STR_DEEP_STANDBY_AFTER_ARY">
+        <item>Never</item>
+        <item>5 mins</item>
+        <item>15 mins</item>
+        <item>30 mins</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+    </string-array>
+
+    <string name="STR_AUTO_STANDBY_AFTER">Auto Standby After</string>
+    <string-array name="STR_AUTO_STANDBY_AFTER_ARY">
+        <item>Never</item>
+        <item>1 hr</item>
+        <item>2 hrs</item>
+        <item>3 hrs</item>
+        <item>4 hrs</item>
+        <item>5 hrs</item>
+        <item>6 hrs</item>
+        <item>7 hrs</item>
+        <item>8 hrs</item>
+        <item>9 hrs</item>
+        <item>10 hrs</item>
+        <item>11 hrs</item>
+        <item>12 hrs</item>
+    </string-array>
+
+    <!-- DTV_TVmanager -->
+    <string name="STR_ALL_TV_CHANNELS">ALL TV Channels</string>
+    <string name="STR_ALL_RADIO_CHANNELS">ALL RADIO Channels</string>
+    <string name="STR_FAV1">Favorite 1</string>
+    <string name="STR_FAV2">Favorite 2</string>
+    <string name="STR_FAV3">Favorite 3</string>
+    <string name="STR_FAV4">Favorite 4</string>
+    <string name="STR_FAV5">Favorite 5</string>
+    <string name="STR_FAV6">Favorite 6</string>
+    <string name="STR_INVISIBLE">Invisible</string>
+    <string name="STR_FAVORITE">Favorite</string>
+    <string name="STR_MOVE">Move</string>
+    <string name="STR_MOVE_MODE">Move mode</string>
+    <string name="STR_LOCK">Lock</string>
+    <string name="STR_LOCK_MODE">Lock mode</string>
+    <string name="STR_HIDE_MODE">Hide mode</string>
+    <string name="STR_DO_YOU_WANT_TO_DELETE_CHANNEL">Do you want to delete this channel?</string>
+    <string name="STR_YES">YES</string>
+    <string name="STR_NO">NO</string>
+    <string name="STR_INFO">INFO</string>
+    <string name="STR_DO_YOU_WANT_TO_LOCK_CHANNEL">DO you want to lock this channel?</string>
+    <string name="STR_DELETE_ALL_CHANNELS">Delete All Channels</string>
+    <string name="STR_DELETE_CHANNEL">Delete Channel</string>
+    <string name="STR_ENTER_PASSWORD">Please Enter Password</string>
+    <string name="STR_CONFIRM">Confirm</string>
+    <string name="STR_HELP_INFO_RETURN">Return</string>
+    <string name="STR_INVALID_PASSWORD">Invalid password</string>
+    <string name="STR_NOT_SUPPORT">Not Support</string>
+    <string name="STR_TVMANAGER_HELP_INFO">This function create Favorite list. Press OK to add Favorites. Page+/Page- to change page. BACK to close</string>
+    <string name="STR_RECENTLY_WATCHED_CHANNEL">Recently Watched Channels</string>
+    <string name="STR_WATCH_NEXT_CHANNEL">Watched Next</string>
+
+    <!-- ParentalActivity -->
+    <string name="STR_ACTUAL_PIN_CODE">Actual PIN Code</string>
+    <string name="STR_CHANNEL_LOCK">Channel Lock</string>
+    <string name="STR_INSTALLATION_LOCK">Installation lock</string>
+    <string name="STR_PARENTAL_RATE">Parental Rate</string>
+    <string name="STR_NEW_PIN_CODE">New PIN Code</string>
+    <string name="STR_CONFIRM_PIN_CODE">Confirm PIN Code</string>
+    <string name="STR_ON">On</string>
+    <string name="STR_OFF">Off</string>
+    <string name="STR_ENABLE">Enable</string>
+    <string name="STR_DISABLE">Disable</string>
+    <string name="STR_TEST">Test \n Test</string>
+    <string name="STR_PARENT_HELP_INFO">Use OK to list, ◀▶ to change, ▲▼ for navigation and BACK to close.</string>
+    <string name="STR_PARENT_SIX">6+</string>
+    <string name="STR_PARENT_TEN">10+</string>
+    <string name="STR_PARENT_TWELVE">12+</string>
+    <string name="STR_PARENT_SIXTEEN">16+</string>
+    <string name="STR_PARENT_EIGHTEEN">18+</string>
+    <string name="STR_ALL_BLOCKED">All blocked</string>
+    <string name="STR_NOT_CORRECTLY_CONFIRMED">Not correctly confirmed !</string>
+    <string name="STR_BUTTON_HELP">Use [0–9] buttons to enter value.</string>
+    <string name="STR_OK">Ok</string>
+    <string name="STR_INCORRECT_PIN_CODE_ACCESS_DENIED">Incorrect PIN code. Access denied.</string>
+    <string name="STR_PIN_CODE_SUCCESSFULLY_CHANGED">PIN code successfully changed.</string>
+    <string name="STR_NUMBER_INPUT_OK_CONFIRM_HELP">Use [0–9] buttons to enter value. Use [OK] to confirm.</string>
+
+    <array name="STR_ARRAY_ONOFF" translatable="false">
+        <item>@string/STR_OFF</item>
+        <item>@string/STR_ON</item>
+    </array>
+    <array name="STR_ARRAY_PARENTAL_RATE" translatable="false">
+        <item>@string/STR_DISABLE</item>
+        <item>@string/STR_PARENT_SIX</item>
+        <item>@string/STR_PARENT_TWELVE</item>
+        <item>@string/STR_PARENT_SIXTEEN</item>
+        <item>@string/STR_PARENT_EIGHTEEN</item>
+        <item>@string/STR_ALL_BLOCKED</item>
+    </array>
+
+    <!-- ResetDefaultActivity -->
+    <string name="STR_RESET_DEFAULT">Reset Default</string>
+    <string name="STR_RESET_DEFAULT_HELP_CONTENT">All channels and settings will be DELETED\nand the receiver will be reset to the Factory Default!\nDo you really want to initialize the Factory Default?</string>
+
+    <!-- EpgActivity -->
+    <string name="STR_CH_GUIDE_TITLE">Channel > TV Programme Guide</string>
+    <string name="STR_NO_INFO_AVAILABLE">No information available</string>
+    <string name="STR_TV_CH_GUIDE">TV Channel Guide</string>
+    <string name="STR_DETAILED_PROGRAM_INFO">Detailed Program Info</string>
+    <string name="STR_RESERVE">Reserve</string>
+    <string name="STR_DO_YOU_WANT_TO_RESERVE_THIS">Do you want to reserve this?</string>
+    <string name="STR_DO_YOU_WANT_TO_DELETE_THE_RESERVATION">Do you want to delete the reservation?</string>
+    <string name="STR_EVENT_TYPE">Event Type</string>
+    <string name="STR_CYCLE">Cycle</string>
+    <string name="STR_DURATION">Duration</string>
+    <string name="STR_EPG_OK_HELP">OK Change Program</string>
+    <!--<string name="STR_EPG_OK_HELP">OK Summary</string>-->
+    <string name="STR_EPG_INFO_HELP">INFO Detail</string>
+
+    <string name="STR_RECORD">Record</string>
+    <string name="STR_TURN_ON">Turn On</string>
+    <string name="STR_ONCE">Once</string>
+    <string name="STR_DAILY">Daily</string>
+    <string name="STR_WEEKLY">Weekly</string>
+    <string name="STR_WEEKEND">Weekend</string>
+    <string name="STR_WEEKDAY">Week Day</string>
+    <string name="STR_NEXT_DAY">Next Day</string>
+    <string name="STR_PREVIOUS_DAY">Previous Day</string>
+    <string name="STR_NO_TIMER_IS_ENABLED">No timer is enabled</string>
+    <string name="STR_NO_TV_CHANNEL">No TV Channel</string>
+    <string name="STR_NO_RADIO_CHANNEL">No Radio Channel</string>
+    <string name="STR_NO_TVRADIO_CHANNEL">No TV/Radio Channel</string>
+
+    <string name="STR_DELETE">Delete</string>
+    <string name="STR_CLOSE">Close</string>
+    <array name="STR_EPG_RESERVE_TYPE">
+        <item>@string/STR_RECORD</item>
+        <!--<item>@string/STR_TURN_ON</item>-->
+    </array>
+
+    <array name="STR_EPG_RESERVE_CYCLE">
+        <item>@string/STR_ONCE</item>
+        <item>@string/STR_DAILY</item>
+        <item>@string/STR_WEEKLY</item>
+        <item>@string/STR_WEEKEND</item>
+        <item>@string/STR_WEEKDAY</item>
+    </array>
+
+    <!-- TimerListActivity -->
+    <string name="STR_ADD">Add</string>
+    <string name="STR_TIMER_TITLE">Service > Timer</string>
+    <string name="STR_TIMER_HELP_INFO">@string/STR_TIMER_SELECT_CH_HELP_INFO</string>
+
+    <!-- TimerSettingActivity -->
+    <string name="STR_TIMER_SETTING_TITLE">Service > Timer > Setting</string>
+    <string name="STR_TIMER_NUMBER">Timer Number</string>
+    <string name="STR_TIMER_CHANNEL">Channel</string>
+    <string name="STR_TIMER_CYCLE">Timer Cycle</string>
+    <string name="STR_TIMER_TYPE">Event Type</string>
+    <string name="STR_TIMER_DATE">Date</string>
+    <string name="STR_TIMER_TIME">Time</string>
+    <string name="STR_TIMER_DURATION">Duration</string>
+    <string name="STR_TIMER_ONCE">Once</string>
+    <string name="STR_TIMER_DAILY">Daily</string>
+    <string name="STR_TIMER_WEEKLY">Weekly</string>
+    <string name="STR_TIMER_WEEKEND">Weekend</string>
+    <string name="STR_TIMER_WEEKDAYS">Weekdays</string>
+    <string name="STR_TIMER_RECORD">Record</string>
+    <string name="STR_TIMER_TURNON">TURN ON</string>
+    <string name="STR_TIMER_ENABLE">Enable</string>
+    <string name="STR_TIMER_CHANNEL_SELECT">▲▼ Channel selection</string>
+    <string name="STR_TIMER_CONFLICT_HELPINFO">A conflict was detected, please select the item\nyou want to keep the other item will be cancelled</string>
+    <string name="STR_MONDAY">Monday</string>
+    <string name="STR_TUESDAY">Tuesday</string>
+    <string name="STR_WEDNESDAY">Wednesday</string>
+    <string name="STR_THURSDAY">Thursday</string>
+    <string name="STR_FRIDAY">Friday</string>
+    <string name="STR_SATURDAY">Saturday</string>
+    <string name="STR_SUNDAY">Sunday</string>
+    <string name="STR_DAY">Day</string>
+    <string name="STR_TIMER_FULL">Timer is MAX</string>
+    <string name="STR_TIMER_LESS_THAN_24_HOUR">Please enter the time less than 24 hours</string>
+    <string name="STR_TIMER_LESS_THAN_60_MINUTES">Please enter the time less than 60 minutes</string>
+    <string name="STR_TIMER_MORE_THAN_1_MINUTE">please enter the time at least 1 minute</string>
+    <string name="STR_TIMER_ENTER_TIME_AFTER_NOW">please enter the time after now</string>
+    <string name="STR_TIMER_SUN">SUN</string>
+    <string name="STR_TIMER_MON">MON</string>
+    <string name="STR_TIMER_TUE">TUE</string>
+    <string name="STR_TIMER_WED">WED</string>
+    <string name="STR_TIMER_THU">THU</string>
+    <string name="STR_TIMER_FRI">FRI</string>
+    <string name="STR_TIMER_SAT">SAT</string>
+    <string name="STR_TIMER_LIST_TITLE_NO">No.</string>
+    <string name="STR_TIMER_LIST_TITLE_CHANNEL_NAME_PROGRAM">Channel Name/Program</string>
+    <string name="STR_TIMER_LIST_TITLE_TIME">Time</string>
+    <string name="STR_TIMER_SELECT_CH_HELP_INFO">Use OK to list, ◀▶ to change, ▲▼ for navigation, Page+/Page- to change page and BACK to close.</string>
+    <string name="STR_ILLEGAL_TIME">00:0</string>
+
+    <string name="STR_JAN">JAN</string>
+    <string name="STR_FEB">FEB</string>
+    <string name="STR_MAR">MAR</string>
+    <string name="STR_APR">APR</string>
+    <string name="STR_MAY">MAY</string>
+    <string name="STR_JUN">JUN</string>
+    <string name="STR_JUL">JUL</string>
+    <string name="STR_AUG">AUG</string>
+    <string name="STR_SEP">SEP</string>
+    <string name="STR_OCT">OCT</string>
+    <string name="STR_NOV">NOV</string>
+    <string name="STR_DEC">DEC</string>
+
+
+    <array name="STR_ARRAY_TIMER_CYCLE" translatable="false">
+        <item>@string/STR_TIMER_ONCE</item>
+        <item>@string/STR_TIMER_DAILY</item>
+        <item>@string/STR_TIMER_WEEKLY</item>
+        <item>@string/STR_TIMER_WEEKEND</item>
+        <item>@string/STR_TIMER_WEEKDAYS</item>
+    </array>
+
+    <array name="STR_ARRAY_TIMER_TYPE" translatable="false">
+        <item>@string/STR_TIMER_RECORD</item>
+        <!--<item>@string/STR_TIMER_TURNON</item>-->
+    </array>
+
+    <array name="STR_ARRAY_TIMER_ENABLE" translatable="false">
+        <item>@string/STR_NO</item>
+        <item>@string/STR_YES</item>
+    </array>
+
+    <array name="STR_ARRAY_TIMER_WEEKLY" translatable="false">
+        <item>@string/STR_MONDAY</item>
+        <item>@string/STR_TUESDAY</item>
+        <item>@string/STR_WEDNESDAY</item>
+        <item>@string/STR_THURSDAY</item>
+        <item>@string/STR_FRIDAY</item>
+        <item>@string/STR_SATURDAY</item>
+        <item>@string/STR_SUNDAY</item>
+    </array>
+
+    <array name="STR_ARRAY_WEEK_CYCLE" translatable="false">
+        <item>@string/STR_TIMER_MON</item>
+        <item>@string/STR_TIMER_TUE</item>
+        <item>@string/STR_TIMER_WED</item>
+        <item>@string/STR_TIMER_THU</item>
+        <item>@string/STR_TIMER_FRI</item>
+        <item>@string/STR_TIMER_SAT</item>
+        <item>@string/STR_TIMER_SUN</item>
+    </array>
+
+    <array name="STR_ARRAY_MONTH" translatable="false">
+        <item>@string/STR_JAN</item>
+        <item>@string/STR_FEB</item>
+        <item>@string/STR_MAR</item>
+        <item>@string/STR_APR</item>
+        <item>@string/STR_MAY</item>
+        <item>@string/STR_JUN</item>
+        <item>@string/STR_JUL</item>
+        <item>@string/STR_AUG</item>
+        <item>@string/STR_SEP</item>
+        <item>@string/STR_OCT</item>
+        <item>@string/STR_NOV</item>
+        <item>@string/STR_DEC</item>
+    </array>
+
+
+    <!-- TimeAdjustActivity -->
+    <string name="STR_TIME_ADJUST_TITLE">Service > Time Adjust</string>
+    <string name="STR_AUTO_TIME_SETTING">Auto Time Setting</string>
+    <string name="STR_GMT_OFFSET">GMT Offset</string>
+    <string name="STR_SUMMER_TIME">Summer Time</string>
+    <string name="STR_CURRENT_DATE">Current Date</string>
+    <string name="STR_CURRENT_TIME">Current Time</string>
+    <array name="STR_AUTO_TIME_SETTING_OPTION">
+        <item>@string/STR_OFF</item>
+        <item>@string/STR_ON</item>
+    </array>
+    <array name="STR_GTM_OFFSET_OPTION">
+        <item>-12:00</item>
+        <item>-11:30</item>
+        <item>-11:00</item>
+        <item>-10:30</item>
+        <item>-10:00</item>
+        <item>-9:30</item>
+        <item>-9:00</item>
+        <item>-8:30</item>
+        <item>-8:00</item>
+        <item>-7:30</item>
+        <item>-7:00</item>
+        <item>-6:30</item>
+        <item>-6:00</item>
+        <item>-5:30</item>
+        <item>-5:00</item>
+        <item>-4:30</item>
+        <item>-4:00</item>
+        <item>-3:30</item>
+        <item>-3:00</item>
+        <item>-2:30</item>
+        <item>-2:00</item>
+        <item>-1:30</item>
+        <item>-1:00</item>
+        <item>-0:30</item>
+        <item>0:00</item>
+        <item>+0:30</item>
+        <item>+1:00</item>
+        <item>+1:30</item>
+        <item>+2:00</item>
+        <item>+2:30</item>
+        <item>+3:00</item>
+        <item>+3:30</item>
+        <item>+4:00</item>
+        <item>+4:30</item>
+        <item>+5:00</item>
+        <item>+5:30</item>
+        <item>+6:00</item>
+        <item>+6:30</item>
+        <item>+7:00</item>
+        <item>+7:30</item>
+        <item>+8:00</item>
+        <item>+8:30</item>
+        <item>+9:00</item>
+        <item>+9:30</item>
+        <item>+10:00</item>
+        <item>+10:30</item>
+        <item>+11:00</item>
+        <item>+11:30</item>
+        <item>+12:00</item>
+    </array>
+    <array name="STR_TIME_REGION_OPTION">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Hawaii</item>
+        <item></item>
+        <item>Alaska</item>
+        <item></item>
+        <item>Pacific Time (US &amp; Canada)</item>
+        <item></item>
+        <item>Arizona Mountain Time (US &amp; Canada)</item>
+        <item></item>
+        <item>Mexico city, central timel(US &amp; Canada)</item>
+        <item></item>
+        <item>Eastern Time (US &amp; Canada), Indian</item>
+        <item></item>
+        <item>Atlantic Time (Canada, Chile)</item>
+        <item></item>
+        <item>Brasilia, Buenos Aires, Georgetown</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>London, Lisbon, Dublin, Casablanca</item>
+        <item></item>
+        <item>Berlin, Paris, Madrid, Rome, Bratislava, Prague</item>
+        <item></item>
+        <item>Kiev, Donetsk, Lviv, Kharkiv, Odessa, Eastern Europe</item>
+        <item></item>
+        <item>Baghdad, Kuwait, Moscow</item>
+        <item>Tehran</item>
+        <item>Abu Dhabi</item>
+        <item></item>
+        <item></item>
+        <item>Bombay, Calcutta, New Delhi</item>
+        <item>Colombo</item>
+        <item></item>
+        <item>Bangkok, Jakarta, Hanoi</item>
+        <item></item>
+        <item>Beijing, Singapore, Hongkong, Taipei</item>
+        <item></item>
+        <item>Seoul, Pusan, Tokyo, Osaka, Sapporo</item>
+        <item></item>
+        <item>Melbourne, Sydney, Guam</item>
+        <item></item>
+        <item>Magadha, Solomon IS., New Caledonia</item>
+        <item></item>
+        <item>Auckland, Wellington</item>
+    </array>
+    <array name="STR_SUMMER_TIME_OPTION">
+        <item>@string/STR_OFF</item>
+        <item>@string/STR_ON</item>
+    </array>
+
+
+    <!-- OkList -->
+    <string name="STR_OKLIST_HELP_OK_SELECT">OK Select \n◀▶ Change Channel list \nPage+/Page- to change page</string>
+    <!--Error Msg-->
+    <string name="STR_NO_SIGNAL">No Signal !</string>
+    <string name="STR_BAD_SIGNAL">Bad Signal !</string>
+    <string name="STR_NO_VIDEO_SIGNAL">No Video Signal !</string>
+
+    <!-- Ratio Dialog-->
+    <string name="STR_RATIO">Ratio</string>
+
+    <!-- Teletext Dialog -->
+    <string name="STR_TELETEXT_IS_NOT_AVAILABLE">Teletext Is Not Available</string>
+
+    <!-- ViewActivity -->
+    <string name="STR_VOLUME">Volume</string>
+    <string name="STR_ERROR_CHANNEL_NUMBER">Error channel number</string>
+    <string name="STR_NO_SUBTITLE">No Subtitle</string>
+    <string name="STR_PRESS_BACK_AGAIN">Press back again to exit</string>
+    <string name="STR_WOULD_YOU_LIKE_TO_LOCK_THIS_CHANNEL">Would you like to lock this channel?</string>
+    <string name="STR_WOULD_YOU_LIKE_TO_SCAN_NOW">Would you like to scan now?</string>
+
+    <!-- Channel Search ISDBT-->
+    <string name="STR_ISDBT_BANDWIDTH">Bandwidth</string>
+    <string name="STR_ISDBT_NITSEARCH">NIT Search</string>
+    <string name="STR_ISDBT_1SEGCHANNEL">1-Seg Channel</string>
+
+    <string name="STR_ISDBT_BANDWIDTH_SIX">6000</string>
+    <string name="STR_ISDBT_BANDWIDTH_SEVEN">7000</string>
+    <string name="STR_ISDBT_BANDWIDTH_EIGHT">8000</string>
+
+    <array name="STR_ISDBT_ARRAY_BANDWIDTH" translatable="false">
+        <item>@string/STR_ISDBT_BANDWIDTH_SIX</item>
+        <!--<item>@string/STR_ISDBT_BANDWIDTH_SEVEN</item>-->
+        <!--<item>@string/STR_ISDBT_BANDWIDTH_EIGHT</item>-->
+    </array>
+
+    <array name="STR_ISDBT_ARRAY_NIT_SEARCH" translatable="false">
+        <item>@string/STR_OFF</item>
+        <item>@string/STR_ON</item>
+    </array>
+
+    <array name="STR_ISDBT_ARRAY_1SEG_CHANNEL" translatable="false">
+        <item>@string/STR_OFF</item>
+        <item>@string/STR_ON</item>
+    </array>
+
+    <!-- Channel Search DVBS-->
+    <string name="STR_DVBS_SATELLITE">Satellite</string>
+    <string name="STR_DVBS_TP">Transponder</string>
+    <string name="STR_DVBS_TP_LIST">Transponder List</string>
+    <string name="STR_DVBS_LNB_TYPE">LNB Type</string>
+    <string name="STR_DVBS_ANT_TYPE">Antenna Type</string>
+    <string name="STR_DVBS_22KHZ_TONE">22KHz Tone</string>
+    <string name="STR_DVBS_DISEQC">DiSEqC</string>
+    <string name="STR_DVBS_EDIT_TP">Edit Tp</string>
+    <string name="STR_DVBS_DELETE_TP">Delete Tp</string>
+    <string name="STR_DVBS_ADD_TP">Add Tp</string>
+
+    <string name="STR_DVBS_SCAN_SELECTED_SAT">Scan Selected Satellite</string>
+    <string name="STR_DVBS_SEARCH_TP">Search TP</string>
+    <string name="STR_DVBS_NETWORK_SEARCH">Network Search</string>
+    <string name="STR_DVBS_SEARCH_ALL_SAT">Search All Sat</string>
+    <string name="STR_DVBS_LOAD_HD_AUSTRIA">Load HD Austria Senderliste</string>
+
+    <string name="STR_DVBS_LNB_TYPE_NORMAL">Normal</string>
+    <string name="STR_DVBS_LNB_TYPE_UNIVERSAL">Universal</string>
+    <string name="STR_DVBS_LNB_TYPE_LNBF">LNBF</string>
+
+    <string name="STR_DVBS_ANT_TYPE_DISEQC_TYPE_NONE">NONE</string>
+    <string name="STR_DVBS_ANT_TYPE_DISEQC_TYPE_OFF">OFF</string>
+    <string name="STR_DVBS_ANT_TYPE_DISEQC_TYPE_1">DiSEqC 1.0</string>
+    <string name="STR_DVBS_ANT_TYPE_DISEQC_TYPE_1_1">DiSEqC 1.1</string>
+    <string name="STR_DVBS_ANT_TYPE_DISEQC_TYPE_1_2">DiSEqC 1.2</string>
+
+    <string name="STR_DVBS_22KHZ_TONE_AUTO">AUTO</string>
+    <string name="STR_DVBS_22KHZ_TONE_0K">0K</string>
+    <string name="STR_DVBS_22KHZ_TONE_22K">22K</string>
+
+    <string name="STR_DVBS_DISEQC_1">LNB 1</string>
+    <string name="STR_DVBS_DISEQC_2">LNB 2</string>
+    <string name="STR_DVBS_DISEQC_3">LNB 3</string>
+    <string name="STR_DVBS_DISEQC_4">LNB 4</string>
+    <string name="STR_DVBS_DISEQC_NONE">None</string>
+
+    <array name="STR_DVBS_ARRAY_SEARCH_BUTTON" translatable="false">
+        <item>@string/STR_DVBS_SCAN_SELECTED_SAT</item>
+        <item>@string/STR_DVBS_SEARCH_TP</item>
+        <item>@string/STR_DVBS_NETWORK_SEARCH</item>
+        <item>@string/STR_DVBS_SEARCH_ALL_SAT</item>
+        <!--<item>@string/STR_DVBS_LOAD_HD_AUSTRIA</item>-->
+    </array>
+
+    <array name="STR_DVBS_ARRAY_LNB_TYPE" translatable="false">
+        <item>@string/STR_DVBS_LNB_TYPE_NORMAL</item>
+        <item>@string/STR_DVBS_LNB_TYPE_UNIVERSAL</item>
+        <item>@string/STR_DVBS_LNB_TYPE_UNIVERSAL</item>
+        <item>@string/STR_DVBS_LNB_TYPE_LNBF</item>
+    </array>
+
+    <array name="STR_DVBS_ARRAY_ANT_TYPE" translatable="false">
+        <item>@string/STR_DVBS_ANT_TYPE_DISEQC_TYPE_NONE</item>
+        <item>@string/STR_DVBS_ANT_TYPE_DISEQC_TYPE_OFF</item>
+        <item>@string/STR_DVBS_ANT_TYPE_DISEQC_TYPE_1</item>
+        <item>@string/STR_DVBS_ANT_TYPE_DISEQC_TYPE_1_1</item>
+        <item>@string/STR_DVBS_ANT_TYPE_DISEQC_TYPE_1_2</item>
+    </array>
+
+    <array name="STR_DVBS_ARRAY_22KHZ_TONE" translatable="false">
+        <item>@string/STR_DVBS_22KHZ_TONE_AUTO</item>
+        <item>@string/STR_DVBS_22KHZ_TONE_0K</item>
+        <item>@string/STR_DVBS_22KHZ_TONE_22K</item>
+    </array>
+
+    <array name="STR_DVBS_ARRAY_DISEQC" translatable="false">
+        <item>@string/STR_DVBS_DISEQC_1</item>
+        <item>@string/STR_DVBS_DISEQC_2</item>
+        <item>@string/STR_DVBS_DISEQC_3</item>
+        <item>@string/STR_DVBS_DISEQC_4</item>
+    </array>
+
+    <!-- DVBS Tp Dialog-->
+    <string name="STR_VERTICAL">VER</string>
+    <string name="STR_HORIZONTAL">HOR</string>
+    <string name="STR_DO_YOU_WANT_TO_DELETE_TP">Do you want to delete the selected transponder?</string>
+    <string name="STR_CAN_NOT_DELETE_LAST_TP">Can not delete last transponder!</string>
+    <string name="STR_TP_LIST_IS_FULL">Transponder list is full!</string>
+    <string name="STR_ADD_TP_FAIL">Add transponder fail!</string>
+
+    <array name="STR_ARRAY_POLAR" translatable="false">
+        <item>@string/STR_HORIZONTAL</item>
+        <item>@string/STR_VERTICAL</item>
+    </array>
+
+    <!--BookConflict Dialog-->
+    <string name="STR_BOOK_CONFLICT_TITLE">Find Conflicts</string>
+    <string name="STR_THE_FOLLOW_CONFLICTS_WILL_BE_REMOVED">The following conflicts will be REMOVED! Continue?</string>
+
+    <!--BookAlarm Dialog-->
+    <string name="STR_BOOK_ALARM_TITLE">Timer Alarm : Book will begin in 20 seconds</string>
+    <string name="STR_BOOK_ALARM_SEPARATE">:</string>
+    <string name="STR_BOOK_ALARM_CHANNEL_TITLE">Channel</string>
+    <string name="STR_BOOK_ALARM_EVENTNAME_TITLE">Name</string>
+    <string name="STR_BOOK_ALARM_STARTTIME_TITLE">Time</string>
+    <string name="STR_BOOK_ALARM_DURATION_TITLE">Duration</string>
+
+    <!--BookArrive Dialog-->
+    <string name="STR_BOOK_ARRIVE_TITLE">Timer Arrived : Book begin!</string>
+
+    <!-- FirstTimeInstallationActivity -->
+    <string name="STR_FIRST_TIME_INSTALLATION_TITLE">First Time Installation</string>
+    <array name="STR_4X3CONVERSION_OPTION">
+        <item>Letter box</item>
+        <item>PanScan</item>
+        <item>Combined</item>
+    </array>
+    <string name="STR_NEXT">Next</string>
+    <string name="STR_PREVIOUS">Previous</string>
+    <string name="STR_TITLE_EASY_CHANNEL_SEARCH">Channel Search</string>
+    <string name="STR_PRESS_OK_IF_YOU_SEE_THIS_SCREEN">Press OK if you see this screen</string>
+    <string name="STR_FIRST_TIME_INSTALLATION_HELP_INFO">Use the ◀▶ to change language. To proseed with the next step press the BLUE button.</string>
+
+
+    <!-- Pvr -->
+    <string name="STR_TIMESHIFT">TimeShift</string>
+    <string name="STR_RECORD_PATH">Record Path</string>
+    <string name="STR_TIMESHIFT_LENGTH">TimeShift Length</string>
+    <string name="STR_START_RECORDING">Start Recording</string>
+    <string name="STR_STOP_RECORDING">Stop Recording</string>
+    <string name="STR_TIMESHIFT_MODE_START">TimeShift Mode Start</string>
+    <string name="STR_SELECT_CHANNEL_TO_STOP_RECORDING">Select channel to stop recording</string>
+    <string name="STR_DO_YOU_WANT_TO_STOP_RECORD">Do you want to stop record ?</string>
+    <string name="STR_DO_YOU_WANT_TO_STOP_TIMESHIFT">Do you want to stop timeshift ?</string>
+    <string name="STR_DO_YOU_WANT_TO_STOP_ALL_RECORDS_AND_TIMESHIFT">Do you want to stop all records and timeshift ?</string>
+    <string name="STR_SET_RECORD_DURATION">Set Recording Time</string>
+    <string name="STR_HD_SPACE_FULL">HD Space Full</string>
+    <string name="STR_4K_NOT_SUPPORT">4K stream and 4K display out Do not support now</string>
+    <string name="STR_RECORD_PATH_NOT_EXIST">Record Path Not Exist !</string>
+    <string name="STR_THERE_IS_NO_FREE_SPACE_TO_RECORD">There is no Free Space to Record !</string>
+    <string name="STR_RECORD_IS_ALREADY_MAX">Records are already max</string>
+    <string name="STR_RECORD_FAIL">Record Fail !</string>
+    <string name="STR_WORK">Work</string>
+    <string name="STR_PORT">Port</string>
+    <string name="STR_DEVICE">Device</string>
+    <string name="STR_TOTAL_SPACE">Total Space</string>
+    <string name="STR_FREE_SPACE">Free Space</string>
+    <string name="STR_USE_SPACE">Use Space</string>.
+    <string name="STR_FRONT">Front</string>
+    <string name="STR_BACK">Back</string>
+    <string name="STR_EXIT">Exit</string>
+    <string name="STR_BUILD_IN">Build in</string>
+    <string name="STR_STORAGE_SETTING_TITLE">Service > Storage Settings</string>
+    <string name="STR_SDCARD_PATH">/mnt/sdcard</string>
+    <string name="STR_SDCARD_TYPE">SD card</string>
+    <string name="STR_USB_2_0">USB2.0</string>
+    <string name="STR_USB_3_0">USB3.0</string>
+    <string name="STR_V">V</string>
+    <string name="STR_USB_PORT1">Port 1</string>
+    <string name="STR_USB_PORT2">Port 2</string>
+    <string name="STR_DO_YOU_WANT_TO_PLAY_THE_FILE_FROM_THE_LAST_STOP_TIME">Do you want to play the file from the last stop time?</string>
+    <string name="STR_PLAY_SYMBOL">▶</string>
+    <array name="STR_TIMESHIFT_LENGTH_OPTION">
+        <item>15 Minute</item>
+        <item>30 Minute</item>
+        <item>1 Hour</item>
+        <item>2 Hour</item>
+    </array>
+    <string name="STR_FILE_NAME">File Name</string>
+    <!--RecordSettingActivity-->
+    <string name="STR_RECORD_SETTINGS_TITLE">Service > Record Settings</string>
+    <string name="STR_TIMESHIFT_INTERVAL">TimeShift Interval</string>
+    <string name="STR_INTERVAL_FIFTEEN">15 min</string>
+    <string name="STR_INTERVAL_THIRTY">30 min</string>
+    <string name="STR_INTERVAL_SIXTY">1 h</string>
+    <string name="STR_INTERVAL_NINETY">1 h 30 min</string>
+    <string name="STR_INTERVAL_ONE_TWENTY">2 h</string>
+    <string name="STR_RECORD_ICON">Record Icon</string>
+    <array name="STR_ARRAY_TIMESHIFT_INTERVAL">
+        <item>@string/STR_INTERVAL_FIFTEEN</item>
+        <item>@string/STR_INTERVAL_THIRTY</item>
+        <item>@string/STR_INTERVAL_SIXTY</item>
+        <item>@string/STR_INTERVAL_NINETY</item>
+        <item>@string/STR_INTERVAL_ONE_TWENTY</item>
+    </array>
+    <array name="STR_ARRAY_RECORD_ICON">
+        <item>@string/STR_OFF</item>
+        <item>@string/STR_ON</item>
+    </array>
+
+    <!-- Help Filter-->
+    <string name="STR_HELP_FILTER_LEFT_RIGHT">◀▶</string>
+    <string name="STR_HELP_FILTER_OK">OK</string>
+    <string name="STR_HELP_FILTER_EXIT">EXIT</string>.
+    <string name="STR_HELP_FILTER_INFO">INFO</string>
+    <string name="STR_HELP_FILTER_BACK">BACK</string>
+    <string name="STR_HELP_FILTER_UP_DOWN">▲▼</string>
+    <string name="STR_HELP_FILTER_ZERO_TO_NINE">[0–9]</string>
+    <string name="STR_HELP_FILTER_OK_CIRCLE">[OK]</string>
+    <string name="STR_HELP_FILTER_SPACE">" "</string>
+    <string name="STR_HELP_FILTER_NEXTLINE_LEFT_RIGHT">\n◀▶</string>
+    <string name="STR_HELP_FILTER_OK_KEY">[OK]</string>
+    <string name="STR_HELP_FILTER_PAGE_UP_DOWN">Page+/Page-</string>
+    <string name="STR_HELP_FILTER_PAGE_UP_DOWN_NEXT">\nPage+/Page-</string>
+
+    <!-- Extras start-->
+    <!-- Channel Search-->
+    <string name="STR_EXTRAS_PARENT">"parent"</string>
+    <string name="STR_EXTRAS_EASYINSTALL">"EasyInstall"</string>
+    <string name="STR_EXTRAS_MAINMENU">"MainMenu"</string>
+    <!-- ScanResult-->
+    <string name="STR_EXTRAS_TPID">"tp_id"</string>
+    <string name="STR_EXTRAS_SCANMODE">"scan_mode"</string>
+    <string name="STR_EXTRAS_CHANNELTYPE">"channel_type"</string>
+    <string name="STR_EXTRAS_SEARCHMODE">"search_mode"</string>
+    <string name="STR_EXTRAS_VMX_START_TPID">"start_tpid"</string>
+    <string name="STR_EXTRAS_VMX_END_TPID">"end_tpid"</string>
+    <string name="STR_EXTRAS_VMX_TRIGGER_ID">"trigger_id"</string>
+    <string name="STR_EXTRAS_VMX_TRIGGER_NUM">"trigger_num"</string>
+    <string name="STR_EXTRA_NIT_SEARCH">"nit_search"</string>
+    <string name="STR_EXTRA_ONE_SEG_CHANNEL">"1seg_channel"</string>
+    <!-- Extras end-->
+
+    <!-- CA Menu -->
+    <string name="STR_CA_MENU_TITLE">Installation > CA Information</string>
+    <string name="STR_LOADER_INFO">Loader Information</string>
+    <string name="STR_IRD_INFO">IRD Information</string>
+    <string name="STR_CA_INFO">CA Information</string>
+
+    <!--LoaderInfo-->
+    <string name="STR_LOADER_INFORMATION_TITLE">Installation > CA Information > Loader Information</string>
+    <string name="str_Hardware_version">Hardware</string>
+    <string name="str_loader_version">Loader Version</string>
+    <string name="str_loader_sequence_number">Load Sequence Number</string>
+    <string name="str_loader_build_time">Loader Build Time</string>
+
+    <!--CA Info-->
+    <string name="STR_CA_INFORMATION_TITLE">Installation > CA Information > CA Information</string>
+    <string name="str_ca_status">CA Status</string>
+    <string name="str_auth">Auth</string>
+    <string name="str_deauth">Deauth</string>
+    <string name="str_ecm">ECM</string>
+    <string name="str_emm">EMM</string>
+
+    <!--CA Mail-->
+    <string name="STR_MAIL_TITLE">Setting > Timer</string>
+    <string name="STR_MAIL_UUID">UUID</string>
+    <string name="STR_MAIL_NO">NO.</string>
+    <string name="STR_MAIL">Mail</string>
+    <string name="STR_READ">Read</string>
+    <string name="STR_UNREAD">UnRead</string>
+    <string name="STR_CONNECT_DATABASE_FAIL">Connect DataBase Fail !!!</string>
+    <string name="STR_NO_MAIL">No Mail</string>
+
+
+    <!--IRD Info-->
+    <string name="STR_IRD_INFORMATION_TITLE">Installation > CA Information > IRD Information</string>
+    <string name="str_ird_sw">IRD SW</string>
+    <string name="str_build_date">Build Date</string>
+    <string name="str_chip_id">Chip ID</string>
+    <string name="str_sn">SN</string>
+    <string name="str_ca_version">CA Version</string>
+    <string name="str_sc_number">SC Number</string>
+    <string name="str_pairing_status">Pairing Status</string>
+    <string name="str_purse">Purse</string>
+    <string name="str_group_m">Group M</string>
+
+    <string name="STR_LOCATION_INFO">Location Info</string>
+
+    <string name="STR_VMX_OTA_TITLE">Service > OTA Software Update</string>
+    <string name="str_ca_msg">CA info</string>
+    <string name="str_ota_start">Upgrading!!Don\'t remove power</string>
+    <string name="str_ota_fail">OTA Fail...</string>
+    <string name="str_ota_user_msg">We have a software upgrade. Just dial the OK button on the ABC-TVB remote control. The upgrade may take 10-20 minutes to enjoy watching. Thanks!</string>
+    <string name="str_ota_sw_cant_find">Software can\'t find.</string>
+    <string name="str_ota_sw_is_the_last_version">Software is the latest version.</string>
+    <string name="str_ota_hw_err">Hardware error.</string>
+    <string name="str_ota_no_signal">No Signal.</string>
+    <string name="str_ota_unknown_err">Unknown error.</string>
+
+    <string name="STR_AVAILABLE_CREDIT">Available credit :</string>
+    <string name="STR_COST_OF_EVENT">Cost of event :</string>
+
+    <string name="STR_CARD_IN">Card In</string>
+    <string name="STR_CARD_OUT">Card Out</string>
+    <string name="STR_CARD_HWERR">Hardware Error</string>
+
+
+    <string name="STR_E16_TOP_TEXT">#B#EXCLUSIVE CHANNELS*Activate Cinemo,Yey, DZMM Teleradyo &#038; Knnowledge Channel*using ABS-CBNmobile*#B#Text ACTIVATE #ID# &#060;CITY&#047;TOWN&#062; to 23661</string>
+    <string name="STR_E16_BOT_TEXT">#B#KBO CHANNEL*Subscribe to KBO using ABS-CBNmobile load*#B#Text KBO30 &#060;airing date&#062; #ID# to 2131*For available dates and movies, text KBO30 LIST to 2131</string>
+
+    <string name="STR_EWBS1_BOT_TEXT">Emergency Alert or Information tungkol sa paparating*na kalamidad o sakuna sa ating bansa. #ID# test1234* test AAA* testBBB </string>
+    <string name="STR_EWBS1_TOP_TEXT">#B#Test CCC*TestDDD*ito po ay ang Emergency Warning System ng*ABS-CBN TVplus na may kakayanang magbigay ng</string>
+    <string name="STR_EWBS0_BOT_TEXT">SA PAPARATING NA KALAMIDAD.**Go to TVplus Tambayan for more info.*Press AUD button on your TVplus remote</string>
+    <string name="STR_EWBS0_TOP_TEXT">#B#PAALALA***MAGHANDA AT MAG-INGAT</string>
+
+
+    <string name="STR_BOX_ID">Box ID</string>
+    <string name="STR_VIRTUAL_NO">Virtual NO</string>
+
+    <string name="STR_PIN_VERIFIED">PinVerified</string>
+    <string name="STR_PIN_CHANGE">PinChanged</string>
+    <string name="STR_PIN_FAILURE">PinFailure</string>
+    <string name="STR_PIN_BLOCK">PinBlocked</string>
+    <string name="STR_PIN_MAY_NOT_BE_CHANGE">PinMayNotBeChanged</string>
+    <string name="STR_PIN_MAY_NOT_BE_PASSED">PinMayNotBeBypassed</string>
+    <string name="STR_PIN_BAD_INDEX">PinBadIndex</string>
+    <string name="STR_PIN_BAD_LENGTH">PinBadLength</string>
+    <string name="STR_PIN_NOT_ENOUGH_PURSE">PinNotEnoughPurse</string>
+    <string name="STR_PIN_GENERAL_ERROR">PinGeneralError</string>
+    <string name="STR_PLEASE_SELECT_YOUR_PROVINCE_CITY_FIRST">Please select your Province/City first!</string>
+    <string name="STR_COUNTRY">Country</string>
+    <string name="STR_WIDE_AREA_ZONE">Wide Area Zone</string>
+    <string name="STR_REGION">Region</string>
+    <string name="STR_PROVINCE_CITY">Province/City</string>
+    <string name="STR_PHILIPPINES">Philippines</string>
+    <string name="STR_LOCATION_SETTINGS_TITTLE">Setting > Location</string>
+
+    <string name="STR_LUZON">LUZON</string>
+    <string name="STR_CAR">CAR</string>
+    <string name="STR_ABRA">Abra</string>
+    <string name="STR_AGUSAN_DEL_NORTE">Agusan del Norte</string>
+    <string name="STR_AGUSAN_DEL_SUR">Agusan del Sur</string>
+    <string name="STR_AKLAN">Aklan</string>
+    <string name="STR_ALBAY">Albay</string>
+    <string name="STR_ANGELES">Angeles</string>
+    <string name="STR_ANTIQUE">Antique</string>
+    <string name="STR_APAYAO">Apayao</string>
+    <string name="STR_AURORA">Aurora</string>
+    <string name="STR_BACOLOD">Bacolod</string>
+    <string name="STR_BAGUIO">Baguio</string>
+    <string name="STR_BASILAN">Basilan</string>
+    <string name="STR_BATAAN">Bataan</string>
+    <string name="STR_BATANES">Batanes</string>
+    <string name="STR_BATANGAS">Batangas</string>
+    <string name="STR_BENGUET">Benguet</string>
+    <string name="STR_BILIRAN">Biliran</string>
+    <string name="STR_BOHOL">Bohol</string>
+    <string name="STR_BUKIDNON">Bukidnon</string>
+    <string name="STR_BULACAN">Bulacan</string>
+    <string name="STR_BUTUAN">Butuan</string>
+    <string name="STR_CAGAYAN">Cagayan</string>
+    <string name="STR_CAGAYAN_DE_ORO">Cagayan de Oro</string>
+    <string name="STR_CALOOCAN">Caloocan</string>
+    <string name="STR_CAMARINES_NORTE">Camarines Norte</string>
+    <string name="STR_CAMARINES_SUR">Camarines Sur</string>
+    <string name="STR_CAMIGUIN">Camiguin</string>
+    <string name="STR_CAPIZ">Capiz</string>
+    <string name="STR_CATANDUANES">Catanduanes</string>
+    <string name="STR_CAVITE">Cavite</string>
+    <string name="STR_CEBU">Cebu</string>
+    <string name="STR_CEBU_CITY">Cebu City</string>
+    <string name="STR_COMPOSTELA_VALLEY">Compostela Valley</string>
+    <string name="STR_COTABATO">Cotabato</string>
+    <string name="STR_COTABATO_CITY">Cotabato City</string>
+    <string name="STR_DAVAO_CITY">Davao City</string>
+    <string name="STR_DAVAO_DEL_NORTE">Davao del Norte</string>
+    <string name="STR_DAVAO_DEL_SUR">Davao del S ur</string>
+    <string name="STR_DAVAO_ORIENTAL">Davao Oriental</string>
+    <string name="STR_DINAGAT_ISLANDS">Dinagat Islands</string>
+    <string name="STR_EASTERN_SAMAR">Eastern Samar</string>
+    <string name="STR_GENERAL_SANTOS">General Santos</string>
+    <string name="STR_GUIMARAS">Guimaras</string>
+    <string name="STR_IFUGAO">Ifugao</string>
+    <string name="STR_ILIGAN">Iligan</string>
+    <string name="STR_ILOCOS_NORTE">Ilocos Norte</string>
+    <string name="STR_ILOCOS_SUR">Ilocos Sur</string>
+    <string name="STR_ILOILO">Iloilo</string>
+    <string name="STR_ILOILO_CITY">Iloilo City</string>
+    <string name="STR_ISABELA">Isabela</string>
+    <string name="STR_ISABELA_CITY">Isabela City</string>
+    <string name="STR_KALINGA">Kalinga</string>
+    <string name="STR_LA_UNION">La Union</string>
+    <string name="STR_LAGUNA">Laguna</string>
+    <string name="STR_LANAO_DEL_NORTE">Lanao del Norte</string>
+    <string name="STR_LANAO_DEL_SUR">Lanao del Sur</string>
+    <string name="STR_LAPU_LAPU">Lapu Lapu</string>
+    <string name="STR_LAS_PINAS">Las Piñas</string>
+    <string name="STR_LEYTE">Leyte</string>
+    <string name="STR_LUCENA">Lucena</string>
+    <string name="STR_MAGUINDANAO">Maguindanao</string>
+    <string name="STR_MAKATI">Makati</string>
+    <string name="STR_MALABON">Malabon</string>
+    <string name="STR_MANDALUYONG">Mandaluyong</string>
+    <string name="STR_MANILA">Manila</string>
+    <string name="STR_MARIKINA">Marikina</string>
+    <string name="STR_MARINDUQUE">Marinduque</string>
+    <string name="STR_MASBATE">Masbate</string>
+    <string name="STR_MISAMIS_OCCIDENTAL">Misamis Occidental</string>
+    <string name="STR_MISAMIS_ORIENTAL">Misamis Oriental</string>
+    <string name="STR_MT_PROVINCE">Mt. Province</string>
+    <string name="STR_MUNTINLUPA">Muntinlupa</string>
+    <string name="STR_NAGA">Naga</string>
+    <string name="STR_NAVOTAS">Navotas</string>
+    <string name="STR_NEGROS_OCCIDENTAL">Negros Occidental</string>
+    <string name="STR_NEGROS_ORIENTAL">Negros Oriental</string>
+    <string name="STR_NORTHERN_SAMAR">Northern Samar</string>
+    <string name="STR_NUEVA_ECIJA">Nueva Ecija</string>
+    <string name="STR_NUEVA_VIZCAYA">Nueva Vizcaya</string>
+    <string name="STR_OCCIDENTAL_MINDORO">Occidental Mindoro</string>
+    <string name="STR_OLONGAPO">Olongapo</string>
+    <string name="STR_ORIENTAL_MINDORO">Oriental Mindoro</string>
+    <string name="STR_ORMOC">Ormoc</string>
+    <string name="STR_PALAWAN">Palawan</string>
+    <string name="STR_PAMPANGA">Pampanga</string>
+    <string name="STR_PANGASINAN">Pangasinan</string>
+    <string name="STR_PARANAQUE">Parañaque</string>
+    <string name="STR_PASAY">Pasay</string>
+    <string name="STR_PASIG">Pasig</string>
+    <string name="STR_PATEROS">Pateros</string>
+    <string name="STR_PUERTO_PRINCESA">Puerto Princesa</string>
+    <string name="STR_QUEZON">Quezon</string>
+    <string name="STR_QUEZON_CITY">Quezon City</string>
+    <string name="STR_QUIRINO">Quirino</string>
+    <string name="STR_RIZAL">Rizal</string>
+    <string name="STR_ROMBLON">Romblon</string>
+    <string name="STR_RISAMARZAL">RiSamarzal</string>
+    <string name="STR_SAN_JUAN">San Juan</string>
+    <string name="STR_SANTIAGO">Santiago</string>
+    <string name="STR_SARANGGANI">Saranggani</string>
+    <string name="STR_WIQUIJOR">Siquijor</string>
+    <string name="STR_SORSOGON">Sorsogon</string>
+    <string name="STR_SOUTH_COTABATO">South Cotabato</string>
+    <string name="STR_SOUTHERN_LEYTE">Southern Leyte</string>
+    <string name="STR_SULTAN_KUDARAT">Sultan Kudarat</string>
+    <string name="STR_SULU">Sulu</string>
+    <string name="STR_SURIGAO_DEL_NORTE">Surigao del Norte</string>
+    <string name="STR_SURIGAO_DEL_SUR">Surigao del Sur</string>
+    <string name="STR_TACLOBAN">Tacloban</string>
+    <string name="STR_TAGUIG">Taguig</string>
+    <string name="STR_TARLAC">Tarlac</string>
+    <string name="STR_TAWI_TAWI">Tawi-Tawi</string>
+    <string name="STR_VALENZUELA">Valenzuela</string>
+    <string name="STR_ZAMBALES">Zambales</string>
+    <string name="STR_ZAMBOANGA_CITY">Zamboanga City</string>
+    <string name="STR_ZAMBOANGA_DEL_NORTE">Zamboanga del Norte</string>
+    <string name="STR_ZAMBOANGA_DEL_SUR">Zamboanga del Sur</string>
+    <string name="STR_ZAMBOANGA_SIBUGAY">Zamboanga Sibugay</string>
+    <string name="STR_ALL_CITYS_OF_THE_PHILIPPINES">All citys of the Philippines</string>
+    <string name="STR_ALL_CITY_OF_LUZON">All citys of LUZON</string>
+    <string name="STR_ALL_CITYS_OF_NCR">All citys of NCR</string>
+    <string name="STR_ALL_CITIES_OF_CAR">All cities of CAR</string>
+    <string name="STR_ALL_CITIES_OF_LLOCOS_REGION">All cities of llocos Region</string>
+    <string name="STR_ALL_CITIES_OF_CAGAYAN_VALLEY">All cities of Cagayan Valley</string>
+    <string name="STR_ALL_CITIES_OF_CENTRAL_LUZON">All cities of Central Luzon</string>
+    <string name="STR_ALL_CITIES_OF_CALABARZON">All cities of CALABARZON</string>
+    <string name="STR_ALL_CITIES_OF_MIMAROPA">All cities of MIMAROPA</string>
+    <string name="STR_ALL_CITIES_OF_BICOL_REGION">All cities of Bicol Region</string>
+    <string name="STR_ALL_CITIES_OF_VISAYAS">All citys of VISAYAS</string>
+    <string name="STR_ALL_CITIES_OF_WESTERN_VISAYAS">All cities of Western Visayas</string>
+    <string name="STR_ALL_CITIES_OF_CENTRAL_VISAYAS">All cities of Central Visayas</string>
+    <string name="STR_ALL_CITIES_OF_EASTERN_VISAYAS">All cities of Eastern Visayas</string>
+    <string name="STR_ALL_CITIES_OF_MINDANAO">All cities of MINDANAO</string>
+    <string name="STR_ALL_CITIES_OF_ZAMBOANGA_PENINSULA">All cities of Zamboanga Peninsula</string>
+    <string name="STR_ALL_CITIES_OF_NORTHERN_MINDANAO">All cities of Northern Mindanao</string>
+    <string name="STR_ALL_CITIES_OF_DAVAO_REGION">All cities of Davao Region</string>
+    <string name="STR_ALL_CITIES_OF_SOCCSKSARGEN">All cities of SOCCSKSARGEN</string>
+    <string name="STR_ALL_CITIES_OF_CARAGA">All cities of CARAGA</string>
+    <string name="STR_ALL_CITIES_OF_REGION_ARMM">All cities of REGION ARMM</string>
+    <string name="STR_ALL_CITIES_OF_UNDEFINED">Undefined</string>
+
+
+    <array name="STR_ARRAY_CITY_LIST" translatable="false">
+        <item>@string/STR_ABRA</item>
+        <item>@string/STR_AGUSAN_DEL_NORTE</item>
+        <item>@string/STR_AGUSAN_DEL_SUR</item>
+        <item>@string/STR_AKLAN</item>
+        <item>@string/STR_ALBAY</item>
+        <item>@string/STR_ANGELES</item>
+        <item>@string/STR_ANTIQUE</item>
+        <item>@string/STR_APAYAO</item>
+        <item>@string/STR_AURORA</item>
+        <item>@string/STR_BACOLOD</item>
+        <item>@string/STR_BAGUIO</item>
+        <item>@string/STR_BASILAN</item>
+        <item>@string/STR_BATAAN</item>
+        <item>@string/STR_BATANES</item>
+        <item>@string/STR_BATANGAS</item>
+        <item>@string/STR_BENGUET</item>
+        <item>@string/STR_BILIRAN</item>
+        <item>@string/STR_BOHOL</item>
+        <item>@string/STR_BUKIDNON</item>
+        <item>@string/STR_BULACAN</item>
+        <item>@string/STR_BUTUAN</item>
+        <item>@string/STR_CAGAYAN</item>
+        <item>@string/STR_CAGAYAN_DE_ORO</item>
+        <item>@string/STR_CALOOCAN</item>
+        <item>@string/STR_CAMARINES_NORTE</item>
+        <item>@string/STR_CAMARINES_SUR</item>
+        <item>@string/STR_CAMIGUIN</item>
+        <item>@string/STR_CAPIZ</item>
+        <item>@string/STR_CATANDUANES</item>
+        <item>@string/STR_CAVITE</item>
+        <item>@string/STR_CEBU</item>
+        <item>@string/STR_CEBU_CITY</item>
+        <item>@string/STR_COMPOSTELA_VALLEY</item>
+        <item>@string/STR_COTABATO</item>
+        <item>@string/STR_COTABATO_CITY</item>
+        <item>@string/STR_DAVAO_CITY</item>
+        <item>@string/STR_DAVAO_DEL_NORTE</item>
+        <item>@string/STR_DAVAO_DEL_SUR</item>
+        <item>@string/STR_DAVAO_ORIENTAL</item>
+        <item>@string/STR_DINAGAT_ISLANDS</item>
+        <item>@string/STR_EASTERN_SAMAR</item>
+        <item>@string/STR_GENERAL_SANTOS</item>
+        <item>@string/STR_GUIMARAS</item>
+        <item>@string/STR_IFUGAO</item>
+        <item>@string/STR_ILIGAN</item>
+        <item>@string/STR_ILOCOS_NORTE</item>
+        <item>@string/STR_ILOCOS_SUR</item>
+        <item>@string/STR_ILOILO</item>
+        <item>@string/STR_ILOILO_CITY</item>
+        <item>@string/STR_ISABELA</item>
+        <item>@string/STR_ISABELA_CITY</item>
+        <item>@string/STR_KALINGA</item>
+        <item>@string/STR_LA_UNION</item>
+        <item>@string/STR_LAGUNA</item>
+        <item>@string/STR_LANAO_DEL_NORTE</item>
+        <item>@string/STR_LANAO_DEL_SUR</item>
+        <item>@string/STR_LAPU_LAPU</item>
+        <item>@string/STR_LAS_PINAS</item>
+        <item>@string/STR_LEYTE</item>
+        <item>@string/STR_LUCENA</item>
+        <item>@string/STR_MAGUINDANAO</item>
+        <item>@string/STR_MAKATI</item>
+        <item>@string/STR_MALABON</item>
+        <item>@string/STR_MANDALUYONG</item>
+        <item>@string/STR_MANILA</item>
+        <item>@string/STR_MARIKINA</item>
+        <item>@string/STR_MARINDUQUE</item>
+        <item>@string/STR_MASBATE</item>
+        <item>@string/STR_MISAMIS_OCCIDENTAL</item>
+        <item>@string/STR_MISAMIS_ORIENTAL</item>
+        <item>@string/STR_MT_PROVINCE</item>
+        <item>@string/STR_MUNTINLUPA</item>
+        <item>@string/STR_NAGA</item>
+        <item>@string/STR_NAVOTAS</item>
+        <item>@string/STR_NEGROS_OCCIDENTAL</item>
+        <item>@string/STR_NEGROS_ORIENTAL</item>
+        <item>@string/STR_NORTHERN_SAMAR</item>
+        <item>@string/STR_NUEVA_ECIJA</item>
+        <item>@string/STR_NUEVA_VIZCAYA</item>
+        <item>@string/STR_OCCIDENTAL_MINDORO</item>
+        <item>@string/STR_OLONGAPO</item>
+        <item>@string/STR_ORIENTAL_MINDORO</item>
+        <item>@string/STR_ORMOC</item>
+        <item>@string/STR_PALAWAN</item>
+        <item>@string/STR_PAMPANGA</item>
+        <item>@string/STR_PANGASINAN</item>
+        <item>@string/STR_PARANAQUE</item>
+        <item>@string/STR_PASAY</item>
+        <item>@string/STR_PASIG</item>
+        <item>@string/STR_PATEROS</item>
+        <item>@string/STR_PUERTO_PRINCESA</item>
+        <item>@string/STR_QUEZON</item>
+        <item>@string/STR_QUEZON_CITY</item>
+        <item>@string/STR_QUIRINO</item>
+        <item>@string/STR_RIZAL</item>
+        <item>@string/STR_ROMBLON</item>
+        <item>@string/STR_RISAMARZAL</item>
+        <item>@string/STR_SAN_JUAN</item>
+        <item>@string/STR_SANTIAGO</item>
+        <item>@string/STR_SARANGGANI</item>
+        <item>@string/STR_WIQUIJOR</item>
+        <item>@string/STR_SORSOGON</item>
+        <item>@string/STR_SOUTH_COTABATO</item>
+        <item>@string/STR_SOUTHERN_LEYTE</item>
+        <item>@string/STR_SULTAN_KUDARAT</item>
+        <item>@string/STR_SULU</item>
+        <item>@string/STR_SURIGAO_DEL_NORTE</item>
+        <item>@string/STR_SURIGAO_DEL_SUR</item>
+        <item>@string/STR_TACLOBAN</item>
+        <item>@string/STR_TAGUIG</item>
+        <item>@string/STR_TARLAC</item>
+        <item>@string/STR_TAWI_TAWI</item>
+        <item>@string/STR_VALENZUELA</item>
+        <item>@string/STR_ZAMBALES</item>
+        <item>@string/STR_ZAMBOANGA_CITY</item>
+        <item>@string/STR_ZAMBOANGA_DEL_NORTE</item>
+        <item>@string/STR_ZAMBOANGA_DEL_SUR</item>
+        <item>@string/STR_ZAMBOANGA_SIBUGAY</item>
+        <item>@string/STR_ALL_CITYS_OF_THE_PHILIPPINES</item>
+        <item>@string/STR_ALL_CITY_OF_LUZON</item>
+        <item>@string/STR_ALL_CITYS_OF_NCR</item>
+        <item>@string/STR_ALL_CITIES_OF_CAR</item>
+        <item>@string/STR_ALL_CITIES_OF_LLOCOS_REGION</item>
+        <item>@string/STR_ALL_CITIES_OF_CAGAYAN_VALLEY</item>
+        <item>@string/STR_ALL_CITIES_OF_CENTRAL_LUZON</item>
+        <item>@string/STR_ALL_CITIES_OF_CALABARZON</item>
+        <item>@string/STR_ALL_CITIES_OF_MIMAROPA</item>
+        <item>@string/STR_ALL_CITIES_OF_BICOL_REGION</item>
+        <item>@string/STR_ALL_CITIES_OF_VISAYAS</item>
+        <item>@string/STR_ALL_CITIES_OF_WESTERN_VISAYAS</item>
+        <item>@string/STR_ALL_CITIES_OF_CENTRAL_VISAYAS</item>
+        <item>@string/STR_ALL_CITIES_OF_EASTERN_VISAYAS</item>
+        <item>@string/STR_ALL_CITIES_OF_MINDANAO</item>
+        <item>@string/STR_ALL_CITIES_OF_ZAMBOANGA_PENINSULA</item>
+        <item>@string/STR_ALL_CITIES_OF_NORTHERN_MINDANAO</item>
+        <item>@string/STR_ALL_CITIES_OF_DAVAO_REGION</item>
+        <item>@string/STR_ALL_CITIES_OF_SOCCSKSARGEN</item>
+        <item>@string/STR_ALL_CITIES_OF_CARAGA</item>
+        <item>@string/STR_ALL_CITIES_OF_REGION_ARMM</item>
+        <!--<item>@string/STR_ALL_CITIES_OF_UNDEFINED</item> -->
+    </array>
+
+    <string name="STR_VMX_CHBLOCK_MSG">Channel Blocked.\nPlease call ABS-CBN TV plus hotline to unblock all channels</string>
+    <string name="STR_ERROR">Error</string>
+    <string name="STR_ALL_CITIES_OF">All cities of </string>
+
+
+    <!-- // jim 2018/09/27 fix home key broadcast timming cause crash when switch third part app and DTVPlayer  -->
+    <string name="STR_INTERNAL_BROADCAST_HOMEKEY">pesi.Internal.broadcast.action.dectectHomeKey</string>
+    <!-- //Lily add loader dtv test app-->
+    <string name="STR_LOADER_DTV_LOADER_STATUS_PAGE">Loader Status</string>
+    <string name="STR_LOADER_DTV_LOADER_PARAMETERS_PAGE">Loader Parameters</string>
+    <string name="STR_LOADER_DTV_USB_UPGRADE_PAGE">USB Upgrade</string>
+    <string name="STR_LOADER_DTV_OTA_UPGRADE_PAGE">OTA Upgrade</string>
+    <string name="STR_LOADER_DTV_SECURE_SETTING_PAGE">Secure Chipset Status</string>
+
+    <string name="STR_LOADER_DTV_CHIPSET_ID">Secure Chipset ID</string>
+    <string name="STR_LOADER_DTV_SERIAL_NUMBER">Serial Number</string>
+    <string name="STR_LOADER_DTV_SW_VERSION">Software Version</string>
+
+    <string name="STR_LOADER_DTV_CHANNEL">Frequency(MHz)</string>
+    <string name="STR_LOADER_DTV_BANDWIDTH">Bandwidth(MHz)</string>
+    <string name="STR_LOADER_DTV_QAM">QAM</string>
+    <string name="STR_LOADER_DTV_SYMBOL_RATE">Symbol Rate</string>
+    <string name="STR_LOADER_DTV_PID">Download PID</string>
+    <string name="STR_LOADER_DTV_SEARCH">Search</string>
+    <string name="STR_LOADER_DTV_SEARCHING">Searching, please wait ...</string>
+    <string name="STR_LOADER_DTV_EDIT_HINT"> Use numeric key to set value and ▲▼ to confirm and change focus.</string>
+    <string name="STR_LOADER_DTV_SELECT_HINT">Use ◀▶ to change selection and ▲▼ to change focus.</string>
+    <string name="STR_LOADER_DTV_SEARCH_HINT">Use OK to start search download service.</string>
+    <string name="STR_LOADER_DTV_WAIT">Searching, all parameters can not be changed. Please wait a few seconds.</string>
+    <string name="STR_LOADER_DTV_NO_LOCK">Status : Tuner no lock. </string>
+    <string name="STR_LOADER_DTV_SERVICE_FOUND">Status : Download Service Found. Please go "OTA Upgrade" to trigger download.</string>
+    <string name="STR_LOADER_DTV_NOT_FOUND">Status : Download Service Not Found.</string>
+
+    <string name="STR_LOADER_DTV_USB_MSG">Set USB Download Flag and Start High Level Initial Download ?</string>
+    <string name="STR_LOADER_DTV_OTA_MSG">Set Over The Air Download Flag and Start High Level Initial Download ?</string>
+    <string name="STR_LOADER_DTV_OTA_REJECT">Download service not found. Please go "Download Parameters" to search download service.</string>
+    <string name="STR_LOADER_DTV_UPDATE_FILE">DDN82_usb.bin</string>
+    <string name="STR_LOADER_DTV_OK">OK</string>
+    <string name="STR_LOADER_DTV_EXIT">Exit</string>
+
+    <string name="STR_LOADER_DTV_BOOT_FUSE">Secure Boot Fuse</string>
+    <string name="STR_LOADER_DTV_ENABLE">Enable</string>
+    <string name="STR_LOADER_DTV_DISABLE">Disable</string>
+    <string name="STR_LOADER_DTV_BLOW">BLOW</string>
+    <string name="STR_LOADER_DTV_OPEN">Open</string>
+    <string name="STR_LOADER_DTV_PROTECTED">Protected</string>
+    <string name="STR_LOADER_DTV_CLOSE">Close</string>
+    <string name="STR_LOADER_DTV_BLOW_MSG">Do you want to set jtag protected mode ?</string>
+    <string name="STR_LOADER_DTV_PID_WRONG">Illegal download pid! The input range should be 32-8190.</string>
+    <string name="STR_LOADER_DTV_SYMBOL_WRONG">Illegal symbol rate! The input range should be 100-8000.</string>
+    <string name="STR_LOADER_DTV_FREQ_WRONG">Illegal frequency! The input range should be 100-900.</string>
+    <string name="STR_LOADER_DTV_USB_UPGRADE_FAILED">USB Upgrade failed.</string>
+    <string name="STR_LOADER_DTV_OTA_UPGRADE_FAILED">OTA Upgrade failed.</string>
+
+    <string-array name="STR_LOADER_DTV_BANDWIDTH_ARY">
+        <item>6 MHz</item>
+        <item>7 MHz</item>
+        <item>8 MHz</item>
+    </string-array>
+
+    <string-array name="STR_LOADER_DTV_QAM_ARY">
+        <item>16  QAM</item>
+        <item>32  QAM</item>
+        <item>64  QAM</item>
+        <item>128 QAM </item>
+        <item>256 QAM </item>>
+    </string-array>
+
+    <string name="STR_SLEEP_IN">Sleep in</string>
+    <string name="STR_MINUTES">minutes</string>
+
+    <!--MTest-->
+    <string name="str_mtest_ver">Version:20201225-001-Sec</string>
+    <string name="str_model">Model:CDNA9-1319-ATV</string>
+    <string name="str_test_item_ntsc_pal_info">NTSC/PAL Information Test</string>
+    <string name="str_test_item_front_panel_key">Front-Panel Key</string>
+    <string name="str_test_item_seven_segment">7 Segment ON/OFF</string>
+    <string name="str_test_item_led">LED ON/OFF</string>
+    <string name="str_test_item_slow_blanking">Slow Blanking(4:3/16:9/TV)</string>
+    <string name="str_test_item_fast_blanking">Fast Blanking(CVBSRGB)</string>
+    <string name="str_test_item_antenna5v">Antenna 5V ON/OFF</string>
+    <string name="str_test_item_lnb">LNB ON/OFF</string>
+    <string name="str_test_item_diseqc">DiseqC 1.x/2.0</string>
+    <string name="str_test_item_modem">Modem Test</string>
+    <string name="str_test_item_cable_modem">Cable Modem Test</string>
+    <string name="str_test_item_com_port">COM Port Test</string>
+    <string name="str_test_item_smartcard">Smart Card Test</string>
+    <string name="str_test_item_ci">CI Test</string>
+    <string name="str_test_item_rf_modulator">RF Modulator</string>
+    <string name="str_test_item_usb">USB Test</string>
+    <string name="str_test_item_ethernet">Ethernet Test</string>
+    <string name="str_test_item_hdd">HDD Test(PVR)</string>
+    <string name="str_test_item_wifi">WIFI Test</string>
+    <string name="str_test_item_power_saving">Power Saving</string>
+    <string name="str_test_item_eeprom">EEPROM Test</string>
+    <string name="str_test_item_oob">OOB Test</string>
+    <string name="str_test_item_moca">Moca Test</string>
+    <string name="str_test_item_light_sensor">Light Sensor Test</string>
+    <string name="str_test_item_bluetooth">BlueTooth Test</string>
+    <string name="str_test_item_buzzer">Buzzer ON/OFF</string>
+    <string name="str_test_item_microphone">Microphone Test</string>
+    <string name="str_test_item_sdcard">SD Card Test</string>
+    <string name="str_test_item_usb1">USB 1 Test</string>
+    <string name="str_test_item_usb2">USB 2 Test</string>
+    <string name="str_test_item_hdcp1x">HDCP 1.x Test</string>
+    <string name="str_test_item_hdcp2x">HDCP 2.2 Test</string>
+    <string name="str_front_panel_standby">Front-Panel Power Key</string>
+    <string name="str_front_panel_ch_up">Front-Panel CH+ Key</string>
+    <string name="str_front_panel_ch_down">Front-Panel CH- Key</string>
+    <string name="str_front_panel_wps">Front-Panel WPS Key</string>
+    <string name="str_front_panel_reset">Front-Panel Reset Key</string>
+    <string name="str_osd_show_display">OSD Hide/Display</string>
+    <string name="str_ota">OTA</string>
+    <string name="str_qe">QE</string>
+    <string name="str_clean">Clean</string>
+    <string name="str_pass">Pass</string>
+    <string name="str_fail">Fail</string>
+    <string name="str_wait_card_out">Wait card out</string>
+    <string name="str_search">Search</string>
+    <string name="str_ledon_red_or_ora">LED ON Orange/Red </string>
+    <string name="str_ledon_ora">LED ON Orange</string>
+    <string name="str_ledon_green">LED ON Green/Blue</string>
+    <string name="str_ledon_red">LED ON Red</string>
+    <string name="str_ledoff">LED OFF</string>
+    <string name="str_ledon">LED ON</string>
+    <string name="str_num_0">0</string>
+    <string name="str_num_1">1</string>
+    <string name="str_num_2">2</string>
+    <string name="str_num_3">3</string>
+    <string name="str_num_4">4</string>
+    <string name="str_num_5">5</string>
+    <string name="str_ethernet_activity_ip">239.255.100.100:1234</string>
+    <string name="str_power_saving_activity_power_saving">Power Saving</string>
+    <string name="str_power_saving_activity_booting_set">Booting Set</string>
+    <string name="str_power_saving_activity_right_now">Right Now</string>
+    <string name="str_power_saving_activity_no_setting">No Setting</string>
+    <string name="str_power_saving_activity_start_power_saving">Start Power Saving</string>
+    <string name="str_pair">Pair</string>
+    <string name="str_ntsc_pal_activity_ip">udp://@:1234</string>
+    <string name="str_frequency">Freq</string>
+    <string name="str_symbol_rate">SR</string>
+    <string name="str_qam">QAM</string>
+    <string name="str_hierarchy">Hierarchy</string>
+    <string name="str_high">High</string>
+    <string name="str_low">Low</string>
+    <string name="str_bandwidth">Bandwidth</string>
+    <string name="str_clear_tp">Clear TP</string>
+    <string name="str_delete">Delete</string>
+    <string name="str_rf1">RF1</string>
+    <string name="str_rf2">RF2</string>
+    <string name="str_port_a">Port A</string>
+    <string name="str_port_b">Port B</string>
+    <string name="str_port_c">Port C</string>
+    <string name="str_port_d">Port D</string>
+    <string name="str_gluid">GLUID</string>
+    <string name="str_generation_s2">S2</string>
+    <string name="str_lnb_config_0">22K ON + 13V</string>
+    <string name="str_lnb_config_1">22K ON + 18V</string>
+    <string name="str_lnb_config_2">22K OFF + 13V</string>
+    <string name="str_lnb_config_3">22K OFF + 18V</string>
+    <string name="str_lnb_config_4">LNB OFF</string>
+    <string name="str_diseqc_1x">DiseqC 1.X</string>
+    <string name="str_diseqc_20">DiseqC 2.0</string>
+    <string name="str_mount_ok">Mount OK</string>
+    <string name="str_mount_fail">Mount Fail</string>
+    <string name="str_antenna_on">Antenna 5V ON</string>
+    <string name="str_antenna_off">Antenna 5V OFF</string>
+    <string name="str_buzzer_on">Buzzer ON</string>
+    <string name="str_buzzer_off">Buzzer OFF</string>
+    <string name="str_mic">MIC</string>
+    <string name="str_mic_l">MIC-L</string>
+    <string name="str_mic_r">MIC-R</string>
+    <string name="str_alc">ALC</string>
+    <string name="str_mute">Mute</string>
+    <string name="str_db">dB</string>
+    <string name="str_seven_segment_on">7 Segment On</string>
+    <string name="str_seven_segment_off">7 Segment Off</string>
+    <string name="str_split_screen">Split Screen</string>
+    <string name="str_signal_ber">BER</string>
+    <string name="str_usb_rec_rw">USB Record&amp;RW</string>
+    <string name="str_init_ch_index">CH:0</string>
+
+    <string name="str_qe_play_stop">Play/Stop</string>
+    <string name="str_format">HDD Format</string>
+    <string name="str_qe_title">QE Lab Test(PVR)</string>
+    <string name="str_qe_tuner">Tuner/IP</string>
+    <string name="str_qe_storage">Storage</string>
+    <string name="str_qe_mount_ok">Mount OK</string>
+    <string name="str_qe_mount_fail">Mount Fail</string>
+    <string name="str_qe_recording">Recording</string>
+    <string name="str_qe_playing">Playing</string>
+    <string name="str_qe_format_ok">Format OK</string>
+    <string name="str_qe_format_fail">Format Fail</string>
+    <string name="str_ota_msg_pass_all">All tests must be checked before OTA!</string>
+    <string name="str_ota_msg_pass_pctool">PCTool must be done before OTA!</string>
+    <string name="str_ota_msg_check_keys_fail">Check keys fail:</string>
+    <string name="str_ota_msg_no_error">No error</string>
+    <string name="str_ota_msg_check_csc_nuid_fail">Check CSC NUID fail!</string>
+    <string name="str_ota_msg_write_finalboot_fail">Write FinalBoot fail!</string>
+    <string name="str_ota_msg_write_bootloader_fail">Write BootLoader fail!</string>
+    <string name="str_ota_msg_write_launcher_fail">Write Launcher fail!</string>
+    <string name="str_ota_msg_set_marketsegmentid_fail">Set Market Segment ID fail!</string>
+    <string name="str_ota_msg_set_versioning_fail">Set Versioning fail!</string>
+    <string name="str_ota_msg_enable_scs_fail">Enable SCS fail!</string>
+    <string name="str_ota_msg_set_protectionlevel_fail">Set Debug Interface Protection Level fail!</string>
+    <string name="str_ota_msg_recovery_fail">Recovery fail!</string>
+    <string name="str_ota_msg_open_backup_fail">Open backup partition fail!</string>
+    <string name="str_ota_msg_backup_eth_mac_fail">Check backup eth mac fail!</string>
+    <string name="str_ota_msg_backup_hdcp1x_fail">Check backup HDCP1.x fail!</string>
+    <string name="str_ota_msg_backup_hdcp2x_tx_fail">Check backup HDCP2.x TX fail!</string>
+    <string name="str_ota_msg_backup_hdcp2x_rx_fail">Check backup HDCP2.x RX fail!</string>
+    <string name="str_ota_msg_backup_widevine_fail">Check backup widevine key fail!</string>
+    <string name="str_ota_msg_backup_device_info_fail">Check backup device info fail!</string>
+    <string name="str_ota_msg_msid_fail">FuseTool_MSID fail!</string>
+    <string name="str_ota_msg_sboot_fail">FuseTool_SBOOT fail!</string>
+    <string name="str_ota_msg_debug_pwd_sboot_fail">FuseTool_DEBUG_PWD_SBOOT fail!</string>
+    <string name="str_ota_msg_check_fuse_fail">Check fuse fail!</string>
+    <string name="str_ota_msg_check_ota_flag_fail">Check OTA flag fail!</string>
+    <string name="str_ota_msg_undefined_error">Undefined error!</string>
+
+    <array name="STR_ARRAY_OTA_RETURN_ERROR_MSG" translatable="false">
+        <item>@string/str_ota_msg_open_backup_fail</item>
+        <item>@string/str_ota_msg_backup_eth_mac_fail</item>
+        <item>@string/str_ota_msg_backup_hdcp1x_fail</item>
+        <item>@string/str_ota_msg_backup_hdcp2x_tx_fail</item>
+        <item>@string/str_ota_msg_backup_hdcp2x_rx_fail</item>
+        <item>@string/str_ota_msg_backup_widevine_fail</item>
+        <item>@string/str_ota_msg_backup_device_info_fail</item>
+        <item>@string/str_ota_msg_undefined_error</item>
+        <item>@string/str_ota_msg_undefined_error</item>
+        <item>@string/str_ota_msg_undefined_error</item>
+        <item>@string/str_ota_msg_undefined_error</item>
+        <item>@string/str_ota_msg_msid_fail</item>
+        <item>@string/str_ota_msg_sboot_fail</item>
+        <item>@string/str_ota_msg_debug_pwd_sboot_fail</item>
+        <item>@string/str_ota_msg_check_fuse_fail</item>
+        <item>@string/str_ota_msg_check_ota_flag_fail</item>
+    </array>
+
+    <!--PC Tool Connect-->
+    <string name="str_connect_pctool">Connect PC Tool</string>
+    <string name="str_write_mac_eth">Write MAC ETH</string>
+    <string name="str_write_mac_bt">Write MAC BT</string>
+    <string name="str_write_mac_wifi">Write MAC WIFI</string>
+    <string name="str_write_hdcp_1_4_TX">Write HDCP 1.4 TX</string>
+    <string name="str_write_hdcp_1_4_RX">Write HDCP 1.4 RX</string>
+    <string name="str_write_hdcp_2_2_TX">Write HDCP 2.2 TX</string>
+    <string name="str_write_hdcp_2_2_RX">Write HDCP 2.2 RX</string>
+    <string name="str_write_prime_id">Write Prime ID</string>
+    <string name="str_write_customer_sn">Write Customer SN</string>
+    <string name="str_write_chip_id">Write Chip ID</string>
+    <string name="str_write_drm_key">Write DRM Key</string>
+    <string name="str_write_widevine_key">Write Widevine Key</string>
+    <string name="str_write_playready_key">Write Playready Key</string>
+    <string name="str_write_attestion_key">Write Attestion Key</string>
+    <string name="str_write_hdcp_1_4_key">Write HDCP 1.4 Key</string>
+    <string name="str_write_nagra_csc_pk">Write CSC and PK</string>
+    <string name="str_write_android_sn">Write SN</string>
+
+    <string name="str_read_mac_eth">Read MAC ETH</string>
+    <string name="str_read_mac_bt">Read MAC BT</string>
+    <string name="str_read_mac_wifi">Read MAC WIFI</string>
+    <string name="str_read_hdcp_1_4_TX">Read HDCP 1.4 TX</string>
+    <string name="str_read_hdcp_1_4_RX">Read HDCP 1.4 RX</string>
+    <string name="str_read_hdcp_2_2_TX">Read HDCP 2.2 TX</string>
+    <string name="str_read_hdcp_2_2_RX">Read HDCP 2.2 RX</string>
+    <string name="str_read_prime_id">Read Prime ID</string>
+    <string name="str_read_customer_sn">Read Customer SN</string>
+    <string name="str_read_chip_id">Read Chip ID</string>
+    <string name="str_read_drm_key">Read DRM Key</string>
+    <string name="str_read_csc_check_num">Read CSC Check Num</string>
+    <string name="str_read_nuid_check_num">Read NUID Check Num</string>
+    <string name="str_read_dpt_crc">Read DPT CRC</string>
+    <string name="str_read_cert_report_check_num">Read CERT REPORT Check Num</string>
+    <string name="str_read_ca_sn">Read CA SN</string>
+    <string name="str_read_csc_data_config">Read CSC DATA CONFIG</string>
+    <string name="str_read_android_sn">Read STB SN</string>
+    <string name="str_read_mtest_version">Read Mtest Version</string>
+
+    <!--PC Tool Connect Error Code-->
+    <string name="str_pctool_pass">pass</string>
+    <string name="str_pctool_fail">fail</string>
+    <string name="str_pctool_init_fail">Init Fail</string>
+    <string name="str_pctool_write_error">Write Error</string>
+    <string name="str_pctool_read_error">Read Error</string>
+    <string name="str_pctool_crc_check_fail">CRC Check Fail</string>
+    <string name="str_pctool_timeout">Timeout</string>
+    <string name="str_pctool_cmd_not_support">Cmd Not Support</string>
+    <string name="str_pctool_unknown_error">Unknown Error</string>
+
+    <!-- Pesi Launcher chnage progam -->
+    <string name="STR_CHANGE_PROGRAM_CHANNEL_ID">channel_id</string>
+    <string name="str_recommand">Recommended</string>
+    <string name="STR_OPEN_ACTIVITY">open_Activity</string>
+
+    <!-- Hidden input activity -->
+    <string name="str_hidden_input">Hidden Input</string>
+    <string name="str_hidden_input_desc_hidden_activity">Open Hidden Activity</string>
+    <string name="str_hidden_input_desc_stable_test_mode">Enable/Disable stable test mode</string>
+    <string name="str_hidden_input_desc_emi">Enable/Disable EMI test mode</string>
+    <string name="str_hidden_input_desc_mtest_all_pass">Pass all tests and write Pctool finish flag</string>
+    <string name="str_hidden_input_desc_mtest_disable_opt">Disable security when OTA</string>
+    <string name="str_hidden_input_desc_clear_wifi">Clear configured Android Wifi</string>
+    <string name="str_hidden_input_desc_hw_test">Show current hw test config</string>
+    <string name="str_hidden_input_desc_hw_copy_report_file">Copy hw test report to USB</string>
+    <string name="str_hidden_input_desc_hw_reset">Reset hw test config to default</string>
+    <string name="str_hidden_input_desc_hw_delete_report_file">Delete hw test report files and values</string>
+    <string name="str_hidden_input_desc_hw_show_help">Show hw test config help</string>
+    <string name="str_hidden_input_desc_all_item_selectable">Set all test items in menu selectable</string>
+    <string name="str_hidden_input_desc_start_power_saving">Enter power saving mode now</string>
+    <string name="str_hidden_input_desc_switch_locale">Switch locale between zh and en</string>
+    <string name="str_hidden_input_desc_durability_test">Start durability test for factory</string>
+
+    <!--Record Navigator-->
+    <string name="record_navigator" translatable="false">Record Navigator</string>
+    <string name="all_records" translatable="false">All Records</string>
+    <string name="filter_records" translatable="false">Filter Records</string>
+
+    <!-- Test Vod Stream Information -->
+    <string name="vod_present_event_id">5597</string>
+    <string name="vod_present_event_name">Vod</string>
+    <string name="vod_follow_event_id">5598</string>
+    <string name="vod_follow_event_name">Vod</string>
+
+    <!-- Youtube 中天新聞 Information -->
+    <string name="youtube_present_event_id">5599</string>
+    <string name="youtube_present_event_name">中天新聞</string>
+    <string name="youtube_follow_event_id">5600</string>
+    <string name="youtube_follow_event_name">中天新聞</string>
+
+</resources>

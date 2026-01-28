@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lo_music_rltvl_category_item_layer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/lo_music_rltvl_category_item_layer_elevation">
+    <ImageView
+        android:id="@+id/lo_music_imgv_category_item"
+        android:layout_width="@dimen/lo_music_imgv_category_item_width"
+        android:layout_height="@dimen/lo_music_imgv_category_item_height"/>
+    <FrameLayout
+        android:id="@+id/lo_music_frml_category_item"
+        android:background="@drawable/circle_audio_category_selector"
+        android:focusable="true"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="@dimen/lo_music_frml_category_item_width"
+        android:layout_height="@dimen/lo_music_frml_category_item_height"/>
+</RelativeLayout>

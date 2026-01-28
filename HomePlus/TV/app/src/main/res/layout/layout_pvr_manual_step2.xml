@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llPvrManualStep2"
+    android:layout_width="550dp"
+    android:layout_height="415dp"
+    android:background="@drawable/bg_home_1920_w"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvPvrManualStep2Mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/pvr_manual_step2_record_mode"
+        android:textColor="@color/color9fb8cbOpacity50"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgPvrManualStep2Mode"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/tvPvrManualStep2Mode"
+        app:layout_constraintTop_toBottomOf="@+id/tvPvrManualStep2Mode">
+
+        <RadioButton
+            android:id="@+id/rbtnPvrManualStep2Once"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_item2"
+            android:button="@drawable/state_record_schedule_radio_button"
+            android:buttonTint="#ffffff"
+            android:checked="true"
+            android:drawablePadding="4dp"
+            android:paddingLeft="4dp"
+            android:text="@string/pvr_manual_step2_single_time"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbtnPvrManualStep2Daily"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_item2"
+            android:button="@drawable/state_record_schedule_radio_button"
+            android:buttonTint="#ffffff"
+            android:drawablePadding="4dp"
+            android:paddingLeft="4dp"
+            android:text="@string/pvr_manual_step2_daily"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbtnPvrManualStep2Weekly"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_item2"
+            android:button="@drawable/state_record_schedule_radio_button"
+            android:buttonTint="#ffffff"
+            android:drawablePadding="4dp"
+            android:paddingLeft="4dp"
+            android:text="@string/pvr_manual_step2_weekly"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPvrManualStep2Weekly"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_below="@+id/rlReminderTitle"
+        android:layout_alignLeft="@+id/rlReminderTitle"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvPvrManualStep2Weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/pvr_manual_step2_day_of_the_week"
+            android:textColor="@color/color9fb8cbOpacity50"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="37dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp">
+
+                <Button
+                    android:id="@+id/btnPvrManualStep2Monday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_item2"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/pvr_manual_step2_monday"
+                    android:textAllCaps="false"
+                    android:textColor="@color/state_selected_white_normal_b3ffffff"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="0dp">
+                
+                <Button
+                    android:id="@+id/btnPvrManualStep2Tuesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_item2"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/pvr_manual_step2_tuesday"
+                    android:textAllCaps="false"
+                    android:textColor="@color/state_selected_white_normal_b3ffffff"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="0dp">
+                
+                <Button
+                    android:id="@+id/btnPvrManualStep2Wednesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_item2"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/pvr_manual_step2_wednesday"
+                    android:textAllCaps="false"
+                    android:textColor="@color/state_selected_white_normal_b3ffffff"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="0dp">
+
+                <Button
+                    android:id="@+id/btnPvrManualStep2Thursday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_item2"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/pvr_manual_step2_thursday"
+                    android:textAllCaps="false"
+                    android:textColor="@color/state_selected_white_normal_b3ffffff"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="0dp">
+
+                <Button
+                    android:id="@+id/btnPvrManualStep2Friday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_item2"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/pvr_manual_step2_friday"
+                    android:textAllCaps="false"
+                    android:textColor="@color/state_selected_white_normal_b3ffffff"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="0dp">
+
+                <Button
+                    android:id="@+id/btnPvrManualStep2Saturday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_item2"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/pvr_manual_step2_saturday"
+                    android:textAllCaps="false"
+                    android:textColor="@color/state_selected_white_normal_b3ffffff"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="0dp">
+
+                <Button
+                    android:id="@+id/btnPvrManualStep2Sunday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_item2"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/pvr_manual_step2_sunday"
+                    android:textAllCaps="false"
+                    android:textColor="@color/state_selected_white_normal_b3ffffff"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="37dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent" >
+
+                <CheckBox
+                    android:id="@+id/cbPvrManualStep2Monday"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/state_record_schedule_check_box"
+                    android:button="@null"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp" >
+
+                <CheckBox
+                    android:id="@+id/cbPvrManualStep2Tuesday"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/state_record_schedule_check_box"
+                    android:button="@null"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp" >
+
+                <CheckBox
+                    android:id="@+id/cbPvrManualStep2Wednesday"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/state_record_schedule_check_box"
+                    android:button="@null"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp" >
+
+                <CheckBox
+                    android:id="@+id/cbPvrManualStep2Thursday"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/state_record_schedule_check_box"
+                    android:button="@null"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp" >
+
+                <CheckBox
+                    android:id="@+id/cbPvrManualStep2Friday"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/state_record_schedule_check_box"
+                    android:button="@null"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp" >
+
+                <CheckBox
+                    android:id="@+id/cbPvrManualStep2Saturday"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/state_record_schedule_check_box"
+                    android:button="@null"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp" >
+
+                <CheckBox
+                    android:id="@+id/cbPvrManualStep2Sunday"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/state_record_schedule_check_box"
+                    android:button="@null"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorWhiteOpacity40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPvrManualStep2SetTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/pvr_manual_step2_set_time"
+            android:textColor="@color/colorBlueSubtitle"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPvrManualStep2StartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/pvr_manual_step2_start_date"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPvrManualStep2SetTime" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPvrManualStep2StartDate">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_manual_step2_start_time"
+                android:textColor="@color/colorWhiteOpacity70"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/colorWhiteOpacity40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_manual_step2_enter_in_10_mins"
+                android:textColor="@color/colorWhiteOpacity40"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llPvrManualStep2StartTime">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_manual_step2_end_time"
+                android:textColor="@color/colorWhiteOpacity70"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/colorWhiteOpacity40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_manual_step2_max_duration_4_hours"
+                android:textColor="@color/colorWhiteOpacity40"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etPvrManualStep2StartDate"
+            android:layout_width="210dp"
+            android:layout_height="36dp"
+            android:background="@drawable/edittext_item2"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:selectAllOnFocus="true"
+            android:text="yyyy.MM.dd"
+            android:textColor="@color/state_selected_white_normal_4dffffff"
+            android:textSize="16sp"
+            android:nextFocusDown="@id/etPvrManualStep2StartHour"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvPvrManualStep2StartDate"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llPvrManualStep2StartTime"
+            android:layout_width="210dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPvrManualStep2StartDate">
+
+            <EditText
+                android:id="@+id/etPvrManualStep2StartHour"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_item2"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text="00"
+                android:textColor="@color/state_selected_white_normal_4dffffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/colorWhiteOpacity50" />
+
+            <EditText
+                android:id="@+id/etPvrManualStep2StartMinute"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_item2"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text="00"
+                android:textColor="@color/state_selected_white_normal_4dffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="210dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llPvrManualStep2StartTime">
+
+            <EditText
+                android:id="@+id/etPvrManualStep2EndHour"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_item2"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text="00"
+                android:textColor="@color/state_selected_white_normal_4dffffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/colorWhiteOpacity50" />
+
+            <EditText
+                android:id="@+id/etPvrManualStep2EndMinute"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_item2"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text="00"
+                android:textColor="@color/state_selected_white_normal_4dffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

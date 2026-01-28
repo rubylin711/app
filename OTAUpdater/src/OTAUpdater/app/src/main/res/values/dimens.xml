@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- default transparency -->
+    <dimen name="MAIN_LAYOUT_ALPHA">0.85</dimen>
+
+    <!-- default guideline -->
+    <dimen name="TITLE_EDGE">0.10</dimen>
+    <dimen name="HELP_EDGE">0.80</dimen>
+    <dimen name="HELP_EDGE_ISDBT_SEARCH">0.85</dimen>
+    <dimen name="SCREEN_LEFT_EDGE">0.05</dimen>
+    <dimen name="SCREEN_RIGHT_EDGE">0.95</dimen>
+
+    <!-- default font size -->
+    <dimen name="TITLE_SIZE">20sp</dimen>
+    <dimen name="TEXT_SIZE">18sp</dimen>
+    <dimen name="HELP_SIZE">16sp</dimen>
+
+    <!-- default widget guideline -->
+    <dimen name="WIDGET_START">0.20</dimen>
+    <dimen name="WIDGET_TOP">0.10</dimen>
+    <dimen name="WIDGET_CENTER">0.50</dimen>
+    <dimen name="WIDGET_END">0.80</dimen>
+
+    <!-- default view size -->
+    <dimen name="VIEW_SUBMENUITEM_HEIGHT">38dp</dimen>
+    <dimen name="VIEW_SUBMENUITEM_FILLET_HEIGHT">39dp</dimen>
+    <dimen name="VIEW_HEIGHT">26dp</dimen>
+    <dimen name="LIST_VIEW_HEIGHT">32dp</dimen>
+    <dimen name="SUBMENUITEM_WIDTH">489dp</dimen>
+
+
+
+
+    <!--Help-->
+    <dimen name="HELP_ICON_SIZE">25dp</dimen>
+    <dimen name="HELP_ICONTXV_HEIGHT">30dp</dimen>
+
+    <!--Title-->
+
+    <!-- AntennaSetupActivity -->
+    <dimen name="ANTENNASETUP_DISEQC_TYPE_SPINNER_WIDTH">300dp</dimen>
+    <dimen name="ANTENNASETUP_ANTIMAGE_SIZE">48dp</dimen>
+    <dimen name="ANTENNASETUP_ANTLINE_LENGTH">5dp</dimen>
+
+    <!--ChannelSearchActivity-->
+    <dimen name="CHANNELSEARCH_ITEM_WIDTH">200dp</dimen>
+    <dimen name="CHANNELSEARCH_SEARCHBTN_WIDTH">360dp</dimen>
+    <dimen name="CHANNELSEARCH_PROGBAR_HEIGHT">14dp</dimen>
+
+    <!--DimensionEPG-->
+    <dimen name="DIMENSIONEPG_TABLE_CHANNEL_NAME_WIDTH">168dp</dimen>
+    <dimen name="DIMENSIONEPG_TABLE_CHANNEL_NUM_WIDTH">64dp</dimen>
+    <dimen name="DIMENSIONEPG_TABLE_CLOCK_WIDTH">232dp</dimen>
+    <dimen name="DIMENSIONEPG_TXV_HEIGHT">40dp</dimen>
+    <dimen name="DIMENSIONEPG_EVENTNAMETXV_HEIGHT">30dp</dimen>
+    <dimen name="DIMENSIONEPG_CHANNELNAMETXV_TEXTSIZE">30sp</dimen>
+
+    <!--Epg-->
+    <dimen name="EPG_TXV_HEIGHT">40dp</dimen>
+    <dimen name="EPG_STARTTIMERTXV_WIDTH">100dp</dimen>
+
+    <!--FirstTimeInstallationActivity-->
+
+    <!--LanguageSettingsActivity-->
+
+    <!--MainMenuActivity-->
+    <dimen name="MAINMENU_MENU_ICON_SIZE">80dp</dimen>
+    <dimen name="MAINMENU_MAIN_MENU_LAYOUT_HEIGHT">140dp</dimen>
+    <dimen name="MAINMENU_LAYOUT_WIDTH">100dp</dimen>
+
+    <!--MainMenu2Activity-->
+    <dimen name="MAINMENU2_SUBMENU_TEXT">18sp</dimen>
+    <dimen name="MAINMENU2_MENU_ICON_SIZE">80dp</dimen>
+    <dimen name="MAINMENU2_MAIN_MENU_LAYOUT_HEIGHT">210dp</dimen>
+    <dimen name="MAINMENU2_LAYOUT_WIDTH">140dp</dimen>
+
+    <!--OutputSettingsActivity-->
+
+    <!--ParentalActivity-->
+
+    <!--ReceiverInformationActivity-->
+
+    <!--ResetDefaultActivity-->
+
+    <!--ScanResultActivity-->
+    <dimen name="SCANRESULT_TVRADIO_TXV_HEIGHT">40dp</dimen>
+    <dimen name="SCANRESULT_STATUS_TXV_WIDTH">100dp</dimen>
+    <dimen name="SCANRESULT_PROGBAR_HEIGHT">16dp</dimen>
+    <dimen name="SCANRESULT_COMPLETEBTN_WIDTH">120dp</dimen>
+
+    <!--SignalInformationActivity-->
+    <dimen name="SIGNALINFORMATION_PROGBAR_HEIGHT">10dp</dimen>
+
+    <!--SplashScreenAnimationDrawable-->
+
+    <!--SplashScreenVideo-->
+
+    <!--SystemSettingsActivity-->
+
+    <!--TimeAdjustActivity-->
+
+    <!--TimerListActivity-->
+    <dimen name="TIMERLIST_BOOKINGIDTXV_WIDTH">54dp</dimen>
+    <dimen name="TIMERLIST_BOOKINGTYPETXV_WIDTH">223dp</dimen>
+    <dimen name="TIMERLIST_BOOKINGCHNAMETXV_WIDTH">329dp</dimen>
+    <dimen name="TIMERLIST_BOOKINGDATETXV_WIDTH">121dp</dimen>
+    <dimen name="TIMERLIST_BOOKINGTIMETXV_WIDTH">152dp</dimen>
+
+    <!--TimerSettingActivity-->
+
+    <!--TVManagerActivity-->
+    <dimen name="TVMANAGER_LIST_ITEM_ICON_SIZE">28dp</dimen>
+
+    <!--ViewActivity-->
+    <dimen name="VIEW_VOLSEEKBAR_WIDTH">448dp</dimen>  <!--not used-->
+    <dimen name="VIEW_VOLSEEKBAR_HEIGHT">66dp</dimen>  <!--not used-->
+
+    <!--AudioDialogView-->
+    <dimen name="AUDIODIALOG_WIDTH">500dp</dimen>
+    <dimen name="AUDIODIALOG_HEIGHT">300dp</dimen>
+
+    <!--BookAlarmDialogView-->
+    <dimen name="BOOKALARMDIALOG_WIDTH">600dp</dimen>
+
+    <!--BookArriveDialogView-->
+    <dimen name="BOOKARRIVEDIALOG_WIDTH">350dp</dimen>
+
+    <!--BookConflictDialogView-->
+    <dimen name="BOOKCONFLICTDIALOG_WIDTH">960dp</dimen>
+
+    <!--DeleteReserveDialog-->
+    <dimen name="DELETERESERVEDIALOG_WIDTH">750dp</dimen>
+    <dimen name="DELETERESERVEDIALOG_TXV_HEIGHT">40dp</dimen>
+    <dimen name="DELETERESERVEDIALOG_BTN_WIDTH">120dp</dimen>
+    <dimen name="DELETERESERVEDIALOG_BTN_HEIGHT">40dp</dimen>
+    <dimen name="DELETERESERVEDIALOG_BUFFERTXV_HEIGHT">30dp</dimen>
+
+    <!--DetailInfoDialog-->
+    <dimen name="DETAILINFODIALOG_TXV_HEIGHT">40dp</dimen>
+
+    <!--DialogAddTp-->
+    <dimen name="ADDTPDIALOG_FREQ_INPUT_TXV_WIDTH">200dp</dimen>
+    <dimen name="ADDTPDIALOG_OK_CANCEL_TXV_WIDTH">100dp</dimen>
+
+    <!--DialogEditLNB-->
+    <dimen name="EDITLNBDIALOG_TITLE_LINE_WIDTH">700dp</dimen>
+    <dimen name="EDITLNBDIALOG_SAT_SPINNER_WIDTH">300dp</dimen>
+    <dimen name="EDITLNBDIALOG_STRENGTH_PERCENT_TXV_WIDTH">70dp</dimen>
+    <dimen name="EDITLNBDIALOG_CHANGE_LNB_CONFIRM_YES_NO_TXV_WIDTH">70dp</dimen>
+
+    <!--DialogEditPos32-->
+    <dimen name="EDITPOS32DIALOG_TITLE_LINE_WIDTH">700dp</dimen>
+    <dimen name="EDITPOS32DIALOG_SAT_SPINNER_WIDTH">300dp</dimen>
+    <dimen name="EDITPOS32DIALOG_STRENGTH_PERCENT_TXV_WIDTH">70dp</dimen>
+    <dimen name="EDITPOS32DIALOG_LIMIT_SETUP_CONFIRM_YES_NO_TXV_WIDTH">70dp</dimen>
+    <dimen name="EDITPOS32DIALOG_LIMIT_SETUP_EAST_LIMIT_TXV_WIDTH">200dp</dimen>
+
+    <!--DialogEditSat-->
+    <dimen name="EDITSATDIALOG_ITEM_WIDTH">100dp</dimen>
+
+    <!--DVBSTpDialogView-->
+
+    <!--InfoBannerView-->
+    <dimen name="INFOBANNER_DISPLAYNUM_NAME_TEXTSIZE">22sp</dimen>
+    <dimen name="INFOBANNER_ICON_SIZE">32dp</dimen>
+
+    <!--InfoDetailView-->
+    <dimen name="INFODETAIL_DETAILTITLETXV_HEIGHT">30dp</dimen>
+    <dimen name="INFODETAIL_PROGBAR_HEIGHT">20dp</dimen>
+
+    <!--MessageDialogView-->
+
+    <!--NormalView-->
+    <dimen name="NORMALVIEW_CHCHANGE_WIDTH">80dp</dimen>
+    <dimen name="NORMALVIEW_CHCHANGE_HEIGHT">32dp</dimen>
+    <dimen name="NORMALVIEW_ERRORMSG_WIDTH">350dp</dimen>
+    <dimen name="NORMALVIEW_ERRORMSG_HEIGHT">120dp</dimen>
+    <dimen name="NORMALVIEW_CHANNELNO_WIDTH">138dp</dimen>
+    <dimen name="NORMALVIEW_CHANNELNO_HEIGHT">48dp</dimen>
+    <dimen name="NORMALVIEW_MUTE_ICON_SIZE">50dp</dimen>
+    <dimen name="NORMALVIEW_MAIL_ICON_SIZE">80dp</dimen>
+
+    <!--OkListDialogView-->
+    <dimen name="OKLISTDIALOG_WIDTH">450dp</dimen>
+    <dimen name="OKLISTDIALOG_LIST_ITEM_CHNUMTXV_WIDTH">58dp</dimen>
+    <dimen name="OKLISTDIALOG_LIST_ITEM_CHNAMETXV_WIDTH">250dp</dimen>
+    <dimen name="OKLISTDIALOG_LIST_ITEM_ICON_WIDTH">32dp</dimen>
+
+    <!--OtaUpdateDialogView-->
+    <dimen name="OTAUPDATEDIALOG_WIDTH">520dp</dimen>
+    <dimen name="OTAUPDATEDIALOG_EDV_WIDTH">180dp</dimen>
+    <dimen name="OTAUPDATEDIALOG_OTASYMBOLEDV_HEIGHT">46dp</dimen>
+    <dimen name="OTAUPDATEDIALOG_TXV_WIDTH">50dp</dimen>
+    <dimen name="OTAUPDATEDIALOG_SPINNER_WIDTH">180dp</dimen>
+    <dimen name="OTAUPDATEDIALOG_BTN_HEIGHT">36dp</dimen>
+
+    <!--PasswordDialogView-->
+    <dimen name="PASSWORDDIALOG_PIN_TEXTVIEW_WIDTH">325dp</dimen>
+    <dimen name="PASSWORDDIALOG_PIN_TEXTVIEW_HEIGHT">45dp</dimen>
+    <dimen name="PASSWORDDIALOG_BTN_WIDTH">80dp</dimen>
+    <dimen name="PASSWORDDIALOG_BTN_HEIGHT">40dp</dimen>
+
+    <!--RatioDialogView-->
+    <dimen name="RATIODIALOG_WIDTH">450dp</dimen>
+    <dimen name="RATIODIALOG_BTN_HEIGHT">36dp</dimen>
+
+    <!--SelectBoxView-->
+    <dimen name="SELECTBOX_DROPDOWN_ADAPTER_HEIGHT">160dp</dimen>
+
+    <!--SetReserveInfoDialog-->
+    <dimen name="SETRESERVEINFODIALOG_WIDTH">550dp</dimen>
+    <dimen name="SETRESERVEINFODIALOG_CURTIMETXV_WIDTH">200dp</dimen>
+    <dimen name="SETRESERVEINFODIALOG_CURTIMETXV_HEIGHT">30dp</dimen>
+    <dimen name="SETRESERVEINFODIALOG_ITEM_HEIGHT">40dp</dimen>
+    <dimen name="SETRESERVEINFODIALOG_TXV_WIDTH">150dp</dimen>
+    <dimen name="SETRESERVEINFODIALOG_SPINNER_WIDTH">200dp</dimen>
+    <dimen name="SETRESERVEINFODIALOG_STARTTIME_DURATION_BTN_WIDTH">200dp</dimen>
+    <dimen name="SETRESERVEINFODIALOG_OK_CANCEL_BTN_WIDTH">120dp</dimen>
+    <dimen name="SETRESERVEINFODIALOG_BUFFERTXV_HEIGHT">30dp</dimen>
+
+    <!--SubtitleDialogView-->
+    <dimen name="SUBTITLEDIALOG_TXT_AND_DVB_WIDTH">300dp</dimen>
+    <dimen name="SUBTITLEDIALOG_ITEM_SUBTITLETXV_WIDTH">100dp</dimen>
+    <dimen name="SUBTITLEDIALOG_ITEM_SUBTITLEIGV_WIDTH">50dp</dimen>
+    <dimen name="SUBTITLEDIALOG_ITEM_SUBTITLEIGV_HEIGHT">30dp</dimen>
+
+    <!--SummaryInfoDialog-->
+    <dimen name="SUMMARYINFODIALOG_WIDTH">900dp</dimen>
+    <dimen name="SUMMARYINFODIALOG_HEIGHT">300dp</dimen>
+    <dimen name="SUMMARYINFODIALOG_ICON_SIZE">25dp</dimen>
+    <dimen name="SUMMARYINFODIALOG_HELPTXV_WIDTH">100dp</dimen>
+    <dimen name="SUMMARYINFODIALOG_HELPTXV_HEIGHT">30dp</dimen>
+    <dimen name="SUMMARYINFODIALOG_MSGTXV_HEIGHT">40dp</dimen>
+
+    <!--TeletextDialogView-->
+
+    <!--VolumeView--><!--not used-->
+    <dimen name="VOLUMEVIEW_VOLUMEBGIGV_WIDTH">431dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMEBGIGV_HEIGHT">62dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMEBARSEEKBAR_WIDTH">229dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMEBARSEEKBAR_HEIGHT">24dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMETXV_WIDTH">85dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMETXV_HEIGHT">26dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMEVALUETXV_WIDTH">48dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMEVALUETXV_HEIGHT">26dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMEBARMUTEIGV_WIDTH">40dp</dimen>
+    <dimen name="VOLUMEVIEW_VOLUMEBARMUTEIGV_HEIGHT">40dp</dimen>
+
+    <!--CalendarDialogView--> <!--not used-->
+    <dimen name="CALENDARDIALOG_CALENDARBACKGROUNDVIEW_WIDTH">396dp</dimen>
+    <dimen name="CALENDARDIALOG_CALENDARBACKGROUNDVIEW_HEIGHT">280dp</dimen>
+    <dimen name="CALENDARDIALOG_CALENDARVIEW_WIDTH">368dp</dimen>
+    <dimen name="CALENDARDIALOG_CALENDARVIEW_HEIGHT">250dp</dimen>
+
+    <!--MessageDialog-->
+    <dimen name="MESSAGEDIALOG_WIDTH">456dp</dimen>
+    <dimen name="MESSAGEDIALOG_HEIGHT">190dp</dimen>
+    <dimen name="MESSAGEDIALOG_YESBTN_WIDTH">80dp</dimen>
+    <dimen name="MESSAGEDIALOG_YESBTN_HEIGHT">29dp</dimen>
+
+    <!--SureDialog-->
+    <dimen name="SUREDIALOG_WIDTH">550dp</dimen>
+    <dimen name="SUREDIALOG_HEIGHT">220dp</dimen>
+    <dimen name="MESSAGEDIALOG_BTN_WIDTH">80dp</dimen>
+    <dimen name="SUREDIALOG_INNER_WIDTH">445dp</dimen>
+    <dimen name="SUREDIALOG_INNER_HEIGHT">215dp</dimen>
+    <dimen name="SUREDIALOG_TEXTSIZE">20sp</dimen>
+    <dimen name="SUREDIALOG_TEXTSIZE_18sp">18sp</dimen>
+    <dimen name="SUREDIALOG_TEXTSIZE_16sp">16sp</dimen>
+
+    <!--ProgramItemView-->
+    <dimen name="PROGRAMITEMVIEW_TABLE_ITEM_VISIBLE_THRESHOLD">48dp</dimen>
+    <dimen name="PROGRAMITEMVIEW_TABLE_ITEM_PADDING">8dp</dimen>
+
+    <!--Location View-->
+    <dimen name="LOCATION_WIDTH">300dp</dimen>
+
+    <!--Sleep Timer-->
+    <dimen name="SLEEP_TIMER_WIDTH">180dp</dimen>
+
+    <!--timer_conflict_dialog--> <!--replaced by book_conflict_dialog-->
+
+</resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtest.activity.Power_SavingActivity">
+
+    <ImageView
+        android:id="@+id/iv_item21_set_down_triangle"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="267dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/down_triangle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item21_booting_set_option" />
+
+    <ImageView
+        android:id="@+id/iv_item21_set_up_triangle"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:layout_marginLeft="267dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/up_triangle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_action_down_triangle" />
+
+    <TextView
+        android:id="@+id/tv_item21_index_0"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/shape_rectangle_fail"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_num_0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_action_up_triangle" />
+
+    <ImageView
+        android:id="@+id/iv_item21_menu"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/green_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_set_down_triangle" />
+
+    <TextView
+        android:id="@+id/tv_item21_menu"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_power_saving_activity_start_power_saving"
+        app:layout_constraintLeft_toRightOf="@+id/iv_item21_menu"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_set_down_triangle" />
+
+    <ImageView
+        android:id="@+id/iv_item21_action_up_triangle"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="267dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/up_triangle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item21_title" />
+
+    <TextView
+        android:id="@+id/tv_item21_power_saving_action"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_power_saving_activity_right_now"
+        app:layout_constraintStart_toEndOf="@+id/tv_item21_power_saving"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_action_up_triangle" />
+
+    <ImageView
+        android:id="@+id/iv_item21_action_down_triangle"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="267dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/down_triangle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item21_power_saving_action" />
+
+    <TextView
+        android:id="@+id/tv_item21_booting_set_option"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/shape_rectangle_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_power_saving_activity_no_setting"
+        app:layout_constraintLeft_toRightOf="@+id/tv_item21_booting_set"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_set_up_triangle" />
+
+    <TextView
+        android:id="@+id/tv_item21_index_1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/shape_rectangle_fail"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_num_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_set_up_triangle" />
+
+    <TextView
+        android:id="@+id/tv_item21_booting_set"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-1dp"
+        android:background="@drawable/shape_rectangle_pass"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/str_power_saving_activity_booting_set"
+        app:layout_constraintLeft_toRightOf="@+id/tv_item21_index_1"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_set_up_triangle"
+        android:layout_marginLeft="0dp" />
+
+    <ImageView
+        android:id="@+id/iv_item21_fail"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/str_fail"
+        android:scaleType="fitCenter"
+        android:src="@drawable/red_btn"
+        app:layout_constraintStart_toEndOf="@+id/tv_item21_pass"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_menu" />
+
+    <ImageView
+        android:id="@+id/iv_item21_pass"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/str_pass"
+        android:scaleType="fitCenter"
+        android:src="@drawable/blue_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_menu" />
+
+    <TextView
+        android:id="@+id/tv_item21_power_saving"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle_pass"
+        android:gravity="center"
+        android:text="@string/str_test_item_power_saving"
+        app:layout_constraintStart_toEndOf="@+id/tv_item21_index_0"
+        app:layout_constraintTop_toTopOf="@+id/tv_item21_power_saving_action" />
+
+    <TextView
+        android:id="@+id/tv_item21_title"
+        android:layout_width="353dp"
+        android:layout_height="25dp"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="@string/str_test_item_power_saving"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item21_pass"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_pass"
+        app:layout_constraintStart_toEndOf="@+id/iv_item21_pass"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_menu" />
+
+    <TextView
+        android:id="@+id/tv_item21_fail"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/str_fail"
+        app:layout_constraintStart_toEndOf="@+id/iv_item21_fail"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item21_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

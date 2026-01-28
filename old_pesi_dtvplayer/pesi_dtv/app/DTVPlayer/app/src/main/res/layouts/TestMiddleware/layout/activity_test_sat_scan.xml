@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.prime.dtvplayer.TestMiddleware.TestDVBSScanActivity">
+
+    <Button
+        android:id="@+id/buttonTestSatScanStartScanManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="368dp"
+        android:onClick="BtnTestDVBSStartScanManual_OnClick"
+        android:gravity="start|center"
+        android:text="Button"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTestSatScanStartScanAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="368dp"
+        android:onClick="BtnTestDVBSStartScanAuto_OnClick"
+        android:layout_marginTop="8dp"
+        android:gravity="start|center"
+        android:text="Button"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTestSatScanStartScanManual" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanTpId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestSatScanTpId" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanSymbolRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestSatScanFrequency" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanDrot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestSatScanSymbolRate" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanLockStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestSatScanTpId"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestSatScanStrength"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanTpId"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/textViewTestSatScanFrequency"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanFrequency" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestSatScanStrength"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanDrot" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/TestScanguildline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="481dp" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanTvResult"
+        android:layout_width="426dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TestScanguildline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestSatScanSAT" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanRadioResult"
+        android:layout_width="426dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TestScanguildline"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanTvResult" />
+
+    <Button
+        android:id="@+id/buttonTestSatScanComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:gravity="start|center"
+        android:text="@string/STR_COMPLETE"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestSatScanStartScanManual"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTestSatScanCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start|center"
+        android:text="@string/STR_CANCEL"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestSatScanStartScanAuto"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTestSatScanComplete" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanTotalTvCnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestSatScanComplete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanTotalRadioCnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestSatScanComplete"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestSatScanTotalTvCnt" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanBER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestSatScanLockStatus"
+        app:layout_constraintStart_toEndOf="@+id/textViewTestSatScanLockStatus"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanLockStatus" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanSNR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestSatScanStrength"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestSatScanBER"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanStrength"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanSAT"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/textViewTestSatScanDrot"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestSatScanDrot" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanFEC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestSatScanStrength"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanSymbolRate" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanPOLAR"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="text"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestSatScanBER"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanFEC" />
+
+    <TextView
+        android:id="@+id/textViewTestSatScanSpect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestSatScanBER"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestSatScanQuality" />
+
+    <Button
+        android:id="@+id/buttonTestSatScanStartScanAllSat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        android:onClick="BtnTestDVBSStartScanAllSat_OnClick"
+        app:layout_constraintStart_toStartOf="@+id/buttonTestSatScanStartScanAuto"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTestSatScanStartScanAuto" />
+
+    <Button
+        android:id="@+id/buttonTestSatScanStartScanNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Button"
+        android:onClick="BtnTestDVBSStartScanNetwok_OnClick"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestSatScanStartScanAllSat"
+        app:layout_constraintTop_toTopOf="@+id/buttonTestSatScanStartScanAllSat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

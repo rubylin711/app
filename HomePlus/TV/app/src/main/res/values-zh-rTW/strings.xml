@@ -1,0 +1,284 @@
+<resources>
+    <string name="app_name">HOMEPLUS_TV</string>
+
+    <!-- Mini EPG -->
+    <string name="miniepg_channel_list">頻道列表</string>
+
+    <!-- EPG -->
+    <string name="epg">EPG</string>
+
+    <!-- PVR -->
+    <string name="pvr">PVR</string>
+
+    <!-- Genre List -->
+    <string name="genre_favorite_channels">我的收藏頻道</string>
+    <string name="genre_all_channels">所有頻道</string>
+    <string name="genre_welfare_religion">公益/宗教</string>
+    <string name="genre_drama_music">戲劇/音樂</string>
+    <string name="genre_news_finance">新聞/財經</string>
+    <string name="genre_leisure_knowledge">休閒/新知</string>
+    <string name="genre_children_animation">兒童/卡通</string>
+    <string name="genre_films_series">電影/影集</string>
+    <string name="genre_variety">綜藝/綜合</string>
+    <string name="genre_shopping">購物</string>
+    <string name="genre_foreign_language">外語/學習</string>
+    <string name="genre_hd">HD高畫質</string>
+    <string name="genre_sports_others">體育運動/其他</string>
+    <string name="genre_adult">成人</string>
+
+    <!-- Error code messages -->
+    <string name="error_e000">智慧卡通訊錯誤，可能是智慧卡受損，請與客服中心聯絡 (代碼：E000)</string>
+    <string name="error_e002">請清潔智慧卡晶片。請將機上盒的智慧卡抽出，使用眼鏡布、乾布或乾淨橡皮擦擦拭智慧卡上方晶片之後，再插回機上盒,並重新插拔機上盒電源線，若仍無法正常收視，請與客服中心聯絡 (代碼：E002)</string>
+    <string name="error_e005">智慧卡未開卡，本卡未與機上盒配對過，請與客服中心聯絡 (代碼：E005)</string>
+    <string name="error_e006">機上盒未於授權伺服器註冊，請與客服中心聯絡 (代碼：E006)</string>
+    <string name="error_e007">智慧卡配對已經過期，請與客服中心聯絡 (代碼：E007)</string>
+    <string name="error_e009">智慧卡感應接觸不良。請確認機上盒智慧卡為本公司所提供，並將智慧卡重新拔插，再重新插拔機上盒電源線，若仍無法正常收視，請與客服中心聯絡 (代碼：E009)</string>
+    <string name="error_e010">智慧卡無法觀看本節目，請與客服中心聯絡 (代碼：E010)</string>
+    <string name="error_e014">因尚有費用未繳交，您可至官網查詢或撥打繳費復訊專線 (代碼：E014)</string>
+    <string name="error_e015">頻道授權已過期，欲知詳情請按[BLUE]藍色鍵或與客服中心聯絡。 (代碼：E015)</string>
+    <string name="error_e016">智慧卡因異常暫停使用，請5分鐘後重新拔插，再將機上盒斷電重啟，若仍無法正常收視，請與客服中心聯絡 (代碼：E016)</string>
+    <string name="error_e017">智慧卡無效或是非本公司所提供的智慧卡，請與客服中心聯絡 (代碼：E017)</string>
+    <string name="error_e018">本頻道目前時段被設置成無法收視，請與客服中心聯絡 (代碼：E018)</string>
+    <string name="error_e019">目前節目受到分級限制，請與客服中心聯絡 (代碼：E019)</string>
+    <string name="error_e020">節目解碼失敗，請與客服中心聯絡 (代碼：E020)</string>
+    <string name="error_e021">智慧卡無效或是非本公司所提供的智慧卡，請與客服中心聯絡 (代碼：E021)</string>
+    <string name="error_e022">請重新啟動機上盒 (代碼：E022)</string>
+    <string name="error_e023">機上盒已經被凍結，請與客服中心聯絡 (代碼：E023)</string>
+    <string name="error_e024">智慧卡無效或是非本公司所提供的智慧卡，請與客服中心聯絡 (代碼：E024)</string>
+    <string name="error_e025">未訂購本節目，欲知詳情請按[BLUE]藍色鍵 (代碼：E025)</string>
+    <string name="error_e026">未訂購音樂頻道，欲知詳情請按[BLUE]藍色鍵 (代碼：E026)</string>
+    <string name="error_e027">無法透過線上訂購本頻道，請聯絡客服中心 (代碼：E027)</string>
+    <string name="error_e028">節目解碼異常，請與客服中心聯絡 (代碼：E028)</string>
+    <string name="error_e029">本頻道訊號調整中，如持續無畫面，請拔插機上盒電源，若仍無法正常收視，請與客服中心聯絡 (代碼：E029)</string>
+    <string name="error_e030">此機上盒發生異常，請與客服中心聯絡 (代碼：E030)</string>
+    <string name="error_e200">請確認纜線接頭是否鎖緊，再將機上盒電源重新拔插，若仍無法正常收視，請與客服中心聯絡 (代碼：E200)</string>
+    <string name="error_e201">無法與母機上盒建立連線，請保持母機上盒電源開啟，並確認網路連線正確 (代碼：E201)</string>
+    <string name="error_e202">電視機或顯示器不支援HDCP保護機制，請洽電視機或顯示器製造商 (代碼：E202)</string>
+    <string name="error_e300">此設備無正確網路連結，請確認使用本公司提供的寬頻網路服務，若還是無法排除，請聯絡客服中心 (代碼：E300)</string>
+    <string name="error_e911">目前網路連線異常，請檢查網路設備並重新嘗試。若持續遭遇此問題，請聯絡客服專線。(代碼：E911)</string>
+    <string name="error_e999">此設備無網路連結，若需進一步資訊，請洽客服中心 (代碼：E999)</string>
+    <string name="error_unknown">未知錯誤 (代碼：%1$s)</string>
+
+    <!-- PVR Error code messages -->
+    <string name="error_pvr001">您尚未購買錄影功能，請與客服中心聯絡。(代碼: PVR001)</string>
+    <string name="error_pvr002">請連接錄影用硬碟機。(代碼: PVR002)</string>
+    <string name="error_pvr003">請連接已授權的錄影用硬碟機。(代碼: PVR003)</string>
+    <string name="error_pvr004">您尚未訂購錄影空間，請與客服中心聯絡。(代碼: PVR004)</string>
+    <string name="error_pvr005">機上盒忙碌中，請稍後再嘗試錄影。(代碼: PVR005)</string>
+    <string name="error_pvr006">機上盒忙碌中，請稍後再嘗試取消錄影。(代碼: PVR006)</string>
+    <string name="error_pvr007">不明原因導致錄製發生異常。(代碼: PVR007)</string>
+    <string name="error_pvr008">錄影空間已滿，請刪除過期影片以騰出空間。(代碼: PVR008)</string>
+    <string name="error_pvr009">您所連接的硬碟機尚未完成格式化，請與客服中心聯絡。(代碼: PVR009)</string>
+    <string name="error_pvr010">播放錄製節目失敗，請確認硬碟正確連接機上盒。(代碼: PVR010)</string>
+    <string name="error_pvr011">提醒您，目前可錄製空間低於10%，建議刪除過期節目。(代碼: PVR011)</string>
+    <string name="error_pvr012">音樂頻道目前不支援錄影。(代碼: PVR012)</string>
+    <string name="error_pvr013">僅支援一部錄製設備，請移除不必要裝置。(代碼: PVR013)</string>
+    <string name="error_pvr014">錄影裝置空間不足32GB，請安裝大於32GB的硬碟機。(代碼: PVR014)</string>
+    <string name="error_pvr015">錄影用硬碟未正確連接機上盒，請重新拔插裝置。(代碼: PVR015)</string>
+    <string name="error_pvr016">錄製內容不完整，請移除檔案，造成不便敬請見諒。(代碼: PVR016)</string>
+    <string name="error_pvr017">預約日期超出範圍，請重新選取，造成不便敬請見諒。(代碼: PVR017)</string>
+    <string name="error_pvr018">預約列表已達上限，請刪除其他預約後再進行新的預約。(代碼: PVR018)</string>
+    <string name="error_pvr019">未訂購頻道目前不支援錄影。(代碼: PVR019)</string>
+
+    <!-- Others -->
+    <string name="adult_lock_info_hint">本頻道有親子分級設定</string>
+    <string name="adult_lock_info_ok">請先按OK鍵進行解鎖</string>
+    <string name="add_favourite">收藏頻道</string>
+
+    <string name="bilingual">雙語</string>
+    <string name="bilingual_switch">雙語切換</string>
+    <string name="back">返回</string>
+
+    <string name="channel_lock_info_hint">本頻道有親子分級設定</string>
+    <string name="channel_lock_info_ok">請先按OK鍵進行解鎖</string>
+    <string name="channel_lock_info_path"><![CDATA[權限設定請前往: 設定 > 個人化設定 > 親子鎖設定 > 頻道鎖設定]]></string>
+    <string name="caption_startrecording">開始錄影</string>
+    <string name="caption_ok_en">OK</string>
+    <string name="close">關閉</string>
+    <string name="channel_tune">進入頻道</string>
+    <string name="channel_list_favorite_channel">我的收藏頻道</string>
+    <string name="channel_list_up_down">上下台</string>
+    <string name="channel_list_switching_list">切換分類</string>
+    <string name="channel_list_locked_channel">頻道鎖定</string>
+    <string name="channel_list_adult_channel">成人頻道鎖定</string>
+    <string name="channel_list_parental_rated_program">節目名稱鎖定</string>
+    <string name="cancel">取消</string>
+    <string name="channel">頻道</string>
+    <string name="channel_genre">頻道類型</string>
+
+    <string name="delete">刪除</string>
+    <string name="delete_all">全部刪除</string>
+    <string name="delete_favourite">取消收藏頻道</string>
+    <string name="date">日期</string>
+    <string name="date_duration_divider">|</string>
+    <string name="direction">方向</string>
+
+    <string name="epg_title">節目表</string>
+    <string name="epg_unlock_hint">按遙控器藍鍵以解鎖所有頻道</string>
+    <string name="epg_locked_channel">節目名稱鎖定</string>
+
+    <string name="format_toast_no_such_channel">%s頻道不存在，如有疑問請洽中嘉客服</string>
+
+    <string name="live_search_msg_1_1">請按遙控器上的</string>
+    <string name="live_search_msg_1_2">鍵進行輸入</string>
+    <string name="live_search_msg_1_3">當遙控器上綠燈亮起時，表示麥克風已在收音</string>
+    <string name="live_search_msg_2">輸入想要搜尋的頻道名稱</string>
+    <string name="live_search_msg_3">開始語音</string>
+
+    <string name="music_introduction">享受各種類型的音樂</string>
+    <string name="miniepg_channel_search">搜尋頻道</string>
+    <string name="miniepg_locked_channel">節目名稱鎖定</string>
+    <string name="miniepg_adult_channel">節目名稱鎖定</string>
+    <string name="miniepg_parental_rated_program">節目頻道鎖定</string>
+
+    <string name="none">無</string>
+    <string name="no_program_info">無節目資訊</string>
+    <string name="no_channel_list">沒有頻道清單</string>
+    <string name="no_channels_available_msg">當前頻道為空，請先搜索。</string>
+
+    <string name="ok">確認</string>
+
+    <string name="parental_lock_authorization_title">親子鎖密碼</string>
+    <string name="parental_lock_authorization_msg">請輸入四位數親子鎖密碼</string>
+    <string name="parental_lock_authorization_incorrect_pin">輸入錯誤的PIN碼，請重試</string>
+    <string name="parental_lock_authorization_press_left_to_delete">按左鍵清除</string>
+    <string name="program">節目</string>
+    <string name="program_title">節目</string>
+    <string name="please_confirm">請確認</string>
+
+    <string name="rating_lock_info_hint">本頻道有親子分級設定</string>
+    <string name="rating_lock_info_ok">請先按OK鍵進行解鎖</string>
+    <string name="rating_lock_info_path"><![CDATA[權限設定請前往: 設定 > 個人化設定 > 親子鎖設定 > 分級設定]]></string>
+    <string name="record">錄影</string>
+
+    <string name="subtitle">字幕</string>
+
+    <string name="text_Chinese">中文</string>
+    <string name="text_English">英文</string>
+    <string name="text_all_channels">所有頻道</string>
+
+
+    <string name="unlock_all">全部解鎖</string>
+
+    <string name="reminder_epg_watch">觀看提醒</string>
+    <string name="reminder_epg_cancel">取消觀看提醒</string>
+    <string name="reminder_floating_title">預約觀看提醒</string>
+    <string name="reminder_floating_start_in_n_sec_line1"></string>
+    <string name="reminder_floating_start_in_n_sec_line2">\u0020秒後即將開始</string>
+    <string name="reminder_watch">觀看</string>
+    <string name="reminder_set">加入提醒</string>
+    <string name="reminder_cancel">取消觀看提醒</string>
+    <string name="reminder_go_to_list">查看提醒清單</string>
+    <string name="reminder_list">收視提醒</string>
+    <string name="reminder_start_end_time">開始與結束時間</string>
+    <string name="reminder_no_watch_list">目前無收視提醒</string>
+    <string name="reminder_enter_parental_control">輸入親子鎖</string>
+    <string name="reminder_delete_msg">是否要取消以下收視提醒？</string>
+    <string name="reminder_conflict_title">預約節目衝突</string>
+    <string name="reminder_conflict_msg">該節目和現有預約節目時間衝突，是否更換預約節目?</string>
+    <string name="reminder_new_event">新節目預約</string>
+    <string name="reminder_existing_event">已有節目預約</string>
+
+    <string name="record_title">錄影</string>
+    <string name="recorded_list">已錄節目</string>
+    <string name="recorded_duration">片長</string>
+    <string name="recorded_file_size">檔案大小</string>
+    <string name="recorded_no_recorded_list">沒有已錄節目</string>
+    <string name="recorded_series_list">系列影集</string>
+    <string name="recorded_total_disk_size">總授權</string>
+    <string name="recorded_disk_available">剩餘儲存空間：</string>
+    <string name="recorded_disk_empty_space">0 B</string>
+    <string name="recorded_content_delete_msg">是否要刪除該錄製檔案?</string>
+    <string name="recording_title">錄影</string>
+    <string name="recording_schedule">查看預約錄影清單</string>
+    <string name="recording_schedule_start_end_time">起訖時間</string>
+    <string name="recording_schedule_no_scheduled_list">沒有預約錄製節目</string>
+    <string name="recording_setup">錄影設定</string>
+    <string name="recording_setup_select_option">選擇錄影項目</string>
+    <string name="recording_setup_epg">節目表預約錄影</string>
+    <string name="recording_setup_manual">時段預約錄影</string>
+    <string name="recording_setting_single_record">單集錄影</string>
+    <string name="recording_setting_series_record">系列錄影</string>
+    <string name="recording_setting_select_record_mode">請選擇錄製選項</string>
+    <string name="recording_setting_record_one">錄單集</string>
+    <string name="recording_setting_cancel_single_record">取消單集錄影</string>
+    <string name="recording_setting_cancel_series">取消系列錄影</string>
+    <string name="recording_setting_add_recording_success">添加錄製成功</string>
+    <string name="recording_setting_add_recording_fail">添加錄製失敗</string>
+    <string name="recording_setting_cancel_record">取消錄影</string>
+    <string name="recording_setting_go_to_list">查看錄影清單</string>
+
+    <string name="recording_setting_conflict_msg_1">預約錄製衝突</string>
+    <string name="recording_setting_conflict_msg_2">同時段已有預約錄製之節目，請選擇是否取消原預約錄製</string>
+    <string name="recording_setting_conflict_msg_3">新預約節目</string>
+    <string name="recording_setting_conflict_msg_4">已預約節目</string>
+
+    <string name="pvr_start_time">00:00:00</string>
+    <string name="pvr_bilingual">雙語</string>
+    <string name="pvr_pause">暫停</string>
+    <string name="pvr_play">播放</string>
+    <string name="pvr_rewind">快轉後退</string>
+    <string name="pvr_fast_forward">快轉前進</string>
+    <string name="pvr_seek_backward">後退</string>
+    <string name="pvr_seek_forward">前進</string>
+    <string name="pvr_player_info">資訊</string>
+    <string name="pvr_program_info">節目介紹</string>
+    <string name="pvr_format_step_mins">%+d 分鐘</string>
+    <string name="pvr_last_position_title">播放錄製節目</string>
+    <string name="pvr_last_position_line1">該節目曾播放過</string>
+    <string name="pvr_last_position_line2">是否要從上次位置播放？</string>
+    <string name="pvr_last_position_continue">從上次位置播放</string>
+    <string name="pvr_last_position_from_start">重頭開始播放</string>
+    <string name="pvr_end_playback_title">錄製節目播放完畢</string>
+    <string name="pvr_end_playback_line1">錄製節目已播放完畢</string>
+    <string name="pvr_end_playback_exit">退出</string>
+    <string name="pvr_end_playback_replay">本集再播一次</string>
+    <string name="pvr_stop_playback_title">錄製節目停止播放</string>
+    <string name="pvr_stop_playback_line1">是否要停止播放錄製節目</string>
+    <string name="pvr_manual_recording_title">定時預約</string>
+    <string name="pvr_manual_recording_step">步驟</string>
+    <string name="pvr_manual_recording_select_channel">選擇頻道</string>
+    <string name="pvr_manual_recording_set_record_mode">設定錄影模式/時間</string>
+    <string name="pvr_manual_step1_genre">頻道分類</string>
+    <string name="pvr_manual_step2_record_mode">錄影模式</string>
+    <string name="pvr_manual_step2_single_time">單次錄</string>
+    <string name="pvr_manual_step2_daily">每天錄</string>
+    <string name="pvr_manual_step2_weekly">每周錄</string>
+    <string name="pvr_manual_step2_day_of_the_week">週間</string>
+    <string name="pvr_manual_step2_monday">\n週一</string>
+    <string name="pvr_manual_step2_tuesday">\n週二</string>
+    <string name="pvr_manual_step2_wednesday">\n週三</string>
+    <string name="pvr_manual_step2_thursday">\n週四</string>
+    <string name="pvr_manual_step2_friday">\n週五</string>
+    <string name="pvr_manual_step2_saturday">\n週六</string>
+    <string name="pvr_manual_step2_sunday">\n週日</string>
+    <string name="pvr_manual_step2_set_time">設置時間</string>
+    <string name="pvr_manual_step2_start_date">開始日期</string>
+    <string name="pvr_manual_step2_start_time">開始時間</string>
+    <string name="pvr_manual_step2_enter_in_10_mins">以每10分鐘為單位輸入</string>
+    <string name="pvr_manual_step2_end_time">結束時間</string>
+    <string name="pvr_manual_step2_max_duration_4_hours">最大錄製時長為4小時</string>
+    <string name="pvr_manual_step2_hour_out_of_range">輸入的小時數超出範圍(0~23)</string>
+    <string name="pvr_manual_step2_minute_out_of_range">輸入的分鐘數超出範圍(0~50)</string>
+    <string name="pvr_manual_step2_schedule_must_after_now">預約的錄製時間必須大於當前時間</string>
+    <string name="pvr_manual_confirmation">請確認</string>
+    <string name="pvr_manual_success_msg">預約節目已成功保存</string>
+    <string name="pvr_manual_success_start_msg">開始|</string>
+
+    <string name="preferred_setting_msg">進行偏好設定  音頻/字幕/語言</string>
+    <string name="preferred_setting_audio_lang">音頻</string>
+    <string name="preferred_setting_subtitle">字幕</string>
+    <string name="preferred_setting_global_lang">語言</string>
+
+    <string name="slash">/</string>
+    <string name="select">選擇</string>
+    <string name="setting">設定</string>
+    <string name="save">儲存</string>
+
+    <string name="vertical_divider">｜</string>
+
+    <string name="worktime_lock_info_hint">本頻道有時間鎖</string>
+    <string name="worktime_lock_info_ok">請先按OK鍵進行解鎖</string>
+    <string name="worktime_lock_info_path"><![CDATA[權限設定請前往:  > 個人化設定 > 親子鎖設定 > 工作時段設定]]></string>
+    <string name="undefined_language">未定義</string>
+</resources>

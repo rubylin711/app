@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/dmg_settings_engineering_setting"
+    android:key="key_engineering_setting">
+    <Preference
+        android:title="@string/dmg_settings_engineering_setting_usb_update"
+        android:key="key_usb_update"
+        app:iconSpaceReserved="false"/>
+    <Preference
+        android:title="@string/dmg_settings_engineering_setting_channel_scan"
+        android:key="key_channel_scan"
+        app:iconSpaceReserved="false"/>
+<!--    <Preference-->
+<!--        android:title="@string/dmg_settings_engineering_setting_error_log"-->
+<!--        android:key="key_error_log"-->
+<!--        app:iconSpaceReserved="false"/>-->
+    <ListPreference
+        android:entries="@array/info_hint_entries"
+        android:title="@string/dmg_settings_engineering_setting_info_hint"
+        android:key="key_info_hint"
+        android:entryValues="@array/info_hint_values"
+        app:iconSpaceReserved="false"/>
+<!--    <Preference-->
+<!--        android:title="@string/tv_nagra_reset_title"-->
+<!--        android:key="key_reset_nagra"-->
+<!--        app:iconSpaceReserved="false"/>-->
+    <Preference
+        android:title="@string/tv_nagra_license_reset_title"
+        android:key="key_reset_nagra_license"
+        app:iconSpaceReserved="false"/>
+    <Preference
+        android:title="@string/firmware_version_title"
+        android:key="ro.firmwareVersion"
+        android:summary="ro.firmwareVersion"
+        app:iconSpaceReserved="false"/>
+    <Preference
+        android:title="@string/provision_info"
+        android:key="provision_info"
+        android:fragment="com.prime.dmg.launcher.Settings.fragment.ProvisionInfoFragment"
+        app:iconSpaceReserved="false"/>
+
+</PreferenceScreen>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/live_tv_dialog_width"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:background="@drawable/gradient_panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/lo_dialog_func_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/live_tv_dialog_title_height"
+            android:textSize="@dimen/live_tv_dialog_title_text_size"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/lo_dialog_line"
+            android:background="@color/dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/live_tv_dialog_line_height"
+            android:layout_marginStart="@dimen/live_tv_dialog_line_margin"
+            android:layout_marginEnd="@dimen/live_tv_dialog_line_margin"
+            android:orientation="vertical"
+            android:focusable="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_dialog_func_title"/>
+
+        <LinearLayout
+            android:id="@+id/lo_dialog_func_list_root"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/live_tv_dialog_item_root_margin"
+            android:layout_marginBottom="@dimen/live_tv_dialog_item_root_margin"
+            android:focusable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_dialog_line"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+    Hotkey Hint
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lo_dialog_hotkey_hint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/live_tv_dialog_hotkey_hint_height"
+        android:background="@drawable/hint_shadow"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/lo_dialog_hotkey_hint_select_icon"
+            android:layout_width="@dimen/live_tv_dialog_hotkey_hint_icon_size"
+            android:layout_height="@dimen/live_tv_dialog_hotkey_hint_icon_size"
+            android:layout_marginEnd="@dimen/live_tv_dialog_hotkey_hint_icon_select_margin_end"
+            android:layout_marginBottom="@dimen/live_tv_dialog_hotkey_hint_icon_margin_bottom"
+            android:src="@drawable/hint_updown"
+            android:scaleType="centerInside"
+            android:focusable="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lo_dialog_hotkey_hint_ok_icon"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/lo_dialog_hotkey_hint_select_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/live_tv_dialog_hotkey_hint_text_margin"
+            android:text="@string/hint_rcu_dpad_select"
+            android:textSize="@dimen/live_tv_dialog_hotkey_hint_text_size"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/lo_dialog_hotkey_hint_select_icon"
+            app:layout_constraintBottom_toBottomOf="@id/lo_dialog_hotkey_hint_select_icon"
+            app:layout_constraintStart_toEndOf="@id/lo_dialog_hotkey_hint_select_icon"/>
+        <ImageView
+            android:id="@+id/lo_dialog_hotkey_hint_ok_icon"
+            android:layout_width="@dimen/live_tv_dialog_hotkey_hint_icon_size"
+            android:layout_height="@dimen/live_tv_dialog_hotkey_hint_icon_size"
+            android:layout_marginEnd="@dimen/live_tv_dialog_hotkey_hint_icon_margin_end"
+            android:layout_marginBottom="@dimen/live_tv_dialog_hotkey_hint_icon_margin_bottom"
+            android:src="@drawable/hint_ok"
+            android:scaleType="centerInside"
+            android:focusable="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/lo_dialog_hotkey_hint_ok_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/live_tv_dialog_hotkey_hint_text_margin"
+            android:text="@string/hint_rcu_ok_confirm"
+            android:textSize="@dimen/live_tv_dialog_hotkey_hint_text_size"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/lo_dialog_hotkey_hint_ok_icon"
+            app:layout_constraintBottom_toBottomOf="@id/lo_dialog_hotkey_hint_ok_icon"
+            app:layout_constraintStart_toEndOf="@id/lo_dialog_hotkey_hint_ok_icon"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

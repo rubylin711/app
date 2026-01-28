@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_1920_w">
+
+    <!-- title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/recorded_list"
+        android:textColor="@color/colorWhiteOpacity75"
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- main block -->
+    <RelativeLayout
+        android:id="@+id/rlPvrRecordedListMain"
+        android:layout_width="580dp"
+        android:layout_height="355dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/round_corner_square2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- list title -->
+        <RelativeLayout
+            android:id="@+id/rlPvrRecordedListTitle"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="#26282d">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- channel -->
+                <TextView
+                    android:id="@+id/tvPvrRecordedListChannel"
+                    android:layout_width="85.5dp"
+                    android:layout_height="39dp"
+                    android:paddingLeft="15dp"
+                    android:gravity="center|left"
+                    android:text="@string/channel"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:layout_weight="0"
+                    android:textSize="14sp" />
+
+                <!-- program name -->
+                <TextView
+                    android:id="@+id/tvPvrRecordedListProgramName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:gravity="center|left"
+                    android:text="@string/program_title"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:layout_weight="1"
+                    android:textSize="14sp" />
+
+                <!-- date -->
+                <TextView
+                    android:id="@+id/tvPvrRecordedListDate"
+                    android:layout_width="78dp"
+                    android:layout_height="39dp"
+                    android:gravity="center"
+                    android:text="@string/date"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:layout_weight="0"
+                    android:textSize="14sp" />
+
+                <!-- duration -->
+                <TextView
+                    android:id="@+id/tvPvrRecordedListDuration"
+                    android:layout_width="78dp"
+                    android:layout_height="39dp"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:text="@string/recorded_duration"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:layout_weight="0"
+                    android:textSize="14sp" />
+
+                <!-- size -->
+                <TextView
+                    android:id="@+id/tvPvrRecordedListFileSize"
+                    android:layout_width="78dp"
+                    android:layout_height="39dp"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:text="@string/recorded_file_size"
+                    android:textColor="@color/colorWhiteOpacity50"
+                    android:layout_weight="0"
+                    android:textSize="14sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <!-- Right spacing when enlarged -->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="39dp"
+                    android:visibility="visible"
+                    android:layout_weight="0">
+                </View>
+            </LinearLayout>
+
+            <!-- title bottom line -->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="#262626" />
+        </RelativeLayout>
+
+        <!-- main block top line -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorWhiteOpacity40" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPvrRecordedList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlPvrRecordedListTitle"
+            android:layout_alignStart="@+id/rlPvrRecordedListTitle"
+            android:divider="@drawable/layer_recorded_program_divider"
+            android:dividerHeight="0.5dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <!-- no recorded list -->
+        <TextView
+            android:id="@+id/tvPvrNoRecordedList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlPvrRecordedListTitle"
+            android:layout_alignStart="@+id/rlPvrRecordedListTitle"
+            android:gravity="center"
+            android:listSelector="@drawable/button_item2"
+            android:text="@string/recorded_no_recorded_list"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="14sp" />
+
+        <!-- main block bottom line -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhiteOpacity40" />
+    </RelativeLayout>
+
+    <!-- page info -->
+    <LinearLayout
+        android:id="@+id/llPvrRecordedListPageInfo"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/rlPvrRecordedListMain"
+        app:layout_constraintTop_toBottomOf="@+id/rlPvrRecordedListMain">
+
+        <TextView
+            android:id="@+id/tvPvrRecordedListCurrentPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slash"
+            android:textColor="#404040"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tvPvrRecordedListTotalPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#808080"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+    <!-- series information -->
+    <LinearLayout
+        android:id="@+id/llPvrRecordedListSeriesBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rlPvrRecordedListMain"
+        app:layout_constraintStart_toStartOf="@+id/rlPvrRecordedListMain">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/recorded_series_list"
+            android:textColor="@color/colorBlueSubtitle"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/vertical_divider"
+            android:textColor="@color/colorBlueSubtitle"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:contentDescription="@string/ok"
+            android:src="@drawable/icon_pvr_folder" />
+
+        <!-- series name -->
+        <TextView
+            android:id="@+id/tvPvrRecordedListSeriesProgramName"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="2dp"
+            android:text="Series Program"
+            android:textColor="@color/colorWhiteOpacity70" />
+    </LinearLayout>
+
+    <!-- disk information -->
+    <LinearLayout
+        android:id="@+id/llPvrRecordedListDiskSize"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rlPvrRecordedListMain"
+        app:layout_constraintEnd_toEndOf="@+id/rlPvrRecordedListMain">
+
+        <TextView
+            android:id="@+id/tvPvrRecordedListDiskUsePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorBlueSubtitle"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/pbPvrRecordedListDisk"
+            style="@style/progress_channel"
+            android:layout_width="125dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="9dp"
+            android:background="#1A1D24"
+            android:indeterminate="false"
+            android:progressBackgroundTint="#393D46"
+            android:progressTint="#8EA4B9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:gravity="center"
+            android:text="@string/recorded_total_disk_size"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tvPvrRecordedListTotalDiskSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:text="@string/recorded_disk_available"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tvRecordedListAvailableStorage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:text="@string/recorded_disk_empty_space"
+            android:textColor="@color/colorWhiteOpacity70"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <!-- color button block -->
+    <LinearLayout
+        android:id="@+id/llPvrRecordedListColorButtonBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/rlPvrRecordedListMain"
+        app:layout_constraintTop_toBottomOf="@+id/rlPvrRecordedListMain">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/colorkey_direction" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:text="@string/direction"
+            android:textColor="@color/colorScrollBarGray"
+            android:textSize="12sp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/colorkey_r" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:text="@string/delete"
+            android:textColor="@color/colorScrollBarGray"
+            android:textSize="12sp"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:id="@+id/llPvrRecordedListBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/colorkey_b" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginLeft="2dp"
+                android:text="@string/unlock_all"
+                android:textColor="@color/colorScrollBarGray"
+                android:textSize="12sp"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/key_ok" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:text="@string/select"
+            android:textColor="@color/colorScrollBarGray"
+            android:textSize="12sp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/key_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:text="@string/back"
+            android:textColor="@color/colorScrollBarGray"
+            android:textSize="12sp"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

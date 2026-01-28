@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLiveOverlayCurtain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:gravity="center"
+                android:background="@color/colorBlackOpacity80"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:gravity="center"
+                android:background="@color/colorBlackOpacity80"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:gravity="center"
+                android:background="@color/colorBlackOpacity80"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:gravity="center"
+                android:background="@color/colorBlackOpacity80"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:gravity="center"
+                android:background="@color/colorBlackOpacity80"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:gravity="center"
+                android:background="@color/colorBlackOpacity80"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="23dp"
+                android:gravity="center"
+                android:background="@color/colorBlackOpacity80"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="24dp"
+                android:background="@color/colorBlackOpacity80"
+                android:textSize="28dp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLiveOverlayMusic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_live_iframe_lock_2"
+        android:visibility="gone">
+
+        <!-- Semi-transparent mask over background -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBgMask" />
+
+        <ImageView
+            android:id="@+id/ivLiveOverlayMusicAnimation"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="190dp"
+            android:src="@drawable/img_music_animation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="190dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="65dp"
+            android:src="@drawable/img_iframe_text_music"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLiveOverlayQrErrorEvent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="440dp"
+            android:layout_height="180dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/color34363dOpacity90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/ivLiveOverlayQrCode"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="28dp"
+                android:contentDescription="QRcode"
+                android:scaleType="center" />
+
+            <TextView
+                android:id="@+id/tvLiveOverlayQrErrorCode"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="error code"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvLiveOverlayQrErrorMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="20dp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:text="error message here"
+                android:textColor="@color/colorC2c3c5"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLiveOverlayChannelBlock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_live_iframe_lock"
+        android:visibility="gone">
+
+        <!-- Semi-transparent mask over background -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBgMask"/>
+
+        <ImageView
+            android:id="@+id/ivLiveOverlayPadlockAnimation"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="190dp"
+            android:src="@drawable/img_locked_animation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="190dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="65dp"
+            android:src="@drawable/img_iframe_text_locked"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

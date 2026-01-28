@@ -1,0 +1,95 @@
+plugins {
+    id 'com.android.library'
+    // 若有用 Kotlin 再加：id 'org.jetbrains.kotlin.android'
+}
+
+def DATASTRUCTURE_LIBRARY_VERSION_CODE = 64
+def DATASTRUCTURE_LIBRARY_VERSION_NAME = "1.0.64"
+
+android {
+    namespace 'com.prime.datastructure'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        // Android Library 必須是整數，但它不會影響最終 APK
+        versionCode DATASTRUCTURE_LIBRARY_VERSION_CODE
+
+        // Android Library 必須是字串，但它不會影響最終 APK
+        versionName DATASTRUCTURE_LIBRARY_VERSION_NAME
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "VERSION_NAME", "\"${DATASTRUCTURE_LIBRARY_VERSION_NAME}\""
+            buildConfigField "int", "VERSION_CODE", "${DATASTRUCTURE_LIBRARY_VERSION_CODE}"
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "VERSION_NAME", "\"${DATASTRUCTURE_LIBRARY_VERSION_NAME}\""
+            buildConfigField "int", "VERSION_CODE", "${DATASTRUCTURE_LIBRARY_VERSION_CODE}"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        main {
+            aidl.srcDirs = ['src/main/aidl']
+            java.srcDirs = ['src/main/java']
+        }
+    }
+
+    buildFeatures {
+        aidl true
+        buildConfig true
+    }
+    // 自訂輸出 AAR 檔案的名稱
+    // 讓輸出的 AAR 檔案名稱包含版本號 (例如：adservice-1.0.0.aar)
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            def projectDir = project.rootDir.name
+            def versionName = project.properties['PLAYERSERVICE_LIBRARY_VERSION_NAME']
+
+            outputFileName = "${project.name}-${versionName}.aar"
+        }
+    }
+}
+
+/**
+ * framework.jar 路徑：用「相對本模組」定位，不用 flatDir。
+ * 這樣不會受 CNSLauncher rootDir 影響。
+ */
+def frameworkJar = new File(project.projectDir, "../libs/framework.jar").canonicalFile
+
+dependencies {
+    // 不用 flatDir，直接 files()
+    if (frameworkJar.exists()) {
+        compileOnly files(frameworkJar)
+    } else {
+        logger.warn("WARNING: framework.jar not found at ${frameworkJar}")
+    }
+
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    // 用明確座標，避免使用 libs.*（Version Catalog）造成脈絡取用失敗
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.tvprovider:tvprovider:1.1.0'
+    implementation 'com.hannesdorfmann.parcelableplease:annotation:1.0.2'
+    implementation 'androidx.work:work-runtime:2.9.0'
+    annotationProcessor 'com.hannesdorfmann.parcelableplease:processor:1.0.2'
+}

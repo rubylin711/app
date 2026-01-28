@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant T as DsmccTable (HandlerThread)
+    participant M as DsmccBiopCollector
+    participant P as BiopReader (ThreadPoolExecutor/BG)
+    participant S as sinkHandler (序列化)
+    participant FS as FileSystem (sessions/<txid>)
+
+    T->>M: onModuleComplete(dl, modId, ver, payload)
+    Note over M: inflight++（追蹤背景解析中數量）
+    M->>P: execute BiopReader.parse(payload)（背景執行緒池）
+
+    P->>S: onServiceGateway / onDirectory / onFile（逐筆事件）
+    S->>FS: saveImpl()：寫 tmp → fsync → rename 原子落地
+    S->>M: maybePublishAndGcImpl()：計算 live set、GC、(可選) publish
+
+    Note over M: ★ barrier：在 onModuleComplete 的 finally 內<br/>post 到 sinkHandler，確保落在所有 onFile 之後
+    M->>S: barrier runnable
+    S->>M: 標記 module 已 saved（tracker.saved.add(modId)）
+    S->>M: 若 allSaved() 且 inflight==1 → 觸發 onCarouselAllSaved(dl)
+    S->>M: maybePublishAndGcPost(dl)（冪等）
+    M->>UI: onModuleSaved(dl, modId, ver) / onCarouselAllSaved(dl, sessionDir)
+
+    Note over UI: 收到回調後，直接使用<br/>sessions/<txid>/<path> 的檔案

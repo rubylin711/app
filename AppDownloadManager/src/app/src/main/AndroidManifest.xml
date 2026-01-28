@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prime.appDownloadManager"
+    android:versionCode="8"
+    android:versionName="1.7"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission
+        android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--<uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />-->
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppDownloadManager"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <receiver android:name=".BootBroadcastReceiver" android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".ServerCommunicate.BackendManagementService" android:exported="true">
+            <intent-filter
+                android:priority="1000">
+                <action android:name="pesi.broadcast.action.device.manager" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".UpdateApp.UpdateAppProcess$InstalledUninstalledReceiver"/>
+
+        <receiver android:name=".ResultReceiver" android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="pesi.broadcast.action.device.appDownloadManager"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

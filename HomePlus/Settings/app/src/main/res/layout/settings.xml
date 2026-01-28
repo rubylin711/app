@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_1920_w">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clList"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:background="#171719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clListTitle"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- 左上角背景圖 -->
+            <ImageView
+                android:layout_width="118dp"
+                android:layout_height="118dp"
+                android:translationX="0dp"
+                android:translationY="0dp"
+                android:src="@drawable/bg_setting_title_set"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/settings"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="80dp"
+                android:gravity="left|center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivWeather"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/icon_twoway_time" />
+
+                <TextView
+                    android:id="@+id/tvDateTime"
+                    android:layout_width="205dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="3dp"
+                    android:gravity="center|left"
+                    android:text="16.18 (週四) 16:42"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ListView
+            android:id="@+id/lvSettings"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:listSelector="@drawable/button_item2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clListTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clListTitle"
+            app:layout_constraintVertical_bias="0.0"
+            android:divider="@null"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="250dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <include
+        android:id="@+id/settingsAndroid"
+        layout="@layout/settings_android"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/clList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/settingsPersonal"
+        layout="@layout/settings_personal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/clList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/settingsSystem"
+        layout="@layout/settings_system"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/clList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

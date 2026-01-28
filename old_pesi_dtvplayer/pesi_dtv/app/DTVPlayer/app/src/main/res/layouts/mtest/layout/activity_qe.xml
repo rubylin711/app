@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtest.activity.QEActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_qe_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="480dp"
+            android:layout_height="25dp"
+            android:background="@android:color/holo_blue_bright"
+            android:gravity="center"
+            android:text="@string/str_qe_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_rectangle_fail"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_tuner"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_rectangle"
+            android:gravity="center"
+            android:text="@string/str_qe_tuner"
+            app:layout_constraintEnd_toStartOf="@+id/tv_tuner_value"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+        <TextView
+            android:id="@+id/tv_tuner_value"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/shape_rectangle_disable"
+            android:gravity="center"
+            android:text="@string/str_num_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_tuner"
+            app:layout_constraintTop_toTopOf="@+id/tv_tuner" />
+
+        <ImageView
+            android:id="@+id/iv_tuner_up"
+            android:layout_width="12dp"
+            android:layout_height="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/up_triangle"
+            app:layout_constraintBottom_toTopOf="@+id/tv_tuner_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_tuner_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_tuner_value"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_tuner_down"
+            android:layout_width="12dp"
+            android:layout_height="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/down_triangle"
+            app:layout_constraintEnd_toEndOf="@+id/tv_tuner_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_tuner_value"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tuner_value"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_storage"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_rectangle"
+            android:gravity="center"
+            android:text="@string/str_qe_storage"
+            app:layout_constraintEnd_toStartOf="@+id/tv_storage_value"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tuner" />
+
+        <TextView
+            android:id="@+id/tv_storage_value"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/shape_rectangle_fail"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_storage"
+            app:layout_constraintTop_toTopOf="@+id/tv_storage" />
+
+        <ImageView
+            android:id="@+id/iv_storage_up"
+            android:layout_width="12dp"
+            android:layout_height="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/up_triangle"
+            app:layout_constraintBottom_toTopOf="@+id/tv_storage_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_storage_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_storage_value"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_storage_down"
+            android:layout_width="12dp"
+            android:layout_height="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/down_triangle"
+            app:layout_constraintEnd_toEndOf="@+id/tv_storage_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_storage_value"
+            app:layout_constraintTop_toBottomOf="@+id/tv_storage_value"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_rec"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/STR_RECORD"
+            android:scaleType="fitCenter"
+            android:src="@drawable/red_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_storage" />
+
+        <TextView
+            android:id="@+id/tv_rec"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/STR_RECORD"
+            app:layout_constraintStart_toEndOf="@+id/iv_rec"
+            app:layout_constraintTop_toTopOf="@+id/iv_rec" />
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/str_qe_play_stop"
+            android:scaleType="fitCenter"
+            android:src="@drawable/yellow_btn"
+            app:layout_constraintStart_toEndOf="@+id/tv_rec"
+            app:layout_constraintTop_toTopOf="@+id/tv_rec" />
+
+        <TextView
+            android:id="@+id/tv_play"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_qe_play_stop"
+            app:layout_constraintStart_toEndOf="@+id/iv_play"
+            app:layout_constraintTop_toTopOf="@+id/iv_play" />
+
+        <ImageView
+            android:id="@+id/iv_format"
+            android:layout_width="48dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/str_format"
+            android:scaleType="fitCenter"
+            android:src="@drawable/blue_btn"
+            app:layout_constraintStart_toEndOf="@+id/tv_play"
+            app:layout_constraintTop_toTopOf="@+id/tv_play" />
+
+        <TextView
+            android:id="@+id/tv_format"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_format"
+            app:layout_constraintStart_toEndOf="@+id/iv_format"
+            app:layout_constraintTop_toTopOf="@+id/iv_format" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_error_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

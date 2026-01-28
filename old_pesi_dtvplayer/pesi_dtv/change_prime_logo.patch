@@ -1,0 +1,66 @@
+diff --git a/app/DTVPlayer/app/src/main/AndroidManifest.xml b/app/DTVPlayer/app/src/main/AndroidManifest.xml
+index 024875d4..3eb6430f 100644
+--- a/app/DTVPlayer/app/src/main/AndroidManifest.xml
++++ b/app/DTVPlayer/app/src/main/AndroidManifest.xml
+@@ -62,8 +62,7 @@
+         android:name="com.mtest.activity.Global_Variables"
+         android:allowBackup="true"
+         android:debuggable="true"
+-        android:icon="@mipmap/vodafone"
+-        android:banner="@mipmap/vodafone"
++        android:icon="@mipmap/ic_launcher"
+         android:keepScreenOn="true"
+         android:label="@string/app_name"
+         android:largeHeap="true"
+		 
+diff --git a/app/DTVPlayer/app/src/main/res/layouts/PesiUI/layout/main_menu3_nav_header.xml b/app/DTVPlayer/app/src/main/res/layouts/PesiUI/layout/main_menu3_nav_header.xml
+index dc32f29e..2474467c 100644
+--- a/app/DTVPlayer/app/src/main/res/layouts/PesiUI/layout/main_menu3_nav_header.xml
++++ b/app/DTVPlayer/app/src/main/res/layouts/PesiUI/layout/main_menu3_nav_header.xml
+@@ -17,7 +17,7 @@
+         android:layout_height="wrap_content"
+         android:contentDescription="@string/nav_header_desc"
+         android:paddingTop="@dimen/nav_header_vertical_spacing"
+-        android:src="@drawable/vodafone" />
++        android:src="@drawable/prime_logo" />
+ 
+     <TextView
+         android:layout_width="match_parent"
+diff --git a/app/DTVPlayer/app/src/main/res/values-en/strings.xml b/app/DTVPlayer/app/src/main/res/values-en/strings.xml
+index 86687879..cc5f7aa2 100755
+--- a/app/DTVPlayer/app/src/main/res/values-en/strings.xml
++++ b/app/DTVPlayer/app/src/main/res/values-en/strings.xml
+@@ -1,7 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-<!--    <string name="app_name">DTVPlayer</string>-->
+-    <string name="app_name">Vodafone</string>
++    <string name="app_name">DTVPlayer</string>
+ 
+     <string name="str_mtest_ver">Version:20201225-001-Sec</string>
+     <string name="str_model">Model:CDNA9-1319-ATV</string>
+diff --git a/app/DTVPlayer/app/src/main/res/values-zh/strings.xml b/app/DTVPlayer/app/src/main/res/values-zh/strings.xml
+index 1f9eeebf..1e3c436f 100755
+--- a/app/DTVPlayer/app/src/main/res/values-zh/strings.xml
++++ b/app/DTVPlayer/app/src/main/res/values-zh/strings.xml
+@@ -1,7 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-<!--    <string name="app_name">DTVPlayer</string>-->
+-    <string name="app_name">Vodafone</string>
++    <string name="app_name">DTVPlayer</string>
+ 
+     <string name="str_mtest_ver">版本:20201225-001-Sec</string>
+     <string name="str_model">型号:CDNA9-1319-ATV</string>
+diff --git a/app/DTVPlayer/app/src/main/res/values/strings.xml b/app/DTVPlayer/app/src/main/res/values/strings.xml
+index 10182268..4c76a06d 100755
+--- a/app/DTVPlayer/app/src/main/res/values/strings.xml
++++ b/app/DTVPlayer/app/src/main/res/values/strings.xml
+@@ -1,6 +1,5 @@
+ <resources>
+-<!--    <string name="app_name">DTVPlayer</string>-->
+-    <string name="app_name">Vodafone</string>
++    <string name="app_name">DTVPlayer</string>
+     <string name="STR_PROGRAM_DETAIL">Detailed Program Info</string>
+     <string name="STR_PROGRESS">Progress</string>
+     <string name="STR_STRENGTH">Strength</string>

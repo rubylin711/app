@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.prime.dtvplayer.View.InfoBannerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Transparent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA">
+
+    <ImageView
+        android:id="@+id/bannerBgIGV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vertical_black_bg_round_corner"
+        android:contentDescription="@string/STR_TODO"
+        app:layout_constraintBottom_toTopOf="@+id/BottomGuideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/bannerNoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/INFOBANNER_DISPLAYNUM_NAME_TEXTSIZE"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/EventGuideline"
+        app:layout_constraintStart_toStartOf="@+id/LeftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/scrambleIGV" />
+
+    <TextView
+        android:id="@+id/bannerNameTXV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/INFOBANNER_DISPLAYNUM_NAME_TEXTSIZE"
+        app:layout_constraintBottom_toTopOf="@+id/EventGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bannerNoTXV"
+        app:layout_constraintTop_toBottomOf="@+id/parentalRateIGV" />
+
+    <TextView
+        android:id="@+id/bannerEventTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:gravity="start|top"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/LeftGuideline"
+        app:layout_constraintRight_toLeftOf="@+id/RightGuideline"
+        app:layout_constraintStart_toEndOf="@+id/banner_arrow_left"
+        app:layout_constraintTop_toBottomOf="@+id/EventGuideline" />
+
+
+    <ImageView
+        android:id="@+id/scrambleIGV"
+        android:layout_width="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_height="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/STR_TODO"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/parentalRateIGV"
+        app:layout_constraintStart_toStartOf="@+id/LeftGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/subtitleIGV"
+        android:layout_width="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_height="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/STR_TODO"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/parentalRateIGV"
+        app:layout_constraintStart_toEndOf="@+id/scrambleIGV"
+        app:layout_constraintTop_toTopOf="@+id/scrambleIGV" />
+
+    <ImageView
+        android:id="@+id/teletextIGV"
+        android:layout_width="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_height="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/STR_TODO"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/parentalRateIGV"
+        app:layout_constraintStart_toEndOf="@+id/subtitleIGV"
+        app:layout_constraintTop_toTopOf="@+id/scrambleIGV" />
+
+
+    <ImageView
+        android:id="@+id/stereoIGV"
+        android:layout_width="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_height="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/STR_TODO"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/parentalRateIGV"
+        app:layout_constraintStart_toEndOf="@+id/teletextIGV"
+        app:layout_constraintTop_toTopOf="@+id/scrambleIGV"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/parentalRateIGV"
+        android:layout_width="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_height="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/STR_TODO"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/stereoIGV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/resolutionIGV"
+        android:layout_width="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_height="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/parentalRateIGV"
+        app:layout_constraintLeft_toRightOf="@+id/parentalRateIGV"
+        app:layout_constraintTop_toTopOf="@+id/scrambleIGV"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ratioIGV"
+        android:layout_width="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_height="@dimen/INFOBANNER_ICON_SIZE"
+        android:layout_marginStart="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/parentalRateIGV"
+        app:layout_constraintLeft_toRightOf="@+id/resolutionIGV"
+        app:layout_constraintStart_toEndOf="@+id/resolutionIGV"
+        app:layout_constraintTop_toTopOf="@+id/scrambleIGV"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/curTimeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintEnd_toEndOf="@+id/bannerBgIGV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/LeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RightGuideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/BottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/EventGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/banner_tvradio_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="@string/STR_TODO"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/EventGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/LeftGuideline"
+        app:layout_constraintTop_toTopOf="@+id/bannerNoTXV" />
+
+    <ImageView
+        android:id="@+id/banner_arrow_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/ic_left"
+        android:contentDescription="@string/STR_TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LeftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/EventGuideline" />
+
+    <ImageView
+        android:id="@+id/banner_arrow_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ic_right"
+        android:contentDescription="@string/STR_TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bannerEventTXV"
+        app:layout_constraintTop_toBottomOf="@+id/EventGuideline" />
+
+</com.prime.dtvplayer.View.InfoBannerView>

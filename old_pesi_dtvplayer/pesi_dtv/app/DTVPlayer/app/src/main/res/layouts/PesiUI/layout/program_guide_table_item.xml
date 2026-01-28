@@ -1,0 +1,14 @@
+
+<com.prime.dtvplayer.View.guide.ProgramItemView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="0dp"
+android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+android:gravity="start|center_vertical"
+android:focusable="true"
+android:focusableInTouchMode="true"
+android:textAlignment="viewStart"
+android:textSize="@dimen/TEXT_SIZE"
+android:ellipsize="marquee"
+android:textColor="@color/text_color"
+android:marqueeRepeatLimit="marquee_forever"
+android:background="@drawable/program_guide_table_item_background"
+android:singleLine="true"/>

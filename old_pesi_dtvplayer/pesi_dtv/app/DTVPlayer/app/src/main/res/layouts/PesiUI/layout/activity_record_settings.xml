@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:layout_margin="0dp"
+    android:background="@drawable/bg"
+    tools:context=".Activity.RecordSettingsActivity">
+
+    <include
+        android:id="@+id/recordSettingsTitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/recordSettingsHelpLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/help" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <TextView
+        android:id="@+id/textTimeShiftInterval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/STR_TIMESHIFT_INTERVAL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"/>
+
+    <TextView
+        android:id="@+id/textRecordIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_RECORD_ICON"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/textTimeShiftInterval"
+        app:layout_constraintTop_toBottomOf="@+id/textTimeShiftInterval" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxLeft_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxRight_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_END" />
+
+
+    <Spinner
+        android:id="@+id/spinnerTimeShiftInterval"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_ARRAY_TIMESHIFT_INTERVAL"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/textTimeShiftInterval"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/textTimeShiftInterval" />
+
+    <Spinner
+        android:id="@+id/spinnerRecordIcon"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_ARRAY_RECORD_ICON"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/textRecordIcon"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/textRecordIcon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

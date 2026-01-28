@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 高亮度顏色 -->
+    <item
+        android:color="#FFFFFF"
+        android:state_selected="true"
+        />
+
+    <!-- 其它顏色 -->
+    <item android:color="#B8B8B8" />
+</selector>
+<!-- https://developer.android.com/guide/topics/resources/color-list-resource -->

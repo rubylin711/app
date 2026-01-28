@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PrimeSetting</string>
+    <string name="setting_usb_update">USB更新</string>
+    <string name="settings_category_title">機上盒設定</string>
+</resources>

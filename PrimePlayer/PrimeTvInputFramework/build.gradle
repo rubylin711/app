@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.application'
+    // 若有 Kotlin 再加：
+    // id 'org.jetbrains.kotlin.android'
+}
+def consumer = providers.gradleProperty("consumer.app").orElse("primeplayer").get()
+
+android {
+    namespace 'com.prime.tvinputframework'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.prime.tvinputframework"
+        minSdk 34
+        targetSdk 34
+        versionCode 6
+        versionName "1.0.5"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets {
+        main {
+            if (consumer == "cnslauncher") {
+                java {
+                exclude 'androidx/startup/**'
+                }
+            }
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    signingConfigs {
+        release {
+            //storeFile file("jdk_A1B.jks")
+            storeFile file("../SignedKeys/1319D_CNS_PLATFORM.jks")
+//            storeFile file("../SignedKeys/AOSP_public_wellknow_key.jks")
+//            storeFile file("../rtd1319D_DMG.jks")
+            storePassword 'pesi1234'
+            keyAlias 'key0'
+            keyPassword 'pesi1234'
+        }
+        debug {
+            //storeFile file("jdk_A1B.jks")
+            storeFile file("../SignedKeys/1319D_CNS_PLATFORM.jks")
+//            storeFile file("../SignedKeys/AOSP_public_wellknow_key.jks")
+//            storeFile file("../rtd1319D_DMG.jks")
+            storePassword 'pesi1234'
+            keyAlias 'key0'
+            keyPassword 'pesi1234'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+/**
+ * framework.jar 路徑：用「相對本模組」定位，不用 flatDir。
+ * 這樣不會受 CNSLauncher rootDir 影響。
+ */
+def frameworkJar = new File(project.projectDir, "../libs/framework.jar").canonicalFile
+
+dependencies {
+	 // 不用 flatDir，直接 files()
+    if (frameworkJar.exists()) {
+        compileOnly files(frameworkJar)
+    } else {
+        logger.warn("WARNING: framework.jar not found at ${frameworkJar}")
+    }
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+
+    implementation project(':DataStructure')
+    implementation project(':PlayerService')
+    implementation 'androidx.leanback:leanback:1.2.0-alpha04'
+    implementation 'androidx.leanback:leanback-preference:1.2.0-alpha04'
+    implementation "androidx.media3:media3-exoplayer:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-dash:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-hls:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-ima:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-midi:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-rtsp:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-smoothstreaming:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-workmanager:1.4.1"
+    implementation "androidx.media3:media3-ui:1.4.1"
+    implementation "androidx.media3:media3-common:1.4.1"
+    implementation 'com.google.android.gms:play-services-nearby:18.0.0'
+   testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

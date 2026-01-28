@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#66FFFF</color>
+    <color name="colorGray">#646464</color>
+    <color name="colorTimePickerBackground">#a7dbf7</color>
+    <color name="colorLightGray">#d4d3d3</color>
+    <color name="colorMtestPass">#73ff40</color>
+    <color name="colorMtestFocus">#fff940</color>
+    <color name="LightYellow">#FFFFE0</color>
+    <color name="Yellow">#FFFF00</color>
+    <color name="DeepBlue">#002743</color>
+    <color name="Blue">#00487A</color>
+    <color name="LightBlue">#00AFD5</color>
+    <color name="Aqua">#1b90e8</color>
+    <color name="DarkTransparent">#80000000</color>
+    <color name="DarkBlue">#313842</color>
+</resources>

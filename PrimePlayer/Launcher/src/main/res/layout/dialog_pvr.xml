@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/trans">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/lo_pvr_dialog_background_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_panel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/lo_pvr_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pvr_record_management"
+            android:textSize="@dimen/lo_pvr_dialog_text_size"
+            android:padding="@dimen/lo_pvr_dialog_padding"
+            android:textColor="@color/pvr_red_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <View
+            android:id="@+id/lo_pvr_dialog_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lo_pvr_dialog_line_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_title"
+            android:background="@color/opacity_thirty_white"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_line_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_line_margin"/>
+
+        <TextView
+            android:id="@+id/lo_pvr_dialog_book_record_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pvr_epg_timer_management"
+            android:textSize="@dimen/lo_pvr_dialog_text_size"
+            android:paddingStart="@dimen/lo_pvr_dialog_padding"
+            android:paddingTop="@dimen/lo_pvr_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_pvr_dialog_padding_up"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_text_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_text_margin"
+            android:textColor="@color/white"
+            android:focusable="true"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_line_1"/>
+        <View
+            android:id="@+id/lo_pvr_dialog_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lo_pvr_dialog_line_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_book_record_management"
+            android:background="@color/opacity_thirty_white"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_line_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_line_margin"/>
+
+        <TextView
+            android:id="@+id/lo_pvr_dialog_timer_management"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pvr_timer_management"
+            android:textSize="@dimen/lo_pvr_dialog_text_size"
+            android:paddingStart="@dimen/lo_pvr_dialog_padding"
+            android:paddingTop="@dimen/lo_pvr_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_pvr_dialog_padding_up"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_text_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_text_margin"
+            android:textColor="@color/white"
+            android:focusable="true"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_line_2"/>
+        <View
+            android:id="@+id/lo_pvr_dialog_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lo_pvr_dialog_line_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_timer_management"
+            android:background="@color/opacity_thirty_white"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_line_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_line_margin"/>
+
+        <TextView
+            android:id="@+id/lo_pvr_dialog_record_programs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pvr_record_programs"
+            android:textSize="@dimen/lo_pvr_dialog_text_size"
+            android:paddingStart="@dimen/lo_pvr_dialog_padding"
+            android:paddingTop="@dimen/lo_pvr_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_pvr_dialog_padding_up"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_text_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_text_margin"
+            android:textColor="@color/white"
+            android:focusable="true"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_line_3"/>
+        <View
+            android:id="@+id/lo_pvr_dialog_line_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lo_pvr_dialog_line_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_record_programs"
+            android:background="@color/opacity_thirty_white"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_line_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_line_margin"/>
+
+        <TextView
+            android:id="@+id/lo_pvr_dialog_memory_device_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pvr_memory_device_setting"
+            android:textSize="@dimen/lo_pvr_dialog_text_size"
+            android:paddingStart="@dimen/lo_pvr_dialog_padding"
+            android:paddingTop="@dimen/lo_pvr_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_pvr_dialog_padding_up"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_text_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_text_margin"
+            android:textColor="@color/white"
+            android:focusable="true"
+            android:background="@drawable/list_item_zapping_bg_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_line_4"/>
+        <View
+            android:id="@+id/lo_pvr_dialog_line_5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lo_pvr_dialog_line_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_memory_device_setting"
+            android:background="@color/opacity_thirty_white"
+            android:layout_marginStart="@dimen/lo_pvr_dialog_line_margin"
+            android:layout_marginEnd="@dimen/lo_pvr_dialog_line_margin"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/lo_pvr_dialog_hint_layout_height"
+            android:paddingTop="@dimen/lo_pvr_dialog_padding_up"
+            android:paddingBottom="@dimen/lo_pvr_dialog_padding_up"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lo_pvr_dialog_line_5">
+
+            <ImageView
+                android:id="@+id/lo_pvr_dialog_hint_up_down_icon"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/lo_pvr_dialog_hint_text_marginend"
+                android:src="@drawable/hint_updown" />
+
+            <TextView
+                android:id="@+id/lo_pvr_dialog_hint_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/pvr_hint_page"
+                android:textSize="@dimen/lo_pvr_dialog_hint_text_size"
+                android:layout_marginEnd="@dimen/lo_pvr_dialog_hint_text_marginend"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/lo_pvr_dialog_hint_confirm_icon"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/lo_pvr_dialog_hint_icon_marginend"
+                android:src="@drawable/hint_ok" />
+
+            <TextView
+                android:id="@+id/lo_pvr_dialog_hint_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/pvr_dialog_confirm"
+                android:textSize="@dimen/lo_pvr_dialog_hint_text_size"
+                android:layout_marginEnd="@dimen/lo_pvr_dialog_hint_text_marginend"
+                android:textColor="@color/white" />
+            <ImageView
+                android:id="@+id/lo_pvr_dialog_hint_back_icon"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/lo_pvr_dialog_hint_icon_marginend"
+                android:src="@drawable/hint_back" />
+            <TextView
+                android:id="@+id/lo_pvr_dialog_hint_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/hint_rcu_cancel"
+                android:textSize="@dimen/lo_pvr_dialog_hint_text_size"
+                android:layout_marginEnd="25dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

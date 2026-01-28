@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.loader.LoaderISDBTParameters">
+
+    <TextView
+        android:id="@+id/t_isdbt_title"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:text="@string/STR_LOADER_DTV_LOADER_PARAMETERS_PAGE"
+        android:textColor="@color/text_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/t_isdbt_channel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline22"
+        app:layout_constraintTop_toTopOf="@+id/guideline21" />
+
+    <EditText
+        android:id="@+id/e_isdbt_freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="@+id/t_isdbt_channel" />
+
+    <EditText
+        android:id="@+id/e_isdbt_pid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/e_isdbt_bandwidth"
+        app:layout_constraintStart_toStartOf="@+id/e_isdbt_bandwidth"
+        app:layout_constraintTop_toTopOf="@+id/t_isdbt_pid" />
+
+    <Spinner
+        android:id="@+id/e_isdbt_bandwidth"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:background="@drawable/selectbox"
+        android:descendantFocusability="afterDescendants"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:focusable="true"
+        android:popupBackground="@drawable/banner"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/e_isdbt_freq"
+        app:layout_constraintStart_toStartOf="@+id/e_isdbt_freq"
+        app:layout_constraintTop_toTopOf="@+id/t_isdbt_bandwidth" />
+
+    <TextView
+        android:id="@+id/t_isdbt_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:text="@string/STR_LOADER_DTV_CHANNEL"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/t_isdbt_bandwidth"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toBottomOf="@+id/t_isdbt_title" />
+
+    <TextView
+        android:id="@+id/t_isdbt_bandwidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_LOADER_DTV_BANDWIDTH"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/t_isdbt_pid"
+        app:layout_constraintStart_toStartOf="@+id/t_isdbt_channel"
+        app:layout_constraintTop_toBottomOf="@+id/t_isdbt_channel" />
+
+    <TextView
+        android:id="@+id/t_isdbt_pid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/STR_LOADER_DTV_PID"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/b_isdbt_confirm"
+        app:layout_constraintStart_toStartOf="@+id/t_isdbt_bandwidth"
+        app:layout_constraintTop_toBottomOf="@+id/t_isdbt_bandwidth" />
+
+    <Button
+        android:id="@+id/b_isdbt_confirm"
+        android:layout_width="568dp"
+        android:layout_height="28sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/item_selector"
+        android:text="@string/STR_LOADER_DTV_SEARCH"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/t_isdbt_status"
+        app:layout_constraintEnd_toEndOf="@+id/e_isdbt_freq"
+        app:layout_constraintStart_toStartOf="@+id/t_isdbt_channel"
+        app:layout_constraintTop_toBottomOf="@+id/t_isdbt_pid" />
+
+    <TextView
+        android:id="@+id/t_isdbt_status"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:text="@string/STR_LOADER_DTV_EDIT_HINT"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline18"
+        app:layout_constraintEnd_toEndOf="@+id/e_isdbt_freq"
+        app:layout_constraintStart_toStartOf="@+id/t_isdbt_channel"
+        app:layout_constraintTop_toBottomOf="@+id/b_isdbt_confirm" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

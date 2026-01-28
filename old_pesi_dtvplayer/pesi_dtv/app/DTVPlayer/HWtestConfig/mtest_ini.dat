@@ -1,0 +1,90 @@
+HW_TEST_CONFIG_ONOFF=0
+#0:off
+#1:on
+
+UDP_URL=udp://@10.1.4.183:1234
+#以UDP_URL播放影像
+
+STB_IP=10.1.4.183
+#以STB_IP設定機上盒的IP
+
+DEST_IP=10.1.4.200
+#以DEST_IP做為ping的位址
+
+TUNER_TEST=1
+#0:off
+#1:1個頻點,生產模式
+#2:2個頻點互切
+
+LED_TEST=1
+#0:off
+#1: 生產模式
+#2:LED on/off互切
+
+SC_TEST=1
+#0:off
+#1: ATR一次,生產模式
+#2:持續ATR
+
+USB_TEST=1
+#0:off
+#1: R/W一次,生產模式
+#2:持續R/W
+
+WIFI_TEST=1
+#0:off
+#1:連AP
+#2:持續scan
+
+BT_TEST=1
+#0:off
+#1:連AP
+#2:持續scan
+
+POWER_TEST=0
+#0:off
+#1:制具
+#2:SW reboot
+#3:STR
+#4:Reset default
+
+SATA_TEST=1
+#0:off
+#1: R/W一次,生產模式
+#2:持續R/W
+
+SD_TEST=1
+#0:off
+#1: R/W一次,生產模式
+#2:持續R/W
+
+ETHERNET_TEST=1
+#0:off
+#1: ping一次,生產模式
+#2:持續ping
+
+DISEQC_TEST=1
+#0:off
+#1: 生產模式
+#2:持續切換
+
+LNB_TEST=1
+#0:off
+#1: 生產模式
+#2:持續切換
+
+LONG_TERM_TEST=0
+#0:off
+#1:間隔10分鐘, show 周邊裝置PASS/FAIL
+
+THERMAL_TEST=0
+#0:off
+#1:增加loading , 如UI一直畫
+
+FLASH_TEST=0
+#0:off
+#1: 持續R/W
+
+DDR_TEST=0
+#0:off
+#1: 持續R/W

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prime.tvservice"
+    tools:ignore="ImpliedTouchscreenHardware,MissingLeanbackLauncher,MissingLeanbackSupport">
+
+    <application
+        android:allowBackup="true"
+        android:label="TVService"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Leanback">
+        <service
+            android:name=".TVService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.prime.tvservice.ITVService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.prime.tvprovider.TVMProvider"
+            android:authorities="com.prime.tvprovider.TVMProvider"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

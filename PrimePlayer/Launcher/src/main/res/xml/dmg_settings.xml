@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/dmg_settings_category_title">
+
+    <Preference
+        android:icon="@drawable/ic_channel_lock"
+        android:key="channel_lock"
+        android:title="@string/dmg_settings_channel_lock"
+        android:fragment="com.prime.launcher.Settings.fragment.ChannelLockFragment">
+    </Preference>
+
+    <Preference
+        android:icon="@drawable/ic_project_setting"
+        android:key="engineering_setting"
+        android:title="@string/dmg_settings_engineering_setting"
+        android:fragment="com.prime.launcher.Settings.fragment.EngineeringSettingFragment">
+    </Preference>
+
+    <Preference
+        android:icon="@drawable/ic_connection_test"
+        android:key="connection_test"
+        android:title="@string/dmg_settings_connection_test">
+    </Preference>
+
+    <Preference
+        android:icon="@drawable/ic_signal_detect"
+        android:key="signal_detect"
+        android:title="@string/dmg_settings_signal_detect">
+    </Preference>
+
+    <Preference
+        android:icon="@drawable/ic_channel_scan"
+        android:key="channel_scan"
+        android:title="@string/dmg_settings_channel_scan">
+    </Preference>
+
+    <ListPreference
+        android:icon="@drawable/ic_introduction_time"
+        android:key="introduction_time"
+        android:title="@string/dmg_settings_introduction_time"
+        android:entries="@array/info_time_entries"
+        android:defaultValue="2"
+        android:entryValues="@array/info_time_values"
+        android:summary="%s">
+    </ListPreference>
+
+    <!--
+    <Preference
+        android:icon="@drawable/ic_ratings_survey"
+        android:key="ratings_survey"
+        android:title="@string/dmg_settings_ratings_survey"
+        android:fragment="com.prime.launcher.Settings.fragment.DMGRMSSwitchFragment">
+    </Preference>
+    -->
+</PreferenceScreen>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/parental_locked_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/mRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <RadioButton
+                    android:id="@+id/rbtn1"
+                    android:layout_width="140dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/button_item2"
+                    android:button="@drawable/radio_button_inset"
+                    android:buttonTint="#ffffff"
+                    android:text="3秒"
+                    android:textColor="@color/state_selected_white_normal_white70"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/rbtn2"
+                    android:layout_width="140dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="172dp"
+                    android:background="@drawable/button_item2"
+                    android:button="@drawable/radio_button_inset"
+                    android:buttonTint="#ffffff"
+                    android:text="5秒"
+                    android:textColor="@color/state_selected_white_normal_white70"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/rbtn3"
+                    android:layout_width="140dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="318dp"
+                    android:background="@drawable/button_item2"
+                    android:button="@drawable/radio_button_inset"
+                    android:buttonTint="#ffffff"
+                    android:text="10秒"
+                    android:textColor="@color/state_selected_white_normal_white70"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/rbtn4"
+                    android:layout_width="140dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="464dp"
+                    android:background="@drawable/button_item2"
+                    android:button="@drawable/radio_button_inset"
+                    android:buttonTint="#ffffff"
+                    android:text="15秒"
+                    android:textColor="@color/state_selected_white_normal_white70"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/rbtn5"
+                    android:layout_width="140dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="611dp"
+                    android:background="@drawable/button_item2"
+                    android:button="@drawable/radio_button_inset"
+                    android:buttonTint="#ffffff"
+                    android:text="20秒"
+                    android:textColor="@color/state_selected_white_normal_white70"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RadioGroup>
+
+    </LinearLayout>
+</LinearLayout>

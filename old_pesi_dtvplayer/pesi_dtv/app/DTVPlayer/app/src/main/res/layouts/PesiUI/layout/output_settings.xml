@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/bg"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    tools:context="com.prime.dtvplayer.Activity.LanguageSettingsActivity">
+
+    <include
+        android:id="@+id/outputTitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/outputHelpLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/help" />
+
+    <TextView
+        android:id="@+id/tvRatioTxv"
+        android:text="@string/STR_TV_RATIO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START" />
+
+    <TextView
+        android:id="@+id/conversionTxv"
+        android:text="@string/STR_CONVERSION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tvRatioTxv"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatioTxv" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxLeft_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxRight_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_END" />
+
+    <Spinner
+        android:id="@+id/tvRatio"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:entries="@array/STR_TV_RATIO_OPTION"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRatioTxv"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/tvRatioTxv" />
+
+    <Spinner
+        android:id="@+id/conversion"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_CONVERSION_OPTION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintTop_toTopOf="@+id/conversionTxv"
+        app:layout_constraintBottom_toBottomOf="@+id/conversionTxv"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v" />
+
+    <Spinner
+        android:id="@+id/conversion4X3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_CONVERSION4X3_OPTION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintTop_toTopOf="@+id/conversionTxv"
+        app:layout_constraintBottom_toBottomOf="@+id/conversionTxv"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_v_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_v_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <TextView
+        android:id="@+id/audiooutputTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_AUDIO_OUTPUT"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/conversionTxv"
+        app:layout_constraintTop_toBottomOf="@+id/conversionTxv" />
+
+    <Spinner
+        android:id="@+id/audoutputSPINNER"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:entries="@array/STR_ARRAY_AUDIO_OUTPUT"
+        android:popupBackground="@drawable/banner"
+        app:layout_constraintBottom_toBottomOf="@+id/audiooutputTXV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/audiooutputTXV" />
+
+    <TextView
+        android:id="@+id/hdmiResolutionTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_HDMI_RESOLUTION"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/audiooutputTXV"
+        app:layout_constraintTop_toBottomOf="@+id/audiooutputTXV" />
+
+    <Spinner
+        android:id="@+id/resolutionSpinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/hdmiResolutionTxv"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/hdmiResolutionTxv" />
+
+    <TextView
+        android:id="@+id/autoStandbyTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/STR_AUTO_STANDBY"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/hdmiResolutionTxv"
+        app:layout_constraintTop_toBottomOf="@+id/hdmiResolutionTxv" />
+
+    <Spinner
+        android:id="@+id/autoStandbySpinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/selectbox"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        android:popupBackground="@drawable/banner"
+        android:entries="@array/STR_AUTO_STANDBY_OPTION_ENTRIES"
+        app:layout_constraintBottom_toBottomOf="@+id/autoStandbyTxv"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/autoStandbyTxv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

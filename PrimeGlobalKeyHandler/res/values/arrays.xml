@@ -1,0 +1,20 @@
+<resources>
+    <string-array name="disney_plus_package_name" translatable="false">
+        <item>com.disney.disneyplus</item>
+    </string-array>
+    <string-array name="hbo_package_name" translatable="false">
+        <item>com.wbd.stream</item>
+    </string-array>
+    <string-array name="prime_video_package_name" translatable="false">
+        <item>com.amazon.amazonvideo.livingroom</item>
+    </string-array>
+    <string-array name="LiTV_package_name" translatable="false">
+        <item>com.js.litv.home</item>
+    </string-array>	
+    <string-array name="Friday_package_name" translatable="false">
+        <item>net.fetnet.fetvod.tv</item>
+    </string-array>		
+    <string-array name="Catchplay_package_name" translatable="false">
+        <item>com.catchplay.asiaplay.common.tv</item>
+    </string-array>	
+</resources>

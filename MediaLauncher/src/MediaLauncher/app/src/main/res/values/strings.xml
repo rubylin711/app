@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Media Launcher</string>
+
+    <!-- Main Activity -->
+    <string name="tv_applications">TV Applications</string>
+</resources>

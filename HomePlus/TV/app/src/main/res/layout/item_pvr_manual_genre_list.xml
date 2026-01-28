@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llPvrManualGenreList"
+    android:layout_width="match_parent"
+    android:layout_height="38dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPvrManualGenreListName"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:maxWidth="147dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Genre Name"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="1dp"
+            android:background="@color/colorWhiteOpacity20"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="18dp" />
+    </LinearLayout>
+</LinearLayout>

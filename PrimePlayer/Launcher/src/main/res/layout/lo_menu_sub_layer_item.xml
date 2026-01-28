@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/lo_menu_sub_layer_item_width"
+    android:layout_height="@dimen/lo_menu_sub_layer_item_height"
+    android:layout_marginLeft="@dimen/lo_menu_sub_layer_item_marginleft"
+    android:layout_marginRight="@dimen/lo_menu_sub_layer_item_marginright"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/lo_layer_item_rltvl_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lo_layer_item_rltvl_border_marginleft">
+
+        <ImageView
+            android:id="@+id/lo_layer_item_sub_border_imgv_icon"
+            android:layout_width="@dimen/lo_layer_item_sub_border_imgv_icon_width"
+            android:layout_height="@dimen/lo_layer_item_sub_border_imgv_icon_height"
+            android:layout_marginLeft="@dimen/lo_layer_item_rltvl_border_marginleft"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/lo_layer_item_sub_border_textv_label"
+            android:layout_width="@dimen/lo_layer_item_sub_border_textv_label_width"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:text="label"
+            android:textSize="@dimen/lo_layer_item_sub_border_textv_label_textsize"
+            android:textColor="@color/lo_layer_item_sub_border_textv_label_unfocus"
+            android:focusable="false"
+            android:paddingLeft="@dimen/lo_layer_item_sub_border_textv_label_paddingleft"
+            android:layout_marginLeft="@dimen/lo_layer_item_sub_border_textv_label_marginleft"
+            android:layout_marginBottom="@dimen/lo_layer_item_sub_border_textv_label_marginbottom"
+            android:layout_marginTop="@dimen/lo_layer_item_sub_border_textv_label_margintop"
+            android:layout_marginRight="@dimen/lo_layer_item_sub_border_textv_label_marginright"/>
+
+        <TextView
+            android:id="@+id/lo_layer_item_sub_border_textv_count"
+            android:textSize="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="@drawable/circular_notification_count"
+            android:shadowColor="@android:color/white"
+            android:visibility="gone"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:layout_marginTop="@dimen/lo_layer_item_sub_border_textv_count_margintop"
+            android:layout_marginLeft="@dimen/lo_layer_item_sub_border_textv_count_marginleftm"/>
+    </RelativeLayout>
+</RelativeLayout>

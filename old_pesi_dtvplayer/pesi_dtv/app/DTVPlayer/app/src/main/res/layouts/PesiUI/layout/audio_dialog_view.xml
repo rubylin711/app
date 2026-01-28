@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AudioDialogView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/audioDialogLayout"
+        android:layout_width="@dimen/AUDIODIALOG_WIDTH"
+        android:layout_height="@dimen/AUDIODIALOG_HEIGHT"
+        android:background="@drawable/full_black_bg_with_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/audioDialog_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="128"
+            android:contentDescription="@string/STR_TODO"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/audioDialogListview_ll"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/audioDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:paddingBottom="2dp"
+            android:text="@string/STR_AUDIO_LANGUAGE"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/TEXT_SIZE"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/audioDialog_TitleLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_margin="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/gradient_title_line"
+            android:contentDescription="@string/STR_TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/audioDialogTitle" />
+
+        <!--
+            android:listSelector="@drawable/focus_list"
+        -->
+        <LinearLayout
+            android:id="@+id/audioDialogListview_ll"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@id/audioDialog_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/audioDialog_TitleLine">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/audioDialogListview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+                app:layoutManager="LinearLayoutManager"/>
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/gradient_title_line"
+            app:layout_constraintBottom_toTopOf="@+id/audioDialog_btm2"
+            />
+
+        <TextView
+            android:id="@+id/audioDialog_message"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:text="@string/STR_NULL"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintEnd_toStartOf="@id/audio_dialog_right"
+            app:layout_constraintStart_toEndOf="@id/audio_dialog_left"
+            app:layout_constraintTop_toTopOf="@+id/audio_dialog_left"
+            app:layout_constraintBottom_toBottomOf="@id/audio_dialog_left"/>
+
+        <!-- frame -->
+        <ImageView
+            android:id="@+id/audioDialog_btm1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/audioDialogListview_ll"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/audioDialog_message" />
+        <ImageView
+            android:id="@+id/audioDialog_btm2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/audioDialogListview_ll"
+            app:layout_constraintBottom_toTopOf="@id/audioDialog_message"
+            app:layout_constraintStart_toEndOf="@id/audioDialog_btm1"
+            app:layout_constraintEnd_toStartOf="@id/audioDialog_btm4" />
+        <ImageView
+            android:id="@+id/audioDialog_btm3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/audioDialog_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/audioDialog_btm1"
+            app:layout_constraintEnd_toStartOf="@id/audioDialog_btm4" />
+        <ImageView
+            android:id="@+id/audioDialog_btm4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/audioDialogListview_ll"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/audioDialog_message"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- left arrow -->
+        <ImageView
+            android:id="@+id/audio_dialog_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/selectbox_left_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- right arrow -->
+        <ImageView
+            android:id="@+id/audio_dialog_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/selectbox_right_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/txvHorTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/txvHorBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.76" />
+</androidx.constraintlayout.widget.ConstraintLayout>

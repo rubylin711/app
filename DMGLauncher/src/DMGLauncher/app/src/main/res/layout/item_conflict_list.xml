@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:focusable="true"
+    android:background="@drawable/mail_item_list_top_and_down_gold_line" >
+    <!--
+    android:background="@drawable/item_list_top_and_down_gold_line"
+    -->
+
+    <!-- Check Box -->
+    <ImageView
+        android:id="@+id/CheckboxOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center_vertical"
+        android:focusable="false"
+        android:background="@mipmap/icon_checkbox_off"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+    <ImageView
+        android:id="@+id/CheckboxOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center_vertical"
+        android:focusable="false"
+        android:background="@mipmap/icon_checkbox_on"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+    <!-- 頻道名稱 -->
+    <TextView
+        android:id="@+id/Title"
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7.5dp"
+        android:layout_marginEnd="7.5dp"
+        android:focusable="false"
+        android:text="260 LOVE NATURE 4K"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        app:layout_constraintEnd_toStartOf="@id/Show4KIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/CheckboxOff"
+        tools:ignore="HardcodedText" />
+    <!-- 4K icon -->
+    <ImageView
+        android:id="@+id/Show4KIcon"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="7.5dp"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:src="@drawable/icon_4k"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toStartOf="@id/RecordIcon"
+        app:layout_constraintTop_toTopOf="@id/Title"
+        app:layout_constraintBottom_toBottomOf="@id/Title" />
+    <!-- 錄影中 icon -->
+    <ImageView
+        android:id="@+id/RecordIcon"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="7.5dp"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:src="@drawable/icon_recording"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/Title"
+        app:layout_constraintBottom_toBottomOf="@id/Title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

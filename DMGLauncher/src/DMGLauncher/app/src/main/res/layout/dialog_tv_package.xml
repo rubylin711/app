@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="@dimen/left_shadow_layout_width"
+        android:layout_height="match_parent"
+        android:background="@drawable/left_shadow"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hint_shadow_layout_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/hint_shadow"/>
+    <!--<LinearLayout
+        android:id="@+id/lo_left_tv_package_layer"
+        android:orientation="vertical"
+        android:layout_width="@dimen/left_tv_package_layer_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/left_tv_package_layer_marginTop"
+        android:layout_marginBottom="@dimen/left_tv_package_layer_marginBottom">
+        <ImageView
+            android:layout_width="@dimen/left_tv_package_arrow_layout_size"
+            android:layout_height="@dimen/left_tv_package_arrow_layout_size"
+            android:layout_marginStart="@dimen/left_tv_package_arrow_layout_marginStart"
+            android:focusable="false"
+            android:src="@drawable/icon_miniepg_prev"
+            android:rotation="90"
+            tools:ignore="ContentDescription" />
+        <com.prime.dmg.launcher.Home.LiveTV.TvPackage.TypeListView
+            android:id="@+id/lo_tv_package_type_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/left_tv_package_type_layout_height"
+            android:layout_marginStart="@dimen/left_tv_package_type_layout_marginStart"
+            android:focusable="false"/>
+        <ImageView
+            android:layout_width="@dimen/left_tv_package_arrow_layout_size"
+            android:layout_height="@dimen/left_tv_package_arrow_layout_size"
+            android:layout_marginStart="@dimen/left_tv_package_arrow_layout_marginStart"
+            android:focusable="false"
+            android:src="@drawable/icon_miniepg_next"
+            android:rotation="90"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lo_left_tv_package_layer"
+        android:orientation="vertical"
+        android:layout_width="@dimen/left_tv_package_layer_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/left_tv_package_layer_marginTop"
+        android:layout_marginBottom="@dimen/left_tv_package_layer_marginBottom" >
+
+        <ImageView
+            android:id="@+id/arrow_up"
+            android:layout_width="@dimen/left_tv_package_arrow_layout_size"
+            android:layout_height="@dimen/left_tv_package_arrow_layout_size"
+            android:layout_marginStart="@dimen/left_tv_package_arrow_layout_marginStart"
+            android:focusable="false"
+            android:src="@drawable/icon_miniepg_prev"
+            android:rotation="90"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <com.prime.dmg.launcher.Home.LiveTV.TvPackage.TypeListView
+            android:id="@+id/lo_tv_package_type_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/left_tv_package_type_layout_marginStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arrow_up"
+            app:layout_constraintBottom_toTopOf="@id/arrow_down"
+            android:focusable="false"/>
+
+        <ImageView
+            android:id="@+id/arrow_down"
+            android:layout_width="@dimen/left_tv_package_arrow_layout_size"
+            android:layout_height="@dimen/left_tv_package_arrow_layout_size"
+            android:layout_marginStart="@dimen/left_tv_package_arrow_layout_marginStart"
+            android:layout_marginBottom="20dp"
+            android:focusable="false"
+            android:src="@drawable/icon_miniepg_next"
+            android:rotation="90"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/lo_bottom_tv_package_layer"
+        android:layout_width="@dimen/bottom_tv_package_layer_width"
+        android:layout_height="@dimen/bottom_tv_package_layer_height"
+        android:layout_marginStart="158dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/lo_bottom_tv_package_layer_left_arrow"
+            android:focusable="false"
+            android:layout_width="@dimen/bottom_tv_package_arrow_layout_size"
+            android:layout_height="@dimen/bottom_tv_package_arrow_layout_size"
+            android:layout_marginTop="@dimen/bottom_tv_package_layer_margin"
+            android:src="@drawable/icon_miniepg_prev"
+            tools:ignore="ContentDescription" />
+        <com.prime.dmg.launcher.Home.LiveTV.TvPackage.ContentListView
+            android:id="@+id/lo_tv_package_content_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_tv_package_content_height"
+            android:layout_toEndOf="@+id/lo_bottom_tv_package_layer_left_arrow"/>
+        <ImageView
+            android:focusable="false"
+            android:layout_width="@dimen/bottom_tv_package_arrow_layout_size"
+            android:layout_height="@dimen/bottom_tv_package_arrow_layout_size"
+            android:layout_marginTop="@dimen/bottom_tv_package_layer_margin"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_miniepg_next"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/lo_no_data_text"
+        android:textSize="@dimen/no_data_text_size"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/no_data_text_height"
+        android:text="@string/package_no_data"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+    <com.prime.dmg.launcher.CustomView.TimeView
+        android:id="@+id/lo_time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/time_view_layout_marginEnd"
+        android:layout_marginBottom="@dimen/time_view_layout_marginBottom"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:focusable="false"
+        android:visibility="visible"
+        android:clickable="false"/>
+    <!--<ImageView
+        android:id="@+id/lo_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/logo_layout_marginStart"
+        android:layout_marginBottom="@dimen/logo_layout_marginBottom"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/dmg_logo"
+        tools:ignore="ContentDescription" />-->
+
+    
+</RelativeLayout>

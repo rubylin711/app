@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/lo_quick_item_add_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/quick_tune_item_add_icon_padding"
+        android:src="@drawable/icon_quick_tune_add"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/lo_quick_item_channel_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/lo_quick_item_channel_icon"
+            android:layout_width="@dimen/quick_tune_item_channel_width"
+            android:layout_height="@dimen/quick_tune_item_channel_height"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/lo_quick_item_channel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="top"
+            android:includeFontPadding="false"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

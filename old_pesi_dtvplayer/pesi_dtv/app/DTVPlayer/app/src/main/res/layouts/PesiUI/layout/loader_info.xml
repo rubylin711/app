@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context=".Activity.LoaderInfoActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/infoGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <include
+        android:id="@+id/TitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hwTXV"
+        android:text="@string/str_Hardware_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP" />
+
+    <TextView
+        android:id="@+id/swTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/str_loader_version"
+        app:layout_constraintStart_toStartOf="@+id/hwTXV"
+        app:layout_constraintTop_toBottomOf="@+id/hwTXV" />
+
+    <TextView
+        android:id="@+id/sequenceNumTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/str_loader_sequence_number"
+        app:layout_constraintStart_toStartOf="@+id/swTXV"
+        app:layout_constraintTop_toBottomOf="@+id/swTXV" />
+
+    <TextView
+        android:id="@+id/buildtimeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:text="@string/str_loader_build_time"
+        app:layout_constraintStart_toStartOf="@+id/sequenceNumTXV"
+        app:layout_constraintTop_toBottomOf="@+id/sequenceNumTXV" />
+
+    <TextView
+        android:id="@+id/hwInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/infoGuideline"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/hwTXV" />
+
+    <TextView
+        android:id="@+id/swInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/swTXV"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/swTXV" />
+
+    <TextView
+        android:id="@+id/sequenceNumInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/sequenceNumTXV"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/sequenceNumTXV" />
+
+    <TextView
+        android:id="@+id/buildtimeInfoTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/buildtimeTXV"
+        app:layout_constraintStart_toStartOf="@+id/infoGuideline"
+        app:layout_constraintTop_toTopOf="@+id/buildtimeTXV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

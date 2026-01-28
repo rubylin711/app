@@ -1,0 +1,21 @@
+// Copyright 2018 Google LLC. All Rights Reserved. This file and proprietary
+// source code may only be used and distributed under the Widevine Master
+// License Agreement.
+
+syntax = "proto2";
+
+package tutorial;
+
+//option optimize_for = LITE_RUNTIME;
+
+option java_package = "com.google.android.exoplayer2.cas";
+option java_multiple_files = true;
+
+// Widevine private data in the CA descriptor.
+message CaDescriptorPrivateData {
+  // Provider name.
+  optional string provider = 1;
+
+  // Content ID.
+  optional bytes content_id = 2;
+}

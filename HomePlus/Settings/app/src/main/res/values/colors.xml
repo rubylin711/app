@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#353a42</color>
+    <color name="colorPrimaryDark">@color/colorWhiteOpacity50</color>
+    <color name="colorAccent">@color/colorWhiteOpacity50</color>
+
+    <color name="colorTabSelect">#00a199</color>
+    <color name="colorNotSelect">#66000000</color>
+
+    <color name="colorIconBar">#2e2e36</color>
+
+    <color name="colorButton">#99000000</color>
+    <color name="colorButton2">#46485a</color>
+
+    <color name="colorTextSelect">#ffffff</color>
+    <color name="colorTextNotSelect">#ffb2b2b2</color>
+    <color name="colorTextExit">#464a52</color>
+    <color name="colorTextTitle">#3b3c41</color>
+
+    <color name="settings_layout_bg_f">#cc111112</color>
+
+    <color name="settings_title_layout_bg_d">#00171719</color>
+    <color name="settings_title_layout_bg_f">#0db2d2ff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="colorWhiteOpacity10">#1affffff</color>
+    <color name="colorWhiteOpacity20">#33ffffff</color>
+    <color name="colorWhiteOpacity30">#4dffffff</color>
+    <color name="colorWhiteOpacity40">#66ffffff</color>
+    <color name="colorWhiteOpacity45">#73ffffff</color>
+    <color name="colorWhiteOpacity50">#80ffffff</color>
+    <color name="colorWhiteOpacity70">#b3ffffff</color>
+    <color name="colorWhiteOpacity75">#bfffffff</color>
+    <color name="colorWhiteOpacity80">#ccffffff</color>
+    <color name="colorWhiteOpacity100">#ffffffff</color>
+
+    <color name="colorNewGold">#e5bc6f</color>
+    <color name="colorNewGoldOpacity70">#b3e5bc6f</color>
+    <color name="colorGoldOpacity70">#b3ebca8c</color>
+    <color name="colorGoldOpacity80">#ccebca8c</color>
+
+    <color name="colorWarning">#ffea5b5b</color>
+    <color name="colorBlueSubtitle">#ff8da4b9</color>
+
+</resources>

@@ -1,0 +1,71 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.prime.primetvinputapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.prime.primetvinputapp"
+        minSdk 34
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    signingConfigs {
+        release {
+            //storeFile file("jdk_A1B.jks")
+            storeFile file("../SignedKeys/1319D_CNS_PLATFORM.jks")
+//            storeFile file("../SignedKeys/AOSP_public_wellknow_key.jks")
+//            storeFile file("../rtd1319D_DMG.jks")
+            storePassword 'pesi1234'
+            keyAlias 'key0'
+            keyPassword 'pesi1234'
+        }
+        debug {
+            //storeFile file("jdk_A1B.jks")
+            storeFile file("../SignedKeys/1319D_CNS_PLATFORM.jks")
+//            storeFile file("../SignedKeys/AOSP_public_wellknow_key.jks")
+//            storeFile file("../rtd1319D_DMG.jks")
+            storePassword 'pesi1234'
+            keyAlias 'key0'
+            keyPassword 'pesi1234'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    compileOnly files("$rootDir/libs/framework.jar")
+    implementation project(':DataStructure')
+    implementation project(':PlayerService')
+    implementation 'androidx.leanback:leanback:1.2.0-alpha04'
+    implementation 'androidx.leanback:leanback-preference:1.2.0-alpha04'
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

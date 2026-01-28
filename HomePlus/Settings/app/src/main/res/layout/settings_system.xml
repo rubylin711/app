@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/settings_system"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/colorWhiteOpacity40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llSystemRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_recycler_view_height"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.prime.homeplus.settings.SettingsRecyclerView
+            android:id="@+id/systemRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSystemPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_recycler_view_height"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="225dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/etSystemPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/edittext_item"
+                android:cursorVisible="false"
+                android:maxLength="8"
+                android:textColor="#00000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvPin1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/password_off"
+                    android:textColor="@color/colorWhiteOpacity80"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPin2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/password_off"
+                    android:textColor="@color/colorWhiteOpacity80"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPin3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/password_off"
+                    android:textColor="@color/colorWhiteOpacity80"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPin4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/password_off"
+                    android:textColor="@color/colorWhiteOpacity80"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPin5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/password_off"
+                    android:textColor="@color/colorWhiteOpacity80"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPin6"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/password_off"
+                    android:textColor="@color/colorWhiteOpacity80"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPin7"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/password_off"
+                    android:textColor="@color/colorWhiteOpacity80"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPin8"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/password_off"
+                    android:textColor="@color/colorWhiteOpacity80"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tvEnterPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/settings_system_pin"
+            android:textColor="@color/colorWhiteOpacity80"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvEnterPinHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_system_pindel"
+            android:textColor="@color/colorWhiteOpacity40"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLineBottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/colorWhiteOpacity40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llSystemRecyclerView" />
+
+    <LinearLayout
+        android:id="@+id/llSystemIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llSystemRecyclerView">
+
+        <TextView
+            android:id="@+id/tvSystemIndex"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="01"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="/"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/colorWhiteOpacity50"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tvSystemTotal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="09"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/colorWhiteOpacity50"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

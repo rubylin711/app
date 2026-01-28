@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SignatureAlgorithm" parent="Theme.AppCompat.Light">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+<!--        <item name="android:windowContentOverlay">@null</item>-->
+    </style>
+
+    <style name="Theme.SignatureAlgorithm" parent="Base.Theme.SignatureAlgorithm" />
+</resources>

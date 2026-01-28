@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="480dp"
+        android:layout_height="310dp"
+        android:background="#34363c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textStyle="bold"
+            android:text="@string/msg_notice"
+            android:textColor="#ffffff"
+            android:textSize="23dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="410dp"
+            android:layout_height="135dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="0dp"
+            android:background="@color/settings_layout_bg_f"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+            <ImageView
+                android:id="@+id/ivContent"
+                android:layout_width="155dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="8dp"
+                android:focusable="false"
+                />
+
+            <ScrollView
+                android:id="@+id/svContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="內文"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLineTop"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="@color/colorWhiteOpacity40"
+            app:layout_constraintStart_toStartOf="@id/llContent"
+            app:layout_constraintTop_toTopOf="@id/llContent"
+            app:layout_constraintEnd_toEndOf="@id/llContent"/>
+
+        <TextView
+            android:id="@+id/tvLineBottom"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="@color/colorWhiteOpacity40"
+            app:layout_constraintStart_toStartOf="@id/llContent"
+            app:layout_constraintBottom_toBottomOf="@id/llContent"
+            app:layout_constraintEnd_toEndOf="@id/llContent"/>
+
+        <LinearLayout
+            android:id="@+id/changePageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:drawableLeft="@android:drawable/arrow_up_float"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="@id/llContent"
+            app:layout_constraintTop_toBottomOf="@id/llContent">
+
+            <LinearLayout
+                android:id="@+id/llUpDownSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/tvmail_key_backward" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:gravity="left"
+                    android:text="@string/msg_up"
+                    android:textColor="#A2A3A3"
+                    android:textSize="13dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/tvmail_key_forward" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:gravity="left"
+                    android:text="@string/msg_down"
+                    android:textColor="#A2A3A3"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/tvmail_key_ok" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:gravity="left"
+                android:text="@string/msg_select"
+                android:textColor="#A2A3A3"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:textColor="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnOK"
+                android:layout_width="125dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item5"
+                android:checked="true"
+                android:text="@string/tvmail_open"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="125dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item5"
+                android:checked="true"
+                android:text="@string/tvmail_cancel"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

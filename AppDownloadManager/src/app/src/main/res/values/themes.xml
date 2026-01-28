@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.AppDownloadManager" parent="@android:style/Theme.Translucent.NoTitleBar" />
+</resources>

@@ -1,0 +1,1013 @@
+<resources>
+    <string name="app_name">Launcher</string>
+    <!--
+    Home Recommendations
+    -->
+    <string name="home_recommend_hint">尚無節目推薦</string>
+    <string name="home_list_recommend_title_program">本週強檔</string>
+    <string name="home_list_recommend_title_app">應用程式推薦</string>
+    <string name="home_list_recommend_title_app_and_game">應用程式與遊戲</string>
+
+    <!--
+    QR Code
+    -->
+    <string name="rec_program_qrcode">詳細訊息請掃描</string>
+
+
+    <!--
+    Home Menu
+    -->
+    <string name="home_menu_search">搜尋</string>
+    <string name="home_menu_epg">節目表</string>
+    <string name="home_menu_record">錄影清單</string>
+    <string name="home_menu_weather">天氣</string>
+    <string name="home_menu_ranking">排行榜</string>
+    <string name="home_menu_mail">訊息通知</string>
+    <string name="home_menu_account">會員專區</string>
+    <string name="home_menu_music">音樂入口</string>
+    <string name="home_menu_notification">系統通知</string>
+    <string name="home_menu_settings">系統設定</string>
+
+    <!--
+    Mini EPG
+    -->
+    <string name="mini_epg_record">錄影</string>
+    <string name="mini_epg_menu">功能選單</string>
+    <string name="mini_epg_remind">預約提醒</string>
+    <string name="mini_epg_genre">類別</string>
+    <string name="mini_epg_info">節目簡介</string>
+    <string name="epg_actors">演員: </string>
+    <string name="epg_bottom">節目表已到底</string>
+    <string name="epg_directors">導演: </string>
+    <string name="epg_display_mode">顯示模式</string>
+    <string name="epg_expired">播映完畢</string>
+    <string name="epg_host">主持人: </string>
+    <string name="epg_list_channel">頻道</string>
+    <string name="epg_list_date">日期</string>
+    <string name="epg_list_program">節目</string>
+    <string name="epg_loading">讀取中...</string>
+    <string name="epg_lock_data">節目資訊鎖碼保護</string>
+    <string name="epg_no_data">尚無節目資訊</string>
+    <string name="epg_no_genre">此類別尚無頻道</string>
+    <string name="epg_today">今天</string>
+    <string name="epg_tomorrow">明天</string>
+    <string name="dialog_audio_pri">主聲道</string>
+    <string name="dialog_audio_sec">副聲道</string>
+    <string name="dialog_count_channel">個頻道已上鎖</string>
+    <string name="dialog_function_menu">功能選單</string>
+    <string name="dialog_item_audio">語音選擇</string>
+    <string name="dialog_item_caption">字幕選擇</string>
+    <string name="dialog_item_hd">畫質選擇</string>
+    <string name="dialog_lang_ch">中文</string>
+    <string name="dialog_lang_disable">關閉</string>
+    <string name="dialog_lang_en">英文</string>
+    <string name="dialog_lang_jp">日文</string>
+    <string name="dialog_lang_kr">韓文</string>
+    <string name="dialog_lang_none">無</string>
+    <string name="dialog_lang_vt">越南文</string>
+    <string name="dialog_next_step">下一步</string>
+    <string name="dialog_resolution_1080i">1080i</string>
+    <string name="dialog_resolution_1080p">1080P</string>
+    <string name="dialog_resolution_480p">480P</string>
+    <string name="dialog_resolution_720p">720P</string>
+    <string name="dialog_time_clear">清除時間</string>
+    <string name="dialog_time_delete">刪除時段</string>
+    <string name="dialog_time_error">時間輸入錯誤</string>
+    <string name="dialog_time_lock_all_day">全天</string>
+    <string name="dialog_time_lock_label">單一時段</string>
+    <string name="dialog_time_lock_time">起訖時間</string>
+    <string name="dialog_time_lock_title">時段鎖</string>
+    <string name="dialog_title_channel_locked">鎖碼頻道</string>
+    <string name="dialog_und">未定義</string>
+    <string name="dialog_unlock_channel">未上鎖頻道</string>
+
+    <!--EPG-->
+    <string name="lo_epg_textv_unlock_title_text1">請輸入</string>
+    <string name="lo_epg_textv_unlock_title_text3">密碼</string>
+
+    <string name="lo_epg_textv_pass_fail_incorrect_pass">密碼不正確,請重新輸入</string>
+    <string name="lo_epg_sub_textv_loading">讀取中...</string>
+
+    <string name="lo_epg_sub_list_textv_channel">頻道</string>
+    <string name="lo_epg_sub_list_textv_date">日期</string>
+    <string name="lo_epg_sub_list_textv_program">節目</string>
+
+    <!--
+    Genre
+    -->
+    <string name="genre_adult">成人</string>
+    <string name="genre_all">全部</string>
+    <string name="genre_current_highlight">目前類別</string>
+    <string name="genre_current_hint">目前類別：</string>
+    <string name="genre_education">教育</string>
+    <string name="genre_hd">高畫質</string>
+    <string name="genre_kids">兒童</string>
+    <string name="genre_movie">電影</string>
+    <string name="genre_music">音樂</string>
+    <string name="genre_news">新聞</string>
+    <string name="genre_religion">宗教</string>
+    <string name="genre_shopping">購物</string>
+    <string name="genre_sports">體育</string>
+    <string name="genre_uhd">4K</string>
+    <string name="genre_variety">綜合</string>
+
+    <!--Weather-->
+    <string name="start_voice_recognition">開始語音辨識</string>
+
+    <!--Rank-->
+    <string name="rank_box_num">機上盒數</string>
+    <string name="rank_program">節目</string>
+    <string name="rank_ranking">排行</string>
+    <string name="rank_ratio">收視率%</string>
+    <string name="rank_ratio2">收視率</string>
+    <string name="rank_title">收視排行榜</string>
+    <string name="rank_title2">收視排行</string>
+    <string name="rank_watching">人正在觀看</string>
+
+    <!--Mail-->
+    <string name="mail_inbox">收件夾</string>
+    <string name="mail_setting">訊息設定</string>
+    <string name="mail_no_data">尚無清單</string>
+    <string name="mail_coupon">好康活動</string>
+    <string name="mail_latest_news">最新消息</string>
+    <string name="mail_popular">強檔推薦</string>
+    <string name="mail_service">服務訊息</string>
+    <string name="mail_setting_hint">可開啟/關閉 不同種類訊息的接收</string>
+    <string name="mail_shopping">購物優惠</string>
+    <string name="mail_close">關閉</string>
+
+    <string name="no_data">尚無資訊</string>
+
+    <!--DMG Settings-->
+    <string name="settings_signal_quality">信號品質</string>
+    <string name="settings_signal_detecting_hint">信號偵測中，請稍後</string>
+    <string name="settings_signal_detecting_hint_detecting">已偵測到信號,每秒更新中</string>
+    <string name="settings_signal_detecting_hint_fail">無法偵測到信號，請確認同軸纜線是否有接妥</string>
+    <string name="settings_signal_strength">信號強度</string>
+
+    <string name="settings_channel_current_highlight">現正播放</string>
+    <string name="settings_channel_current_hint">現正播放：</string>
+    <string name="settings_channel_freq_scan">單頻點掃描</string>
+    <string name="settings_channel_frequency">頻率</string>
+    <string name="settings_channel_lock_title">請輸入 親子鎖 密碼</string>
+    <string name="settings_channel_lock_title1">請輸入</string>
+    <string name="settings_channel_lock_title2">密碼</string>
+    <string name="settings_channel_prepare_scan_subtitle">請先檢查訊號源線路是否有接上數位機上盒，如果有即可開始操作</string>
+    <string name="settings_channel_prepare_scan_title">手動頻道掃描</string>
+    <string name="settings_channel_qam">QAM</string>
+    <string name="settings_channel_scan">頻道掃描</string>
+    <string name="settings_channel_scan_clear">清除</string>
+    <string name="settings_channel_scan_failed">掃描失敗，沒有發現頻道，請確認Cable是否接妥</string>
+    <string name="settings_channel_scan_no_signal">掃描失敗，無法偵測到信號，請確認Cable是否接妥</string>
+    <string name="settings_channel_scan_reset">恢復預設值</string>
+    <string name="settings_channel_scan_timeout">掃描失敗，超過30秒沒訊號反應，請確認Cable是否接妥</string>
+    <string name="settings_channel_scanning_back">返回</string>
+    <string name="settings_channel_scanning_completed">頻道掃描已完成</string>
+    <string name="settings_channel_scanning_hint">頻道掃描中，請稍後</string>
+    <string name="settings_channel_scanning_progress_hint">掃描進度</string>
+    <string name="settings_channel_scanning_sub_hint_audio">個廣播電台</string>
+    <string name="settings_channel_scanning_sub_hint_video">個頻道</string>
+    <string name="settings_channel_signal_scan">信號偵測</string>
+    <string name="settings_channel_symbol_rate">Symbol Rate</string>
+    <string name="settings_channel_unlock_title1">請輸入頻道鎖密碼</string>
+    <string name="settings_channel_unlock_title2">請輸入工程密碼</string>
+
+    <string name="settings_rms_agree">同意</string>
+    <string name="settings_rms_hint_title_first">「我同意貴公司蒐集本人向貴公司申裝所有服務(包含未來申請服務)之收視行為，日後如有變更，亦得使用機上盒點選「停止蒐集」，日後如再有需要，則得再使用機上盒點選「同意蒐集」。」若您同意以上聲明，請您點選「同意」，本公司收到您的「同意」回覆後，機上盒將傳送確認訊息給您。</string>
+    <string name="settings_rms_hint_title_second">本公司尚未收到您對使用行為收集同意簡訊之回覆，請問是否要再發送一次簡訊以利您的回覆?</string>
+    <string name="settings_rms_not_agree">取消</string>
+    <string name="settings_rms_not_show_again">開機時不再顯示</string>
+    <string name="settings_rms_title">收視率調查</string>
+
+    <string name="settings_hint_rcu_dpad_select">選擇</string>
+
+    <string name="dmg_settings_signal_excellent">優</string>
+    <string name="dmg_settings_signal_good">好</string>
+    <string name="dmg_settings_signal_isp1">站點1測試</string>
+    <string name="dmg_settings_signal_isp2">站點2測試</string>
+    <string name="dmg_settings_signal_moderate">普通</string>
+    <string name="dmg_settings_signal_poor">差</string>
+    <string name="dmg_settings_signal_test_stop_connection">離開測試</string>
+    <string name="dmg_settings_signal_ethernet_connected">Ethernet 已連線</string>
+    <string name="dmg_settings_signal_connection_test_title">連線品質測試</string>
+    <string name="dmg_settings_signal_network_disconnected">未連線</string>
+    <string name="dmg_settings_signal_network_status">網路狀態</string>
+    <string name="dmg_settings_signal_test_start_connection">開始測試</string>
+    <string name="dmg_settings_signal_wifi_connected">Wifi 已連線</string>
+
+    <string name="dmg_settings_category_title">機上盒設定</string>
+    <string name="dmg_settings_channel_lock">頻道鎖</string>
+    <string name="dmg_settings_engineering_setting">工程設定</string>
+    <string name="dmg_settings_engineering_setting_channel_scan">手動頻道掃描</string>
+    <string name="dmg_settings_engineering_setting_connect_test">連線測試</string>
+    <string name="dmg_settings_engineering_setting_error_log">錄影失敗紀錄</string>
+    <string name="dmg_settings_engineering_setting_info_hint">所有訊息提醒</string>
+    <string name="dmg_settings_engineering_setting_usb_update">USB 軟體更新</string>
+    <string name="dmg_settings_connection_test">連線測試</string>
+    <string name="dmg_settings_signal_detect">信號偵測</string>
+    <string name="dmg_settings_channel_scan">頻道掃描</string>
+    <string name="dmg_settings_introduction_time">簡介時間</string>
+    <string name="dmg_settings_ratings_survey">收視率調查</string>
+
+    <string name="dmg_settings_info_time_entries_three_second">3 秒</string>
+    <string name="dmg_settings_info_time_entries_five_second">5 秒</string>
+    <string name="dmg_settings_info_time_entries_ten_second">10 秒</string>
+
+    <string name="dmg_settings_rms_switch_opening">開通中</string>
+    <string name="dmg_settings_rms_switch_on">開啟</string>
+    <string name="dmg_settings_rms_switch_off">關閉</string>
+
+    <string name="parental_lock_entries_6">保護級</string>
+    <string name="parental_lock_entries_12">輔12級</string>
+    <string name="parental_lock_entries_15">輔15級</string>
+    <string name="parental_lock_entries_18">限制級</string>
+    <string name="parental_lock_entries_0">無</string>
+
+    <string name="dmg_settings_channel_lock_channel_lock">鎖碼頻道</string>
+    <string name="dmg_settings_channel_lock_channel_lock_count">0 個頻道</string>
+    <string name="dmg_settings_channel_lock_channel_lock_count_no_number">個頻道</string>
+    <string name="dmg_settings_channel_lock_parental_NC_17">限制級</string>
+    <string name="dmg_settings_channel_lock_parental_PG">保護級</string>
+    <string name="dmg_settings_channel_lock_parental_PG_13">輔12級</string>
+    <string name="dmg_settings_channel_lock_parental_R">輔15級</string>
+    <string name="dmg_settings_channel_lock_parental_lock">親子鎖</string>
+    <string name="dmg_settings_channel_lock_password_hint">請輸入頻道鎖密碼</string>
+    <string name="dmg_settings_channel_lock_password_hint_detail">輸入頻道鎖密碼解鎖,或按返回鍵回機上盒設定</string>
+    <string name="dmg_settings_channel_lock_set_password">設定密碼</string>
+    <string name="dmg_settings_channel_lock_time_lock">+ 新增時段鎖</string>
+    <string name="dmg_settings_channel_lock_time_lock_detail">時段鎖</string>
+    <string name="dmg_settings_channel_lock_time_lock_full">新增時段鎖</string>
+
+    <string name="dmg_settings_factory_lock_password_hint">請輸入工程密碼</string>
+    <string name="dmg_settings_factory_lock_password_hint_detail">輸入工程密碼解鎖,或按返回鍵回機上盒設定</string>
+
+    <string name="watting_nagra_license_reset">清除授權中...</string>
+    <string name="watting_nagra_reset">清除CA資訊中...</string>
+    <string name="tv_nagra_reset_info">清除CA資訊將會自動重開機,是否更改設定?</string>
+    <string name="tv_nagra_reset_ok">確定</string>
+    <string name="tv_nagra_reset_cancel">取消</string>
+    <string name="tv_nagra_reset_title">清除CA資訊</string>
+    <string name="tv_nagra_license_reset_title">清除授權</string>
+    <string name="tv_nagra_license_reset_info">清除授權資訊將會自動重開機,是否更改設定?</string>
+    <string name="tv_wvcas_license_reset_info">是否確定清除授權資訊?</string>
+    <string name="firmware_version_title">Image Version</string>
+    <string name="provision_info">開通資訊</string>
+    <string name="provision_info_SO">SO</string>
+    <string name="provision_info_Home_ID">Home ID</string>
+    <string name="provision_info_NIT">NIT</string>
+    <string name="provision_info_SI_NIT">SI NIT</string>
+    <string name="provision_info_MOBILE">Mobile</string>
+    <string name="provision_info_BAT_ID">BAT ID</string>
+    <string name="provision_info_ZIP_CODE">Zip Code</string>
+
+    <string name="dmg_settings_password_new_both_not_match">新密碼不一致</string>
+    <string name="dmg_settings_password_new_hint">輸入新密碼</string>
+    <string name="dmg_settings_password_new_hint_again">確認新密碼</string>
+    <string name="dmg_settings_password_new_update_success">密碼更新成功</string>
+    <string name="dmg_settings_password_old_hint">輸入舊密碼</string>
+    <string name="dmg_settings_password_old_no_match">舊密碼錯誤</string>
+    <string name="dmg_settings_password_subtitle">請輸入四位數密碼</string>
+    <string name="dmg_settings_password_title">設定個人密碼</string>
+
+    <string name="dmg_settings_lock_cancel">取消</string>
+    <string name="dmg_settings_lock_done">完成</string>
+    <string name="dmg_settings_lock_channel_add">新增頻道鎖</string>
+    <string name="dmg_settings_lock_channel_hint">設定鎖定頻道</string>
+    <!--
+    Remind
+    -->
+    <string name="remind_dialog_cancel_no">否</string>
+    <string name="remind_hint_cancel">是否取消收看?</string>
+    <string name="remind_dialog_cancel_yes">是</string>
+    <string name="remind_dialog_channel_change_no">否</string>
+    <string name="remind_dialog_channel_change_title">預約節目: \"%1$s\"\n即將開始，是否前往收看?</string>
+    <string name="remind_dialog_channel_change_yes">是，前往收看</string>
+    <string name="remind_hint_duplicated">同時間已預約其它節目</string>
+    <string name="remind_hint_no_epg">尚無節目可以預約</string>
+    <string name="remind_program_too_close">節目即將開始，不提供預約提醒</string>
+    <string name="remind_program_too_short">節目時間太短不提供預約提醒</string>
+    <string name="remind_hint_conflict">您已於同一時間預約收視 \"%1$s\" 節目，是否取代？</string>
+    <string name="remind_hint_conflict_yes">是</string>
+    <string name="remind_hint_conflict_no">否</string>
+
+
+    <!--
+    Hint
+    -->
+    <string name="hint_check_channel_license">確認頻道授權，請稍候...</string>
+    <string name="hint_check_hdd_space">確認硬碟空間，請稍後...</string>
+    <string name="hint_current_mini">現正播出</string>
+    <string name="hint_current_program">現正播出：</string>
+    <string name="hint_enter_number">請輸入頻道號碼</string>
+    <string name="hint_next_mini">即將播出</string>
+    <string name="hint_next_program">接下來：</string>
+    <string name="hint_over_time_mini">下次再看</string>
+    <string name="hint_rcu_cancel">返回</string>
+    <string name="hint_rcu_cancel_record">取消錄影</string>
+    <string name="hint_rcu_cancel_remind">取消提醒</string>
+    <string name="hint_rcu_channel_down">下一頁</string>
+    <string name="hint_rcu_channel_genre">類別</string>
+    <string name="hint_rcu_channel_list">頻道列表</string>
+    <string name="hint_rcu_channel_up">上一頁</string>
+    <string name="hint_rcu_delete">刪除</string>
+    <string name="hint_rcu_delete_all">全部刪除</string>
+    <string name="hint_rcu_dpad_select">選擇</string>
+    <string name="hint_rcu_hdd_modify">更改名稱</string>
+    <string name="hint_rcu_hdd_unpair">解除配對</string>
+    <string name="hint_rcu_lang">雙語</string>
+    <string name="hint_rcu_manager">管理</string>
+    <string name="hint_rcu_menu">功能選單</string>
+    <string name="hint_rcu_move">移動</string>
+    <string name="hint_rcu_nextday">下一天</string>
+    <string name="hint_rcu_now">目前時刻</string>
+    <string name="hint_rcu_ok_confirm">確認</string>
+    <string name="hint_rcu_ok_info">節目簡介</string>
+    <string name="hint_rcu_ok_more">更多</string>
+    <string name="hint_rcu_open_ad">打開廣告</string>
+    <string name="hint_rcu_open_network">開啟網路設定</string>
+    <string name="hint_rcu_pause">暫停</string>
+    <string name="hint_rcu_play">播放</string>
+    <string name="hint_rcu_prev">上一層</string>
+    <string name="hint_rcu_prevday">上一天</string>
+    <string name="hint_rcu_record">錄影</string>
+    <string name="hint_rcu_remind">預約提醒</string>
+    <string name="hint_rcu_select_all">全選</string>
+    <string name="hint_rcu_sort">排序</string>
+    <string name="hint_rcu_stop">離開</string>
+    <string name="hint_rcu_stop_record">結束錄影</string>
+    <string name="hint_rcu_switch">切換</string>
+    <string name="hint_rcu_unlock">解鎖</string>
+    <string name="hint_rcu_watch">收看</string>
+    <string name="hint_rcu_zapping">選台</string>
+    <string name="hint_rcu_zoom">放大</string>
+    <string name="hint_recording">錄影中</string>
+    <string name="hint_fullscreen">全螢幕</string>
+    <string name="hint_program_record">節目表錄製</string>
+    <string name="hint_new_timer">新增預約</string>
+    <string name="hint_cancel_timer">取消預約</string>
+    <string name="hint_open">開啟</string>
+    <string name="hint_program_intro">節目介紹</string>
+    <string name="hint_prev_page">回上層</string>
+
+    <!--
+    Hottest
+    -->
+    <string name="hottest_app_not_install">尚未安裝此應用程式，點選後將自動開啟Google Play商店</string>
+    <string name="hottest_app_not_provide_recommend_video">此應用尚未提供熱門影片，請執行應用取得最新推薦</string>
+    <string name="hottest_plan_hint">方案說明:</string>
+    <string name="hottest_play_video">撥放影片</string>
+    <string name="hottest_purchase_hint">立即購買</string>
+
+    <!--
+    channel
+    -->
+    <string name="channel_current_highlight">現正播放</string>
+    <string name="channel_current_hint">現正播放：</string>
+    <string name="channel_freq_scan">單頻點掃描</string>
+    <string name="channel_frequency">頻率</string>
+    <string name="channel_lock_title">請輸入 親子鎖 密碼</string>
+    <string name="channel_lock_title1">請輸入</string>
+    <string name="channel_lock_title2">密碼</string>
+    <string name="channel_prepare_scan_subtitle">請先檢查訊號源線路是否有接上數位機上盒，如果有即可開始操作</string>
+    <string name="channel_prepare_scan_title">手動頻道掃描</string>
+    <string name="channel_qam">QAM</string>
+    <string name="channel_scan">頻道掃描</string>
+    <string name="channel_scan_clear">清除</string>
+    <string name="channel_scan_failed">掃描失敗，沒有發現頻道，請確認Cable是否接妥</string>
+    <string name="channel_scan_no_signal">掃描失敗，無法偵測到信號，請確認Cable是否接妥</string>
+    <string name="channel_scan_reset">恢復預設值</string>
+    <string name="channel_scan_timeout">掃描失敗，超過30秒沒訊號反應，請確認Cable是否接妥</string>
+    <string name="channel_scanning_back">返回</string>
+    <string name="channel_scanning_completed">頻道掃描已完成</string>
+    <string name="channel_scanning_hint">頻道掃描中，請稍後</string>
+    <string name="channel_scanning_progress_hint">掃描進度</string>
+    <string name="channel_scanning_sub_hint_audio">個廣播電台</string>
+    <string name="channel_scanning_sub_hint_video">個頻道</string>
+    <string name="channel_signal_scan">信號偵測</string>
+    <string name="channel_symbol_rate">Symbol Rate</string>
+    <string name="channel_unlock_title1">請輸入頻道鎖密碼</string>
+    <string name="channel_unlock_title2">請輸入工程密碼</string>
+    <string name="channel_next_step">下一步</string>
+
+
+    <!--
+    PVR
+    -->
+    <string name="pvr_conflict_4k_replace_title">目前僅支援同時間一台4K畫質頻道錄影，\n請確認是否放棄已選項目。</string>
+    <string name="pvr_conflict_hd_replace_title">目前僅支援同時間兩台FullHD畫質頻道錄影，\n請選擇欲放棄已選項目。</string>
+    <string name="pvr_conflict_normal_hint">最多可選擇兩台FullHD畫質節目，或是一台4K畫質節目</string>
+    <string name="pvr_conflict_replace_go_back">回上一步</string>
+    <string name="pvr_conflict_title">錄影衝突，請選擇要保留的節目</string>
+    <string name="pvr_dialog_cancel">取消</string>
+    <string name="pvr_dialog_confirm">確認</string>
+    <string name="pvr_event_dialog_episode_already_recorded_title">此影集節目已經完成錄影</string>
+    <string name="pvr_event_dialog_episode_already_recorded_title_confirm">確認</string>
+    <string name="pvr_event_dialog_episode_resume_scheduled_title">此影集節目已恢復排程</string>
+    <string name="pvr_event_dialog_episode_resume_scheduled_title_confirm">確認</string>
+    <string name="pvr_event_dialog_episodes">影集錄影</string>
+    <string name="pvr_event_dialog_hdd_remove_confirm">確認</string>
+    <string name="pvr_event_dialog_hdd_suddenly_remove_title">錄影中移除硬碟!\n請確認硬碟是否正確安裝</string>
+    <string name="pvr_event_dialog_next_album_cancel">否，結束播放</string>
+    <string name="pvr_event_dialog_next_album_ok">是，播放下一集</string>
+    <string name="pvr_event_dialog_next_album_title">是否收看下一集?</string>
+    <string name="pvr_event_dialog_play_last">是，繼續播放</string>
+    <string name="pvr_event_dialog_play_reset">否，從頭播放</string>
+    <string name="pvr_event_dialog_play_status_title">從上次觀看處開始播放?</string>
+    <string name="pvr_event_dialog_record_cancel_no">否</string>
+    <string name="pvr_event_dialog_record_cancel_ok">是，取消錄影</string>
+    <string name="pvr_event_dialog_record_cancel_title">確認取消錄影\n\"%1$s\" ?</string>
+    <string name="pvr_event_dialog_record_conflict_replace_one">取代  %1$s</string>
+    <string name="pvr_event_dialog_record_conflict_select_no">否，維持原錄影</string>
+    <string name="pvr_event_dialog_record_conflict_title">錄影衝突!\n同時段已經設定其它錄影，是否取代?</string>
+    <string name="pvr_event_dialog_record_manager_space">管理錄影空間</string>
+    <string name="pvr_event_dialog_record_mgmt_cancel_title">確認取消 %1$s 個預約錄影?</string>
+    <string name="pvr_event_dialog_record_space_limit_title">已達錄影空間上限!\n選擇管理錄影空間 或 停止錄影</string>
+    <string name="pvr_event_dialog_record_stop">停止錄影</string>
+    <string name="pvr_event_dialog_recorded_delete_no">否</string>
+    <string name="pvr_event_dialog_recorded_delete_ok">是</string>
+    <string name="pvr_event_dialog_recorded_mgmt_delete_title">確認是否刪除選擇的錄影檔案?</string>
+    <string name="pvr_event_dialog_series_already_scheduled_title">此影集已自動排程錄影</string>
+    <string name="pvr_event_dialog_series_already_scheduled_title_confirm">確認</string>
+    <string name="pvr_event_dialog_series_video_title">本節目支援影集錄影，請選擇...</string>
+    <string name="pvr_event_dialog_single_episode">單集錄影</string>
+    <string name="pvr_event_dialog_watched_delete_no">否，不刪除</string>
+    <string name="pvr_event_dialog_watched_delete_ok">是，刪除紀錄</string>
+    <string name="pvr_event_dialog_watched_delete_title">確認是否刪除觀看紀錄\n\"%1$s\" ?</string>
+    <string name="pvr_exit_pause_mode_title">是否結束時移模式?</string>
+    <string name="pvr_exit_pause_mode_title_no">否</string>
+    <string name="pvr_exit_pause_mode_title_ok">是</string>
+    <string name="pvr_hint_rcu_more_recorded">多選</string>
+    <string name="pvr_hint_rcu_pre_record">多選</string>
+    <string name="pvr_hint_record_select"> 個已選取</string>
+    <string name="pvr_hint_record_select_index">第</string>
+    <string name="pvr_hint_record_select_pages">頁</string>
+    <string name="pvr_jump_conflict_cancel_item">取消%1$s錄影</string>
+    <string name="pvr_jump_conflict_first_item">是，切台至 </string>
+    <string name="pvr_jump_conflict_second_item">否，取消錄影並停留在此頻道</string>
+    <string name="pvr_message_delete">此錄影檔即將刪除</string>
+    <string name="pvr_message_delete_time">確定刪除所選時段?</string>
+    <string name="pvr_message_delete_watched">請確定是否刪除觀看紀錄\n</string>
+    <string name="pvr_message_delete_watched_cancel">否，不刪除</string>
+    <string name="pvr_message_delete_watched_confirm">是，刪除紀錄</string>
+    <string name="pvr_message_enable_time_shift">時移功能準備中</string>
+    <string name="pvr_message_error_fileinfo">檔案內容不正確，檔案無法順利播放</string>
+    <string name="pvr_message_file_noexist">檔案不存在</string>
+    <string name="pvr_message_hdd_format_check">是否需要格式化硬碟?</string>
+    <string name="pvr_message_hdd_format_completed">DVR 硬碟格式化完畢\n請等待硬碟重新載入</string>
+    <string name="pvr_message_hdd_format_completed_with_pairing">DVR 硬碟格式化完畢，且已完成綁定\n請等待硬碟重新載入</string>
+    <string name="pvr_message_hdd_modify_check">請輸入硬碟名稱</string>
+    <string name="pvr_message_hdd_modify_failed">修改名稱失敗</string>
+    <string name="pvr_message_hdd_modify_success">修改名稱成功</string>
+    <string name="pvr_message_hdd_not_ready">未偵測到硬碟\n請確認您的硬碟連接在標記為DVR之USB端口</string>
+    <string name="pvr_message_hdd_pairing_kick">硬碟配對超過八組！\n請從目前的配對列表選擇要剔除的硬碟</string>
+    <string name="pvr_message_hdd_pairing_request">您的硬碟尚未配對，請問是否進行綁定?</string>
+    <string name="pvr_message_hdd_pairing_request_hint">(過程中會格式化，請備份您的資料再進行綁定)</string>
+    <string name="pvr_message_hdd_remove_check">是否需要移除硬碟?</string>
+    <string name="pvr_message_hdd_terms_fail">此硬碟需要重新格式化以供DVR功能使用</string>
+    <string name="pvr_message_hdd_unpair_check">請確定是否解除配對?</string>
+    <string name="pvr_message_hdd_unpair_failed">解除配對失敗</string>
+    <string name="pvr_message_hdd_unpair_hint">(重新配對將會格式化硬碟並清除資料)</string>
+    <string name="pvr_message_hdd_unpair_success">解除配對成功</string>
+    <string name="pvr_message_hdd_unplug_when_recording">錄影中移除硬碟！</string>
+    <string name="pvr_message_hdd_wrong_port">硬碟插入錯誤接口！\n請將錄影設備插入DVR埠</string>
+    <string name="pvr_message_low_space">錄影用USB儲存裝置的空間小於%1$dGB\n請更換較大的儲存裝置</string>
+    <string name="pvr_message_low_speed">錄影用USB儲存裝置的速度必須為USB 2.0以上</string>
+    <string name="pvr_message_not_acs_connect">您的設備無法與ACS連線\n請確認您的網路是否正常並稍候再試</string>
+    <string name="pvr_message_port_error">DVR專用埠上並未偵測到儲存設備</string>
+    <string name="pvr_message_reserve_shortest_time_program">節目時間太短不提供錄影</string>
+    <string name="pvr_message_start_recording_hint">開始錄影</string>
+    <string name="pvr_message_stop_recording_hint">結束錄影</string>
+    <string name="pvr_message_stop_recording_if_license_disable">無法取得錄影授權，停止錄影。</string>
+    <string name="pvr_message_stop_recording_if_network_problem">無法取得錄影授權，停止錄影。\n(網路訊號異常)</string>
+    <string name="pvr_message_stop_recording_if_no_watch">無法取得錄影授權，停止錄影。\n(未有頻道授權)</string>
+    <string name="pvr_message_storage_not_enough_title">錄影空間已達上限!系統將停止所有錄影</string>
+    <string name="pvr_message_unknown">未知原因失敗</string>
+    <string name="pvr_no_ready">申請DVR服務，請來電客服</string>
+    <string name="pvr_no_ready_dmg">服務建置中，敬請期待</string>
+    <string name="pvr_operation_prohibited_while_scheduling">錄影排程處理中,暫時無法操作</string>
+    <string name="pvr_record_start_title">錄影即將開始\n是否切台至錄影節目頻道</string>
+    <string name="pvr_recording_full_title">其他頻道錄影中，此操作將會停止所有錄影\n請問是否繼續?</string>
+    <string name="pvr_reserve_conflict_replace_all_title">同時段已有兩個FHD的錄影事件\n是否全部取代?</string>
+    <string name="pvr_reserve_conflict_replace_all_title_no">否</string>
+    <string name="pvr_reserve_conflict_replace_all_title_yes">是</string>
+    <string name="pvr_reserve_conflict_title">同時段已有以下錄影事件\n請選擇欲取代的預約項目</string>
+    <string name="pvr_schedule_missed">追錄中</string>
+    <string name="pvr_select_channel_category_but_recording_is_full">其它頻道錄影中，暫時無法切換類別</string>
+    <string name="pvr_stop_recording_cancel">否</string>
+    <string name="pvr_stop_recording_ok">是，取消所有錄影</string>
+    <string name="pvr_zapping_channel_but_recording_is_full">其它頻道錄影中，是否要中斷最近的錄影?</string>
+    <string name="pvr_record_management">錄影管理</string>
+    <string name="pvr_timer_management">預約錄影</string>
+    <string name="pvr_epg_timer_management">預錄清單</string>
+    <string name="pvr_record_programs">已錄製節目</string>
+    <string name="pvr_memory_device_setting">儲存設備管理</string>
+    <string name="pvr_hint_page">1/1 頁</string>
+    <string name="pvr_record_programs_message">使用 %1$s HDD 空間 / 總共 %2$d 個節目</string>
+    <string name="pvr_record_time">錄影時間: </string>
+    <string name="pvr_usb_disk_is_extracted">USB硬碟已移除</string>
+    <string name="pvr_would_you_like_to_resume_playback_from_where_you_left_off">您想要從上次停止的地方繼續播放嗎？</string>
+    <string name="pvr_Your_hard_drive_has_not_been_paired_Do_you_want_to_bind_it">@string/pvr_message_hdd_pairing_request</string>
+    <string name="pvr_the_hard_disk_will_be_formatted_Please_backup_your_data_before_binding">@string/pvr_message_hdd_pairing_request_hint</string>
+    <string name="pvr_ejecting_usb_device">正在將「%1$s」退出…</string>
+    <string name="pvr_usb_device_ejected">已安全退出「%1$s」</string>
+
+    <!-- Storage -->
+    <string name="storage_eject">退出</string>
+    <string name="storage_format_failure">無法將「%1$s」格式化</string>
+    <string name="storage_format_success">已將「%1$s」格式化</string>
+    <string name="storage_unmount_failure">無法安全退出「%1$s」</string>
+    <string name="storage_unmount_success">已安全退出「%1$s」</string>
+    <string name="storage_wizard_eject_private_description">當您將這個儲存裝置退出時，其中的應用程式將停止運作。這個 USB 儲存裝置經過格式化，僅能在這台裝置上運作，無法與其他裝置通用。</string>
+    <string name="storage_wizard_eject_private_title">退出裝置儲存空間</string>
+    <string name="storage_wizard_eject_progress_title">正在將「%1$s」退出…</string>
+    <string name="storage_wizard_format_action">格式化</string>
+    <string name="storage_wizard_format_as_public_description">格式化後，這個 USB 儲存裝置即可用於其他裝置。系統會將儲存裝置中的所有資料清除，因此建議您先將應用程式移到其他裝置儲存空間進行備份。</string>
+    <string name="storage_wizard_format_as_public_title">清除並格式化</string>
+    <string name="storage_wizard_format_progress_description">這可能需要一些時間。請勿移除儲存裝置。</string>
+    <string name="storage_wizard_format_progress_title">正在格式化 USB 儲存裝置…</string>
+    <string name="storage_wizard_format_slow_summary">您可以繼續使用，但應用程式移動到這個位置後可能無法流暢執行，資料移轉作業也會耗費大量時間。建議您改用速度更快的隨身碟來提升效能。</string>
+    <string name="storage_wizard_format_slow_title">這個儲存裝置似乎很慢。</string>
+
+    <!--
+    DVR
+    -->
+    <string name="dvr_add_time_record">+  新增錄影時段</string>
+    <string name="dvr_dialog_channel_title">頻道號碼:</string>
+    <string name="dvr_dialog_record_confirm">確定新增</string>
+    <string name="dvr_dialog_record_freq_title">錄影頻率:</string>
+    <string name="dvr_dialog_record_time_freq_every_day">每日</string>
+    <string name="dvr_dialog_record_time_freq_once">單次</string>
+    <string name="dvr_dialog_record_time_freq_once_a_week">每週</string>
+    <string name="dvr_dialog_record_time_freq_weekday_day">平日</string>
+    <string name="dvr_dialog_record_time_length_120">120分鐘</string>
+    <string name="dvr_dialog_record_time_length_30">30分鐘</string>
+    <string name="dvr_dialog_record_time_length_60">60分鐘</string>
+    <string name="dvr_dialog_record_time_length_title">錄影長度:</string>
+    <string name="dvr_dialog_start_date_title">起始日期:</string>
+    <string name="dvr_dialog_start_time_title">開始時間:</string>
+    <string name="dvr_dialog_time_record_title">新增錄影時段</string>
+    <string name="dvr_manager">空間管理</string>
+    <string name="dvr_mgr_auto_clear">自動清除</string>
+    <string name="dvr_mgr_hdd_dvr_source">遠端</string>
+    <string name="dvr_mgr_hdd_error_log">錄影失敗紀錄</string>
+    <string name="dvr_mgr_hdd_formatting">硬碟格式化</string>
+    <string name="dvr_mgr_hdd_label">名稱</string>
+    <string name="dvr_mgr_hdd_management">硬碟管理</string>
+    <string name="dvr_mgr_hdd_model">型號</string>
+    <string name="dvr_mgr_hdd_not_ready">尚未插入硬碟</string>
+    <string name="dvr_mgr_hdd_remove">硬碟安全退出</string>
+    <string name="dvr_mgr_hdd_size">容量</string>
+    <string name="dvr_mgr_hdd_sn">序號</string>
+    <string name="dvr_mgr_limit">錄影空間上限管理</string>
+    <string name="dvr_mgr_manual_clear">手動清除</string>
+    <string name="dvr_mgr_pre_record_time">預錄時間:</string>
+    <string name="dvr_no_data">尚無清單</string>
+    <string name="dvr_other_channel_recording">錄影失敗，其它頻道正在錄影中</string>
+    <string name="dvr_play_recorded_music_label">播放名稱:</string>
+    <string name="dvr_prerecord_list">預錄清單</string>
+    <string name="dvr_quota_space_hint">已使用 %1$s 硬碟空間 / 總共 %2$d 個節目</string>
+    <string name="dvr_record_sort">排序:</string>
+    <string name="dvr_record_sort_newest">最近</string>
+    <string name="dvr_record_sort_oldest">最遠</string>
+    <string name="dvr_record_sort_time">時間</string>
+    <string name="dvr_record_time">錄影時間:</string>
+    <string name="dvr_recorded_list">已錄清單</string>
+    <string name="dvr_recorded_sort_newest">最新</string>
+    <string name="dvr_recorded_sort_oldest">最舊</string>
+    <string name="dvr_recording_fail">錄影失敗</string>
+    <string name="dvr_time_record">時段錄影</string>
+    <string name="dvr_type_instant_record">即時錄影</string>
+    <string name="dvr_type_next_record_time">下次錄影時間:</string>
+    <string name="dvr_type_record_size">檔案大小:</string>
+    <string name="dvr_type_record_time">錄影時間:</string>
+    <string name="dvr_type_series_record">影集錄影</string>
+    <string name="dvr_type_single_record">單集錄影</string>
+    <string name="dvr_type_time_hint">時段</string>
+    <string name="dvr_type_time_record">時段錄影</string>
+    <string name="dvr_video_time_length">影片長度:</string>
+    <string name="dvr_watched_list">觀看紀錄</string>
+    <string name="dvr_watched_progress">觀看進度:</string>
+
+    <!--
+    Install Activity
+    -->
+    <string name="detail_cancel_downloading">取消下載</string>
+    <string name="detail_downloading">下載中...</string>
+    <string name="detail_install">安裝</string>
+    <string name="detail_installing">安裝中...</string>
+    <string name="detail_open">開啟</string>
+    <string name="detail_screen_capture">螢幕擷取畫面</string>
+    <string name="detail_update">更新</string>
+
+    <!--
+    error message
+    -->
+    <!--<string name="error_e010">E010 您未購買本頻道</string>-->
+    <string name="error_e010">您未購買本頻道，若欲收視請洽客服中心，若您已購買此頻道，請拔插機上盒電源，仍有無法收視請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E010步驟。</string>
+    <string name="error_e200">無訊號或訊號不良，請確認機上盒後方Cable線是否接妥，接上後如仍無法正常，請拔插機上盒電源，仍有問題請來電客服中心或於官網\uFF02聯絡我們\uFF02留言，並請告知錯誤代碼為E200。</string>
+    <string name="error_e201">頻道搜尋中，請稍待10分鐘!如仍有問題，請拔插機上盒電源，仍有問題請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E201處理步驟。</string>
+    <string name="error_e213">本頻道訊號調整中，請稍待一會!如持續無畫面，請拔插機上盒電源，仍有問題請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E213處理步驟。</string>
+    <string name="error_e301">您的機上盒未授權於本區使用，請撥打客服專線。</string>
+    <string name="error_e501">因遙控器電量不足導致遙控器升級失敗, 請更換電池以利版本更新</string>
+    <string name="error_e502">遙控器軟體升級失敗，請再操作一次</string>
+    <string name="error_e503">遙控器軟體升級超時，請再操作一次</string>
+    <!--<string name="error_e504">系統偵測到TBC的網路服務，請確認您的網路線並連接TBC網路服務，若有連線上的問題，懇請撥打客服專線到您未連線</string>-->
+    <string name="error_e504">尚未連接網路，請重新插拔網路線，仍有問題請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E504處理步驟。</string>
+    <!--<string name="error_e505">系統偵測到TBC的網路服務，請確認您的網路線並連接TBC網路服務，若有連線上的問題，懇請撥打客服專線到您未連線</string>-->
+    <string name="error_e505">網路訊號異常，請重新插拔網路線，仍有問題請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E505處理步驟。</string>
+    <!--<string name="error_e506">系統偵測到您的設備無法與TBC伺服器同步，請來電客服中心或於官網“聯絡我們”留言，並請告知錯誤代碼為E506。</string>-->
+    <string name="error_e506">ACS過久無回應，請確認網路線是否鬆脫或是網路線路異常，仍有問題請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E506處理步驟。</string>
+    <string name="error_e507">此機台尚未通過ACS開通</string>
+    <!--<string name="error_e508">您連結的網路為非TBC網段，請確認您的網路連線，已確保機上盒功能與版本更新機制，仍有問題請來電客服中心或於官網“常見問題”搜尋E508處理步驟。</string>-->
+    <string name="error_e508">您連結的網路為非本公司網段，請確認您的網路連線，以確保機上盒功能與版本更新機制，仍有問題請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E508處理步驟。</string>
+    <!--<string name="error_e510">E510 CAS 授權異常</string>-->
+    <string name="error_e510">播放授權發生異常，請確認您的網路連線，仍有問題請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E510處理步驟。</string>
+    <!--<string name="error_e511">您的帳號已經暫停使用，若欲收視請與客服中心聯絡，若您的帳號已經恢復，請拔插機上盒電源，仍有無法收視請來電客服中心或於官網\uFF02常見問題\uFF02搜尋E511處理步驟。</string>-->
+    <string name="error_e511">錯誤代碼:E511 您的收視授權已被停用，請撥打客服專線。</string>
+    <string name="error_e512">錯誤代碼:E512 您的設備未註冊，請播打客服專線.</string>
+    <string name="error_e601">E601 硬碟尚未準備好</string>
+    <string name="error_e602">E602 硬碟空間不足</string>
+    <string name="error_e603">E603 錄影中移除硬碟</string>
+    <string name="error_e604">E604 錄影授權失敗</string>
+    <string name="error_e605">E605 錄影衝突</string>
+    <string name="error_e606">E606 錄影中訊號源拔除</string>
+    <string name="error_e611">E611 硬碟拔除</string>
+    <string name="error_e612">E612 播放錄影檔失敗，無法取得授權</string>
+    <string name="error_e621">E621 硬碟容量小於250G</string>
+    <string name="error_e622">E622 硬碟速度似乎不夠快</string>
+    <string name="error_e623">E623 硬碟檔案格式錯誤</string>
+    <string name="error_e624">E624 硬碟分割格式錯誤</string>
+    <string name="error_e625">E625 無法取得硬碟序號</string>
+
+    <string name="enter_pass">請輸入四位數字密碼</string>
+    <string name="enter_pass_eight">請輸入八位數字密碼</string>
+    <string name="incorrect_pass">密碼不正確,請重新輸入</string>
+
+
+    <!--
+    lock
+    -->
+    <string name="lock_adult">成人鎖</string>
+    <string name="lock_cancel">取消</string>
+    <string name="lock_channel">頻道鎖</string>
+    <string name="lock_channel_add">新增頻道鎖</string>
+    <string name="lock_channel_hint">設定鎖定頻道</string>
+    <string name="lock_done">完成</string>
+    <string name="lock_parent">親子鎖</string>
+    <string name="lock_program">鎖碼節目</string>
+    <string name="lock_time">時段鎖</string>
+    <string name="lock_time_add">新增時段鎖</string>
+    <string name="lock_time_end">結束時間</string>
+    <string name="lock_time_hint">設定鎖定時間，\n請輸入24小時制時間</string>
+    <string name="lock_time_modify">修改時段鎖</string>
+    <string name="lock_time_start">開始時間</string>
+    <string name="lock_worker">工程鎖</string>
+
+    <!--
+    acs data
+    -->
+    <string name="project_name_dmg">DMG</string>
+    <string name="project_name_tbc">TBC</string>
+
+    <!--
+    Quick Tune
+    -->
+    <string name="title_add_quick_tune">快捷選台-新增頻道</string>
+    <string name="title_move_quick_tune">快捷選台-移動頻道</string>
+    <string name="title_quick_tune">快捷選台</string>
+
+    <!--
+    Favorite
+    -->
+    <string name="favorite_add">新增</string>
+    <string name="favorite_add_hint">-新增頻道</string>
+    <string name="favorite_add_up_to_limit">新增數量已達上限</string>
+    <string name="favorite_delete">刪除</string>
+    <string name="favorite_title">喜愛頻道組</string>
+    <string name="favorite_title_1">喜愛頻道組1</string>
+    <string name="favorite_title_2">喜愛頻道組2</string>
+    <string name="favorite_title_3">喜愛頻道組3</string>
+    <string name="favorite_title_4">喜愛頻道組4</string>
+    <string name="favorite_title_5">喜愛頻道組5</string>
+
+    <!--
+    TV Package
+    -->
+    <string name="package_channel_purchase">已購買</string>
+    <string name="package_hint">親愛的用戶您好，如欲訂購%1$s，建議您可透過手機掃描右方的QR Code，進入訂購頁面，或來電客服中心</string>
+    <string name="package_no_data">尚無套餐清單</string>
+
+    <!-- otl -->
+    <string name="otl_app_can_not_open">應用程式無法開啟</string>
+    <string name="otl_menu_account">會員專區</string>
+    <string name="otl_menu_apps">應用程式與遊戲</string>
+    <string name="otl_menu_dvr">錄影清單</string>
+    <string name="otl_menu_epg">節目表</string>
+    <string name="otl_menu_favorite">我的最愛</string>
+    <string name="otl_menu_mail">訊息通知</string>
+    <string name="otl_menu_music">音樂入口</string>
+    <string name="otl_menu_network_settings">網路設定</string>
+    <string name="otl_menu_notification">系統通知</string>
+    <string name="otl_menu_ranking">排行榜</string>
+    <string name="otl_menu_system_settings">系統設定</string>
+    <string name="otl_menu_tips">小提示</string>
+    <string name="otl_menu_voice">搜尋</string>
+    <string name="otl_menu_weather">天氣</string>
+    <string name="otl_popular_this_week">本週強檔</string>
+    <string name="otl_rec_apps">應用程式推薦</string>
+    <string name="otl_rec_video">節目推薦</string>
+    <string name="otl_rec_video_no_data">尚無節目推薦</string>
+
+    <!-- member -->
+    <!--<string name="member_hint">親愛的用戶您好，如欲繳費，\n建議您可透過手機，\n掃描左方的QR Code，\n進入繳費頁面，\n或來電客服中心</string>-->
+    <string name="member_hint">親愛的用戶您好，如欲%1$s，\n建議您可透過手機，\n掃描左方的QR Code，\n進入%2$s頁面，\n或來電客服中心</string>
+    <string name="member_payment">我要繳費</string>
+    <string name="member_qcode_1">我要報修請掃描</string>
+    <string name="member_qcode_2">我要繳費請掃描</string>
+    <string name="member_qcode_3">成為TBC會員請掃描</string>
+    <string name="member_register">成為TBC會員</string>
+    <string name="member_repair">我要報修</string>
+    <string name="member_sub_payment">繳費</string>
+    <string name="member_sub_repair">報修</string>
+
+    <string name="dmg_service_number">(02) 8253–8966</string>
+    <string name="tbc_service_number">(04) 4050–5858</string>
+    <!-- ota -->
+    <string name="ota_content_message">系統更新提示 : 現在有新版本可用</string>
+    <string name="ota_more_options">更多選項</string>
+    <string name="ota_update_now">立即更新</string>
+
+    <string name="install_system_update">安裝系統更新</string>
+    <string name="install_time_now">立即更新</string>
+    <string name="install_time_2hr">2小時後提醒</string>
+    <string name="install_time_1day">1天後提醒</string>
+    <string name="install_stop_reminding">不再提醒</string>
+    <string name="setting_last_check_time">最後檢查時間</string>
+    <string name="setting_check_for_update">檢查更新</string>
+    <string name="system_update">系統更新</string>
+    <string name="current_version_prefix">目前版本:</string>
+
+    <!-- book info-->
+    <string name="book_cycle_one_time">單次錄製</string>
+    <string name="book_cycle_daily">每天錄製</string>
+    <string name="book_cycle_weekly">每周錄製</string>
+    <string name="book_cycle_weekend">周末錄製</string>
+    <string name="book_cycle_weekdays">平日錄製</string>
+    <string name="book_week_day_sunday">每周(日)錄製</string>
+    <string name="book_week_day_monday">每周(一)錄製</string>
+    <string name="book_week_day_tuesday">每周(二)錄製</string>
+    <string name="book_week_day_wednesday">每周(三)錄製</string>
+    <string name="book_week_day_thursday">每周(四)錄製</string>
+    <string name="book_week_day_friday">每周(五)錄製</string>
+    <string name="book_week_day_saturday">每周(六)錄製</string>
+    <string name="book_type_record">預錄</string>
+
+    <!-- reserve timer-->
+    <string name="reserve_timer_channel_select">頻道選擇:</string>
+    <string name="reserve_timer_date">預約日期:</string>
+    <string name="reserve_timer_time">預約時間:</string>
+    <string name="reserve_timer_duration">預約長度:</string>
+    <string name="reserve_timer_cycle">預約循環:</string>
+    <string name="reserve_timer_cycle_once">單次</string>
+    <string name="reserve_timer_cycle_everyday">每天</string>
+    <string name="reserve_timer_cycle_weekly">每周</string>
+    <string name="reserve_timer_cycle_weekend">周末</string>
+    <string name="reserve_timer_cycle_weekdays">平日</string>
+    <string name="reserve_timer_type">預約類型:</string>
+    <string name="reserve_timer_type_record">錄製</string>
+    <string name="reserve_timer_conflict">與其他的預約設定衝突，請選擇欲保留的設定，另一設定則會被自動刪除。</string>
+    <string name="reserve_timer_expired">請輸入未來時間</string>
+
+    <string name="sunday">星期日</string>
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+
+    <string name="sunday_short">日</string>
+    <string name="monday_short">一</string>
+    <string name="tuesday_short">二</string>
+    <string name="wednesday_short">三</string>
+    <string name="thursday_short">四</string>
+    <string name="friday_short">五</string>
+    <string name="saturday_short">六</string>
+
+    <string name="hrs">小時</string>
+    <string name="mins">分鐘</string>
+
+    <!-- memory device setting-->
+    <string name="usb_devices">USB裝置</string>
+    <string name="total_space">容量</string>
+    <string name="free_space">可用空間</string>
+    <string name="used_space">已用空間</string>
+    <string name="type">類型</string>
+    <string name="remove_usb">移除USB</string>
+    <string name="used">使用中</string>
+
+    <!-- other -->
+    <string name="unmute_by_volume_up">您的音量已經降至最低，請用音量上鍵解除靜音</string>
+    <string name="ota_status">下載進度</string>string>
+    <string name="ota_status_idle">閒置</string>string>
+    <string name="ota_status_downloading">下載中</string>string>
+    <string name="ota_status_download_completed">下載完成</string>string>
+    <string name="ota_status_download_fail">下載失敗</string>string>
+    <string name="ota_upgrade_status">更新進度</string>string>
+    <string name="ota_verify_status">檢查進度</string>string>
+
+    <!-- irdeto cloak error message-->
+    <string name="E037_0">Service Unknown</string>
+    <string name="E038_0">Service is not currently running</string>
+    <string name="E039_0">Locating Service</string>
+    <string name="E040_0">Decoder Memory Full</string>
+    <string name="E041_0">Service is not currently available</string>
+    <string name="E042_0">Parental Control Lock</string>
+    <string name="E044_0">No Event Information</string>
+    <string name="E045_0">Service not allowed</string>
+    <string name="E046_0">Reading Satellite Information</string>
+    <string name="E047_0">Bouquet Block</string>
+    <string name="E048_32">No Signal,Please Check Cable/Connection to Antenna.</string>
+    <string name="E049_0">LNB Overload</string>
+    <string name="E050_0">No Services available</string>
+    <string name="E052_32">Searching For Signal....Please Contact Service Provider For Further Information.</string>
+    <string name="E064_0">Invalid tuning parameters</string>
+    <string name="D029_0">Service is currently descrambled</string>
+    <string name="D100_0">EMM service OK or FTA service</string>
+    <string name="D101_0">No matching CA System ID in CAT</string>
+    <string name="D126_0">PVR Record Request OK</string>
+    <string name="D127_0">PVR Playback Request OK</string>
+    <string name="I300_0">New CG for FSU product has been received</string>
+    <string name="I301_0">New CG for Push VOD product has been received</string>
+    <string name="I302_0">CG Mismatch</string>
+    <string name="I303_0">SG Mismatch</string>
+    <string name="I304_0">Invalid P-Key Index</string>
+    <string name="I305_0">Invalid G-Key Index</string>
+    <string name="I306_0">Invalid Timestamp received</string>
+    <string name="I307_0">Variant Mismatch</string>
+    <string name="I308_0">P-Key Hash Mismatch</string>
+    <string name="I309_0">Opcode Restricted</string>
+    <string name="I310_0">Invalid VOD Nonce</string>
+    <string name="I311_0">TMS Failed</string>
+    <string name="I312_0">Homing Channel Failed</string>
+    <string name="I313_0">Invalid Middleware User Data</string>
+    <string name="I314_0">Flexi Flash Failed</string>
+    <string name="I315_0">SN Mapping EMM handled successfully</string>
+    <string name="I316_0">No valid entitlement found</string>
+    <string name="I317_0">No valid sector found</string>
+    <string name="I318_0">Sector Overwrite EMM handled successfully</string>
+    <string name="I319_0">Pairing EMM handled successfully</string>
+    <string name="I320_0">Product Key EMM handled successfully</string>
+    <string name="I321_0">Product Overwrite EMM handled successfully</string>
+    <string name="I322_0">Region Control EMM handled successfully</string>
+    <string name="I323_0">PVR MSK EMM handled successfully</string>
+    <string name="I324_0">VOD Product Overwrite EMM handled successfully</string>
+    <string name="I325_0">VOD Asset ID EMM handled successfully</string>
+    <string name="I326_0">Nationality EMM handled successfully</string>
+    <string name="I327_0">Product Delete EMM handled successfully</string>
+    <string name="I328_0">Entitlement Property EMM handled successfully</string>
+    <string name="I329_0">Timestamp EMM handled successfully</string>
+    <string name="I330_0">P-Key mismatch</string>
+    <string name="I331_0">User Area EMM handled successfully</string>
+    <string name="I332_0">Application Data EMM handled successfully</string>
+    <string name="I333_0">Filter Criteria EMM handled successfully</string>
+    <string name="I334_0">Package EMM handled successfully</string>
+    <string name="I335_0">Block Download EMM handled successfully</string>
+    <string name="I336_0">IRD EMM handled successfully</string>
+    <string name="I337_0">Unique SN Mapping EMM handled successfully</string>
+    <string name="I338_0">Signed CCP CAM EMM handled successfully</string>
+    <string name="I339_0">TM Message EMM handled successfully</string>
+    <string name="I340_0">Macrovision Configuration EMM handled successfully</string>
+    <string name="I341_0">Extended TMS Message EMM handled successfully</string>
+    <string name="I342_0">Reset To Factory State EMM handled successfully</string>
+    <string name="I101_0">Incomplete Definition</string>
+    <string name="I102_0">No ECM/EMM data received</string>
+    <string name="I103_0">No valid ECM found</string>
+    <string name="I104_0">Invalid EMM received</string>
+    <string name="I106_0">No matching CA System ID in PMT</string>
+    <string name="E016_0">No valid entitlement found</string>
+    <string name="E017_0">No valid sector found</string>
+    <string name="E018_0">Product blackout</string>
+    <string name="E030_0">P-Key mismatch</string>
+    <string name="E031_0">G-Key mismatch</string>
+    <string name="E032_0">TG mismatch</string>
+    <string name="E033_0">CWDK mismatch</string>
+    <string name="E055_0">Macrovision blocking enforced</string>
+    <string name="E094_0">Invalid PVR metadata</string>
+    <string name="E111_0">No PVR Session Key to perform PVR operation</string>
+    <string name="E128_0">Not entitled to perform PVR operation</string>
+    <string name="E129_0">The PVR content is expired</string>
+    <string name="E130_0">PVR Record is not allowed</string>
+    <string name="E131_0">No PVR Master Session Key to perform PVR operation</string>
+    <string name="E132_0">No PVR CPSK Key to perform PVR operation.</string>
+    <string name="E133_0">Asset ID mismatch when converting Asset VOD content to PVR.</string>
+    <string name="E134_0">PVR Recording is prohibited due to copy control setting.</string>
+    <string name="E135_0">PVR Sharing is prohibited due to isShareable setting.</string>
+    <string name="E138_0">PVR sharing is prohibited due to domain id mismatch.</string>
+    <string name="E139_0">No valid CA Regional Information found</string>
+    <string name="E140_0">Region or Sub-Region mismatch</string>
+    <string name="E150_0">The Pre-enablement product is expired.</string>
+    <string name="E151_0">PESK mismatch.</string>
+    <string name="E157_0">The Secure Pre-enablement is not supported.</string>
+    <string name="E160_0">White Box algorithm mismatch.</string>
+    <string name="E161_0">Failed to load the required Cloaked CA package. Device is trying to download it.</string>
+    <string name="E162_0">Failed to load IFCP image.</string>
+    <string name="E163_0">Invalid arbitrary value length.</string>
+    <string name="E164_0">IFCP authentication failure.</string>
+    <string name="E165_0">Device does not support IFCP.</string>
+    <string name="E166_0">Failed to receive CA data for security update process.</string>
+    <string name="E167_0">No enough memory to load the new secure core package during FSU.</string>
+    <string name="E169_0">Either the TDC SPI was not implemented or an error occurred when Cloaked CA loaded TDC via this SPI.</string>
+    <string name="E170_0">The secure core does not match the transformation mode.</string>
+    <string name="E171_0">The platform does not support Secure Client Output Transformation (SCOT).</string>
+    <string name="E172_0">Traitor Tracing is not supported in MSR mode.</string>
+    <string name="E173_0">Traitor Tracing application data version mismatch.</string>
+    <string name="E174_0">Traitor Tracing is not supported.</string>
+    <string name="E175_0">Incorrect number of CWs in the Traitor Tracing application data.</string>
+    <string name="E176_0">There is a mismatch for existing Auth Ctrl value.</string>
+    <string name="E600_0">Receiver is not enabled yet to view this service. To enable your receiver, call 0804-1-911-911.</string>
+    <string name="D000_4">Card In.</string>
+    <string name="D029_4">Service is currently descrambled.</string>
+    <string name="D100_5">DVB EMM Service Ok.</string>
+    <string name="D100_8">Descrambler Service Ok.</string>
+    <string name="D101_6">No Matched Vendor ID.</string>
+    <string name="D102_9">No Vendor ID.</string>
+    <string name="D105_9">FTA Service.</string>
+    <string name="D106_9">Please insert the correct smartcard.</string>
+    <string name="I007_4">Checking Smartcard.</string>
+    <string name="I034_9">Validating subscription, please wait.</string>
+    <string name="I055_4">Subscription update in progress.</string>
+    <string name="I102_4">Currently unable to view this channel.</string>
+    <string name="I139_4">Validating subscription, please wait.</string>
+    <string name="E000_32">Service not scrambled.</string>
+    <string name="E004_4">Please insert Smartcard.</string>
+    <string name="E005_4">Unknown Smartcard.</string>
+    <string name="E006_4">Smartcard Failure.</string>
+    <string name="E016_4">No permission to view this channel.</string>
+    <string name="E017_13">Service is currently scrambled.</string>
+    <string name="E018_4">This channel is not available in this location.</string>
+    <string name="E019_4">The subscription to this channel has expired.</string>
+    <string name="E030_4">Currently unable to view this channel.</string>
+    <string name="E032_4">Viewing is temporarily blocked, please stay tuned.</string>
+    <string name="E033_4">Check if the correct smart card is inserted.</string>
+    <string name="E038_32">Service is not currently running.</string>
+    <string name="E045_32">Service not allowed.</string>
+    <string name="E080_35">Currently unable to view this channel.</string>
+    <string name="E081_35">Currently unable to view this channel.</string>
+    <string name="E101_4">Currently unable to view this channel.</string>
+    <string name="E106_9">Please insert the correct smartcard.</string>
+    <string name="E107_4">The smartcard is not fully authorized.</string>
+    <string name="E108_4">Currently unable to view this channel.</string>
+    <string name="E109_4">Currently unable to view this channel.</string>
+    <string name="E136_4">This channel is age restricted, insert the parental pin to view.</string>
+    <string name="E137_4">Currently unable to view this channel.</string>
+    <string name="E140_4">This channel is not available in this location.</string>
+    <string name="E141_4">Currently unable to view this channel.</string>
+    <string name="E142_4">Insert the secondary card into the primary decoder to continue viewing with the secondary decoder.</string>
+    <string name="E144_4">Wrong Home Network.</string>
+    <string name="E152_4">Preview time period time out.</string>
+    <string name="D500_0">CCA package successfully loaded.</string>
+    <string name="I343_0">Invalid change version.</string>
+    <string name="I344_0">Block Download EMM duplication.</string>
+    <string name="I345_0">No Secure Core is loaded.</string>
+    <string name="I346_0">Secure PVR MSK EMM handled successfully.</string>
+    <string name="I347_0">Shared PVR MSK EMM handled incorrectly.</string>
+    <string name="I348_0">Shared PVR MSK EMM handled successfully.</string>
+    <string name="I349_0">ARP+ Configuration EMM handled successfully.</string>
+    <string name="I350_0">Invalid Secure CW Mode.</string>
+    <string name="I351_0">Invalid cipher mode.</string>
+    <string name="I352_0">Invalid White Box cipher mode.</string>
+    <string name="I353_0">Asset VOD Entitlement Delete EMM handled successfully.</string>
+    <string name="E015_0">No valid entitlement found.</string>
+    <string name="E501_0">FlexiFlash not initialized.</string>
+    <string name="E502_0">Invalid CFG data.</string>
+    <string name="E503_0">Invalid CCA package data.</string>
+    <string name="E504_0">CCA package not loaded.</string>
+    <string name="E505_0">Invalid CCA package index.</string>
+    <string name="E506_0">Duplicated VM ID.</string>
+    <string name="E507_0">Creat VM context failed.</string>
+    <string name="E508_0">Creat VM failed.</string>
+    <string name="E509_0">Too many vm created.</string>
+    <string name="E510_0">VM load image failed.</string>
+    <string name="E511_0">VM memmap failed.</string>
+    <string name="E512_0">VM execution failed.</string>
+    <string name="E513_0">VM IO failed.</string>
+    <string name="E514_0">VM reset failed.</string>
+    <string name="E515_0">Root key check failed.</string>
+    <string name="E516_0">Invalid package signature.</string>
+    <string name="E517_0">Unsupported compress algorithm.</string>
+    <string name="E518_0">Invalid SYS ID.</string>
+    <string name="E519_0">Client type mismatch.</string>
+    <string name="E520_0">The client version too low to support FlexiFlash download.</string>
+    <string name="E521_0">Invalid Variant.</string>
+    <string name="E522_0">Invalid White Box algorithm.</string>
+    <string name="E100_4">Currently unable to view this channel.</string>
+    <string name="E118_4">Currently unable to view this channel.</string>
+    <string name="E120_4">Please wait, while the card is being synchronized.</string>
+    <string name="E133_4">Currently unable to view this channel.</string>
+    <string name="E116_0">The device is invalid.</string>
+    <string name="E202_0">Timeout to receive the request entitlement response.</string>
+    <string name="E203_0">Request entitlement has failed.</string>
+    <string name="E204_0">CCIS internal error has happened.</string>
+    <string name="E205_0">DeviceID/UniqueAddress pair mismatches.</string>
+</resources>

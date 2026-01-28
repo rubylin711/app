@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.ChannelSearchDVBSActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <include
+        android:id="@+id/TitleViewLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/HelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomGuideline" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="@+id/topGuideline"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerVGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerHGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/barStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/barEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftContentEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.48" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightContentStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <TextView
+            android:id="@+id/satTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/STR_DVBS_SATELLITE"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/satSPINNER"
+            app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="@dimen/WIDGET_TOP" />
+
+
+        <TextView
+            android:id="@+id/tpListTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_DVBS_TP_LIST"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/tpListSPINNER"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/satTXV" />
+
+        <TextView
+            android:id="@+id/scanModeTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_SCAN_MODE"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/scanModeSPINNER"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tpListTXV" />
+
+        <TextView
+            android:id="@+id/channelTypeTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_CHANNEL_TYPE"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/channelTypeSPINNER"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanModeTXV" />
+
+        <Spinner
+            android:id="@+id/satSPINNER"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:dropDownSelector="@drawable/drop_down_selector"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_constraintBottom_toBottomOf="@+id/satTXV"
+            app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/satTXV"
+            app:layout_constraintTop_toTopOf="@+id/satTXV" />
+
+        <Spinner
+            android:id="@+id/tpListSPINNER"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:dropDownSelector="@drawable/drop_down_selector"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tpListTXV"
+            app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tpListTXV"
+            app:layout_constraintTop_toTopOf="@+id/tpListTXV" />
+
+        <Spinner
+            android:id="@+id/scanModeSPINNER"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:dropDownSelector="@drawable/drop_down_selector"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_constraintBottom_toBottomOf="@+id/scanModeTXV"
+            app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scanModeTXV"
+            app:layout_constraintTop_toTopOf="@+id/scanModeTXV" />
+
+        <Spinner
+            android:id="@+id/channelTypeSPINNER"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:dropDownSelector="@drawable/drop_down_selector"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_constraintBottom_toBottomOf="@+id/channelTypeTXV"
+            app:layout_constraintEnd_toStartOf="@+id/leftContentEndGuideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/channelTypeTXV"
+            app:layout_constraintTop_toTopOf="@+id/channelTypeTXV" />
+
+        <TextView
+            android:id="@+id/lnbTypeTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/STR_DVBS_LNB_TYPE"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lnbTypeValueTXV"
+            app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+            app:layout_constraintStart_toStartOf="@+id/rightContentStartGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="@dimen/WIDGET_TOP" />
+
+
+        <TextView
+            android:id="@+id/antTypeTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_DVBS_ANT_TYPE"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/antTypeValueTXV"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/rightContentStartGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/lnbTypeTXV" />
+
+        <TextView
+            android:id="@+id/tone22kTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_DVBS_22KHZ_TONE"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/tone22kValueTXV"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/rightContentStartGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/antTypeTXV" />
+
+        <TextView
+            android:id="@+id/diseqcTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_DVBS_DISEQC"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/diseqcValueTXV"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/rightContentStartGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/tone22kTXV" />
+
+        <TextView
+            android:id="@+id/lnbTypeValueTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintBottom_toBottomOf="@+id/lnbTypeTXV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lnbTypeTXV"
+            app:layout_constraintTop_toTopOf="@+id/lnbTypeTXV" />
+
+
+        <TextView
+            android:id="@+id/antTypeValueTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintBottom_toBottomOf="@+id/antTypeTXV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/antTypeTXV"
+            app:layout_constraintTop_toTopOf="@+id/antTypeTXV" />
+
+        <TextView
+            android:id="@+id/tone22kValueTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintBottom_toBottomOf="@+id/tone22kTXV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tone22kTXV"
+            app:layout_constraintTop_toTopOf="@+id/tone22kTXV" />
+
+        <TextView
+            android:id="@+id/diseqcValueTXV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintBottom_toBottomOf="@+id/diseqcTXV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/diseqcTXV"
+            app:layout_constraintTop_toTopOf="@+id/diseqcTXV" />
+
+        <TextView
+            android:id="@+id/strengthTXV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_STRENGTH"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/barStartGuideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchBTN" />
+
+        <TextView
+            android:id="@+id/qualityTXV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/STR_QUALITY"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/barStartGuideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/strengthTXV" />
+
+        <TextView
+            android:id="@+id/berTXV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/str_signal_ber"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toStartOf="@+id/barStartGuideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qualityTXV" />
+
+        <ProgressBar
+            android:id="@+id/strengthPROGBAR"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/CHANNELSEARCH_PROGBAR_HEIGHT"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/strengthTXV"
+            app:layout_constraintEnd_toStartOf="@+id/barEndGuideline"
+            app:layout_constraintStart_toStartOf="@+id/barStartGuideline"
+            app:layout_constraintTop_toTopOf="@+id/strengthTXV" />
+
+        <ProgressBar
+            android:id="@+id/qualityPROGBAR"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/CHANNELSEARCH_PROGBAR_HEIGHT"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/qualityTXV"
+            app:layout_constraintEnd_toStartOf="@+id/barEndGuideline"
+            app:layout_constraintStart_toStartOf="@+id/barStartGuideline"
+            app:layout_constraintTop_toTopOf="@+id/qualityTXV" />
+
+        <TextView
+            android:id="@+id/strengthValueTXV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/barEndGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/searchBTN" />
+
+        <TextView
+            android:id="@+id/qualityValueTXV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/barEndGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/strengthValueTXV" />
+
+        <TextView
+            android:id="@+id/berValueTXV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/barEndGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/qualityValueTXV" />
+
+        <Button
+            android:id="@+id/searchBTN"
+            android:layout_width="@dimen/CHANNELSEARCH_SEARCHBTN_WIDTH"
+            android:layout_height="@dimen/VIEW_LAD_SMALL_HEIGHT"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/selectbox"
+            android:text="@string/STR_DVBS_SCAN_SELECTED_SAT"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_LAD_SMALL_SIZE"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/centerHGuideline"
+            app:layout_constraintVertical_bias="0.3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

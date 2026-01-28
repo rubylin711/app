@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Whether to allow the welcome (locale picker) to be shown. -->
+	<bool name="show_welcome">true</bool>
+    <!-- Display "SKIP" in network selection screen -->
+    <bool name="show_skip_network">false</bool>
+    <!-- Allow user to skip Google signin at signin setup step -->
+    <bool name="show_skip_signin">true</bool>
+	<!-- Provide a list of locales to show atop the default locale picker.
+	Relevant only if the default locale picker is shown. -->
+	<string-array name="welcome_preferred_locales">
+		<item>en-US</item>
+		<item>zh-TW</item>
+	</string-array>
+    <!-- Disable default google paring instruction -->
+    <bool name="disable_remote_pairing">true</bool>
+    <bool name="disable_basic_mode">true</bool>
+
+    <!-- Setup 2.0 -->
+    <bool name="use_gtv_setup_v2">true</bool>
+
+	<string-array name="tutorial_titles">
+		<item>@string/tutorial_title0</item>
+		<item>@string/tutorial_title1</item>
+		<item>@string/tutorial_title2</item>
+		<item>@string/tutorial_title3</item>
+		<item>@string/tutorial_title4</item>
+	</string-array>
+
+	<string-array name="tutorial_descriptions">
+		<item>@string/tutorial_desc0</item>
+		<item>@string/tutorial_desc1</item>
+		<item>@string/tutorial_desc2</item>
+		<item>@string/tutorial_desc3</item>
+		<item>@string/tutorial_desc4</item>
+	</string-array>
+
+	<array name="tutorial_drawables">
+		<item>@drawable/tutorial_img_cn_01</item>
+		<item>@drawable/tutorial_img_02</item>
+		<item>@drawable/tutorial_img_cn_03</item>
+		<item>@drawable/tutorial_img_04</item>
+		<item>@drawable/tutorial_img_cn_05</item>
+	</array>
+</resources>

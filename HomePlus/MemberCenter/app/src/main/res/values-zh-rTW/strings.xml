@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">HomePlus MemberCenter</string>
+    <string name="membercenter">會員中心</string>
+    <string name="memberinfo">會員資料</string>
+    <string name="memberinfo_subtitle">以下是您的會員資料</string>
+    <string name="memberinfo_householdid">住戶編號</string>
+    <string name="memberinfo_subscriberid">訂戶編號</string>
+    <string name="memberinfo_stbid">機上盒編號</string>
+    <string name="memberinfo_scid">智慧卡編號</string>
+    <string name="channel_list">頻道列表</string>
+    <string name="subscription">訂閱資訊</string>
+    <string name="subscription_subtitle">以下是您的訂閱資訊</string>
+    <string name="subscription_onlinepayment">線上繳費</string>
+    <string name="subscription_billinghistory">帳單紀錄</string>
+    <string name="subscription_allchannelinfo">頻道清單</string>
+    <string name="subscription_onlinepayment_subtitle">請勾選您要付費的項目</string>
+    <string name="subscription_onlinepayment_item">項目</string>
+    <string name="subscription_onlinepayment_serviceperiod">服務期間</string>
+    <string name="subscription_onlinepayment_price">價格</string>
+    <string name="subscription_onlinepayment_checkall">已勾選/全部</string>
+    <string name="subscription_onlinepayment_contract">定型化契約</string>
+    <string name="subscription_onlinepayment_selectall">選擇全部</string>
+    <string name="subscription_onlinepayment_deselectall">取消選擇全部</string>
+    <string name="subscription_onlinepayment_pay">付款</string>
+    <string name="subscription_billinghistory_subtitle">查看歷史帳單紀錄</string>
+    <string name="subscription_billinghistory_period">服務期間</string>
+    <string name="subscription_billinghistory_paymentdate">付款日期</string>
+    <string name="subscription_billinghistory_unpaid_amount">待繳金額</string>
+    <string name="subscription_allchannelinfo_subtitle">全部節目列表</string>
+    <string name="subscription_allchannelinfo_back">Back返回</string>
+    <string name="vodpoint">看片金</string>
+    <string name="vodpoint_subtitle">以下是您的看片金紀錄</string>
+    <string name="vodpoint_point">看片金(VOD點數)</string>
+    <string name="vodpoint_used">已使用的看片金</string>
+    <string name="vodpoint_available">可使用的看片金</string>
+    <string name="vodpoint_querytime">查詢時間</string>
+    <string name="vodpoint_duedate">看片金有效時間</string>
+    <string name="vodpoint_voddiscount">看片金折抵上限</string>
+    <string name="mail">郵件箱</string>
+    <string name="new_mail">NEW</string>
+    <string name="mail_unread">未讀郵件:</string>
+    <string name="mail_limit">郵件上限: </string>
+    <string name="mail_id">編號</string>
+    <string name="mail_title">郵件名稱</string>
+    <string name="mail_type">重要性</string>
+    <string name="mail_date">日期</string>
+    <string name="mail_nolist">沒有郵件</string>
+    <string name="mail_delete">刪除</string>
+    <string name="mail_delread">刪除已讀郵件</string>
+    <string name="mail_markread">全部標示已讀</string>
+    <string name="mail_read">讀取</string>
+    <string name="question">常見問題</string>
+    <string name="question_subtitle">觀看新手導覽與常見問題</string>
+    <string name="question_tutorial">新手導覽</string>
+    <string name="question_qa">常見問題</string>
+
+    <!-- 範例圖中文介面使用英文 -->
+    <string name="tutorial_skip">跳過</string>
+    <string name="tutorial_confirm">完成</string>
+    <string name="tutorial_next">下一頁</string>
+    <string name="tutorial_previous_next">上一頁/下一頁</string>
+    <string name="tutorial_previous">上一頁</string>
+    <string name="tutorial_dont_show_again">不再顯示</string>
+    <string name="tutorial_learn_more">學習更多</string>
+    <string name="tutorial_cancel">關閉</string>
+    <string name="tutorial_popup_1">新手導覽功能設定</string>
+    <string name="tutorial_popup_2">機上盒功能導覽教學服務</string>
+    <string name="tutorial_popup_3">使用者可以設定顯示開啟或關閉</string>
+    <string name="tutorial_title1">歡迎使用 Android 機上盒</string>
+    <string name="tutorial_title2">首頁</string>
+    <string name="tutorial_title3">探索新頻道</string>
+    <string name="tutorial_title4">盡情享受多種內容</string>
+    <string name="tutorial_title5">線上影音及音樂</string>
+    <string name="tutorial_description1">開始嶄新的體驗</string>
+    <string name="tutorial_description2">首頁是您的全新娛樂入口，透過瀏覽各式各樣的\n
+        Apps及電視頻道觀看您想要的內容。</string>
+    <string name="tutorial_description3">您可以觀賞節目同時瀏覽導覽資訊，\n
+        並使用錄製及邊看邊錄功能來獲得更好的觀看體驗。</string>
+    <string name="tutorial_description4">觀看種類繁多的VOD影片，\n
+        您可以從會員中心查看最新的訂閱狀態</string>
+    <string name="tutorial_description5">您可以在本機上面享受各種影視服務及音樂</string>
+    <string name="tvmail_cancel">關閉</string>
+    <string name="tvmail_open">前往</string>
+    <string name="tvmail_OK">確認</string>
+    <string name="tvmail_close">關閉</string>
+    <string name="settings_tvmail_setting">TvMail設定</string>
+    <string name="settings_tvmail_subtitle">設定Tv Mail伺服器地址</string>
+    <string name="settings_tvmail_server">伺服器地址</string>
+    <string name="settings_tvmail_heartbeat">心跳(分)</string>
+    <string name="settings_default">預設值</string>
+    <string name="settings_save">儲存</string>
+    <string name="settings_cancel">取消</string>
+
+    <string name="msg_ok">確認</string>
+    <string name="msg_cancel">關閉</string>
+    <string name="msg_privacy">隱私權與個資蒐集</string>
+    <string name="msg_service">服務條款</string>
+    <string name="msg_important">重要</string>
+    <string name="msg_medium">中等</string>
+    <string name="msg_normal">一般</string>
+    <string name="msg_important_notice">重要郵件</string>
+    <string name="msg_notice">郵件</string>
+    <string name="msg_up">往上</string>
+    <string name="msg_down">往下</string>
+    <string name="msg_select">選取</string>
+
+</resources>

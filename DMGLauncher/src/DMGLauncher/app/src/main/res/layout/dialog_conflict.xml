@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_trans">
+    <!-- Dialog -->
+    <LinearLayout
+        android:id="@+id/ConflictWireFrame"
+        android:orientation="vertical"
+        android:layout_width="450dp"
+        android:layout_height="350dp"
+        android:visibility="visible"
+        android:background="@drawable/black_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!-- 主標題 -->
+        <TextView
+            android:id="@+id/ConflictTitle"
+            android:text="@string/pvr_conflict_title"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+        <!-- 副標題 -->
+        <TextView
+            android:id="@+id/ConflictHint"
+            android:text="@string/pvr_conflict_normal_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14sp"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:visibility="visible"
+            tools:ignore="SmallSp" />
+        <!-- 分隔線 -->
+        <View
+            android:background="@color/show_panel_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="2.5dp"/>
+        <!-- 清單 -->
+        <com.prime.dmg.launcher.PVR.Conflict.ConflictListView
+            android:id="@+id/ConflictListView"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="2.5dp"/>
+        <!-- 分隔線 -->
+        <View
+            android:id="@+id/BottomLine"
+            android:background="@color/show_panel_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="2.5dp"/>
+        <!-- 確認 -->
+        <TextView
+            android:id="@+id/ConfirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/pvr_dialog_confirm"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/locked_dialog_button"
+            android:focusable="true"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

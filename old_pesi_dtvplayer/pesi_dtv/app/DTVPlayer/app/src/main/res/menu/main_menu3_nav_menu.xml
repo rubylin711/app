@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_live_channel"
+            android:icon="@drawable/ic_baseline_live_tv_24"
+            android:title="@string/str_live_channel" />
+        <item
+            android:id="@+id/nav_channel_search"
+            android:icon="@drawable/ic_baseline_settings_input_antenna_24"
+            android:title="@string/STR_CHANNEL_SEARCH" />
+        <item
+            android:id="@+id/nav_antenna_setup"
+            android:icon="@drawable/ic_baseline_settings_input_antenna_24"
+            android:title="@string/STR_ANTENNA_SETUP" />
+        <item
+            android:id="@+id/nav_tv_channel"
+            android:icon="@drawable/ic_baseline_tv_24"
+            android:title="@string/STR_TV_CHANNEL" />
+        <item
+            android:id="@+id/nav_radio_channel"
+            android:icon="@drawable/ic_baseline_radio_24"
+            android:title="@string/STR_RADIO_CHANNEL" />
+        <item
+            android:id="@+id/nav_epg"
+            android:icon="@drawable/ic_baseline_dvr_24"
+            android:title="@string/STR_TV_PROGRAMME_GUIDE" />
+
+        <item
+            android:id="@+id/nav_reset_default"
+            android:icon="@drawable/ic_baseline_reset_tv_24"
+            android:title="@string/STR_RESET_FACTORY_DEFAULT" />
+    </group>
+</menu>

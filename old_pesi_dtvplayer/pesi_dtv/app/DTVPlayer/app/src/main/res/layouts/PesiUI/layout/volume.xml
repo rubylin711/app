@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.prime.dtvplayer.View.VolumeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/volumebgIGV"
+        android:layout_width="@dimen/VOLUMEVIEW_VOLUMEBGIGV_WIDTH"
+        android:layout_height="@dimen/VOLUMEVIEW_VOLUMEBGIGV_HEIGHT"
+        android:background="@drawable/banner"
+        android:contentDescription="@string/STR_VOLUME"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <SeekBar
+        android:id="@+id/volumebarSEEKBAR"
+        android:layout_width="@dimen/VOLUMEVIEW_VOLUMEBARSEEKBAR_WIDTH"
+        android:layout_height="@dimen/VOLUMEVIEW_VOLUMEBARSEEKBAR_HEIGHT"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:progressDrawable="@drawable/progress"
+        android:thumb="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/volumeTXV"
+        app:layout_constraintStart_toEndOf="@+id/volumeTXV"
+        app:layout_constraintTop_toTopOf="@+id/volumeTXV" />
+
+    <TextView
+        android:id="@+id/volumeTXV"
+        android:layout_width="@dimen/VOLUMEVIEW_VOLUMETXV_WIDTH"
+        android:layout_height="@dimen/VOLUMEVIEW_VOLUMETXV_HEIGHT"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/STR_VOLUME"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/volumevalueTXV"
+        android:layout_width="@dimen/VOLUMEVIEW_VOLUMEVALUETXV_WIDTH"
+        android:layout_height="@dimen/VOLUMEVIEW_VOLUMEVALUETXV_HEIGHT"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="0"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/volumebarSEEKBAR"
+        app:layout_constraintEnd_toEndOf="@+id/volumebgIGV"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toEndOf="@+id/volumebarSEEKBAR"
+        app:layout_constraintTop_toTopOf="@+id/volumebarSEEKBAR"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <ImageView
+        android:id="@+id/volumebarmuteIGV"
+        android:layout_width="@dimen/VOLUMEVIEW_VOLUMEBARMUTEIGV_WIDTH"
+        android:layout_height="@dimen/VOLUMEVIEW_VOLUMEBARMUTEIGV_HEIGHT"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/STR_VOLUME"
+        android:src="@drawable/mute"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/volumebarSEEKBAR"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.prime.dtvplayer.View.VolumeView>

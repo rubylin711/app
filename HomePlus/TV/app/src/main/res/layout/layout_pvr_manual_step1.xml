@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clPvrManualStep1"
+    android:layout_width="550dp"
+    android:layout_height="415dp"
+    android:background="@drawable/bg_home_1920_w">
+
+    <TextView
+        android:id="@+id/tvPvrManualStep1Genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/pvr_manual_step1_genre"
+        android:textColor="@color/colorBlueSubtitle"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="165dp"
+        android:layout_height="310dp"
+        app:layout_constraintStart_toStartOf="@+id/tvPvrManualStep1Genre"
+        app:layout_constraintTop_toBottomOf="@+id/tvPvrManualStep1Genre">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPvrManualStep1Genre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="afterDescendants"
+            android:paddingEnd="7.5dp"
+            android:divider="@color/colorBlackOpacity30"
+            android:dividerHeight="1dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <!--
+        <ListView
+            android:id="@+id/lvPvrManualStep1Genre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@drawable/button_item3"
+            android:paddingEnd="7.5dp"
+            android:scrollbarSize="1.5dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbarThumbVertical="@color/colorTextNotSelect"
+            android:scrollbarTrackVertical="@color/colorWhiteOpacity15" />
+           -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorWhiteOpacity40" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhiteOpacity40" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvPvrManualStep1ChannelList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/miniepg_channel_list"
+        android:textColor="@color/colorBlueSubtitle"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="310dp"
+        app:layout_constraintStart_toStartOf="@+id/tvPvrManualStep1ChannelList"
+        app:layout_constraintTop_toBottomOf="@+id/tvPvrManualStep1ChannelList">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPvrManualStep1ChannelList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingEnd="7.5dp"
+            android:divider="@color/colorBlackOpacity30"
+            android:dividerHeight="1dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <!--
+        <GridView
+            android:id="@+id/gvPvrManualStep1ChannelList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@drawable/button_item3"
+            android:numColumns="2"
+            android:orientation="vertical"
+            android:paddingEnd="7.5dp"
+            android:scrollbarSize="1.5dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbarThumbVertical="@color/colorTextNotSelect"
+            android:scrollbarTrackVertical="@color/colorWhiteOpacity15" />
+-->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorWhiteOpacity40" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhiteOpacity40" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

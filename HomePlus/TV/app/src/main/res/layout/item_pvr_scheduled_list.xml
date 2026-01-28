@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llScheduledProgramList"
+    android:layout_width="match_parent"
+    android:layout_height="39dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/state_recorded_program_background"
+    android:gravity="center|start"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvScheduledProgramChannelNumber"
+        android:layout_width="26.5dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="15dp"
+        android:ellipsize="end"
+        android:gravity="center|start"
+        android:singleLine="true"
+        android:textColor="@color/state_selected_white_normal_b3ebca8c"
+        android:text="000"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tvScheduledProgramChannelName"
+        android:layout_width="96dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="6dp"
+        android:ellipsize="end"
+        android:gravity="center|start"
+        android:singleLine="true"
+        android:textColor="@color/state_selected_white_normal_b3ffffff"
+        android:text="channel name"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/ivScheduledProgramPadlock"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/icon_ch_lock"
+        android:textColor="@drawable/state_recorded_program_common_text_color"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:gravity="center|start"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivScheduledProgramSeries"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/ok"
+            android:src="@drawable/icon_pvr_folder"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvScheduledProgramName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:ellipsize="end"
+            android:maxWidth="321dp"
+            android:singleLine="true"
+            android:text="program name"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivScheduledProgramRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginEnd="5dp"
+        android:visibility="gone"
+        android:scaleType="fitEnd"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_live_rec" />
+
+    <ImageView
+        android:id="@+id/ivScheduledProgramRating"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/rating_0"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvScheduledProgramDate"
+        android:layout_width="78dp"
+        android:layout_height="39dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/state_selected_white_normal_b3ffffff"
+        android:text="24.01.01"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvScheduledProgramStartEndTime"
+        android:layout_width="107dp"
+        android:layout_height="39dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:textColor="@color/state_selected_white_normal_b3ffffff"
+        android:text="00:00 - 23:59"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="39dp"
+        android:visibility="visible"
+        android:layout_weight="0">
+    </View>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+    android:background="@drawable/focus_list"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/subtitleTxv"
+        android:layout_width="@dimen/SUBTITLEDIALOG_ITEM_SUBTITLETXV_WIDTH"
+        android:layout_height="@dimen/LIST_VIEW_HEIGHT"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|start"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/sub_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/subtitleIgv"
+        android:layout_width="@dimen/SUBTITLEDIALOG_ITEM_SUBTITLEIGV_WIDTH"
+        android:layout_height="@dimen/SUBTITLEDIALOG_ITEM_SUBTITLEIGV_HEIGHT"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/STR_NULL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/icon_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sub_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

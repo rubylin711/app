@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llPvrMenu"
+    android:layout_width="210dp"
+    android:layout_height="50dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center|left"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivPvrMenuIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvPvrMenuName"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="MenuTitle"
+        android:textColor="@color/state_selected_white_normal_bfffffff"
+        android:textSize="16dp" />
+</LinearLayout>

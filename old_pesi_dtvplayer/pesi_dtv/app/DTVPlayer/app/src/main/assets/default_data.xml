@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DB>
+    <Ant_List>
+        <ant_entry AntLnbType= "0" AntLnb1= "9750" AntLnb2="10600" AntSatId="0"/>
+    </Ant_List>
+    <Satellite_list>
+        <sat_entry SatName="Astra 1" SatAngle="1.2" SatLocation="E" SatPostionIndex="0" SatNTp="10"/>
+        <sat_entry SatName="Astra 2" SatAngle="2.4" SatLocation="E" SatPostionIndex="1" SatNTp="5"/>
+        <sat_entry SatName="Astra 3" SatAngle="3.6" SatLocation="E" SatPostionIndex="2" SatNTp="7"/>
+    </Satellite_list>
+    <Tp_List name="TPList1" type="dvbc">
+        <tp_entry Frequency="306000" SymRate="6667" Qam="QAM64" sat_id="1"/>
+        <tp_entry Frequency="314000" SymRate="6952" Qam="QAM256" sat_id="1"/>
+        <tp_entry Frequency="322000" SymRate="6953" Qam="QAM128" sat_id="1"/>
+        <tp_entry Frequency="330000" SymRate="6954" Qam="QAM64" sat_id="1"/>
+        <tp_entry Frequency="338000" SymRate="6955" Qam="QAM256" sat_id="1"/>
+        <tp_entry Frequency="346000" SymRate="6956" Qam="QAM128" sat_id="1"/>
+        <tp_entry Frequency="354000" SymRate="6957" Qam="QAM64" sat_id="1"/>
+        <tp_entry Frequency="362000" SymRate="6958" Qam="QAM256" sat_id="1"/>
+        <tp_entry Frequency="370000" SymRate="6959" Qam="QAM128" sat_id="1"/>
+        <tp_entry Frequency="378000" SymRate="6960" Qam="QAM64" sat_id="1"/>
+        <tp_entry Frequency="386000" SymRate="6961" Qam="QAM256" sat_id="1"/>
+        <tp_entry Frequency="394000" SymRate="6962" Qam="QAM128" sat_id="1"/>
+        <tp_entry Frequency="402000" SymRate="6963" Qam="QAM64" sat_id="1"/>
+        <tp_entry Frequency="410000" SymRate="6964" Qam="QAM256" sat_id="1"/>
+        <tp_entry Frequency="418000" SymRate="6965" Qam="QAM128" sat_id="1"/>
+        <tp_entry Frequency="426000" SymRate="6966" Qam="QAM64" sat_id="1"/>
+        <tp_entry Frequency="434000" SymRate="6967" Qam="QAM256" sat_id="1"/>
+    </Tp_List>
+    <Program_List>
+        <program_entry ServiceId="100" TsId="51" OnId="2012" ServiceType="TVCH" ChName="TVCH 1" Lcn="1" Lock="0" Skip="0" CaFlag="0" TpId="0" SatId="0" AntId="0" PcrPid="3001" VideoPid="2001" VideoCodec="mpeg12" AudioPids="1001,1002" AudioCodecs="mpeg4,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="101" TsId="51" OnId="2012" ServiceType="TVCH" ChName="TVCH 2" Lcn="2" Lock="0" Skip="0" CaFlag="0" TpId="0" SatId="0" AntId="0" PcrPid="3001" VideoPid="2002" VideoCodec="mpeg4" AudioPids="1003,1004" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="102" TsId="51" OnId="2012" ServiceType="TVCH" ChName="TVCH 3" Lcn="3" Lock="0" Skip="0" CaFlag="0" TpId="0" SatId="0" AntId="0" PcrPid="3001" VideoPid="2003" VideoCodec="mpeg12" AudioPids="1005,1006" AudioCodecs="mpeg12,mpeg4" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="103" TsId="51" OnId="2012" ServiceType="TVCH" ChName="TVCH 4" Lcn="4" Lock="0" Skip="0" CaFlag="0" TpId="0" SatId="0" AntId="0" PcrPid="3001" VideoPid="2004" VideoCodec="mpeg4" AudioPids="1007,1008" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="104" TsId="52" OnId="2012" ServiceType="TVCH" ChName="TVCH 5" Lcn="5" Lock="0" Skip="0" CaFlag="0" TpId="1" SatId="0" AntId="0" PcrPid="3001" VideoPid="2005" VideoCodec="mpeg12" AudioPids="1009" AudioCodecs="mpeg12" AudioLanguagesL="eng" AudioLanguagesR=""/>
+        <program_entry ServiceId="105" TsId="52" OnId="2012" ServiceType="TVCH" ChName="TVCH 6" Lcn="6" Lock="0" Skip="0" CaFlag="0" TpId="1" SatId="0" AntId="0" PcrPid="3001" VideoPid="2006" VideoCodec="mpeg4" AudioPids="1010,1011" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="106" TsId="53" OnId="2012" ServiceType="TVCH" ChName="TVCH 7" Lcn="7" Lock="0" Skip="0" CaFlag="0" TpId="2" SatId="0" AntId="0" PcrPid="3001" VideoPid="2007" VideoCodec="mpeg12" AudioPids="1012,1013" AudioCodecs="mpeg4,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="107" TsId="53" OnId="2012" ServiceType="TVCH" ChName="TVCH 8" Lcn="8" Lock="0" Skip="0" CaFlag="0" TpId="2" SatId="0" AntId="0" PcrPid="3001" VideoPid="2008" VideoCodec="mpeg4" AudioPids="1014,1015" AudioCodecs="mpeg12,mpeg4" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="108" TsId="54" OnId="2012" ServiceType="TVCH" ChName="TVCH 9" Lcn="9" Lock="0" Skip="0" CaFlag="0" TpId="3" SatId="0" AntId="0" PcrPid="3001" VideoPid="2009" VideoCodec="mpeg12" AudioPids="1016,1017" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="109" TsId="55" OnId="2012" ServiceType="TVCH" ChName="TVCH 10" Lcn="10" Lock="0" Skip="0" CaFlag="0" TpId="4" SatId="0" AntId="0" PcrPid="3001" VideoPid="2010" VideoCodec="mpeg4" AudioPids="1018" AudioCodecs="mpeg4" AudioLanguagesL="eng" AudioLanguagesR=""/>
+        <program_entry ServiceId="110" TsId="55" OnId="2012" ServiceType="TVCH" ChName="TVCH 11" Lcn="11" Lock="0" Skip="0" CaFlag="0" TpId="4" SatId="0" AntId="0" PcrPid="3001" VideoPid="2011" VideoCodec="mpeg12" AudioPids="1019,1020,1021" AudioCodecs="mpeg4,mpeg12,mpeg12" AudioLanguagesL="eng,fre,gre" AudioLanguagesR=""/>
+        <program_entry ServiceId="111" TsId="56" OnId="2012" ServiceType="TVCH" ChName="TVCH 12" Lcn="12" Lock="0" Skip="0" CaFlag="0" TpId="5" SatId="0" AntId="0" PcrPid="3001" VideoPid="2012" VideoCodec="mpeg4" AudioPids="1022,1023" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="112" TsId="56" OnId="2012" ServiceType="TVCH" ChName="TVCH 13" Lcn="13" Lock="0" Skip="0" CaFlag="0" TpId="5" SatId="0" AntId="0" PcrPid="3001" VideoPid="2013" VideoCodec="mpeg12" AudioPids="1024,1025" AudioCodecs="mpeg4,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="113" TsId="57" OnId="2012" ServiceType="TVCH" ChName="TVCH 14" Lcn="14" Lock="0" Skip="0" CaFlag="0" TpId="6" SatId="0" AntId="0" PcrPid="3001" VideoPid="2014" VideoCodec="mpeg4" AudioPids="1026,1027" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="114" TsId="57" OnId="2012" ServiceType="TVCH" ChName="TVCH 15" Lcn="15" Lock="0" Skip="0" CaFlag="0" TpId="6" SatId="0" AntId="0" PcrPid="3001" VideoPid="2015" VideoCodec="mpeg12" AudioPids="1028,1029" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="115" TsId="57" OnId="2012" ServiceType="TVCH" ChName="TVCH 16" Lcn="17" Lock="0" Skip="0" CaFlag="0" TpId="6" SatId="0" AntId="0" PcrPid="3001" VideoPid="2016" VideoCodec="mpeg4" AudioPids="1030" AudioCodecs="mpeg4" AudioLanguagesL="eng" AudioLanguagesR=""/>
+        <program_entry ServiceId="116" TsId="57" OnId="2012" ServiceType="TVCH" ChName="TVCH 17" Lcn="21" Lock="0" Skip="0" CaFlag="0" TpId="6" SatId="0" AntId="0" PcrPid="3001" VideoPid="2017" VideoCodec="h264" AudioPids="1031,1003" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="117" TsId="58" OnId="2012" ServiceType="TVCH" ChName="TVCH 18" Lcn="31" Lock="0" Skip="0" CaFlag="0" TpId="7" SatId="0" AntId="0" PcrPid="3001" VideoPid="2018" VideoCodec="mpeg4" AudioPids="1033,1034" AudioCodecs="mpeg4,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="118" TsId="58" OnId="2012" ServiceType="TVCH" ChName="TVCH 19" Lcn="32" Lock="0" Skip="0" CaFlag="0" TpId="7" SatId="0" AntId="0" PcrPid="3001" VideoPid="2019" VideoCodec="h264" AudioPids="1035,1036" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="119" TsId="58" OnId="2012" ServiceType="TVCH" ChName="TVCH 20" Lcn="44" Lock="0" Skip="0" CaFlag="0" TpId="7" SatId="0" AntId="0" PcrPid="3001" VideoPid="2020" VideoCodec="mpeg4" AudioPids="1037,1038" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="120" TsId="58" OnId="2012" ServiceType="TVCH" ChName="TVCH 21" Lcn="51" Lock="0" Skip="0" CaFlag="0" TpId="7" SatId="0" AntId="0" PcrPid="3001" VideoPid="2021" VideoCodec="h264" AudioPids="1039" AudioCodecs="mpeg12" AudioLanguagesL="eng" AudioLanguagesR=""/>
+        <program_entry ServiceId="121" TsId="59" OnId="2012" ServiceType="TVCH" ChName="TVCH 22" Lcn="53" Lock="0" Skip="0" CaFlag="0" TpId="8" SatId="0" AntId="0" PcrPid="3001" VideoPid="2022" VideoCodec="mpeg12" AudioPids="1040" AudioCodecs="mpeg4" AudioLanguagesL="eng" AudioLanguagesR=""/>
+        <program_entry ServiceId="122" TsId="59" OnId="2012" ServiceType="TVCH" ChName="TVCH 23" Lcn="55" Lock="0" Skip="0" CaFlag="0" TpId="8" SatId="0" AntId="0" PcrPid="3001" VideoPid="2023" VideoCodec="mpeg12" AudioPids="1041,1042" AudioCodecs="mpeg12,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="123" TsId="51" OnId="2012" ServiceType="RADIOCH" ChName="RADIOCH 1" Lcn="101" Lock="0" Skip="0" CaFlag="" TpId="0" SatId="0" AntId="0" PcrPid="3001" VideoPid="0" VideoCodec="" AudioPids="1043,1044" AudioCodecs="mpeg4,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="124" TsId="52" OnId="2012" ServiceType="RADIOCH" ChName="RADIOCH 2" Lcn="102" Lock="0" Skip="0" CaFlag="0" TpId="1" SatId="0" AntId="0" PcrPid="3001" VideoPid="0" VideoCodec="" AudioPids="1045,1046" AudioCodecs="mpeg4,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="125" TsId="53" OnId="2012" ServiceType="RADIOCH" ChName="RADIOCH 3" Lcn="103" Lock="0" Skip="0" CaFlag="0" TpId="2" SatId="0" AntId="0" PcrPid="3001" VideoPid="0" VideoCodec="" AudioPids="1047,1048" AudioCodecs="mpeg4,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="126" TsId="54" OnId="2012" ServiceType="RADIOCH" ChName="RADIOCH 4" Lcn="104" Lock="0" Skip="0" CaFlag="0" TpId="3" SatId="0" AntId="0" PcrPid="3001" VideoPid="0" VideoCodec="" AudioPids="1049,1050" AudioCodecs="mpeg4,mpeg12" AudioLanguagesL="eng,fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="1010" TsId="1021" OnId="8945" ServiceType="TVCH" ChName="SVT1" Lcn="110" Lock="0" Skip="0" CaFlag="0" TpId="10" SatId="0" AntId="0" PcrPid="1019" VideoPid="1019" VideoCodec="mpeg12" AudioPids="1018" AudioCodecs="mpeg12" AudioLanguagesL="eng" AudioLanguagesR=""/>
+        <program_entry ServiceId="5100" TsId="1021" OnId="8945" ServiceType="TVCH" ChName="SVT2 med ABC" Lcn="111" Lock="0" Skip="0" CaFlag="1" TpId="10" SatId="0" AntId="0" PcrPid="1029" VideoPid="1029" VideoCodec="mpeg4" AudioPids="1028" AudioCodecs="mpeg12" AudioLanguagesL="fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="880" TsId="1021" OnId="8945" ServiceType="TVCH" ChName="SVT Extra" Lcn="112" Lock="0" Skip="0" CaFlag="0" TpId="10" SatId="0" AntId="0" PcrPid="889" VideoPid="889" VideoCodec="mpeg12" AudioPids="1028" AudioCodecs="mpeg12" AudioLanguagesL="eng" AudioLanguagesR=""/>
+        <program_entry ServiceId="870" TsId="1021" OnId="8945" ServiceType="TVCH" ChName="Barnkanalen" Lcn="113" Lock="0" Skip="0" CaFlag="0" TpId="10" SatId="0" AntId="0" PcrPid="879" VideoPid="879" VideoCodec="mpeg4" AudioPids="878" AudioCodecs="mpeg12" AudioLanguagesL="fre" AudioLanguagesR=""/>
+        <program_entry ServiceId="5170" TsId="1021" OnId="8945" ServiceType="TVCH" ChName="24 ABC" Lcn="114" Lock="0" Skip="0" CaFlag="0" TpId="10" SatId="0" AntId="0" PcrPid="1249" VideoPid="1249" VideoCodec="mpeg12" AudioPids="1248" AudioCodecs="mpeg12" AudioLanguagesL="eng" AudioLanguagesR=""/>
+    </Program_List>
+    <FavGroupName_List>
+        <favgroupname_entry GroupType="0" GroupName="All TV"/>
+        <favgroupname_entry GroupType="1" GroupName="TV Favorite 1"/>
+        <favgroupname_entry GroupType="2" GroupName="TV Favorite 2"/>
+        <favgroupname_entry GroupType="3" GroupName="TV Favorite 3"/>
+        <favgroupname_entry GroupType="4" GroupName="TV Favorite 4"/>
+        <favgroupname_entry GroupType="5" GroupName="TV Favorite 5"/>
+        <favgroupname_entry GroupType="6" GroupName="TV Favorite 6"/>
+        <favgroupname_entry GroupType="7" GroupName="All Radio"/>
+        <favgroupname_entry GroupType="8" GroupName="Radio Favorite 1"/>
+        <favgroupname_entry GroupType="9" GroupName="Radio Favorite 2"/>
+    </FavGroupName_List>
+    <GposInfo>
+        <gpos_entry
+            DBVersion = "1"
+            CurServiceNum = "1"
+            CurServiceType = "0"
+            CurFavMode = "0"
+            PasswordValue = "0"
+            ParentalRate = "0"
+            ParentalLockOnOff = "0"
+            InstallLockOnOff = "0"
+            BoxPowerStatus = "0"
+            setStartOnChannelId = "0"
+            StartOnChType = "0"
+            Volume = "0"
+            AudioStereo = "0"
+            PalStandard = "0"
+            MonitorType = "0"
+            AutoRegionTimeOffset = "0"
+            RegionTimeOffset = "0"
+            RegionSummerTime = "0"
+            LnbPower = "0"
+            Screen16x9 = "0"
+            Conversion = "0"
+            Resolution = "0"
+            OSDLanguage = "eng"
+            SearchProgramType = "0"
+            SearchMode = "0"
+            AudioLanguageSelection1 = "eng"
+            AudioLanguageSelection2 = "eng"
+            SubtitleLanguageSelection1 = "eng"
+            SubtitleLanguageSelection2 = "eng"
+            SortByLcn = "0"
+            OSDTransparency = "0"
+            BannerTimeout = "0"
+            StandbyMode = "0"
+            HardHearing = "0"
+            AutoStandbyTime = "0"
+            DolbyMode = "0"
+            HDCPOnOff = "0"
+            DeepSleepMode = "0"
+            GoBackStandby = "0"
+            SubtitleOnOff = "0"
+        />
+    </GposInfo>
+</DB>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/full_black_background"
+    tools:context="com.prime.dtvplayer.Activity.ScanResultActivity">
+
+    <include
+        android:id="@+id/TitleViewLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/titleGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--<include
+        android:id="@+id/HelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/helpGuideline" />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleGuideline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvTXV"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="40dp"
+                android:gravity="bottom"
+                android:text="@string/STR_TV"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                app:layout_constraintBottom_toTopOf="@+id/listTopGuideline"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineCenterV"
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft" />
+
+            <TextView
+                android:id="@+id/radioTXV"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="20dp"
+                android:gravity="bottom"
+                android:text="@string/STR_RADIO"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTXV"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenterV" />
+
+            <LinearLayout
+                android:id="@+id/tvlistLIV_ll"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/frame"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="false"
+                app:layout_constraintBottom_toTopOf="@+id/guidelineCenterH"
+                app:layout_constraintEnd_toEndOf="@+id/tvTXV"
+                app:layout_constraintStart_toStartOf="@+id/tvTXV"
+                app:layout_constraintTop_toBottomOf="@+id/listTopGuideline">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tvlistLIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/radioLIV_ll"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/frame"
+                android:focusable="false"
+                android:descendantFocusability="blocksDescendants"
+                app:layout_constraintBottom_toBottomOf="@+id/tvlistLIV_ll"
+                app:layout_constraintEnd_toEndOf="@+id/radioTXV"
+                app:layout_constraintStart_toStartOf="@+id/radioTXV"
+                app:layout_constraintTop_toTopOf="@+id/tvlistLIV_ll">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/radioLIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:orientation="vertical"
+                    android:descendantFocusability="blocksDescendants"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/searchInfoTXV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/frame"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                app:layout_constraintEnd_toEndOf="@+id/radioLIV_ll"
+                app:layout_constraintStart_toStartOf="@+id/tvlistLIV_ll"
+                app:layout_constraintTop_toBottomOf="@+id/tvlistLIV_ll" />
+            <TextView
+                android:id="@+id/progressTXV"
+                android:layout_width="@dimen/SCANRESULT_STATUS_TXV_WIDTH"
+                android:layout_height="wrap_content"
+                android:text="@string/STR_PROGRESS"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/searchInfoTXV"
+                app:layout_constraintStart_toStartOf="@+id/tvlistLIV_ll"/>
+
+            <TextView
+                android:id="@+id/strengthTXV"
+                android:layout_width="@dimen/SCANRESULT_STATUS_TXV_WIDTH"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/STR_STRENGTH"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                app:layout_constraintStart_toStartOf="@+id/tvlistLIV_ll"
+                app:layout_constraintTop_toBottomOf="@+id/progressTXV" />
+
+            <TextView
+                android:id="@+id/qualityTXV"
+                android:layout_width="@dimen/SCANRESULT_STATUS_TXV_WIDTH"
+                android:layout_height="wrap_content"
+                android:text="@string/STR_QUALITY"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/strengthTXV"
+                app:layout_constraintTop_toBottomOf="@+id/strengthTXV"/>
+
+            <TextView
+                android:id="@+id/berTXV"
+                android:layout_width="@dimen/SCANRESULT_STATUS_TXV_WIDTH"
+                android:layout_height="wrap_content"
+                android:text="@string/str_signal_ber"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                android:visibility="invisible"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/qualityTXV"
+                app:layout_constraintTop_toBottomOf="@+id/qualityTXV"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressPROG"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/SCANRESULT_PROGBAR_HEIGHT"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/progressValueTxv"
+                app:layout_constraintStart_toStartOf="@+id/guidelineProgressStart"
+                app:layout_constraintTop_toTopOf="@+id/progressTXV"
+                app:layout_constraintBottom_toBottomOf="@+id/progressTXV"/>
+
+            <TextView
+                android:id="@+id/progressValueTxv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/VIEW_HEIGHT"
+                android:text="0 %"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                app:layout_constraintBottom_toBottomOf="@+id/progressTXV"
+                app:layout_constraintEnd_toEndOf="@+id/searchInfoTXV"
+                app:layout_constraintTop_toTopOf="@+id/progressTXV"/>
+
+            <ProgressBar
+                android:id="@+id/strengthPROG"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/SCANRESULT_PROGBAR_HEIGHT"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/completeBTN"
+                app:layout_constraintStart_toStartOf="@+id/guidelineProgressStart"
+                app:layout_constraintTop_toTopOf="@+id/strengthTXV"
+                app:layout_constraintBottom_toBottomOf="@+id/strengthTXV"/>
+
+            <ProgressBar
+                android:id="@+id/qualityPROG"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/SCANRESULT_PROGBAR_HEIGHT"
+                app:layout_constraintEnd_toEndOf="@+id/strengthPROG"
+                app:layout_constraintStart_toStartOf="@+id/guidelineProgressStart"
+                app:layout_constraintTop_toTopOf="@+id/qualityTXV"
+                app:layout_constraintBottom_toBottomOf="@+id/qualityTXV"/>
+
+            <TextView
+                android:id="@+id/berValueTxv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/VIEW_HEIGHT"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/TEXT_SIZE"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/berTXV"
+                app:layout_constraintStart_toStartOf="@+id/guidelineProgressStart"
+                app:layout_constraintTop_toTopOf="@+id/berTXV"/>
+
+            <Button
+                android:id="@+id/completeBTN"
+                android:layout_width="@dimen/SCANRESULT_COMPLETEBTN_WIDTH"
+                android:layout_height="@dimen/VIEW_HEIGHT"
+                android:background="@drawable/item_selector"
+                android:text="@string/STR_COMPLETE"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TEXT_SIZE"
+                android:focusableInTouchMode="true"
+                app:layout_constraintEnd_toEndOf="@+id/searchInfoTXV"
+                app:layout_constraintTop_toTopOf="@+id/strengthTXV"
+                app:layout_constraintBottom_toBottomOf="@+id/strengthTXV"/>
+
+            <Button
+                android:id="@+id/cancelBTN"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/VIEW_HEIGHT"
+                android:background="@drawable/item_selector"
+                android:text="@string/STR_CANCEL"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TEXT_SIZE"
+                android:focusableInTouchMode="true"
+                app:layout_constraintEnd_toEndOf="@+id/completeBTN"
+                app:layout_constraintStart_toStartOf="@+id/completeBTN"
+                app:layout_constraintTop_toTopOf="@+id/qualityTXV"
+                app:layout_constraintBottom_toBottomOf="@+id/qualityTXV"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineProgressStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCenterV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCenterH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/listTopGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.14" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/titleGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <!--android.support.constraint.Guideline
+        android:id="@+id/helpGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

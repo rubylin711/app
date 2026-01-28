@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <string name="app_name">DTVPlayer</string>-->
+    <string name="app_name">Cablevision</string>
+
+    <string name="str_mtest_ver">Version:20201225-001-Sec</string>
+    <string name="str_model">Model:CDNA9-1319-ATV</string>
+    <string name="str_test_item_ntsc_pal_info">NTSC/PAL Information Test</string>
+    <string name="str_test_item_front_panel_key">Front-Panel Key</string>
+    <string name="str_test_item_seven_segment">7 Segment ON/OFF</string>
+    <string name="str_test_item_led">LED ON/OFF</string>
+    <string name="str_test_item_slow_blanking">Slow Blanking(4:3/16:9/TV)</string>
+    <string name="str_test_item_fast_blanking">Fast Blanking(CVBSRGB)</string>
+    <string name="str_test_item_antenna5v">Antenna 5V ON/OFF</string>
+    <string name="str_test_item_lnb">LNB ON/OFF</string>
+    <string name="str_test_item_diseqc">DiseqC 1.x/2.0</string>
+    <string name="str_test_item_modem">Modem Test</string>
+    <string name="str_test_item_cable_modem">Cable Modem Test</string>
+    <string name="str_test_item_com_port">COM Port Test</string>
+    <string name="str_test_item_smartcard">Smart Card Test</string>
+    <string name="str_test_item_ci">CI Test</string>
+    <string name="str_test_item_rf_modulator">RF Modulator</string>
+    <string name="str_test_item_usb">USB Test</string>
+    <string name="str_test_item_ethernet">Ethernet Test</string>
+    <string name="str_test_item_hdd">HDD Test(PVR)</string>
+    <string name="str_test_item_wifi">WIFI Test</string>
+    <string name="str_test_item_power_saving">Power Saving</string>
+    <string name="str_test_item_eeprom">EEPROM Test</string>
+    <string name="str_test_item_oob">OOB Test</string>
+    <string name="str_test_item_moca">Moca Test</string>
+    <string name="str_test_item_light_sensor">Light Sensor Test</string>
+    <string name="str_test_item_bluetooth">BlueTooth Test</string>
+    <string name="str_test_item_buzzer">Buzzer ON/OFF</string>
+    <string name="str_test_item_microphone">Microphone Test</string>
+    <string name="str_test_item_sdcard">SD Card Test</string>
+    <string name="str_test_item_usb1">USB 1 Test</string>
+    <string name="str_test_item_usb2">USB 2 Test</string>
+    <string name="str_test_item_hdcp1x">HDCP 1.x Test</string>
+    <string name="str_test_item_hdcp2x">HDCP 2.2 Test</string>
+    <string name="str_front_panel_standby">Front-Panel Power Key</string>
+    <string name="str_front_panel_ch_up">Front-Panel CH+ Key</string>
+    <string name="str_front_panel_ch_down">Front-Panel CH- Key</string>
+    <string name="str_front_panel_wps">Front-Panel WPS Key</string>
+    <string name="str_front_panel_reset">Front-Panel Reset Key</string>
+    <string name="str_osd_show_display">OSD Hide/Display</string>
+    <string name="str_ota">OTA</string>
+    <string name="str_qe">QE</string>
+    <string name="str_clean">Clean</string>
+    <string name="str_pass">Pass</string>
+    <string name="str_fail">Fail</string>
+    <string name="str_wait_card_out">Wait card out</string>
+    <string name="str_search">Search</string>
+    <string name="str_ledon_red_or_ora">LED ON Orange/Red </string>
+    <string name="str_ledon_ora">LED ON Orange</string>
+    <string name="str_ledon_green">LED ON Green/Blue</string>
+    <string name="str_ledon_red">LED ON Red</string>
+    <string name="str_ledon">LED ON</string>
+    <string name="str_ledoff">LED OFF</string>
+    <string name="str_num_0">0</string>
+    <string name="str_num_1">1</string>
+    <string name="str_num_2">2</string>
+    <string name="str_num_3">3</string>
+    <string name="str_num_4">4</string>
+    <string name="str_num_5">5</string>
+    <string name="str_ethernet_activity_ip">239.255.100.100:1234</string>
+    <string name="str_power_saving_activity_power_saving">Power Saving</string>
+    <string name="str_power_saving_activity_booting_set">Booting Set</string>
+    <string name="str_power_saving_activity_right_now">Right Now</string>
+    <string name="str_power_saving_activity_no_setting">No Setting</string>
+    <string name="str_power_saving_activity_start_power_saving">Start Power Saving</string>
+    <string name="str_pair">Pair</string>
+    <string name="str_ntsc_pal_activity_ip">udp://@:1234</string>
+    <string name="str_frequency">Freq</string>
+    <string name="str_symbol_rate">SR</string>
+    <string name="str_qam">QAM</string>
+    <string name="str_hierarchy">Hierarchy</string>
+    <string name="str_high">High</string>
+    <string name="str_low">Low</string>
+    <string name="str_bandwidth">Bandwidth</string>
+    <string name="str_clear_tp">Clear TP</string>
+    <string name="str_delete">Delete</string>
+    <string name="str_rf1">RF1</string>
+    <string name="str_rf2">RF2</string>
+    <string name="str_port_a">Port A</string>
+    <string name="str_port_b">Port B</string>
+    <string name="str_port_c">Port C</string>
+    <string name="str_port_d">Port D</string>
+    <string name="str_gluid">GLUID</string>
+    <string name="str_generation_s2">S2</string>
+    <string name="str_lnb_config_0">22K ON + 13V</string>
+    <string name="str_lnb_config_1">22K ON + 18V</string>
+    <string name="str_lnb_config_2">22K OFF + 13V</string>
+    <string name="str_lnb_config_3">22K OFF + 18V</string>
+    <string name="str_lnb_config_4">LNB OFF</string>
+    <string name="str_diseqc_1x">DiseqC 1.X</string>
+    <string name="str_diseqc_20">DiseqC 2.0</string>
+    <string name="str_mount_ok">Mount OK</string>
+    <string name="str_mount_fail">Mount Fail</string>
+    <string name="str_antenna_on">Antenna 5V ON</string>
+    <string name="str_antenna_off">Antenna 5V OFF</string>
+    <string name="str_buzzer_on">Buzzer ON</string>
+    <string name="str_buzzer_off">Buzzer OFF</string>
+    <string name="str_mic">MIC</string>
+    <string name="str_mic_l">MIC-L</string>
+    <string name="str_mic_r">MIC-R</string>
+    <string name="str_alc">ALC</string>
+    <string name="str_mute">Mute</string>
+    <string name="str_db">dB</string>
+    <string name="str_seven_segment_on">7 Segment On</string>
+    <string name="str_seven_segment_off">7 Segment Off</string>
+    <string name="str_split_screen">Split Screen</string>
+    <string name="str_signal_ber">BER</string>
+    <string name="str_usb_rec_rw">USB Record&amp;RW</string>
+    <string name="str_init_ch_index">CH:0</string>
+
+<string name="str_qe_play_stop">Play/Stop</string>
+    <string name="str_format">HDD Format</string>
+    <string name="str_qe_title">QE Lab Test(PVR)</string>
+    <string name="str_qe_tuner">Tuner/IP</string>
+    <string name="str_qe_storage">Storage</string>
+    <string name="str_qe_mount_ok">Mount OK</string>
+    <string name="str_qe_mount_fail">Mount Fail</string>
+    <string name="str_qe_recording">Recording</string>
+    <string name="str_qe_playing">Playing</string>
+    <string name="str_qe_format_ok">Format OK</string>
+    <string name="str_qe_format_fail">Format Fail</string>
+    <string name="str_ota_msg_pass_all">All tests must be checked before OTA!</string>
+    <string name="str_ota_msg_pass_pctool">PCTool must be done before OTA!</string>
+    <string name="str_ota_msg_check_keys_fail">Check keys fail:</string>
+    <string name="str_ota_msg_no_error">No error</string>
+    <string name="str_ota_msg_check_csc_nuid_fail">Check CSC NUID fail!</string>
+    <string name="str_ota_msg_write_finalboot_fail">Write FinalBoot fail!</string>
+    <string name="str_ota_msg_write_bootloader_fail">Write BootLoader fail!</string>
+    <string name="str_ota_msg_write_launcher_fail">Write Launcher fail!</string>
+    <string name="str_ota_msg_set_marketsegmentid_fail">Set Market Segment ID fail!</string>
+    <string name="str_ota_msg_set_versioning_fail">Set Versioning fail!</string>
+    <string name="str_ota_msg_enable_scs_fail">Enable SCS fail!</string>
+    <string name="str_ota_msg_set_protectionlevel_fail">Set Debug Interface Protection Level fail!</string>
+    <string name="str_ota_msg_recovery_fail">Recovery fail!</string>
+    <string name="str_ota_msg_open_backup_fail">Open backup partition fail!</string>
+    <string name="str_ota_msg_backup_eth_mac_fail">Check backup eth mac fail!</string>
+    <string name="str_ota_msg_backup_hdcp1x_fail">Check backup HDCP1.x fail!</string>
+    <string name="str_ota_msg_backup_hdcp2x_tx_fail">Check backup HDCP2.x TX fail!</string>
+    <string name="str_ota_msg_backup_hdcp2x_rx_fail">Check backup HDCP2.x RX fail!</string>
+    <string name="str_ota_msg_backup_widevine_fail">Check backup widevine key fail!</string>
+    <string name="str_ota_msg_backup_device_info_fail">Check backup device info fail!</string>
+    <string name="str_ota_msg_msid_fail">FuseTool_MSID fail!</string>
+    <string name="str_ota_msg_sboot_fail">FuseTool_SBOOT fail!</string>
+    <string name="str_ota_msg_debug_pwd_sboot_fail">FuseTool_DEBUG_PWD_SBOOT fail!</string>
+    <string name="str_ota_msg_check_fuse_fail">Check fuse fail!</string>
+    <string name="str_ota_msg_check_ota_flag_fail">Check OTA flag fail!</string>
+    <string name="str_ota_msg_undefined_error">Undefined error!</string>
+
+    <array name="STR_ARRAY_OTA_RETURN_ERROR_MSG" translatable="false">
+        <item>@string/str_ota_msg_open_backup_fail</item>
+        <item>@string/str_ota_msg_backup_eth_mac_fail</item>
+        <item>@string/str_ota_msg_backup_hdcp1x_fail</item>
+        <item>@string/str_ota_msg_backup_hdcp2x_tx_fail</item>
+        <item>@string/str_ota_msg_backup_hdcp2x_rx_fail</item>
+        <item>@string/str_ota_msg_backup_widevine_fail</item>
+        <item>@string/str_ota_msg_backup_device_info_fail</item>
+        <item>@string/str_ota_msg_undefined_error</item>
+        <item>@string/str_ota_msg_undefined_error</item>
+        <item>@string/str_ota_msg_undefined_error</item>
+        <item>@string/str_ota_msg_undefined_error</item>
+        <item>@string/str_ota_msg_msid_fail</item>
+        <item>@string/str_ota_msg_sboot_fail</item>
+        <item>@string/str_ota_msg_debug_pwd_sboot_fail</item>
+        <item>@string/str_ota_msg_check_fuse_fail</item>
+        <item>@string/str_ota_msg_check_ota_flag_fail</item>
+    </array>
+
+    <!--PC Tool Connect-->
+    <string name="str_connect_pctool">Connect PC Tool</string>
+    <string name="str_write_mac_eth">Write MAC ETH</string>
+    <string name="str_write_mac_bt">Write MAC BT</string>
+    <string name="str_write_mac_wifi">Write MAC WIFI</string>
+    <string name="str_write_hdcp_1_4_TX">Write HDCP 1.4 TX</string>
+    <string name="str_write_hdcp_1_4_RX">Write HDCP 1.4 RX</string>
+    <string name="str_write_hdcp_2_2_TX">Write HDCP 2.2 TX</string>
+    <string name="str_write_hdcp_2_2_RX">Write HDCP 2.2 RX</string>
+    <string name="str_write_prime_id">Write Prime ID</string>
+    <string name="str_write_customer_sn">Write Customer SN</string>
+    <string name="str_write_chip_id">Write Chip ID</string>
+    <string name="str_write_drm_key">Write DRM Key</string>
+    <string name="str_write_widevine_key">Write Widevine Key</string>
+    <string name="str_write_playready_key">Write Playready Key</string>
+    <string name="str_write_attestion_key">Write Attestation Key</string>
+    <string name="str_write_hdcp_1_4_key">Write HDCP 1.4 Key</string>
+    <string name="str_write_nagra_csc_pk">Write CSC and PK</string>
+    <string name="str_write_android_sn">Write SN</string>
+
+    <string name="str_read_mac_eth">Read MAC ETH</string>
+    <string name="str_read_mac_bt">Read MAC BT</string>
+    <string name="str_read_mac_wifi">Read MAC WIFI</string>
+    <string name="str_read_hdcp_1_4_TX">Read HDCP 1.4 TX</string>
+    <string name="str_read_hdcp_1_4_RX">Read HDCP 1.4 RX</string>
+    <string name="str_read_hdcp_2_2_TX">Read HDCP 2.2 TX</string>
+    <string name="str_read_hdcp_2_2_RX">Read HDCP 2.2 RX</string>
+    <string name="str_read_prime_id">Read Prime ID</string>
+    <string name="str_read_customer_sn">Read Customer SN</string>
+    <string name="str_read_chip_id">Read Chip ID</string>
+    <string name="str_read_drm_key">Read DRM Key</string>
+    <string name="str_read_csc_check_num">Read CSC Check Num</string>
+    <string name="str_read_nuid_check_num">Read NUID Check Num</string>
+    <string name="str_read_dpt_crc">Read DPT CRC</string>
+    <string name="str_read_cert_report_check_num">Read CERT REPORT Check Num</string>
+    <string name="str_read_ca_sn">Read CA SN</string>
+    <string name="str_read_csc_data_config">Read CSC DATA CONFIG</string>
+    <string name="str_read_android_sn">Read STB SN</string>
+    <string name="str_read_mtest_version">Read Mtest Version</string>
+
+    <!--PC Tool Connect Error Code-->
+    <string name="str_pctool_pass">pass</string>
+    <string name="str_pctool_fail">fail</string>
+    <string name="str_pctool_init_fail">Init Fail</string>
+    <string name="str_pctool_write_error">Write Error</string>
+    <string name="str_pctool_read_error">Read Error</string>
+    <string name="str_pctool_crc_check_fail">CRC Check Fail</string>
+    <string name="str_pctool_timeout">Timeout</string>
+    <string name="str_pctool_cmd_not_support">Cmd Not Support</string>
+    <string name="str_pctool_unknown_error">Unknown Error</string>
+
+    <!-- Pesi Launcher chnage progam -->
+    <string name="STR_CHANGE_PROGRAM_CHANNEL_ID">channel_id</string>
+    <string name="str_recommand">Recommended</string>
+    <string name="STR_OPEN_ACTIVITY">open_Activity</string>
+
+    <!-- Hidden input activity -->
+    <string name="str_hidden_input">Hidden Input</string>
+    <string name="str_hidden_input_desc_hidden_activity">Open Hidden Activity</string>
+    <string name="str_hidden_input_desc_stable_test_mode">Enable/Disable stable test mode</string>
+    <string name="str_hidden_input_desc_emi">Enable/Disable EMI test mode</string>
+    <string name="str_hidden_input_desc_mtest_all_pass">Pass all tests and write Pctool finish flag</string>
+    <string name="str_hidden_input_desc_mtest_disable_opt">Disable security when OTA</string>
+    <string name="str_hidden_input_desc_clear_wifi">Clear configured Android Wifi</string>
+    <string name="str_hidden_input_desc_hw_test">Show current hw test config</string>
+    <string name="str_hidden_input_desc_hw_copy_report_file">Copy hw test report to USB</string>
+    <string name="str_hidden_input_desc_hw_reset">Reset hw test config to default</string>
+    <string name="str_hidden_input_desc_hw_delete_report_file">Delete hw test report files and values</string>
+    <string name="str_hidden_input_desc_hw_show_help">Show hw test config help</string>
+    <string name="str_hidden_input_desc_all_item_selectable">Set all test items in menu selectable</string>
+    <string name="str_hidden_input_desc_start_power_saving">Enter power saving mode now</string>
+    <string name="str_hidden_input_desc_switch_locale">Switch locale between zh and en</string>
+    <string name="str_hidden_input_desc_durability_test">Start durability test for factory</string>
+
+</resources>

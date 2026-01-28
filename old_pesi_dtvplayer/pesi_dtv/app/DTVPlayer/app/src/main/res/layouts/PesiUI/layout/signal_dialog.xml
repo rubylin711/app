@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="600dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/banner"
+    tools:context=".View.SleepTimerSettingDialog">
+
+    <TextView
+        android:id="@+id/strengthTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:singleLine="true"
+        android:text="@string/STR_STRENGTH"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/qualityTXV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/STR_QUALITY"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/strengthTXV"
+        app:layout_constraintTop_toBottomOf="@+id/strengthTXV"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/strengthProgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/INFODETAIL_PROGBAR_HEIGHT"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/strengthTXV"
+        app:layout_constraintEnd_toStartOf="@+id/strengthValueTXV"
+        app:layout_constraintStart_toStartOf="@+id/TextGuideLine"
+        app:layout_constraintTop_toTopOf="@+id/strengthTXV" />
+
+    <ProgressBar
+        android:id="@+id/qualityProgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/INFODETAIL_PROGBAR_HEIGHT"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/qualityTXV"
+        app:layout_constraintEnd_toStartOf="@+id/qualityValueTXV"
+        app:layout_constraintStart_toStartOf="@+id/TextGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/strengthProgBar"
+        app:layout_constraintTop_toTopOf="@+id/qualityTXV" />
+
+
+    <TextView
+        android:id="@+id/strengthValueTXV"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="0"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/strengthProgBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/strengthProgBar"
+        app:layout_constraintTop_toTopOf="@+id/strengthProgBar" />
+
+    <TextView
+        android:id="@+id/qualityValueTXV"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="0"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/qualityProgBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/qualityProgBar"
+        app:layout_constraintTop_toTopOf="@+id/qualityProgBar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/TextGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

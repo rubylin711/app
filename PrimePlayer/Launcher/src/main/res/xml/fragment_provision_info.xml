@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/provision_info" >
+
+    <Preference
+        android:title="@string/provision_info_SO"
+        android:key="persist.sys.prime.so"
+        android:summary="persist.sys.prime.so"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        android:title="@string/provision_info_Home_ID"
+        android:key="persist.sys.prime.home_id"
+        android:summary="persist.sys.prime.home_id"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        android:title="@string/provision_info_NIT"
+        android:key="persist.sys.prime.nit"
+        android:summary="persist.sys.prime.nit"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        android:title="@string/provision_info_SI_NIT"
+        android:key="persist.sys.prime.si_nit"
+        android:summary="persist.sys.prime.si_nit"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        android:title="@string/provision_info_MOBILE"
+        android:key="persist.sys.prime.mobile"
+        android:summary="persist.sys.prime.mobile"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        android:title="@string/provision_info_BAT_ID"
+        android:key="persist.sys.prime.bat_id"
+        android:summary="persist.sys.prime.bat_id"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        android:title="@string/provision_info_ZIP_CODE"
+        android:key="persist.sys.prime.zip_code"
+        android:summary="persist.sys.prime.zip_code"
+        app:iconSpaceReserved="false"/>
+
+</androidx.preference.PreferenceScreen>

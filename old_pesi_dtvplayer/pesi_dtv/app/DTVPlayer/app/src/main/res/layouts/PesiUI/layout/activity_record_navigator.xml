@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/record_navigate_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <com.prime.dtvplayer.View.RecordGridView
+            android:id="@+id/record_navigator_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <com.prime.dtvplayer.View.FilterListView
+            android:id="@+id/record_navigate_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center"
+            android:background="@color/DarkBlue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/record_navigate_navigation"
+        android:layout_width="@dimen/record_navigator_menu_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:paddingEnd="16dp"
+        android:focusedByDefault="true"
+        android:background="@color/DarkBlue"
+        app:itemShapeAppearanceOverlay="@style/ShapeAppearanceOverlay_HalfRound"
+        app:itemShapeFillColor="@color/focus_color_aqua"
+        app:itemTextColor="@android:color/white"
+        app:itemHorizontalPadding="30dp"
+        app:itemIconTint="@android:color/white"
+        app:itemTextAppearance="@style/TextAppearance_16sp"
+        app:headerLayout="@layout/record_navigate_menu_header"
+        app:menu="@menu/record_navigate_menu"
+        tools:ignore="RtlSymmetry" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

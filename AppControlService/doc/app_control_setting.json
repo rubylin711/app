@@ -1,0 +1,30 @@
+{
+    "Configuration Update Cycle": 30,
+	"Configuration Remote URL": [
+		"http://10.1.4.180/0000"
+		,"http://10.1.4.180/1111"
+		,"http://10.1.4.180/2222"
+		,"http://10.1.4.180/aaaa"
+	],
+    "OTA File": {
+        "payload":            "http://10.1.4.180/payload.bin",
+        "payload properties": "http://10.1.4.180/payload_properties.txt",
+        "metadata":           "http://10.1.4.180/metadata"
+	},
+    "App Manager": {
+        "Whitelist": {
+            "Enable": true,
+            "Append": ["aaa.aaa.aaa", "bbb.bbb.bbb", "com.test.read.url", "com.prime.testmount", "com.xiaodianshi.tv.yst"],
+            "Replace": ["xxx.xxx.xxx", "com.xiaodianshi.tv.yst", "com.prime.testmount"],
+            "Remove": ["xxx.xxx.xxx"],
+			"RemoveAll": false
+        },
+        "Install": [
+			["com.prime.testmount", "http://10.1.4.180/testMount.apk"],
+			["com.xiaodianshi.tv.yst", "https://dl.hdslb.com/mobile/latest/android_tv_yst/iBiliTV-master.apk?t=20231025&spm_id_from=333.47.b_646f776e6c6f61642d6c696e6b.5"]
+		],
+        "Uninstall": [
+			"com.prime.testmount", "com.xiaodianshi.tv.yst"
+		]
+    }
+}

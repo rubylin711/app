@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_trans"
+    android:focusable="false">
+
+    <!-- Dialog -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConflictWireFrame"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/black_panel"
+        android:focusable="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/ConflictTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/pvr_record_start_title"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:focusable="false"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- Top Line -->
+        <View android:id="@+id/TopLineView"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2.5dp"
+            android:background="#40ffffff"
+            android:focusable="false"
+            app:layout_constraintTop_toBottomOf="@id/ConflictTitle"/>
+
+        <!-- YES -->
+        <TextView
+            android:id="@+id/YES_BUTTON"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/pvr_jump_conflict_first_item"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:visibility="visible"
+            android:focusable="true"
+            android:background="@drawable/mail_item_list_top_and_down_gold_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/TopLineView" />
+
+        <!-- NO -->
+        <TextView
+            android:id="@+id/NO_BUTTON"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/pvr_jump_conflict_second_item"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:visibility="visible"
+            android:focusable="true"
+            android:background="@drawable/mail_item_list_top_and_down_gold_line"
+            app:layout_constraintStart_toStartOf="@id/YES_BUTTON"
+            app:layout_constraintEnd_toEndOf="@id/YES_BUTTON"
+            app:layout_constraintTop_toBottomOf="@id/YES_BUTTON"/>
+
+        <!-- Third Button -->
+        <TextView
+            android:id="@+id/Third_BUTTON"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/pvr_jump_conflict_cancel_item"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:visibility="gone"
+            android:focusable="true"
+            android:background="@drawable/mail_item_list_top_and_down_gold_line"
+            app:layout_constraintStart_toStartOf="@id/NO_BUTTON"
+            app:layout_constraintEnd_toEndOf="@id/NO_BUTTON"
+            app:layout_constraintTop_toBottomOf="@id/NO_BUTTON"/>
+
+        <!-- Bottom Line -->
+        <View android:id="@+id/BottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#40ffffff"
+            android:focusable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Third_BUTTON"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

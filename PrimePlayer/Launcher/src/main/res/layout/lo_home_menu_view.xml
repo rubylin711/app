@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lo_menu_rltvl_home_menu_expand"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lo_menu_rcv_home_menu_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:descendantFocusability="afterDescendants"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

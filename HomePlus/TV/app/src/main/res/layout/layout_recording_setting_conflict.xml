@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="575dp"
+        android:layout_height="400dp"
+        android:background="#34363c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/recording_setting_conflict_msg_1"
+            android:textColor="#ffffff"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRecordingSettingConflictLine1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/colorWhiteOpacity10"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="540dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordingSettingConflictLine1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="@string/recording_setting_conflict_msg_2"
+                android:textColor="#ffffff"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:text="@string/recording_setting_conflict_msg_3"
+                android:textColor="#8da4b9"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorButton2"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRecordingSettingConflictNewChannelNumber"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="00"
+                    android:textColor="@color/colorGoldOpacity70"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvRecordingSettingConflictNewChannelName"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:text="NewChannelName"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvRecordingSettingConflictNewProgramName"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:text="NewProgramName"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvRecordingSettingConflictNewProgramTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:text="05:00-06:00"
+                    android:textColor="@color/colorWhiteOpacity70"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorWhiteOpacity10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:text="@string/recording_setting_conflict_msg_4"
+                android:textColor="#8da4b9"
+                android:textSize="14dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:id="@+id/llRecordingSettingConflictOld1"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:visibility="visible"
+                    android:gravity="center|left"
+                    android:background="@color/colorButton2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbRecordingSettingConflictOld1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:buttonTint="@color/state_selected_white_normal_80ffffff"
+                        android:button="@drawable/state_epg_genre_radio_btn"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
+
+                    <TextView
+                        android:id="@+id/tvRecordingSettingConflictOldChannelNumber1"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="00"
+                        android:textColor="@color/state_selected_white_normal_b3ebca8c"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvRecordingSettingConflictOldChannelName1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:gravity="center|left"
+                        android:singleLine="true"
+                        android:text="OldChannelName1"
+                        android:textColor="@color/state_selected_white_normal_b3ffffff"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="235dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left">
+
+                        <TextView
+                            android:id="@+id/tvRecordingSettingConflictOldProgramName1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:textColor="@color/colorWhiteOpacity70"
+                            android:layout_weight="1"
+                            android:textSize="16dp"
+                            android:text="OldProgramName1"/>
+
+                        <ImageView
+                            android:id="@+id/ivRecordingSettingConflictOldIcon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="9dp"
+                            android:gravity="center|right"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/icon_miniguide_rec_resv" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvRecordingSettingConflictOldTime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:text="05:00-06:00"
+                        android:textColor="@color/state_selected_white_normal_b3ffffff"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRecordingSettingConflictOld2"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:visibility="visible"
+                    android:gravity="center|left"
+                    android:background="@color/colorButton2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbRecordingSettingConflictOld2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:buttonTint="@color/state_selected_white_normal_80ffffff"
+                        android:button="@drawable/state_epg_genre_radio_btn"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
+
+                    <TextView
+                        android:id="@+id/tvRecordingSettingConflictOldChannelNumber2"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="00"
+                        android:textColor="@color/state_selected_white_normal_b3ebca8c"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvRecordingSettingConflictOldChannelName2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:gravity="center|left"
+                        android:singleLine="true"
+                        android:text="OldChannelName1"
+                        android:textColor="@color/state_selected_white_normal_b3ffffff"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="235dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left">
+
+                        <TextView
+                            android:id="@+id/tvRecordingSettingConflictOldProgramName2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:textColor="@color/colorWhiteOpacity70"
+                            android:layout_weight="1"
+                            android:textSize="16dp"
+                            android:text="OldProgramName1"/>
+
+                        <ImageView
+                            android:id="@+id/ivRecordingSettingConflictOldIcon2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="9dp"
+                            android:gravity="center|right"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/icon_miniguide_rec_resv" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvRecordingSettingConflictOldTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:text="05:00-06:00"
+                        android:textColor="@color/state_selected_white_normal_b3ffffff"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="345dp"
+            android:textColor="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnRecordingSettingConflictSave"
+                android:layout_width="125dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item2"
+                android:checked="true"
+                android:drawablePadding="20dp"
+                android:enabled="false"
+                android:textAllCaps="false"
+                android:text="@string/ok"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/btnRecordingSettingConflictCancel"
+                android:layout_width="125dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item2"
+                android:checked="true"
+                android:drawablePadding="20dp"
+                android:textAllCaps="false"
+                android:text="@string/cancel"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

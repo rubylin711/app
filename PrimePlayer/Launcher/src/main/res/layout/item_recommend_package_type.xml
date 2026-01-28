@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lo_recommend_type_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/recommend_type_item_margin"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lo_type_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/type_name_text_size"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:id="@+id/lo_type_purchase_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/type_purchase_layer_marginStart"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/lo_type_purchase_icon"
+            android:layout_width="@dimen/type_purchase_icon_size"
+            android:layout_height="@dimen/type_purchase_icon_size"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_purchased"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/type_purchase_layer_marginStart"
+            android:layout_gravity="center_vertical"
+            android:text="@string/package_channel_purchase"
+            android:textSize="@dimen/type_purchase_text_size"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

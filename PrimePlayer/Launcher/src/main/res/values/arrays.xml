@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="channel_category">
+        <item>@string/genre_all</item>
+        <item>@string/genre_kids</item>
+        <item>@string/genre_education</item>
+        <item>@string/genre_news</item>
+        <item>@string/genre_movie</item>
+        <item>@string/genre_variety</item>
+        <item>@string/genre_music</item>
+        <item>@string/genre_adult</item>
+        <item>@string/genre_sports</item>
+        <item>@string/genre_religion</item>
+        <item>@string/genre_uhd</item>
+        <item>@string/genre_shopping</item>
+    </array>
+
+    <array name="mail_settings">
+        <item>@string/mail_shopping</item>
+        <item>@string/mail_latest_news</item>
+        <item>@string/mail_popular</item>
+        <item>@string/mail_coupon</item>
+        <item>@string/mail_service</item>
+    </array>
+
+    <string-array name="info_time_entries">
+        <item>@string/dmg_settings_info_time_entries_three_second</item>
+        <item>@string/dmg_settings_info_time_entries_five_second</item>
+        <item>@string/dmg_settings_info_time_entries_ten_second</item>
+    </string-array>
+
+    <string-array name="info_time_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="parental_lock_entries">
+        <item>@string/parental_lock_entries_6</item>
+        <item>@string/parental_lock_entries_12</item>
+        <item>@string/parental_lock_entries_15</item>
+        <item>@string/parental_lock_entries_18</item>
+        <item>@string/parental_lock_entries_0</item>
+    </string-array>
+
+    <string-array name="parental_lock_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="info_hint_entries">
+        <item>@string/dmg_settings_rms_switch_on</item>
+        <item>@string/dmg_settings_rms_switch_off</item>
+    </string-array>
+
+    <string-array name="info_hint_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

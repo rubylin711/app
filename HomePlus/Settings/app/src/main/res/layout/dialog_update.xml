@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="210dp"
+        android:layout_centerInParent="true"
+        android:background="#34363c">
+
+        <TextView
+            android:id="@+id/tvUpgradeStatus_L1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/upgrade_status_upgrade"
+            android:textColor="#ffffff"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUpgradeStatus_L2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/colorWhiteOpacity10"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUpgradeStatus_L2"
+            android:layout_alignParentBottom="@+id/tvUpgradeStatus_L2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="0dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvUpgradeStatus_L3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/upgrade_status_checking"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tvUpgradeStatus_L3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvUpgradeStatus_L4_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upgrade_status_current_version"
+                    android:textColor="@color/colorWhiteOpacity40"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tvUpgradeStatus_L4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="1.7.0"
+                    android:textColor="@color/colorWhiteOpacity40"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvUpgradeStatus_L5_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upgrade_status_current_version"
+                    android:textColor="@color/colorWhiteOpacity40"
+                    android:textSize="14dp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tvUpgradeStatus_L5_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="1.7.1"
+                    android:textColor="@color/colorWhiteOpacity40"
+                    android:textSize="14dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:text=""
+            android:textColor="#ffffff">
+
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item2"
+                android:checked="true"
+                android:drawablePadding="20dp"
+                android:paddingLeft="0dp"
+                android:text="@string/upgrade_status_confirm"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16dp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item2"
+                android:checked="true"
+                android:drawablePadding="20dp"
+                android:paddingLeft="0dp"
+                android:text="@string/upgrade_status_cancel"
+                android:textColor="@color/state_selected_white_normal_b3ffffff"
+                android:textSize="16dp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btnFake"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:checked="true"
+                android:drawablePadding="20dp"
+                android:paddingLeft="0dp"
+                android:text=""
+                android:textColor="#00ffffff"
+                android:textSize="10dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

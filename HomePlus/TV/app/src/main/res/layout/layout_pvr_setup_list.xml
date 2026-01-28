@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_1920_w">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/recording_title"
+        android:textColor="#ffffff"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="580dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginRight="62dp"
+        android:background="@color/colorWhiteOpacity40"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="580dp"
+        android:layout_height="351dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginRight="62dp"
+        android:background="@color/colorSettingsLayoutBg"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/recording_setup"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/recording_setup_select_option"
+            android:textColor="#ff8da4b9"
+            android:textSize="11sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnPvrProgramBasedRecording"
+            android:layout_width="210dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_item2"
+            android:text="@string/recording_setup_epg"
+            android:textAllCaps="false"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnPvrManualRecording"
+            android:layout_width="210dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_item2"
+            android:text="@string/recording_setup_manual"
+            android:textAllCaps="false"
+            android:textColor="@color/state_selected_white_normal_b3ffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

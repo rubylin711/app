@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 字體排版 https://developer.android.com/design/ui/tv/guides/styles/typography?hl=zh-tw -->
+    <dimen name="display">45sp</dimen>
+    <dimen name="headline">28sp</dimen>
+    <dimen name="title">16sp</dimen>
+    <dimen name="label">12sp</dimen>
+    <dimen name="body">14sp</dimen>
+
+    <!-- status bar -->
+    <dimen name="status_bar_height">28dp</dimen>
+    <dimen name="btn_settings_width">28dp</dimen>
+
+    <!-- app -->
+    <dimen name="app_width">124dp</dimen>
+    <dimen name="app_height">69dp</dimen>
+    <dimen name="app_frame_width">129dp</dimen>
+    <dimen name="app_frame_height">74dp</dimen>
+
+</resources>

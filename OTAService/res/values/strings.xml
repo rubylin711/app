@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">OTA Service</string>
+    <string name="n_update_f">No upgrade package</string>
+    <string name="sdcard_no_mount">Sdcard not mount</string>
+    <string name="upgrade_dialog_summary">Are you sure you want to upgrade?</string>
+    <string name="method_property">android.os.SystemProperties</string>
+    <string name="set_property">set</string>
+    <string name="get_property">get</string>
+    
+    <array name="DownloadErrMsgArray">
+        <item>No Error</item>
+        <item>Unknown Error</item>
+        <item>File Error</item>
+        <item>Unhandled HTTP Code</item>
+        <item>HTTP Data Error</item>
+        <item>Too Many Redirects</item>
+        <item>Insufficient Space</item>
+        <item>Device Not Found</item>
+        <item>Can Not Resume</item>
+        <item>File Already Exist</item>
+        <item>Blocked</item>
+        <item>Paused And Waiting To Retry</item>
+        <item>Paused And Waiting For Network</item>
+        <item>Paused And Queued For WIFI</item>
+        <item>Pause Unknown</item>
+        <item>Unhandled HTTP response</item>
+        <item>Verify Fail</item>
+        <item>Start Download Md5 File Fail</item>
+        <item>Start Download Update File Fail</item>
+        <item>Service Stop</item>
+        <item>Download File Size Not Match</item>
+        <item>Upgrade Fail</item>
+        <item>Copy Md5 File Fail</item>
+        <item>Copy Update File Fail</item>
+        <item>Download TimeOut</item>
+    </array>
+
+    <!-- System update -->
+    <string name="upgrade_settings_title">System upgrade</string>
+
+    <!-- AB system update-->
+    <string name="ab_update_dialog_summary">Do you want to AB update?</string>
+    <string name="ab_update_reboot_dialog_summary">AB update success ! Do you want to reboot now?</string>
+    <string name="ab_update_fs_copy_fail_dialog">AB update fail due to filesystem copy error.</string>
+    <string name="ab_update_install_fail_dialog">AB update fail due to install runner error.</string>
+    <string name="ab_update_payload_mismatch_fail_dialog">AB update fail due to payload mismatch error.</string>
+    <string name="ab_update_device_open_fail_dialog">AB update fail due to device open error.</string>
+    <string name="ab_update_kernel_open_fail_dialog">AB update fail due to kernel device open error.</string>
+    <string name="ab_update_download_transfer_fail_dialog">AB update fail due to download transfer error.</string>
+    <string name="ab_update_payload_hash_fail_dialog">AB update fail due to payload hash mismatch error.</string>
+    <string name="ab_update_payload_size_fail_dialog">AB update fail due to payload size mismatch error.</string>
+    <string name="ab_update_payload_verification_fail_dialog">AB update fail due to payload verification error.</string>
+    <string name="ab_update_active_fail_dialog">AB update fail due to set active slot error.</string>
+    <string name="ab_update_unknown_fail_dialog">AB update fail due to unknown error.</string>
+    <string name="ab_update_reboot_dialog_tips">It is upgrading now!Just relax!</string>
+    <string name="ab_update_already_success">AB update already applied, waiting for reboot</string>
+
+    <string name="file_check_success">CA Check Success</string>
+    <string name="file_check_failed">CA Check Failed</string>
+
+    <array name="UpdateStatusMsgArray">
+        <item>idle</item>
+        <item>checking for update</item>
+        <item>update available</item>
+        <item>downloading</item>
+        <item>verifying</item>
+        <item>finalizing</item>
+        <item>updated need reboot</item>
+        <item>reporting error evnet</item>
+        <item>attempting rollback</item>
+        <item>disabled</item>
+        <item>need permission to update</item>
+    </array>
+
+    <array name="UpdateErrMsgArray">
+        <item>Success</item>
+        <item>Error</item>
+        <item>Omaha Request Error</item>
+        <item>Omaha Response Handler Error</item>
+        <item>Filesystem Copier Error</item>
+        <item>Postinstall Runner Error</item>
+        <item>Payload Mismatched Type</item>
+        <item>Install Device Open Error</item>
+        <item>Kernel Device Ope nError</item>
+        <item>Download Transfer Error</item>
+        <item>Payload Hash Mismatch Error</item>
+        <item>Payload Size Mismatch Error</item>
+        <item>Download Payload Verification Error</item>
+        <item>Download New Partition Info Error</item>
+        <item>Download Write Error</item>
+        <item>New Rootfs Verification Error</item>
+        <item>New Kernel Verification Error</item>
+        <item>Signed Delta Payload Expected Error</item>
+        <item>Download Payload PubKey Verification Error</item>
+        <item>Postinstall Booted From Firmware B</item>
+        <item>Download State Initialization Error</item>
+        <item>Download Invalid Metadata Magic String</item>
+        <item>Download Signature Missing In Manifest</item>
+        <item>Download Manifest Parse Error</item>
+        <item>Download Metadata Signature Error</item>
+        <item>Download Metadata Signature Verification Error</item>
+        <item>Download Metadata Signature Mismatch</item>
+        <item>Download Operation Hash Verification Error</item>
+        <item>Download Operation Execution Error</item>
+        <item>Download Operation Hash Mismatch</item>
+        <item>Omaha Request Empty Response Error</item>
+        <item>Omaha Request XML Parse Error</item>
+        <item>Download Invalid Metadata Size</item>
+        <item>Download Invalid Metadata Signature</item>
+        <item>Omaha Response Invalid</item>
+        <item>Omaha Update Ignored Per Policy</item>
+        <item>Omaha Update Deferred Per Policy</item>
+        <item>Omaha Error In HTTP Response</item>
+        <item>Download Operation Hash Missing Error</item>
+        <item>Download Metadata Signature Missing Error</item>
+        <item>Omaha Update Deferred For Back off</item>
+        <item>Postinstall Power wash Error</item>
+        <item>Update Canceled By Channel Change</item>
+        <item>Postinstall Firmware RO Not Updatable</item>
+        <item>Unsupported Major Payload Version</item>
+        <item>Unsupported Minor Payload Version</item>
+        <item>Omaha Request XML Has Entity Decl</item>
+        <item>Filesystem Verifier Error</item>
+        <item>User Canceled</item>
+        <item>Non Critical Update In OOBE</item>
+        <item>Omaha Update Ignored Over Cellular</item>
+        <item>Payload Timestamp Error</item>
+        <item>Updated But Not Active</item>
+        <item>No Update</item>
+        <item>Rollback Not Possible</item>
+        <item>First Active Omaha Ping Sent Persistence Error</item>
+        <item>Verity Calculation Error</item>
+    </array>
+</resources>

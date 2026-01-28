@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SureDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background2"
+        android:layout_width="@dimen/SUREDIALOG_WIDTH"
+        android:layout_height="@dimen/SUREDIALOG_HEIGHT"
+        android:text="Hello World!"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sureDialogLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTXV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/SUREDIALOG_TEXTSIZE"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/titlelineIGV"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/title_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTXV" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/titlelineIGV"
+            app:layout_constraintBottom_toBottomOf="@id/titlelineIGV"/>
+
+        <TextView
+            android:id="@+id/contentTXV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="26dp"
+            android:gravity="start"
+            android:text="NULL"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/SUREDIALOG_TEXTSIZE_18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titlelineIGV"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <TextView
+            android:id="@+id/firmware_version_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:gravity="end"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/SUREDIALOG_TEXTSIZE_16sp"
+            app:layout_constraintTop_toTopOf="@id/titleTXV"
+            app:layout_constraintBottom_toBottomOf="@id/titleTXV"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/noBTN"
+            android:layout_width="@dimen/MESSAGEDIALOG_BTN_WIDTH"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/single_dia_button"
+            android:text="NO"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/yesBTN" />
+
+        <Button
+            android:id="@+id/yesBTN"
+            android:layout_width="@dimen/MESSAGEDIALOG_BTN_WIDTH"
+            android:layout_height="@dimen/VIEW_HEIGHT"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/single_dia_button"
+            android:text="OK"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,427 @@
+<resources>
+    <string name="app_name">HomePlus Settings</string>
+    <string name="app_settings">com.android.tv.settings/.MainSettings</string>
+    <string name="settings">Settings</string>
+    <string name="settings_save">Save</string>
+    <string name="settings_cancel">Cancel</string>
+    <string name="settings_confirm">OK</string>
+    <string name="settings_confirm2">CONFIRM</string>
+    <string name="settings_submit">Submit</string>
+    <string name="settings_submit_cable_only">Submit(C)</string>
+    <string name="settings_submit_internet_only">Submit(I)</string>
+    <string name="settings_refresh">Refresh</string>
+
+    <!-- general -->
+    <string name="settings_on">On</string>
+    <string name="settings_off">Off</string>
+
+    <!-- settings_android -->
+    <string name="settings_android">Android Settings</string>
+    <string name="settings_android_press">Press \u0020</string>
+    <string name="settings_android_enter">\u0020 to enter \u0020</string>
+    <string name="settings_android_page">\u0020 Page</string>
+
+    <!-- settings_personal -->
+    <string name="settings_personal">Personal Settings</string>
+    <string name="parental_control">Parental Control</string>
+    <string name="system_information">System Information</string>
+    <string name="unit_of_display_time">s</string>
+    <string name="open">Enable</string>
+    <string name="close">Close</string>
+    <string name="tv_channel">TV Channel</string>
+    <string name="setting_list">Setting List</string>
+    <string-array name="settings_personal">
+        <item>System Upgrade</item>
+        <item>@string/parental_control</item>
+        <item>Purchase PIN</item>
+        <item>Language Setting</item>
+        <item>Video and Audio Setting</item>
+        <item>Subtitle Setting</item>
+        <item>Mini guide duration time</item>
+        <item>Channel Scan</item>
+        <item>@string/system_information</item>
+        <item>STB Data Return Setting</item>
+        <item>Remote Control Setting</item>
+        <item>Tutorial Setting</item>
+    </string-array>
+    <string-array name="settings_personal_subtitle">
+        <item>Upgrade your system to the latest version</item>
+        <item>Set the parental lock settings, and can get the default PIN from call center</item>
+        <item>Change the purchase PIN</item>
+        <item>Set the language displayed on the screen</item>
+        <item>Set 5 default options related to video and audio</item>
+        <item>Set preferred subtitle language</item>
+        <item>Set the auto-fade time of the mini guide</item>
+        <item>Scan the channel to obtain the up-to-date channel list</item>
+        <item>Check basic information about the system</item>
+        <item>Set personal data (VDC/VBM data) return mechanism</item>
+        <item>Set the remote control to control TV Set</item>
+        <item>Set-top box function guide tutorial, users can set the display to be on or off</item>
+    </string-array>
+
+    <!-- settings_system -->
+    <string name="settings_system">System Settings</string>
+    <string name="settings_system_pin">Enter your 8 digits engineer PIN</string>
+    <string name="settings_system_pindel">Press left to delete</string>
+    <string name="settings_system_pinwrong">Wrong PIN Code, Try again</string>
+    <string-array name="settings_system">
+        <item>System Upgrade</item>
+        <item>Channel Scan</item>
+        <item>Signal Diagnose</item>
+        <item>Network Settings</item>
+        <item>CA Settings</item>
+        <item>Factory Reset</item>
+        <item>SMS Installation Report</item>
+        <item>Mobile Activation QR</item>
+        <item>Debug Configuration</item>
+        <item>Format Disk</item>
+    </string-array>
+    <string-array name="settings_system_subtitle">
+        <item>Upgrade your system to the latest version</item>
+        <item>Scan the channel to obtain the up-to-date channel list</item>
+        <item>Detect the signal information through the tuner lock frequency of the set-top box</item>
+        <item>Set the network configuration</item>
+        <item>Set up your set-top box to display CA related information</item>
+        <item>Reset the factory setting</item>
+        <item>Set-top box must be registered by requested system via IVR</item>
+        <item>Create QR code to enable mobile activation</item>
+        <item>Check CPU and Memory usage status</item>
+        <item>Hard disk connection is required for disk formatting</item>
+    </string-array>
+
+    <!-- settings_update -->
+    <string name="settings_update_info">Upgrade Information</string>
+    <string name="settings_update_sysversion">Software Version</string>
+    <string name="settings_update_updateversion">Upgrade Version</string>
+    <string name="settings_update_upgrade">Upgrade</string>
+    <string name="settings_update_newest_version">Latest version already installed</string>
+    <string name="upgrade_status_upgrade">Upgrade</string>
+    <string name="upgrade_status_confirm">OK</string>
+    <string name="upgrade_status_cancel">Cancel</string>
+    <string name="upgrade_status_checking">Checking...</string>
+    <string name="upgrade_status_current_version">Current version : </string>
+    <string name="upgrade_status_is_upgrade">Do you want to update to new version now?</string>
+    <string name="upgrade_status_new_version_for_upgrade">New version is now available</string>
+    <string name="upgrade_status_new_version">New version : </string>
+    <string name="upgrade_status_downloading">downloading...</string>
+    <string name="upgrade_status_upgrade_immediately">The new software version is released. Do you need to upgrade now?</string>
+    <string name="upgrade_status_upgrade_confirm">Upgrade</string>
+    <string name="upgrade_status_download_finish">System detects an update, the download is complete</string>
+    <string name="upgrade_status_reboot">System will reboot after the update</string>
+    <string name="upgrade_status_second">%d seconds</string>
+    <string name="upgrade_status_newest_version">Latest version already installed</string>
+    <string name="upgrade_status_no_free_space">No free disk space</string>
+    <string name="upgrade_status_download_failed">Download failed</string>
+
+    <!-- settings_parental_control -->
+    <string name="settings_parental_control_pg18">PG18</string>
+    <string name="settings_parental_control_pg15">PG15</string>
+    <string name="settings_parental_control_pg12">PG12</string>
+    <string name="settings_parental_control_pg6">PG6</string>
+    <string name="settings_parental_control_pin">Enter 4 digits parental PIN</string>
+    <string name="settings_purchase_pin">Enter 4 digits purchase PIN</string>
+    <string name="settings_purchase_pin_title">Purchase PIN</string>
+    <string name="settings_purchase_pin_sub">Enter 4 digits purchase PIN</string>
+    <string name="settings_parental_rating">Parental Rating</string>
+    <string name="settings_parental_rating_sub">Set age level to limit watching</string>
+    <string name="settings_parental_channel">Parental Channel</string>
+    <string name="settings_parental_channel_sub">Set channels to limit watching</string>
+    <string name="settings_parental_channel_selectch">Selected Ch.</string>
+    <string name="settings_parental_channel_selectall">Select All</string>
+    <string name="settings_parental_channel_delselectall">Deselect All</string>
+    <string name="settings_parental_worktime">Time Setting</string>
+    <string name="settings_parental_worktime_sub">Set the working time limit for the set-top box</string>
+    <string name="settings_parental_worktime_item1">Time Setting</string>
+    <string name="settings_parental_worktime_item2">Start Time</string>
+    <string name="settings_parental_worktime_item3">End Time</string>
+    <string name="settings_parental_changepin">Change PIN</string>
+    <string name="settings_parental_changepin_title">Change PIN</string>
+    <string name="settings_parental_changepin_sub">Enter 4 digit parental PIN to change</string>
+    <string name="settings_parental_changepin_item1">New PIN</string>
+    <string name="settings_parental_changepin_item2">Confirm PIN</string>
+    <string name="settings_parental_adult_show">Adult PIN</string>
+    <string name="settings_parental_adult_show_sub">You can set adult lock settings</string>
+    <string name="settings_lang_setting_chinese">Chinese (繁體中文)</string>
+    <string name="settings_lang_setting_english">English</string>
+    <!-- settings_video_audio -->
+    <string name="settings_av_setting_auto">Auto</string>
+    <string name="settings_av_setting_aspect">Aspect Ratio</string>
+    <string name="settings_av_setting_resoultuion">Resolution</string>
+    <string name="settings_av_setting_audiolang">Audio Lang.</string>
+    <string name="settings_av_setting_btn">Video and Audio Setting</string>
+    <string name="settings_av_setting_cecon">Enable</string>
+    <string name="settings_av_setting_cecoff">Disable</string>
+    <string name="settings_av_setting_lang_chinese">Chinese</string>
+    <string name="settings_av_setting_lang_english">English</string>
+    <string name="video_aduio_title">Video and Audio Setting</string>
+    <string name="video_aduio_subtitle">Set your preferred video and audio preferences</string>
+    <string name="video_aduio_aspectratio">Aspect Ratio</string>
+    <string name="video_aduio_resolution">Resolution</string>
+    <string name="video_aduio_audiolang">Audio Lang.</string>
+    <string name="video_aduio_hdmicec">HDMI CEC</string>
+    <string name="video_aduio_hdcp">HDCP</string>
+    <string name="video_audio_cecon">Enable</string>
+    <string name="video_audio_cecoff">Disable</string>
+    <string name="aspect_ratio_16_9_pb">16:9 PB</string>
+    <string name="aspect_ratio_16_9_ps">16:9 PS</string>
+    <string name="aspect_ratio_4_3_lb">4:3 LB</string>
+    <string name="aspect_ratio_4_3_pb">4:3 PS</string>
+    <string name="resolution_comfirm_title">Resolution Confirm</string>
+    <string name="resolution_comfirm_message_1">The resoultion is set</string>
+    <string name="resolution_comfirm_message_2">In %d seconds, the resolution will be revertd\nPlease confirm the resolution is correct and press Confirm</string>
+
+    <string-array name="audio_language_list">
+        <item>@string/settings_av_setting_lang_chinese</item>
+        <item>@string/settings_av_setting_lang_english</item>
+    </string-array>
+    <string-array name="subtitle_language_list">
+        <item>@string/settings_av_setting_lang_chinese</item>
+        <item>@string/settings_av_setting_lang_english</item>
+    </string-array>
+    <string-array name="aspect_ratio_list">
+        <item>@string/settings_av_setting_auto</item>
+        <item>@string/aspect_ratio_16_9_pb</item>
+        <item>@string/aspect_ratio_16_9_ps</item>
+        <item>@string/aspect_ratio_4_3_lb</item>
+        <item>@string/aspect_ratio_4_3_pb</item>
+    </string-array>
+    <!-- settings_subtitle & dialog_subtitle -->
+    <!--<string name="settings_subtitle_info">Press the \'Subtitle setting\' button</string>-->
+    <string name="settings_subtitle_info1">Press the</string>
+    <string name="settings_subtitle_info2">Subtitle setting</string>
+    <string name="settings_subtitle_info3">Button</string>
+    <string name="settings_subtitle_description">Change the setting value of subtitle</string>
+    <string name="settings_subtitle_title">Subtitle Setting</string>
+    <string name="settings_subtitle_subtitle">Set preferred subtitle language</string>
+    <string name="settings_subtitle_text">Subtitle</string>
+    <!-- settings_system_info -->
+    <string name="settings_system_info_stbsn">Serial Number</string>
+    <string name="settings_system_info_hwversion">Hardware Version</string>
+    <string name="settings_system_info_swversion">Software Version</string>
+    <string name="settings_system_info_loaderversion">Loader Version</string>
+    <string name="settings_system_info_hddsn">HDD SN</string>
+    <string name="settings_system_info_scnumber">Smart Card Number</string>
+    <string name="settings_system_info_caversion">CA Version</string>
+    <string name="settings_system_info_sysversion">System Version</string>
+    <string name="settings_system_info_pvr">PVR</string>
+    <string name="settings_system_info_devnotready">Device not ready</string>
+    <string name="settings_system_info_devready">Device ready</string>
+    <string name="settings_system_info_wvid">WV ID</string>
+    <string name="settings_system_info_area_code">AreaCode</string>
+    <string name="settings_system_info_cm_mode">CmMode</string>
+    <string name="settings_system_info_zip_code">ZIPCode</string>
+    <!-- STBDataReturnView -->
+    <string name="settings_datareturn_enable">Enable</string>
+    <string name="settings_datareturn_disable">Disable</string>
+
+    <string-array name="ac_subtitle">
+        <item>areaCode</item>
+        <item>Bouquet ID</item>
+        <item>AC0</item>
+        <item>AC1</item>
+        <item>AC2</item>
+        <item>AC3</item>
+        <item>AC4</item>
+        <item>AC5</item>
+        <item>AC6</item>
+    </string-array>
+
+    <string-array name="display_time_list">
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="debug_level_list">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="update_success">updates successful</string>
+    <string name="update_fail">updates failed</string>
+
+    <!-- settings_channel_scan -->
+    <string name="settings_channel_scan_network">Network</string>
+    <string name="settings_channel_scan_manual">Manual</string>
+
+    <!-- settings_signal -->
+    <string name="settings_signal_press">Press the</string>
+    <string name="settings_signal_button">button</string>
+    <string name="settings_signal_signaldiag">Signal Diagnose</string>
+    <string name="settings_signal_description">The signal detection process can be performed immediately</string>
+    <string name="signal_diagnose_title">Signal Diagnose</string>
+    <string name="advanced_signal_diagnose_title">Advanced Signal Diagnose</string>
+    <string name="signal_diagnose_subtitle">Press the DIAGNOSE button to test</string>
+    <string name="current_status">Current status</string>
+    <string name="current_status_1">Scan Finished!</string>
+    <string name="freq">Freq(KHz)</string>
+    <string name="symbol_rate">Symbol(Ks/sec)</string>
+    <string name="qam">QAM</string>
+    <string name="ber_new">BER</string>
+    <string name="snr">SNR</string>
+    <string name="strength">Strength</string>
+    <string name="progress_new">Progress</string>
+    <string name="search_scan">SCAN</string>
+    <string name="search_close">CLOSE</string>
+    <string name="signal_diagnose_diagnose">DIAGNOSE</string>
+    <string name="advance">ADVANCE</string>
+    <string name="send_aerm_vbm">Send AERM/VBM</string>
+    <string name="title_netscan_0">Channel Scan > Manual</string>
+    <string name="title_netscan_1">Channel Scan > Network</string>
+    <string name="title_netscan_2">Channel Scan</string>
+    <string name="tv">TV</string>
+    <string name="radio">Radio</string>
+
+    <!-- settings_network & dialog_network & dialog_wifi & dialog_notice -->
+    <string name="cable_network">Ethernet</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="ethernet_setup">Ethernet</string>
+    <string name="ethernet_setup_subtitle">Setup of Ethernet environment</string>
+    <string name="ethernet_setup_ipassign">IP Assignment</string>
+    <string name="local_ip">IP Address</string>
+    <string name="subnet_mask">SubnetMask</string>
+    <string name="gateway">Gateway</string>
+    <string name="dns">DNS Server</string>
+    <string name="net_dhcp">DHCP</string>
+    <string name="net_static">Static</string>
+    <string name="connect_without_plugin">Remove Ehternet cable before using WiFi</string>
+    <string name="wifi_settings">WiFi</string>
+    <string name="wifi_settings_subtitle">Select the WiFi for the set top box</string>
+    <string name="wifi_password">WiFi Password</string>
+    <string name="wifi_password_input">Enter the WiFi password</string>
+    <string name="left_to_delete">Press left to delete</string>
+    <string name="connect">Connecting to</string>
+    <string name="connected">Connected </string>
+    <string name="confirm">Confirmation</string>
+    <string name="save_success">Successfully saved</string>
+
+    <!-- settings_ca & dialog_ca_password & dialog_ca_pair & dialog_ca_operator & dialog_ca_operator_info & dialog_ca_info & dialog_ca_update_info -->
+    <string name="settings_ca_changepin">Change CA PIN</string>
+    <string name="settings_ca_pairing">SC Pairing</string>
+    <string name="settings_ca_operatorinfo">Operator Info</string>
+    <string name="settings_ca_cainfo">CA Info</string>
+    <string name="settings_ca_upgradeinfo">SC Upgrade Info</string>
+    <string name="settings_ca_pasword_subtitle">Enter the CA PIN to change</string>
+    <string name="settings_ca_pasword_enterpin">Enter PIN</string>
+    <string name="settings_ca_pasword_newpin">Enter New PIN</string>
+    <string name="settings_ca_pasword_confirmpin">Confirm New PIN</string>
+    <string name="settings_ca_pair_subtitle">Pairing list with current STB</string>
+    <string name="settings_ca_pair_number">No.</string>
+    <string name="settings_ca_pair_noinfo">No SC pair info</string>
+    <string name="settings_ca_operator_id">Operator ID</string>
+    <string name="settings_ca_operator_name">Operator Name</string>
+    <string name="settings_ca_operator_noinfo">No Operator Info</string>
+    <string name="settings_ca_operatorinfo_product">PRODUCT</string>
+    <string name="settings_ca_operatorinfo_product_id">Product ID</string>
+    <string name="settings_ca_operatorinfo_product_rec">Record</string>
+    <string name="settings_ca_operatorinfo_product_expiredate">Expire date</string>
+    <string name="settings_ca_operatorinfo_product_noinfo">No Product Info</string>
+    <string name="settings_ca_operatorinfo_eslot">E-SLOT</string>
+    <string name="settings_ca_operatorinfo_eslot_id">Slot ID</string>
+    <string name="settings_ca_operatorinfo_eslot_credit">Credit</string>
+    <string name="settings_ca_operatorinfo_eslot_balance">Balance</string>
+    <string name="settings_ca_operatorinfo_eslot_noinfo">No E-Slot Info</string>
+    <string name="settings_ca_operatorinfo_eigenvalue">EIGENVALUE</string>
+    <string name="settings_ca_operatorinfo_eigenvalue_name">Name</string>
+    <string name="settings_ca_operatorinfo_eigenvalue_value">Eigenvalue</string>
+    <string name="settings_ca_operatorinfo_eigenvalue_noinfo">No Eigenvalue Info</string>
+    <string name="settings_ca_info_caversion">Software version</string>
+    <string name="settings_ca_update_time">Upgrade Time</string>
+    <string name="settings_ca_update_status">Upgrade Status</string>
+    <string name="settings_ca_operatorinfo_product_status">License status</string>
+
+    <!-- settings_reset & dialog_reset_to_default-->
+    <string name="settings_reset_press">Press the</string>
+    <string name="settings_reset_button">button</string>
+    <string name="settings_reset_resetstb">Factory Reset</string>
+    <string name="settings_reset_description">Restore the set-top box to the factory default setting</string>
+    <string name="settings_reset_subtitle">Do you want to reset to the default setting?</string>
+    <string name="settings_reset_text">This action cannot be restored</string>
+
+    <!-- ReportView -->
+    <string name="settings_report_smsreport">SMS Installation Report</string>
+    <string name="settings_report_description">Query work order information</string>
+    <string name="workorder_inquiry_notexist">Work order does not exist,Try again</string>
+    <string name="workorder_inquiry_neterror">Network error,Please check the network</string>
+    <string name="work_order_full_number">Full IVR</string>
+    <string name="worker_id">Work code of staff</string>
+    <string name="workorder_inquiry">Work Order Inquiry</string>
+    <string name="workorder_inquiry_subtitle">Enter the company and query IVR number</string>
+    <string name="workorder_inquiry_company">Company</string>
+    <string name="workorder_inquiry_queryivr">Query IVR</string>
+    <string name="workorder_inquiry_submit">Submit</string>
+    <string name="workorder_inquiry_cancel">Cancel</string>
+    <string name="workorder_inquiry_save">Save</string>
+    <string name="work_order_info">Work Order Message</string>
+    <string name="work_msg">Operation Message</string>
+    <string name="activated">Set-top box is activated</string>
+    <string name="activate_failure">Set-top box is not activated</string>
+    <string name="activating">Set-top box is activating now...</string>
+    <string name="activate_title">Verify</string>
+    <string name="author_title">Onboard box authorization opened</string>
+    <string name="author_company">Company</string>
+    <string name="author_stbsn">Set-top box serial number</string>
+    <string name="author_mobile_phone">Engineer phone number</string>
+    <string name="author_with_hdd">With HDD</string>
+    <string name="author_hdd_sn">Hard Drive Serial Number</string>
+    <string name="bp_name">Payment</string>
+    <string name="cm_mode">CmMode</string>
+    <string name="change_engineer">Change engineer</string>
+    <string name="change_engineer2">Change engineer</string>
+    <string name="company_id">Company</string>
+    <string name="input_mobile_no">Enter the mobile phone number</string>
+    <string name="install_name">Installation Classification</string>
+    <string name="return_value">Return Value</string>
+    <string name="mobile_phone">Engineer phone number</string>
+
+    <!-- ActivateQRView & dialog_qr & dialog_qr_code -->
+    <string name="settings_qrview_activation">Mobile Activation QR</string>
+    <string name="settings_qrview_description">Generate a QR code</string>
+    <string name="settings_qrview_activation_subtitle">Enter SO ID to generate QR code</string>
+    <string name="settings_qrview_activation_soid">SO ID</string>
+    <string name="settings_qrview_activation_scan">Scan QR and activate mobile</string>
+    <string name="settings_qrview_activation_status">Opening status</string>
+    <string name="settings_qrview_activation_status_opened">Opened</string>
+    <string name="settings_qrview_activation_status_unopened">Unopened</string>
+    <string name="settings_qrview_confrim_single_c">Switch to singleC ?</string>
+    <string name="settings_qrview_confrim_single_i">Switch to singleI ?</string>
+
+    <!-- DebugView & dialog_debug-->
+    <string name="settings_debug_configuration">Debug Configuration</string>
+    <string name="settings_debug_description">Set the CPU/MEM info and debug log level</string>
+    <string name="settings_debug_subtitle">Set CPU/MEM Info to be displayed on the screen</string>
+    <string name="settings_debug_cpumeminfo">CPU/MEM Info</string>
+    <string name="settings_debug_loglevel">Debug Log Level</string>
+
+    <!-- FormatDiskView & dialog_format_disk -->
+    <string name="settings_format_diskformat">Disk Format</string>
+    <string name="settings_format_description">Can Format Disk</string>
+    <string name="settings_format_notice">Notification</string>
+    <string name="settings_format_disknotconnect">There is no connected hard disk</string>
+    <string name="settings_format_confirm">OK</string>
+    <string name="format_select_disk">Please select a disk to format</string>
+    <string name="format_description">Formatting erases all data currently stored on the drive. To avoid losing the data, consider backing it up.</string>
+    <string name="format_user_label">Disk A</string>
+    <string name="format_size">0 GB</string>
+    <string name="format_formatting">Formatting...</string>
+    <string name="format_notice">Notification</string>
+    <string name="format_disktotalspace">Total space</string>
+    <string name="format_result">%1$s is formatted</string>
+
+    <!-- RemoteControlView -->
+    <string name="settings_rcu_press">Press the</string>
+    <string name="settings_rcu_setting">remote control setting</string>
+    <string name="settings_rcu_button">button</string>
+    <!--<string name="settings_rcu_setting_info">按下 \'遙控器設定\' 按鈕</string>-->
+    <string name="settings_rcu_setting_description">It allows the remote control\nto control the TV\n(Note: the remote control needs\nto be paired with Bluetooth first)</string>
+    <string name="settings_rcu_upgrade_btn">Check/Update</string>
+    <string name="settings_rcu_setting_btn">Settings</string>
+    <string name="settings_rcu_volume_lock_btn">Volume Control</string>
+    <string name="settings_personal_rcu_rcuNotSupport">您目前使用的遙控器不支援此功能</string>
+    <string name="settings_personal_rcu_btNotSupport">藍牙未支援或開啟 !!</string>
+
+</resources>

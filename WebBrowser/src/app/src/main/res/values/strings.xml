@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebBrowser</string>
+    <string name="ssl_title">This website uses a private certificate, would you want to continue?</string>
+    <string name="ssl_agree">OK</string>
+    <string name="ssl_disagree">Cancel</string>
+    <string name="url_error">The URL is error.</string>
+</resources>

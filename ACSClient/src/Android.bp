@@ -1,0 +1,35 @@
+android_app {
+    name: "ACSClient_apk",
+    srcs: [
+        "app/src/main/java/**/*.java",
+    ],
+    resource_dirs: ["app/src/main/res"],
+    manifest: "app/src/main/AndroidManifest.xml",
+    asset_dirs: ["app/src/main/assets"],
+    privileged: true,
+    certificate: "platform",
+    platform_apis: true,
+    static_libs: [
+        "androidx.annotation_annotation",
+        "androidx.legacy_legacy-support-v4",
+        "mqtt_lib",
+        "misc_lib",
+        "media_lib",
+    ]
+
+}
+
+java_import {
+    name: "mqtt_lib",
+    jars: ["app/libs/org.eclipse.paho.client.mqttv3-1.2.5.jar"],
+}
+
+java_import {
+    name: "misc_lib",
+    jars: ["app/libs/Misc.jar"],
+}
+
+java_import {
+    name: "media_lib",
+    jars: ["app/libs/Media.jar"],
+}

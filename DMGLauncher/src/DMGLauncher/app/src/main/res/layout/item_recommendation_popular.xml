@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lo_recommendation_popular_border"
+    android:layout_width="@dimen/recommendation_popular_item_layout_width"
+    android:layout_height="@dimen/recommendation_popular_item_layout_height"
+    android:layout_marginTop="@dimen/recommendation_popular_item_layout_marginTop"
+    android:focusable="true"
+    android:background="@drawable/frame_select_status">
+    <ImageView
+        android:id="@+id/lo_recommendation_popular_video_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:focusable="false"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/lo_recommendation_popular_video_label"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recommendation_popular_video_label_layout_height"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/recommendation_popular_item_textSize"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:background="@drawable/shadow_cover_78"
+        android:focusable="false"
+        android:singleLine="true"/>
+    <FrameLayout
+        android:id="@+id/lo_recommendation_video_focus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:background="@drawable/frame_focus_1"
+        android:visibility="gone"/>
+</RelativeLayout>

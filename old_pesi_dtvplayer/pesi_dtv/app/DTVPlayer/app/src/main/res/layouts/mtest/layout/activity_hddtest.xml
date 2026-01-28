@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    tools:context="com.mtest.activity.HDDTestActivity">
+
+    <TextView
+        android:id="@+id/tv_item19_title"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="@string/str_test_item_hdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item19_status"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_pass"
+        android:gravity="center"
+        android:text="Recording"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_title" />
+
+    <ImageView
+        android:id="@+id/iv_item19_tuner_up_triangle"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/up_triangle"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item19_status"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_status" />
+
+    <TextView
+        android:id="@+id/tv_item19_tuner"
+        android:layout_width="96dp"
+        android:layout_height="25dp"
+        android:background="@drawable/shape_rectangle"
+        android:gravity="center"
+        android:text="Tuner/IP"
+        app:layout_constraintStart_toStartOf="@+id/tv_item19_status"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item19_tuner_up_triangle" />
+
+    <TextView
+        android:id="@+id/tv_item19_tuner_no"
+        android:layout_width="96dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/shape_rectangle_pass"
+        android:gravity="center"
+        android:text="@string/str_num_1"
+        app:layout_constraintStart_toEndOf="@+id/tv_item19_tuner"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item19_tuner_up_triangle" />
+
+    <ImageView
+        android:id="@+id/iv_item19_tuner_down_triangle"
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:layout_marginEnd="42dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/down_triangle"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item19_tuner_no"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_tuner_no" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_name"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle"
+        android:gravity="center"
+        android:text="Storage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item19_tuner_down_triangle" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_1_idx"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_blue_bright"
+        android:gravity="center"
+        android:text="@string/str_num_1"
+        app:layout_constraintStart_toStartOf="@+id/tv_item19_storage_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_name" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_1_name"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle"
+        android:gravity="center"
+        android:text="HDD"
+        app:layout_constraintStart_toEndOf="@+id/tv_item19_storage_1_idx"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_name" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_1_status"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_pass"
+        android:gravity="center"
+        android:text="@string/str_mount_ok"
+        app:layout_constraintStart_toEndOf="@+id/tv_item19_storage_1_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_name" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_2_idx"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_blue_bright"
+        android:gravity="center"
+        android:text="@string/str_num_2"
+        app:layout_constraintStart_toStartOf="@+id/tv_item19_storage_1_idx"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_1_idx" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_2_name"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle"
+        android:gravity="center"
+        android:text="USB1"
+        app:layout_constraintStart_toEndOf="@+id/tv_item19_storage_2_idx"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_1_idx" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_2_status"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_fail"
+        android:gravity="center"
+        android:text="@string/str_mount_fail"
+        app:layout_constraintStart_toEndOf="@+id/tv_item19_storage_2_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_1_idx" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_3_idx"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_blue_bright"
+        android:gravity="center"
+        android:text="@string/str_num_3"
+        app:layout_constraintStart_toStartOf="@+id/tv_item19_storage_2_idx"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_2_idx" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_3_name"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle"
+        android:gravity="center"
+        android:text="USB2"
+        app:layout_constraintStart_toEndOf="@+id/tv_item19_storage_3_idx"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_2_idx" />
+
+    <TextView
+        android:id="@+id/tv_item19_storage_3_status"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rectangle_pass"
+        android:gravity="center"
+        android:text="@string/str_mount_ok"
+        app:layout_constraintStart_toEndOf="@+id/tv_item19_storage_3_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_2_idx" />
+
+    <ImageView
+        android:id="@+id/iv_item19_rec"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/red_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_item19_storage_3_idx"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item19_storage_3_idx" />
+
+    <TextView
+        android:id="@+id/tv_item19_rec"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="REC"
+        app:layout_constraintStart_toEndOf="@+id/iv_item19_rec"
+        app:layout_constraintTop_toTopOf="@+id/iv_item19_rec" />
+</androidx.constraintlayout.widget.ConstraintLayout>

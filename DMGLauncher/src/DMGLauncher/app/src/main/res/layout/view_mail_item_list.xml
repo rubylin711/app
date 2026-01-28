@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/lo_mail_inbox_rltvl_item_list_Layer"
+    android:background="@drawable/mail_item_list_top_and_down_gold_line"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/lo_mail_inbox_rltvl_item_list_Layer_height">
+    <TextView
+        android:id="@+id/lo_mail_inbox_sub_item_list_textv_title"
+        android:textSize="@dimen/lo_mail_inbox_sub_item_list_textv_title_textsize"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/lo_mail_inbox_sub_item_list_textv_title_marginleft"
+        android:singleLine="true"/>
+</RelativeLayout>

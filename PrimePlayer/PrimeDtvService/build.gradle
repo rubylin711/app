@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+    // 若有 Kotlin 再加：
+    // id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.prime.dtvservice'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.prime.dtvservice"
+        minSdk 34
+        targetSdk 34
+        versionCode 13
+        versionName "1.0.13"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    signingConfigs {
+        release {
+            //storeFile file("jdk_A1B.jks")
+            storeFile file("../SignedKeys/1319D_CNS_PLATFORM.jks")
+//            storeFile file("../SignedKeys/AOSP_public_wellknow_key.jks")
+//            storeFile file("../rtd1319D_DMG.jks")
+            storePassword 'pesi1234'
+            keyAlias 'key0'
+            keyPassword 'pesi1234'
+        }
+        debug {
+            //storeFile file("jdk_A1B.jks")
+            storeFile file("../SignedKeys/1319D_CNS_PLATFORM.jks")
+//            storeFile file("../SignedKeys/AOSP_public_wellknow_key.jks")
+//            storeFile file("../rtd1319D_DMG.jks")
+            storePassword 'pesi1234'
+            keyAlias 'key0'
+            keyPassword 'pesi1234'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+def consumer = providers.gradleProperty("consumer.app").orElse("primeplayer").get()
+//def adAar = files("$projectDir/../libs/ADManager-debug.aar")
+def adAar = files("$projectDir/../libs/ADManager-release.aar")
+dependencies {
+    implementation project(':DataStructure')
+    implementation project(':PlayerService')
+    if (consumer == "cnslauncher") {
+        implementation files(adAar)
+        //implementation project(':ADManager')
+    }
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

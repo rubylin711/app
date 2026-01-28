@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.prime.dtvplayer.View.ActivityHelpView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA">
+
+    <TextView
+        android:id="@+id/infohelpTXV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:text="@string/STR_NULL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/HELP_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalMiddleline"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalMiddleline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalBotomline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/redhelpIGV"
+        android:layout_width="@dimen/HELP_ICON_SIZE"
+        android:layout_height="@dimen/HELP_ICON_SIZE"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/STR_TODO"
+        android:src="@drawable/help_red"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBotomline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMiddleline"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_help_leftline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.275" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_help_middleline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_help_rightline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.725" />
+
+    <ImageView
+        android:id="@+id/greenhelpIGV"
+        android:layout_width="@dimen/HELP_ICON_SIZE"
+        android:layout_height="@dimen/HELP_ICON_SIZE"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/STR_TODO"
+        android:src="@drawable/help_green"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBotomline"
+        app:layout_constraintStart_toEndOf="@+id/vertical_help_leftline"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMiddleline" />
+
+    <ImageView
+        android:id="@+id/yellowhelpIGV"
+        android:layout_width="@dimen/HELP_ICON_SIZE"
+        android:layout_height="@dimen/HELP_ICON_SIZE"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/STR_TODO"
+        android:src="@drawable/help_yellow"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBotomline"
+        app:layout_constraintStart_toEndOf="@+id/vertical_help_middleline"
+        app:layout_constraintTop_toBottomOf="@+id/infohelpTXV" />
+
+    <ImageView
+        android:id="@+id/bluehelpIGV"
+        android:layout_width="@dimen/HELP_ICON_SIZE"
+        android:layout_height="@dimen/HELP_ICON_SIZE"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/STR_TODO"
+        android:src="@drawable/help_blue"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBotomline"
+        app:layout_constraintStart_toEndOf="@+id/vertical_help_rightline"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMiddleline" />
+
+    <TextView
+        android:id="@+id/redhelpTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/HELP_ICONTXV_HEIGHT"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/STR_NULL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/HELP_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBotomline"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_help_leftline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/redhelpIGV"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMiddleline"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <TextView
+        android:id="@+id/greenhelpTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/HELP_ICONTXV_HEIGHT"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/STR_NULL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/HELP_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBotomline"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_help_middleline"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toEndOf="@+id/greenhelpIGV"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMiddleline"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <TextView
+        android:id="@+id/yellowhelpTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/HELP_ICONTXV_HEIGHT"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/STR_NULL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/HELP_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBotomline"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_help_rightline"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toEndOf="@+id/yellowhelpIGV"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMiddleline"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <TextView
+        android:id="@+id/bluehelpTXV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/HELP_ICONTXV_HEIGHT"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/STR_NULL"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/HELP_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalBotomline"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/bluehelpIGV"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalMiddleline"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+</com.prime.dtvplayer.View.ActivityHelpView>

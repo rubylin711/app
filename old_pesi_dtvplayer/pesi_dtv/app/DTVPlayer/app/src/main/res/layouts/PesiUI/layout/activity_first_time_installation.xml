@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:layout_margin="0dp"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.FirstTimeInstallationActivity">
+
+    <include
+        android:id="@+id/easyInstallTitleLayout"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/title_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <include
+        android:id="@+id/easyInstallHelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/help" />
+
+    <TextView
+        android:id="@+id/menuLanguageTV"
+        android:text="@string/STR_MENU_LANGUAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_limit"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP" />
+
+    <TextView
+        android:id="@+id/tvRatioTV"
+        android:text="@string/STR_TV_RATIO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/menuLanguageTV"
+        app:layout_constraintTop_toBottomOf="@+id/menuLanguageTV" />
+
+    <TextView
+        android:id="@+id/conversionTV"
+        android:text="@string/STR_CONVERSION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tvRatioTV"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatioTV" />
+
+    <TextView
+        android:id="@+id/hdmiResolutionTV"
+        android:text="@string/STR_HDMI_RESOLUTION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/conversionTV"
+        app:layout_constraintTop_toBottomOf="@+id/conversionTV" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxLeft_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/selectboxRight_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_END" />
+
+    <Spinner
+        android:id="@+id/menuLanguageSPIN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_MENU_LANGUAGE_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/menuLanguageTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/menuLanguageTV" />
+
+    <Spinner
+        android:id="@+id/tvRatioSPIN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_TV_RATIO_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRatioTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/tvRatioTV" />
+
+    <Spinner
+        android:id="@+id/conversionSPIN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_4X3CONVERSION_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/conversionTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/conversionTV" />
+
+    <Spinner
+        android:id="@+id/hdmiResolutionSPIN"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_margin="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selectbox"
+        android:entries="@array/STR_HDMI_RESOLUTION_OPTION"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/hdmiResolutionTV"
+        app:layout_constraintEnd_toStartOf="@+id/selectboxRight_v"
+        app:layout_constraintStart_toStartOf="@+id/selectboxLeft_v"
+        app:layout_constraintTop_toTopOf="@+id/hdmiResolutionTV" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_v_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_RIGHT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/screen_v_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/SCREEN_LEFT_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

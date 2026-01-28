@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SetupWizardCustomize</string>
+    <string name="check_provision_data">檢查連線與更新用戶報竣資訊中...</string>
+    <string name="provision_data_fail">您的設備尚未開通，請等候工程人員完成開通流程\n仍有問題請來電客服中心，並請告知錯誤代碼為E507。</string>
+    <string name="license_title">服務條款</string>
+    <string name="license_content">繼續即表示您已詳閱並同意%s</string>
+    <string name="license_item">《%s》</string>
+    <string name="license_agree">我已閱讀並同意</string>
+
+    <string name="tutorial_title0">歡迎使用 Android 機上盒</string>
+    <string name="tutorial_title1">首頁</string>
+    <string name="tutorial_title2">探索新頻道</string>
+    <string name="tutorial_title3">盡情享受多種內容</string>
+    <string name="tutorial_title4">線上影音及音樂</string>
+
+    <string name="tutorial_desc0">開始嶄新的體驗</string>
+    <string name="tutorial_desc1">首頁是您的全新娛樂入口，透過瀏覽各式各樣的\n Apps及電視頻道觀看您想要的內容</string>
+    <string name="tutorial_desc2">您可以觀賞節目同時瀏覽導覽資訊，\n 並使用錄製及邊看邊錄功能來獲得更好的觀看體驗</string>
+    <string name="tutorial_desc3">觀看種類繁多的VOD影片，\n 您可以從會員中心查看最新的訂閱狀態</string>
+    <string name="tutorial_desc4">您可以在本機上面亨受各種影視服務及音樂</string>
+</resources>

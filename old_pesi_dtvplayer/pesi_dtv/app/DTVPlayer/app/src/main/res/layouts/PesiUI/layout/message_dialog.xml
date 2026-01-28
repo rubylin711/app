@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MessageDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messageLayout"
+        android:layout_width="@dimen/MESSAGEDIALOG_WIDTH"
+        android:layout_height="@dimen/MESSAGEDIALOG_HEIGHT"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/full_black_bg_with_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTXV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/STR_INFO"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/titlelineIGV"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/gradient_title_line"
+            android:contentDescription="@string/STR_TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTXV" />
+
+        <TextView
+            android:id="@+id/contentTXV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/STR_NULL"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titlelineIGV"
+            app:layout_constraintVertical_bias="0.13" />
+
+        <Button
+            android:id="@+id/yesBTN"
+            android:layout_width="@dimen/MESSAGEDIALOG_YESBTN_WIDTH"
+            android:layout_height="@dimen/MESSAGEDIALOG_YESBTN_HEIGHT"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/item_selector"
+            android:text="@string/STR_OK"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/TEXT_SIZE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,6 @@
+ext.HomeplusPlatformKey = [
+	storeFilePath : '1319D_CNS_PLATFORM.jks',
+	storePassword : 'pesi1234',
+	keyAlias      : 'key0',
+	keyPassword   : 'pesi1234',
+]

@@ -1,0 +1,1 @@
+am broadcast -a com.hwacom.homeplus.tv.ACTION_SHOW_REMINDER --es 'channelNumber' "2" --es 'channelName' "channel_name" --es 'programName' "program_name"

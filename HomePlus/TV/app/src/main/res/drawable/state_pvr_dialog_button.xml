@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/shape_r_corner_3_corporate_color"
+        android:state_focused="true"
+        />
+    <item android:drawable="@drawable/shape_r_corner_1_bd_1_gray_4c_bg_gray_44" />
+</selector>

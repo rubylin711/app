@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prime.primetvinputapp"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.ACCESS_TV_TUNER" />
+    <uses-permission android:name="android.permission.TUNER_RESOURCE_ACCESS" />
+    <uses-permission android:name="android.permission.TV_TUNER" />
+    <uses-permission android:name="android.permission.READ_TV_LISTINGS"/>
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" /> <!-- 可選：如果 App 不依賴觸控螢幕 -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:name=".PrimeTvInputAppApplication"
+        android:allowBackup="true"
+        android:banner="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PrimePlayer">
+        <activity
+            android:name=".LiveTvActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" /> <!-- 標準 Launcher -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" /> <!-- TV 專用 -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Scan.Cable.ChannelPreScanningActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Scan.Cable.ChannelScanningActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

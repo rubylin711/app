@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/opacity_white_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/lo_weather_imgv_guide_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:textSize="@dimen/lo_weather_btn_guide_action_textsize"
+        android:textColor="@android:color/black"
+        android:id="@+id/lo_weather_btn_guide_action"
+        android:background="@drawable/red_gradient_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lo_weather_btn_guide_action_marginbottom"
+        android:minHeight="0px"
+        android:text="@string/start_voice_recognition"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

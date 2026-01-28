@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="membercenter_list_title">
+        <item>會員資訊</item>
+        <item>訂閱資訊</item>
+        <item>看片金</item>
+        <item>相關條款</item>
+        <item>郵件</item>
+        <item>常見問題</item>
+        <item>friDay影音跨螢服務</item>
+        <item>下載電視版friDay影音</item>
+    </string-array>
+
+    <string-array name="membercenter_list_cable_mode_title">
+        <item>會員資訊</item>
+        <item>頻道列表</item>
+        <item>郵件</item>
+        <item>常見問題</item>
+    </string-array>
+</resources>

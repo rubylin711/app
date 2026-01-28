@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="membercenter_list_id">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </integer-array>
+
+    <integer-array name="membercenter_list_drawable">
+        <item>@drawable/selector_icon_member_list_info</item>
+        <item>@drawable/selector_icon_member_list_sub</item>
+        <item>@drawable/selector_icon_member_list_point</item>
+        <item>@drawable/selector_icon_member_list_detail</item>
+        <item>@drawable/selector_icon_member_list_mail</item>
+        <item>@drawable/selector_icon_member_list_qna</item>
+        <item>@drawable/selector_icon_member_list_ott</item>
+        <item>@drawable/selector_icon_member_list_download</item>
+    </integer-array>
+
+    <string-array name="membercenter_list_title">
+        <item>Member info</item>
+        <item>Subscription</item>
+        <item>VOD point</item>
+        <item>相關條款</item>
+        <item>Mail</item>
+        <item>Q&amp;A</item>
+        <item>friDay影音跨螢服務</item>
+        <item>下載電視版friDay影音</item>
+    </string-array>
+
+    <integer-array name="membercenter_list_cable_mode_id">
+        <item>0</item>
+        <item>8</item>
+        <item>4</item>
+        <item>5</item>
+    </integer-array>
+
+    <integer-array name="membercenter_list_cable_mode_drawable">
+        <item>@drawable/selector_icon_member_list_info</item>
+        <item>@drawable/selector_icon_member_list_sub</item>
+        <item>@drawable/selector_icon_member_list_mail</item>
+        <item>@drawable/selector_icon_member_list_qna</item>
+    </integer-array>
+
+    <string-array name="membercenter_list_cable_mode_title">
+        <item>Member info</item>
+        <item>Channel list</item>
+        <item>Mail</item>
+        <item>Q&amp;A</item>
+    </string-array>
+</resources>

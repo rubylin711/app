@@ -1,0 +1,29 @@
+flowchart TD
+    A["Demux: PID (0x3B/0x3C)"] --> B["Callback（極輕量）：複製 section 丟入訊息佇列"]
+    B --> C["HandlerThread：DsmccTable.handleMessage"]
+
+    subgraph C1["DSM-CC Parser（DsmccTable）"]
+        C --> C2{"table_id / msgId"}
+        C2 -->|0x1006 DSI| DSI["Parse DSI<br/>取 tapTxId / txId"]
+        C2 -->|0x1002 DII| DII["Parse DII<br/>建 module 目錄與<br/>(dl,mod,ver) 位圖與大小"]
+        C2 -->|0x1003 DDB| DDB["Parse DDB header<br/>多 section 組裝 + 去重"]
+    end
+
+    DSI --> E["DownloadSessionManager.onDsi(dl)"]
+    DII --> F["DownloadSessionManager.onDii(dl, blockSize, modules)"]
+    DDB --> G["DownloadSessionManager.onDdb(dl, modId, ver, blockNo, data)"]
+
+    E --> H["DsmccBiopCollector"]
+    F --> H
+    G --> H
+
+    subgraph H1["DsmccBiopCollector"]
+        H --> I["onModuleComplete：收齊一模組"]
+        I --> J["ThreadPoolExecutor（BACKGROUND）<br/>BiopReader.parse(payload)"]
+        J --> K["BiopSink 事件：onServiceGateway / onDirectory / onFile<br/>(sinkHandler 序列化)"]
+        K --> L["saveImpl()：寫入 sessions/<txid>/<path>"]
+        L --> M["maybePublishAndGcImpl()：<br/>計算 live set、GC、（可選）publish"]
+        M --> N["ModuleStateListener 回調"]
+    end
+
+    N --> O["UI / 上層：可立即讀取<br/>sessions/<txid>/<path>"]

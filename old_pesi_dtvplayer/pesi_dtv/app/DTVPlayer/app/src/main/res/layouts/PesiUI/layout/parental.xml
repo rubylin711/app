@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="@dimen/MAIN_LAYOUT_ALPHA"
+    android:background="@drawable/bg"
+    tools:context="com.prime.dtvplayer.Activity.ParentalActivity">
+
+    <include
+        android:id="@+id/activityTitleViewLayout2"
+        layout="@layout/activity_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/title_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/activityHelpViewLayout"
+        layout="@layout/activity_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/RightItemLeftGuilde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_CENTER" />
+
+    <TextView
+        android:id="@+id/pincodeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/STR_ACTUAL_PIN_CODE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_guideline"
+        app:layout_constraintBottom_toTopOf="@id/help_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="@dimen/WIDGET_TOP"
+        app:layout_constraintHorizontal_bias="@dimen/WIDGET_START"/>
+
+    <TextView
+        android:id="@+id/channllockTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/STR_CHANNEL_LOCK"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/pincodeTXV"
+        app:layout_constraintTop_toBottomOf="@+id/pincodeTXV"/>
+
+    <TextView
+        android:id="@+id/installlockTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/STR_INSTALLATION_LOCK"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/pincodeTXV"
+        app:layout_constraintTop_toBottomOf="@+id/channllockTXV"/>
+
+    <TextView
+        android:id="@+id/parentrateTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/STR_PARENTAL_RATE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/pincodeTXV"
+        app:layout_constraintTop_toBottomOf="@+id/installlockTXV" />
+
+    <TextView
+        android:id="@+id/newpincodeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/STR_NEW_PIN_CODE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/pincodeTXV"
+        app:layout_constraintTop_toBottomOf="@+id/parentrateTXV" />
+
+    <TextView
+        android:id="@+id/confirmpincodeTXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/STR_CONFIRM_PIN_CODE"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintStart_toStartOf="@+id/pincodeTXV"
+        app:layout_constraintTop_toBottomOf="@+id/newpincodeTXV" />
+
+    <EditText
+        android:id="@+id/pincodeEDV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="4"
+        android:inputType="numberPassword"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:gravity="bottom|center_horizontal"
+        android:password="true"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/pincodeTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@+id/pincodeTXV" />
+
+    <EditText
+        android:id="@+id/newpincodeEDV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="bottom|center_horizontal"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:password="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/newpincodeTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@+id/newpincodeTXV" />
+
+    <EditText
+        android:id="@+id/confirmpincodeEDV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="bottom|center_horizontal"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:password="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/TEXT_SIZE"
+        app:layout_constraintBottom_toBottomOf="@+id/confirmpincodeTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@+id/confirmpincodeTXV" />
+
+    <Spinner
+        android:id="@+id/channllockSPINNER"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/channllockTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@+id/channllockTXV" />
+
+    <Spinner
+        android:id="@+id/installlockSPINNER"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="16dp"
+        android:gravity="bottom"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/installlockTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@+id/installlockTXV" />
+
+    <Spinner
+        android:id="@+id/parentrateSPINNER"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/VIEW_HEIGHT"
+        android:layout_marginTop="16dp"
+        android:gravity="bottom"
+        android:textSize="@dimen/TEXT_SIZE"
+        android:dropDownSelector="@drawable/drop_down_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/parentrateTXV"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/RightItemLeftGuilde"
+        app:layout_constraintTop_toTopOf="@+id/parentrateTXV" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/WIDGET_END" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/TITLE_EDGE" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/help_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/HELP_EDGE" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/block1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.prime.dmg.launcher.Settings.SignalDetectView
+        android:id="@+id/lo_cs_signal_scan_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.prime.dmg.launcher.Settings.ChannelScanView
+        android:id="@+id/lo_cs_channel_scan_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--
+    <com.prime.dmg.launcher.Settings.MyVideoView
+        android:id="@+id/lo_cs_mvv_dummy_video_view"
+        android:layout_width="1px"
+        android:layout_height="1px"/>
+    -->
+</RelativeLayout>

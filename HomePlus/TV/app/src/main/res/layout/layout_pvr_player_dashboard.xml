@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:visibility="visible"
+        android:background="@drawable/shape_rect_black_gradient_f5_d1_00_68"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvPvrPlayerStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="119.5dp"
+            android:layout_marginBottom="90dp"
+            android:text="@string/pvr_start_time"
+            android:textColor="@color/white_time"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/pbPvrPlayer"
+            android:layout_width="682.5dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="175dp"
+            android:indeterminate="false"
+            android:progressBackgroundTint="#AAAAAA"
+            android:progressTint="@color/corporateColor"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvPvrPlayerStartTime"
+            app:layout_constraintBottom_toBottomOf="@id/tvPvrPlayerStartTime" />
+
+        <TextView
+            android:id="@+id/tvPvrPlayerDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white_time"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/pbPvrPlayer"
+            app:layout_constraintTop_toTopOf="@id/tvPvrPlayerStartTime" />
+
+        <TextView
+            android:id="@+id/tvPvrPlayerProgramName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tvPvrPlayerStartTime"
+            app:layout_constraintTop_toBottomOf="@id/tvPvrPlayerStartTime" />
+
+        <ImageView
+            android:id="@+id/ivPvrPlayerNowRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/ok"
+            android:src="@drawable/icon_live_rec"
+            android:visibility="gone"
+            android:adjustViewBounds="true"
+            app:layout_constraintLeft_toRightOf="@id/tvPvrPlayerProgramName"
+            app:layout_constraintTop_toTopOf="@id/tvPvrPlayerProgramName"
+            app:layout_constraintBottom_toBottomOf="@id/tvPvrPlayerProgramName" />
+
+        <LinearLayout
+            android:id="@+id/llPvrPlayerColorButtonBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="@id/tvPvrPlayerDuration"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+            <!-- Yellow: Bilingual -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/shape_round_10_yellow_e8d04c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/pvr_bilingual"
+                android:textColor="@color/colorScrollBarGray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvPvrPlayerYellowBilingual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@string/text_Chinese"
+                android:textColor="#dbb04f"
+                android:textSize="12sp" />
+
+            <!-- Red: Pause -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/shape_round_10_red_ea4e4f" />
+
+            <TextView
+                android:id="@+id/tvPvrPlayerRedPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/pvr_pause"
+                android:textColor="@color/colorScrollBarGray"
+                android:textSize="12sp" />
+
+            <!-- Green: Rewind -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/shape_round_10_green_40b571" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/pvr_rewind"
+                android:textColor="@color/colorScrollBarGray"
+                android:textSize="12sp" />
+
+            <!-- Blue: Fast forward -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/shape_round_10_blue_3fa7fe" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/pvr_fast_forward"
+                android:textColor="@color/colorScrollBarGray"
+                android:textSize="12sp" />
+
+            <!-- Left Arrow: Seek backward -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/layer_rc_step_backward" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/pvr_seek_backward"
+                android:textColor="@color/colorScrollBarGray"
+                android:textSize="12sp" />
+
+            <!-- Left Arrow: Seek forward -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/layer_rc_step_forward" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/pvr_seek_forward"
+                android:textColor="@color/colorScrollBarGray"
+                android:textSize="12sp" />
+
+            <!-- Menu/Info: Program Info -->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/colorkey_option" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:background="@drawable/shape_rect_25x15_r_corner_8_bd_1_gray_33"
+                android:gravity="center"
+                android:text="@string/pvr_player_info"
+                android:textColor="#D3D3D3"
+                android:textSize="7sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/pvr_program_info"
+                android:textColor="@color/colorScrollBarGray"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

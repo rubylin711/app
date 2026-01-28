@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stb_info_relative_layout"
+    android.background="@android:color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="40dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingEnd="40dp">
+
+    <TextView
+        android:id="@+id/lo_stb_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STB Information"
+        android.textColor="@android:color/white"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:id="@+id/lo_stb_information_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lo_stb_info_title"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/stb_info_firmware_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Firmware Version:"
+            android.textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/stb_info_firmware_version_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/stb_info_firmware_version"
+            android:layout_toEndOf="@id/stb_info_firmware_version"
+            android:layout_marginStart="10dp"
+            android.textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/stb_info_slot_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stb_info_firmware_version"
+            android:layout_marginTop="10dp"
+            android:text="Slot:"
+            android.textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/stb_info_slot_index_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/stb_info_slot_index"
+            android:layout_toEndOf="@id/stb_info_slot_index"
+            android:layout_marginStart="10dp"
+            android.textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/stb_info_sn_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stb_info_slot_index"
+            android:layout_marginTop="10dp"
+            android:text="SN:"
+            android.textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/stb_info_sn_number_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/stb_info_sn_number"
+            android:layout_toEndOf="@id/stb_info_sn_number"
+            android:layout_marginStart="10dp"
+            android.textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/stb_info_casn_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stb_info_sn_number"
+            android:layout_marginTop="10dp"
+            android:text="CA_SN:"
+            android.textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <!-- CA_SN Value -->
+        <TextView
+            android:id="@+id/stb_info_casn_number_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/stb_info_casn_number"
+            android:layout_toEndOf="@id/stb_info_casn_number"
+            android:layout_marginStart="10dp"
+            android.textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</RelativeLayout>

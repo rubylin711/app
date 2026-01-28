@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.prime.dtvplayer.TestMiddleware.TestISDBTScanActivity">
+
+    <Button
+        android:id="@+id/buttonTestIsdbTScanStartScanManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="368dp"
+        
+        android:gravity="start|center"
+        android:onClick="BtnTestISDBTStartScanManual_OnClick"
+        android:text="Button"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTestIsdbTScanStartScanAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="368dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start|center"
+        android:onClick="BtnTestISDBTStartScanAuto_OnClick"
+        android:text="Button"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTestIsdbTScanStartScanManual" />
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanTpId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestIsdbTScanTpId" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanBandwidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestIsdbTScanFrequency" />
+
+    <!--TextView
+        android:id="@+id/textViewTestIsdbTScanQam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestIsdbTScanBandwidth" />-->
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanLockStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestIsdbTScanTpId"
+        app:layout_constraintStart_toEndOf="@+id/textViewTestIsdbTScanFrequency"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestIsdbTScanTpId"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestIsdbTScanFrequency"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestIsdbTScanLockStatus"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestIsdbTScanFrequency" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestIsdbTScanBandwidth"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestIsdbTScanLockStatus"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestIsdbTScanBandwidth"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/TestScanguildline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="481dp" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanTvResult"
+        android:layout_width="426dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TestScanguildline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTestIsdbTScanStartScanAuto" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanRadioResult"
+        android:layout_width="426dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TestScanguildline"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTestIsdbTScanStartScanAuto" />
+
+    <Button
+        android:id="@+id/buttonTestIsdbTScanComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:gravity="start|center"
+        android:text="@string/STR_COMPLETE"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestIsdbTScanStartScanManual"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTestIsdbTScanCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start|center"
+        android:text="@string/STR_CANCEL"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestIsdbTScanStartScanAuto"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTestIsdbTScanComplete" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanTotalTvCnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestIsdbTScanComplete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanTotalRadioCnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestIsdbTScanComplete"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestIsdbTScanTotalTvCnt" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanBER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestIsdbTScanLockStatus"
+        app:layout_constraintStart_toEndOf="@+id/textViewTestIsdbTScanLockStatus"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestIsdbTScanLockStatus" />
+
+    <TextView
+        android:id="@+id/textViewTestIsdbTScanSNR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestIsdbTScanStrength"
+        app:layout_constraintStart_toStartOf="@+id/textViewTestIsdbTScanBER"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestIsdbTScanStrength"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
